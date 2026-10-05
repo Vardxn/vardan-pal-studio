@@ -8,96 +8,102 @@
      ========================================================================== */
   const PROJECTS = [
     {
-      cat: 'Healthcare',
-      name: 'Aurelia Clinic',
-      domain: 'aureliaclinic.in',
-      headline: 'Care that feels unhurried.',
-      tagline: 'Dental and skin aesthetic practice in South Delhi.',
-      features: [
-        'Online Consultation & Appointment Request',
-        'Doctor Credentials & Clinical Specialities',
-        'Transparent Treatment Guides & Pricing',
-        'Instant WhatsApp Patient Triage'
-      ],
-      shot: 'assets/shots/clinic.webp',
-      dir: 'clinic',
-      url: 'demos/clinic/'
-    },
-    {
-      cat: 'Hospitality',
-      name: 'Malcha Table',
+      cat: 'Restaurants & Dining',
+      name: 'Malcha Table — Restaurant & Bar',
+      motive: 'Built for Restaurants, Cafes & Fine Dining',
       domain: 'malchatable.com',
       headline: 'A table worth the evening.',
-      tagline: 'Seasonal tasting menus and intimate dining in Chanakyapuri.',
+      tagline: 'Complete website designed for fine-dining restaurants, cafes, cocktail bars, and bistros.',
       features: [
-        'Real-Time Table Reservation Flow',
-        'Dynamic Seasonal Tasting Menu Showcase',
-        'Atmospheric Interior & Culinary Lookbook',
-        'Sommelier & Private Event Concierge'
+        'Instant Online Table Reservation Flow',
+        'Digital Food & Drinks Menu with Pricing',
+        'Atmospheric Interior & Dish Photo Lookbook',
+        'Private Event & WhatsApp Concierge'
       ],
       shot: 'assets/shots/restaurant.webp',
       dir: 'restaurant',
       url: 'demos/restaurant/'
     },
     {
-      cat: 'Beauty & Lifestyle',
-      name: 'Maison Aura',
-      domain: 'maisonaura.in',
-      headline: 'Craft in every detail.',
-      tagline: 'Haute coiffure and aesthetic grooming studio.',
+      cat: 'Doctors & Clinics',
+      name: 'Aurelia — Dental & Skin Clinic',
+      motive: 'Built for Clinics, Doctors & Dentists',
+      domain: 'aureliaclinic.in',
+      headline: 'Care that feels unhurried.',
+      tagline: 'Complete website designed for dental practices, dermatologists, clinics, and doctors.',
       features: [
-        'Master Stylist Portfolios & Lookbook',
-        'Curated Service Rate Cards & Treatments',
-        'Direct VIP Appointment Booking',
-        'Bespoke Product Range Showcase'
+        'Online Consultation & Appointment Booking',
+        'Doctor Specialities & Medical Credentials',
+        'Clear Treatment Pricing & Service Guides',
+        'Direct Patient WhatsApp Triage'
+      ],
+      shot: 'assets/shots/clinic.webp',
+      dir: 'clinic',
+      url: 'demos/clinic/'
+    },
+    {
+      cat: 'Salons & Spas',
+      name: 'Aura — Hair Salon & Luxury Spa',
+      motive: 'Built for Hair Salons, Spas & Beauty Parlours',
+      domain: 'aurasalon.in',
+      headline: 'Craft in every detail.',
+      tagline: 'Complete website designed for hair salons, luxury spas, nail studios, and beauty parlours.',
+      features: [
+        'Stylist Portfolios & Hair Makeover Lookbook',
+        'Transparent Service Rate Cards & Treatments',
+        'Direct VIP Appointment Booking via WhatsApp',
+        'Bridal Makeup & Grooming Packages'
       ],
       shot: 'assets/shots/salon.webp',
       dir: 'salon',
       url: 'demos/salon/'
     },
     {
-      cat: 'Property',
-      name: 'South Delhi Prime Estates',
-      domain: 'sdprime.estate',
+      cat: 'Real Estate',
+      name: 'Prime Estates — Luxury Real Estate',
+      motive: 'Built for Real Estate Brokers, Builders & Agents',
+      domain: 'primeestates.in',
       headline: 'Homes with a long view.',
-      tagline: 'Prime residential advisory across South Delhi neighbourhoods.',
+      tagline: 'Complete website designed for property brokers, luxury realtors, and builders.',
       features: [
-        'Curated Lookbook of Prime Residences',
-        'Discreet Confidential Acquisitions',
-        'Vasant Vihar & GK Neighbourhood Guides',
-        'Private Viewing Scheduling'
+        'Curated Property & Penthouse Lookbook',
+        'Discreet Buyer & Seller Consultation Intake',
+        'Neighborhood Guides & Local Insights',
+        'Direct Private Viewing Scheduling'
       ],
       shot: 'assets/shots/real-estate.webp',
       dir: 'real-estate',
       url: 'demos/real-estate/'
     },
     {
-      cat: 'Creative',
-      name: 'Atelier Eleven',
-      domain: 'atelier11.studio',
+      cat: 'Interior Design',
+      name: 'Studio Eleven — Interior Design & Architecture',
+      motive: 'Built for Interior Designers, Architects & Decorators',
+      domain: 'studioeleven.in',
       headline: 'Spaces drawn with intent.',
-      tagline: 'Interior architecture and material design studio.',
+      tagline: 'Complete website designed for interior designers, architects, decorators, and craft studios.',
       features: [
-        'Editorial Project Monographs & Journals',
-        'Tactile Material Palettes & Spatial Studies',
-        'Studio Philosophy & Craft Ethos',
-        'Client Commission Intake Flow'
+        'High-Resolution Completed Project Gallery',
+        'Material Board & Texture Palette Showcase',
+        'Design Philosophy & Studio Process',
+        'Client Project Consultation Form'
       ],
       shot: 'assets/shots/interior.webp',
       dir: 'interior',
       url: 'demos/interior/'
     },
     {
-      cat: 'Photography',
-      name: 'Studio Vows',
+      cat: 'Wedding Photography',
+      name: 'Studio Vows — Wedding Photography & Films',
+      motive: 'Built for Wedding Photographers, Studios & Creators',
       domain: 'studiovows.in',
       headline: 'Days kept as they felt.',
-      tagline: 'Wedding cinema and fine-art destination photography.',
+      tagline: 'Complete website designed for wedding photographers, cinema studios, and event creators.',
       features: [
-        'Full-Bleed Visual Narrative Stories',
-        'Cinematic Film Teaser Previews',
-        'Transparent Commission Packages',
-        'Destination Date Availability Checker'
+        'Cinematic Video Teasers & Highlight Reels',
+        'Full Wedding Story Albums & Galleries',
+        'Transparent Package Pricing Breakdown',
+        'Instant Date & Destination Availability Check'
       ],
       shot: 'assets/shots/events.webp',
       dir: 'events',
@@ -140,9 +146,13 @@
 
       // Update copy
       copy.innerHTML = `
-        <span class="showcase-client-badge">${p.cat} &middot; Portfolio Demo</span>
+        <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px; flex-wrap:wrap;">
+          <span class="showcase-client-badge">${p.cat}</span>
+          <span class="case-motive" style="margin-bottom:0; font-size:11px; padding:3px 9px;">${p.motive}</span>
+          <span class="case-live-pill" style="font-size:10px; padding:3px 8px;">&bull; Working Demo</span>
+        </div>
         <h3 class="showcase-project-name">${p.name}</h3>
-        <p class="showcase-tagline">${p.headline} ${p.tagline}</p>
+        <p class="showcase-tagline">${p.tagline}</p>
         <div class="showcase-features-list">
           ${p.features.map(f => `
             <div class="showcase-feature-item">
@@ -157,7 +167,7 @@
           <a class="btn btn--accent" href="${p.url}" target="_blank" rel="noopener" data-track="demo_click" data-label="${p.name}">
             Explore Live Demo <span class="arr">&rarr;</span>
           </a>
-          <span style="font-size: 13px; color: var(--dark-muted);">Direct working build</span>
+          <span style="font-size: 13px; color: var(--dark-muted);">Direct working website</span>
         </div>
       `;
 
