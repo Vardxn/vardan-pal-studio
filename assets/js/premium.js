@@ -28,7 +28,7 @@
       <div class="mock-body">
         <div class="mock-nav"><b>${p.name}</b><span>${p.nav.map(n => `<em style="font-style:normal">${n}</em>`).join('')}</span></div>
         <div class="mock-hero">
-          <div><h4>${p.headline}</h4><p>${p.tagline}</p><span class="mock-btn">${p.nav[3]}</span></div>
+          <div><p class="mock-headline">${p.headline}</p><p>${p.tagline}</p><span class="mock-btn">${p.nav[3]}</span></div>
           <div class="mock-img"></div>
         </div>
         <div class="mock-cards"><i></i><i></i><i></i></div>
