@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://vardxn.vercel.app/sitemap.xml
+Sitemap: https://YOUR-DOMAIN/sitemap.xml
