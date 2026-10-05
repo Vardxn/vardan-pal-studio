@@ -124,11 +124,11 @@ a { color: inherit; }
 .hero-line span { white-space: nowrap; }
 .hero-line span + span::before { content: "•"; margin-right: 18px; color: var(--accent); }
 /* hero stage */
-.hero-stage { position: relative; aspect-ratio: 1 / 1; max-height: 640px; }
+.hero-stage { position: relative; aspect-ratio: 1 / 1.1; max-height: 640px; }
 .stage-card { position: absolute; width: 78%; transform: translate3d(0, var(--py, 0px), 0); will-change: transform; }
 .stage-card:nth-child(1) { left: 0;  top: 0;   z-index: 1; }
-.stage-card:nth-child(2) { right: 0; top: 21%; z-index: 2; }
-.stage-card:nth-child(3) { left: 5%; top: 43%; z-index: 3; }
+.stage-card:nth-child(2) { right: 0; top: 33%; z-index: 2; }
+.stage-card:nth-child(3) { left: 5%; top: 51%; z-index: 3; }
 .stage-card .mock-fit { box-shadow: var(--shadow-lg); }
 .stage-card .float { animation: float 9s ease-in-out infinite; }
 @keyframes float { 50% { transform: translateY(-10px); } }
