@@ -13,13 +13,15 @@
     { cat: 'Photography', name: 'Studio Vows',               domain: 'studiovows.in',      headline: 'Days kept as they felt.',        tagline: 'Wedding and event photography.',         nav: ['Portfolio', 'Packages', 'Stories', 'Enquire'],  bg: '#f5ece8', ink: '#3a2622', accent: '#c98f86' }
   ];
 
+  const DEMO_DIRS = ['clinic', 'restaurant', 'salon', 'real-estate', 'interior', 'events'];
   const DEMO_HOST = 'demo.YOUR-DOMAIN';
   const SLUGS = ['clinic', 'table', 'aura', 'estates', 'atelier', 'vows']; // same order as PROJECTS
   PROJECTS.forEach((p, i) => {
+    p.dir = DEMO_DIRS[i];
     p.slug = SLUGS[i];
-    p.live = false; // set to true when the demo is deployed at https://<slug>.<DEMO_HOST>
+    p.live = true; // All 6 demos are built and accessible
     p.domain = `${p.slug}.${DEMO_HOST}`;
-    p.url = `https://${p.slug}.${DEMO_HOST}`;
+    p.url = `demos/${p.dir}/`;
   });
 
   const mock = (p) => `
