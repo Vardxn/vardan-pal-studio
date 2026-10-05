@@ -3,182 +3,348 @@
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ---- single source of truth for hero, showcase and work grid ---- */
+  /* ==========================================================================
+     PROJECT DATA (SINGLE SOURCE OF TRUTH)
+     ========================================================================== */
   const PROJECTS = [
-    { cat: 'Healthcare',  name: 'Aurelia Clinic',            domain: 'aureliaclinic.in',   headline: 'Care that feels unhurried.',     tagline: 'Dental and skin care in South Delhi.',   nav: ['Services', 'Doctors', 'About', 'Book'],         bg: '#eef3f1', ink: '#17302b', accent: '#5b8f84' },
-    { cat: 'Hospitality', name: 'Malcha Table',              domain: 'malchatable.com',    headline: 'A table worth the evening.',     tagline: 'Seasonal menus and private dining.',     nav: ['Menu', 'Experience', 'Gallery', 'Reserve'],     bg: '#f3ebdf', ink: '#2a1d14', accent: '#b0653a' },
-    { cat: 'Beauty',      name: 'Maison Aura',               domain: 'maisonaura.in',      headline: 'Craft in every detail.',         tagline: 'Hair, skin and grooming studio.',        nav: ['Services', 'Team', 'Gallery', 'Book'],          bg: '#efe7e2', ink: '#33231f', accent: '#b9805f' },
-    { cat: 'Property',    name: 'South Delhi Prime Estates', domain: 'sdprime.estate',     headline: 'Homes with a long view.',        tagline: 'Residences and advisory in South Delhi.', nav: ['Properties', 'About', 'Locations', 'Enquire'], bg: '#ebe9e4', ink: '#1d2024', accent: '#8a7a56' },
-    { cat: 'Creative',    name: 'Atelier Eleven',            domain: 'atelier11.studio',   headline: 'Spaces drawn with intent.',      tagline: 'Interior and architecture studio.',      nav: ['Projects', 'Process', 'Studio', 'Contact'],     bg: '#1c1b19', ink: '#f1ede4', accent: '#c8ad7c' },
-    { cat: 'Photography', name: 'Studio Vows',               domain: 'studiovows.in',      headline: 'Days kept as they felt.',        tagline: 'Wedding and event photography.',         nav: ['Portfolio', 'Packages', 'Stories', 'Enquire'],  bg: '#f5ece8', ink: '#3a2622', accent: '#c98f86' }
+    {
+      cat: 'Healthcare',
+      name: 'Aurelia Clinic',
+      domain: 'aureliaclinic.in',
+      headline: 'Care that feels unhurried.',
+      tagline: 'Dental and skin aesthetic practice in South Delhi.',
+      features: [
+        'Online Consultation & Appointment Request',
+        'Doctor Credentials & Clinical Specialities',
+        'Transparent Treatment Guides & Pricing',
+        'Instant WhatsApp Patient Triage'
+      ],
+      shot: 'assets/shots/clinic.webp',
+      dir: 'clinic',
+      url: 'demos/clinic/'
+    },
+    {
+      cat: 'Hospitality',
+      name: 'Malcha Table',
+      domain: 'malchatable.com',
+      headline: 'A table worth the evening.',
+      tagline: 'Seasonal tasting menus and intimate dining in Chanakyapuri.',
+      features: [
+        'Real-Time Table Reservation Flow',
+        'Dynamic Seasonal Tasting Menu Showcase',
+        'Atmospheric Interior & Culinary Lookbook',
+        'Sommelier & Private Event Concierge'
+      ],
+      shot: 'assets/shots/restaurant.webp',
+      dir: 'restaurant',
+      url: 'demos/restaurant/'
+    },
+    {
+      cat: 'Beauty & Lifestyle',
+      name: 'Maison Aura',
+      domain: 'maisonaura.in',
+      headline: 'Craft in every detail.',
+      tagline: 'Haute coiffure and aesthetic grooming studio.',
+      features: [
+        'Master Stylist Portfolios & Lookbook',
+        'Curated Service Rate Cards & Treatments',
+        'Direct VIP Appointment Booking',
+        'Bespoke Product Range Showcase'
+      ],
+      shot: 'assets/shots/salon.webp',
+      dir: 'salon',
+      url: 'demos/salon/'
+    },
+    {
+      cat: 'Property',
+      name: 'South Delhi Prime Estates',
+      domain: 'sdprime.estate',
+      headline: 'Homes with a long view.',
+      tagline: 'Prime residential advisory across South Delhi neighbourhoods.',
+      features: [
+        'Curated Lookbook of Prime Residences',
+        'Discreet Confidential Acquisitions',
+        'Vasant Vihar & GK Neighbourhood Guides',
+        'Private Viewing Scheduling'
+      ],
+      shot: 'assets/shots/real-estate.webp',
+      dir: 'real-estate',
+      url: 'demos/real-estate/'
+    },
+    {
+      cat: 'Creative',
+      name: 'Atelier Eleven',
+      domain: 'atelier11.studio',
+      headline: 'Spaces drawn with intent.',
+      tagline: 'Interior architecture and material design studio.',
+      features: [
+        'Editorial Project Monographs & Journals',
+        'Tactile Material Palettes & Spatial Studies',
+        'Studio Philosophy & Craft Ethos',
+        'Client Commission Intake Flow'
+      ],
+      shot: 'assets/shots/interior.webp',
+      dir: 'interior',
+      url: 'demos/interior/'
+    },
+    {
+      cat: 'Photography',
+      name: 'Studio Vows',
+      domain: 'studiovows.in',
+      headline: 'Days kept as they felt.',
+      tagline: 'Wedding cinema and fine-art destination photography.',
+      features: [
+        'Full-Bleed Visual Narrative Stories',
+        'Cinematic Film Teaser Previews',
+        'Transparent Commission Packages',
+        'Destination Date Availability Checker'
+      ],
+      shot: 'assets/shots/events.webp',
+      dir: 'events',
+      url: 'demos/events/'
+    }
   ];
 
-  const DEMO_DIRS = ['clinic', 'restaurant', 'salon', 'real-estate', 'interior', 'events'];
-  const DEMO_HOST = 'demo.YOUR-DOMAIN';
-  const SLUGS = ['clinic', 'table', 'aura', 'estates', 'atelier', 'vows']; // same order as PROJECTS
-  PROJECTS.forEach((p, i) => {
-    p.dir = DEMO_DIRS[i];
-    p.slug = SLUGS[i];
-    p.live = true; // All 6 demos are built and accessible
-    p.domain = `${p.slug}.${DEMO_HOST}`;
-    p.url = `demos/${p.dir}/`;
-  });
+  /* ==========================================================================
+     INTERACTIVE SHOWCASE
+     ========================================================================== */
+  const tabs = $('.category-tabs-bar') || $('.tabs');
+  const copy = $('#showcaseCopy') || $('.showcase-copy');
+  const screenWrap = $('#showcaseMock') || $('.showcase-screen-wrap');
+  const urlEl = $('#showcaseUrl');
+  const imgEl = $('#showcaseImg');
+  const linkEl = $('#showcaseLink');
 
-  const mock = (p) => `
-    <div class="mock" style="--m-bg:${p.bg};--m-ink:${p.ink};--m-accent:${p.accent}">
-      <div class="mock-bar"><span class="mock-dots"><i></i><i></i><i></i></span><span class="mock-url">${p.domain}</span></div>
-      <div class="mock-body">
-        <div class="mock-nav"><b>${p.name}</b><span>${p.nav.map(n => `<em style="font-style:normal">${n}</em>`).join('')}</span></div>
-        <div class="mock-hero">
-          <div><p class="mock-headline">${p.headline}</p><p>${p.tagline}</p><span class="mock-btn">${p.nav[3]}</span></div>
-          <div class="mock-img"></div>
-        </div>
-        <div class="mock-cards"><i></i><i></i><i></i></div>
-      </div>
-    </div>`;
+  if (tabs && copy && screenWrap) {
+    let current = 0;
+    let auto = true;
+    let timer = null;
 
-  const fit = (p) => `<div class="mock-fit"><div class="mock-canvas">${mock(p)}</div></div>`;
-
-  const ro = new ResizeObserver(entries => entries.forEach(e =>
-    e.target.style.setProperty('--s', e.contentRect.width / 760)));
-  const watchFits = (root = document) => $$('.mock-fit', root).forEach(el => {
-    el.style.setProperty('--s', el.clientWidth / 760);
-    ro.observe(el);
-  });
-
-  /* ---- hero stage ---- */
-  const stage = $('#heroStage');
-  if (stage) {
-    const picks = [PROJECTS[0], PROJECTS[1], PROJECTS[3]];
-    const speeds = [0.05, 0.1, 0.02];
-    stage.innerHTML = picks.map((p, i) =>
-      `<div class="stage-card" data-speed="${speeds[i]}"><div class="float" style="animation-delay:${i * -3}s">${fit(p)}</div></div>`).join('');
-    watchFits(stage);
-    new IntersectionObserver(([e]) => stage.classList.toggle('paused', !e.isIntersecting)).observe(stage);
-  }
-
-  /* ---- work grid ---- */
-  const grid = $('#workGrid');
-  if (grid) {
-    grid.innerHTML = PROJECTS.map((p, i) => {
-      const inner = `
-        <div class="work-cover" style="--c:${p.accent}">${fit(p)}${p.live ? '' : '<span class="soon">Demo link soon</span>'}</div>
-        <div class="work-meta">
-          <div><h3>${p.name}</h3><p class="eyebrow">${p.cat} · Demo</p></div>
-          ${p.live ? '<span class="link">View demo <span class="arr">→</span></span>' : ''}
-        </div>`;
-      const d = `style="--d:${(i % 3) * 90}ms"`;
-      return p.live
-        ? `<a class="work-card reveal" ${d} href="${p.url}" target="_blank" rel="noopener" data-track="demo_click" data-label="${p.name}">${inner}</a>`
-        : `<div class="work-card is-soon reveal" ${d}>${inner}</div>`;
-    }).join('');
-    watchFits(grid);
-  }
-
-  /* ---- showcase ---- */
-  const tabs = $('.tabs'), copy = $('.showcase-copy'), pane = $('.showcase-stage');
-  if (tabs && copy && pane) {
-    let current = 0, auto = true, timer = null;
-    tabs.innerHTML = PROJECTS.map((p, k) =>
-      `<button class="tab" role="tab" id="tab-${k}" aria-selected="${k === 0}" aria-controls="showcasePanel" tabindex="${k === 0 ? 0 : -1}">${p.cat}</button>`).join('');
-    pane.id = 'showcasePanel'; pane.setAttribute('role', 'tabpanel');
+    // Render tab buttons
+    tabs.innerHTML = PROJECTS.map((p, k) => `
+      <button class="cat-pill tab ${k === 0 ? 'active' : ''}" role="tab" id="tab-${k}" aria-selected="${k === 0}" aria-controls="showcaseStage" tabindex="${k === 0 ? 0 : -1}">
+        ${p.cat}
+      </button>
+    `).join('');
 
     const paint = (k) => {
       const p = PROJECTS[k];
-      $$('.tab', tabs).forEach((t, n) => {
-        t.setAttribute('aria-selected', String(n === k));
-        t.tabIndex = n === k ? 0 : -1;
-        t.classList.toggle('auto', auto && n === k && !reduce);
+
+      // Update tabs
+      $$('.cat-pill, .tab', tabs).forEach((t, n) => {
+        const isMatch = n === k;
+        t.setAttribute('aria-selected', String(isMatch));
+        t.classList.toggle('active', isMatch);
+        t.tabIndex = isMatch ? 0 : -1;
       });
-      copy.innerHTML = `<p class="eyebrow">${p.cat}</p><h3>${p.name}</h3><p class="muted">${p.tagline}</p>
-        <p class="path">${p.nav.join('  →  ')}</p>
-        ${p.live ? `<a class="link" href="${p.url}" target="_blank" rel="noopener" data-track="demo_click" data-label="${p.name}">View demo <span class="arr">→</span></a>` : ''}`;
-      pane.innerHTML = fit(p);
-      pane.setAttribute('aria-labelledby', `tab-${k}`);
-      watchFits(pane);
+
+      // Update copy
+      copy.innerHTML = `
+        <span class="showcase-client-badge">${p.cat} &middot; Portfolio Demo</span>
+        <h3 class="showcase-project-name">${p.name}</h3>
+        <p class="showcase-tagline">${p.headline} ${p.tagline}</p>
+        <div class="showcase-features-list">
+          ${p.features.map(f => `
+            <div class="showcase-feature-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+              <span>${f}</span>
+            </div>
+          `).join('')}
+        </div>
+        <div class="showcase-cta-row">
+          <a class="btn btn--accent" href="${p.url}" target="_blank" rel="noopener" data-track="demo_click" data-label="${p.name}">
+            Explore Live Demo <span class="arr">&rarr;</span>
+          </a>
+          <span style="font-size: 13px; color: var(--dark-muted);">Direct working build</span>
+        </div>
+      `;
+
+      // Update screen
+      if (urlEl) urlEl.textContent = p.domain;
+      if (imgEl) {
+        imgEl.src = p.shot;
+        imgEl.alt = `${p.name} website preview`;
+      }
+      if (linkEl) {
+        linkEl.href = p.url;
+        linkEl.setAttribute('aria-label', `Explore live demo of ${p.name}`);
+      }
     };
+
     const show = (k, user = false) => {
       current = k;
-      if (user) { auto = false; clearInterval(timer); }
+      if (user) {
+        auto = false;
+        clearInterval(timer);
+      }
       if (reduce) return paint(k);
-      copy.classList.add('swap'); pane.classList.add('swap');
-      setTimeout(() => { paint(k); copy.classList.remove('swap'); pane.classList.remove('swap'); }, 260);
+
+      copy.classList.add('fading');
+      screenWrap.classList.add('fading');
+      setTimeout(() => {
+        paint(k);
+        copy.classList.remove('fading');
+        screenWrap.classList.remove('fading');
+      }, 220);
     };
+
     paint(0);
 
-    tabs.addEventListener('click', e => { const b = e.target.closest('.tab'); if (b) show($$('.tab', tabs).indexOf(b), true); });
+    // Click on tab
+    tabs.addEventListener('click', e => {
+      const b = e.target.closest('.cat-pill, .tab');
+      if (b) {
+        const idx = $$('.cat-pill, .tab', tabs).indexOf(b);
+        if (idx !== -1) show(idx, true);
+      }
+    });
+
+    // Keyboard navigation
     tabs.addEventListener('keydown', e => {
       if (!['ArrowRight', 'ArrowLeft'].includes(e.key)) return;
-      const n = (current + (e.key === 'ArrowRight' ? 1 : -1) + PROJECTS.length) % PROJECTS.length;
-      show(n, true); $$('.tab', tabs)[n].focus();
+      const step = e.key === 'ArrowRight' ? 1 : -1;
+      const next = (current + step + PROJECTS.length) % PROJECTS.length;
+      show(next, true);
+      $$('.cat-pill, .tab', tabs)[next].focus();
     });
-    new IntersectionObserver(([en]) => {
-      clearInterval(timer);
-      if (en.isIntersecting && auto && !reduce) timer = setInterval(() => show((current + 1) % PROJECTS.length), 5200);
-    }, { threshold: 0.35 }).observe($('#showcase'));
+
+    // Auto rotate when section is visible
+    const showcaseSection = $('#showcase');
+    if (showcaseSection) {
+      new IntersectionObserver(([entry]) => {
+        clearInterval(timer);
+        if (entry.isIntersecting && auto && !reduce) {
+          timer = setInterval(() => {
+            show((current + 1) % PROJECTS.length);
+          }, 5500);
+        }
+      }, { threshold: 0.3 }).observe(showcaseSection);
+    }
   }
 
-  /* ---- mobile menu ---- */
+  /* ==========================================================================
+     MOBILE NAVIGATION
+     ========================================================================== */
   const burger = $('.nav-toggle');
-  const closeMenu = () => { document.body.classList.remove('menu-open'); burger && burger.setAttribute('aria-expanded', 'false'); };
-  burger && burger.addEventListener('click', () => {
-    const open = document.body.classList.toggle('menu-open');
-    burger.setAttribute('aria-expanded', String(open));
-  });
+  const closeMenu = () => {
+    document.body.classList.remove('menu-open');
+    if (burger) burger.setAttribute('aria-expanded', 'false');
+  };
+
+  if (burger) {
+    burger.addEventListener('click', () => {
+      const open = document.body.classList.toggle('menu-open');
+      burger.setAttribute('aria-expanded', String(open));
+    });
+  }
   addEventListener('keydown', e => e.key === 'Escape' && closeMenu());
 
-  /* ---- smooth scroll + anchors ---- */
+  /* ==========================================================================
+     SMOOTH SCROLL + ANCHOR HANDLING
+     ========================================================================== */
   let lenis = null;
   if (window.Lenis && !reduce) {
-    lenis = new Lenis({ duration: 1.1, easing: t => 1 - Math.pow(1 - t, 3) });
-    const raf = t => { lenis.raf(t); requestAnimationFrame(raf); };
+    lenis = new Lenis({
+      duration: 1.15,
+      easing: t => 1 - Math.pow(1 - t, 3)
+    });
+    const raf = t => {
+      lenis.raf(t);
+      requestAnimationFrame(raf);
+    };
     requestAnimationFrame(raf);
   }
-  $$('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
-    const id = a.getAttribute('href');
-    if (id.length < 2) return;
-    const target = $(id);
-    if (!target) return;
-    e.preventDefault(); closeMenu();
-    lenis ? lenis.scrollTo(target, { offset: -72 }) : target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
-  }));
 
-  /* ---- navbar state ---- */
+  $$('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id.length < 2) return;
+      const target = $(id);
+      if (!target) return;
+      e.preventDefault();
+      closeMenu();
+      if (lenis) {
+        lenis.scrollTo(target, { offset: -76 });
+      } else {
+        target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+      }
+    });
+  });
+
+  /* ==========================================================================
+     NAVBAR STATE ON SCROLL
+     ========================================================================== */
   const nav = $('.nav');
-  const onScroll = () => nav && nav.classList.toggle('scrolled', scrollY > 24);
-  onScroll(); addEventListener('scroll', onScroll, { passive: true });
+  const onScroll = () => {
+    if (nav) nav.classList.toggle('scrolled', window.scrollY > 24);
+  };
+  onScroll();
+  addEventListener('scroll', onScroll, { passive: true });
 
-  /* ---- hero parallax ---- */
-  const cards = $$('.stage-card');
-  if (cards.length && !reduce) {
+  /* ==========================================================================
+     HERO SUBTLE PARALLAX
+     ========================================================================== */
+  const heroPrimary = $('.hero-shot-primary');
+  const heroSecondary = $('.hero-shot-secondary');
+  if (heroPrimary && heroSecondary && !reduce) {
     let ticking = false;
     addEventListener('scroll', () => {
-      if (ticking) return; ticking = true;
+      if (ticking) return;
+      ticking = true;
       requestAnimationFrame(() => {
-        const y = Math.min(scrollY, innerHeight);
-        cards.forEach(c => c.style.setProperty('--py', `${-y * c.dataset.speed}px`));
+        const y = Math.min(window.scrollY, window.innerHeight);
+        heroPrimary.style.transform = `translateY(${y * -0.06}px)`;
+        heroSecondary.style.transform = `translateY(${y * -0.12}px)`;
         ticking = false;
       });
     }, { passive: true });
   }
 
-  /* ---- enquiry form ---- */
+  /* ==========================================================================
+     ENQUIRY FORM
+     ========================================================================== */
   const form = $('#enquireForm');
-  if (form) form.addEventListener('submit', e => {
-    e.preventDefault();
-    const d = new FormData(form);
-    if (!d.get('name') || !d.get('type')) { form.reportValidity?.(); return; }
-    const text = `Hi, I'm ${d.get('name')}. I run a ${d.get('type')} business and I'd like a website.${d.get('msg') ? ' ' + d.get('msg') : ''}`;
-    window.track && window.track('form_submit', { type: String(d.get('type')) });
-    window.open(`https://wa.me/918279696707?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+  if (form) {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const d = new FormData(form);
+      const name = (d.get('name') || '').toString().trim();
+      const type = (d.get('type') || '').toString().trim();
+      const msg = (d.get('msg') || '').toString().trim();
+
+      if (!name || !type) {
+        form.reportValidity?.();
+        return;
+      }
+
+      const text = `Hi Vardan, I'm ${name}. I run a ${type} business and I'd like a website.${msg ? ' ' + msg : ''}`;
+      if (window.track) {
+        window.track('form_submit', { type });
+      }
+      window.open(`https://wa.me/918279696707?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+    });
+  }
+
+  /* ==========================================================================
+     SCROLL REVEAL OBSERVER
+     ========================================================================== */
+  $$('[data-stagger]').forEach(g => {
+    [...g.children].forEach((c, k) => {
+      c.classList.add('reveal');
+      c.style.setProperty('--d', `${k * 90}ms`);
+    });
   });
 
-  /* ---- reveal (keep this block last, after all rendering) ---- */
-  $$('[data-stagger]').forEach(g => [...g.children].forEach((c, k) => {
-    c.classList.add('reveal'); c.style.setProperty('--d', `${k * 90}ms`);
-  }));
-  const io = new IntersectionObserver(entries => entries.forEach(e => {
-    if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-  }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
-  $$('.reveal, .steps').forEach(el => io.observe(el));
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.05, rootMargin: '0px 0px 50px 0px' });
+
+  $$('.reveal, .steps, .case-card, .plan-card').forEach(el => io.observe(el));
 })();
