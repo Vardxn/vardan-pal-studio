@@ -169,7 +169,17 @@
         </div>
 
         <div class="hero-stage-wrap reveal" id="heroStage" aria-label="Featured website demonstrations">
+          <div class="hero-ambient-glow" aria-hidden="true"></div>
           <div class="hero-card-stack">
+            <!-- Back Tertiary Shot (Atelier Eleven) -->
+            <div class="hero-shot-card hero-shot-tertiary">
+              <div class="hero-shot-chrome">
+                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                <span class="url-pill">atelier11.studio</span>
+              </div>
+              <img src="assets/shots/interior.webp" alt="Atelier Eleven interior architecture website preview" width="1280" height="800" loading="lazy">
+            </div>
+
             <!-- Top Primary Shot (Malcha Table) -->
             <div class="hero-shot-card hero-shot-primary">
               <div class="hero-shot-chrome">
@@ -313,8 +323,8 @@
     <section class="section section-dark showcase-section" id="showcase">
       <div class="wrap">
         <div class="section-head reveal">
-          <p class="eyebrow">Interactive Showcase</p>
-          <h2>Experience the transformation.</h2>
+          <p class="eyebrow">One Studio &middot; Any Business</p>
+          <h2>One studio. Any business.</h2>
           <p class="lede">
             Your business doesn't need a template. It needs a digital experience that fits it. Select an industry to see how the experience adapts:
           </p>
@@ -392,6 +402,7 @@
             </div>
             <div class="case-content">
               <div>
+                <span class="case-num">PROJECT 01 &middot; 06</span>
                 <div class="case-header-row">
                   <span class="case-badge">Hospitality &middot; Demo</span>
                   <span class="case-live-pill">&bull; Live Demo</span>
@@ -427,6 +438,7 @@
                 <img src="assets/shots/clinic.webp" alt="Aurelia Clinic website screenshot" width="1280" height="800" loading="lazy">
               </div>
               <div class="case-content">
+                <span class="case-num">PROJECT 02 &middot; 06</span>
                 <div class="case-header-row">
                   <span class="case-badge">Healthcare &middot; Demo</span>
                   <span class="case-live-pill">&bull; Live Demo</span>
@@ -457,6 +469,7 @@
                 <img src="assets/shots/salon.webp" alt="Maison Aura website screenshot" width="1280" height="800" loading="lazy">
               </div>
               <div class="case-content">
+                <span class="case-num">PROJECT 03 &middot; 06</span>
                 <div class="case-header-row">
                   <span class="case-badge">Beauty &amp; Lifestyle &middot; Demo</span>
                   <span class="case-live-pill">&bull; Live Demo</span>
@@ -490,6 +503,7 @@
                 <img src="assets/shots/real-estate.webp" alt="South Delhi Prime Estates website screenshot" width="1280" height="800" loading="lazy">
               </div>
               <div class="case-content">
+                <span class="case-num">PROJECT 04 &middot; 06</span>
                 <div class="case-header-row">
                   <span class="case-badge">Property &middot; Demo</span>
                   <span class="case-live-pill">&bull; Live Demo</span>
@@ -520,6 +534,7 @@
                 <img src="assets/shots/interior.webp" alt="Atelier Eleven website screenshot" width="1280" height="800" loading="lazy">
               </div>
               <div class="case-content">
+                <span class="case-num">PROJECT 05 &middot; 06</span>
                 <div class="case-header-row">
                   <span class="case-badge">Creative &middot; Demo</span>
                   <span class="case-live-pill">&bull; Live Demo</span>
@@ -542,7 +557,7 @@
           </div>
 
           <!-- 06: Wide Cinematic Case (Studio Vows) -->
-          <article class="case-card work-card case-card--wide reveal" style="--d: 0ms">
+          <article class="case-card work-card case-card--wide case-card--wide-reversed reveal" style="--d: 0ms">
             <div class="case-visual">
               <div class="case-chrome">
                 <span class="case-dots"><i></i><i></i><i></i></span>
@@ -552,6 +567,7 @@
             </div>
             <div class="case-content">
               <div>
+                <span class="case-num">PROJECT 06 &middot; 06</span>
                 <div class="case-header-row">
                   <span class="case-badge">Photography &middot; Demo</span>
                   <span class="case-live-pill">&bull; Live Demo</span>
@@ -669,63 +685,105 @@
 
         <div class="extended-services-grid" data-stagger>
           <article class="extended-card">
-            <div class="extended-svg-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/>
-              </svg>
+            <div class="extended-card-top">
+              <div class="extended-svg-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/>
+                </svg>
+              </div>
+              <span class="extended-tag">Automated Triage</span>
             </div>
             <h3 class="extended-title">Booking Systems</h3>
             <p class="extended-desc">Automated appointment scheduling, calendar sync, table reservations, and automated confirmation reminders.</p>
+            <div class="extended-meta">
+              <span class="extended-meta-label">Applied in:</span>
+              <span class="extended-meta-val">Aurelia Clinic &amp; Malcha Table</span>
+            </div>
           </article>
 
           <article class="extended-card">
-            <div class="extended-svg-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>
-              </svg>
+            <div class="extended-card-top">
+              <div class="extended-svg-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>
+                </svg>
+              </div>
+              <span class="extended-tag">Live Telemetry</span>
             </div>
             <h3 class="extended-title">Business Dashboards</h3>
             <p class="extended-desc">Private internal dashboards to track customer orders, inventory logs, appointments and key metrics in one place.</p>
+            <div class="extended-meta">
+              <span class="extended-meta-label">Applied in:</span>
+              <span class="extended-meta-val">Order Logs &amp; Metric Tracking</span>
+            </div>
           </article>
 
           <article class="extended-card">
-            <div class="extended-svg-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-              </svg>
+            <div class="extended-card-top">
+              <div class="extended-svg-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+              </div>
+              <span class="extended-tag">Intelligent Flows</span>
             </div>
             <h3 class="extended-title">AI &amp; Automation</h3>
             <p class="extended-desc">Intelligent lead filtering, instant auto-replies, automated WhatsApp follow-ups, and repetitive task reduction.</p>
+            <div class="extended-meta">
+              <span class="extended-meta-label">Applied in:</span>
+              <span class="extended-meta-val">Lead Qualification &amp; Auto-Reply</span>
+            </div>
           </article>
 
           <article class="extended-card">
-            <div class="extended-svg-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-              </svg>
+            <div class="extended-card-top">
+              <div class="extended-svg-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+                </svg>
+              </div>
+              <span class="extended-tag">Bespoke Portals</span>
             </div>
             <h3 class="extended-title">Custom Web Apps</h3>
             <p class="extended-desc">Have a unique business process? We build custom web apps, customer portals, and internal tools tailored specifically to how you operate.</p>
+            <div class="extended-meta">
+              <span class="extended-meta-label">Applied in:</span>
+              <span class="extended-meta-val">Client Intake &amp; Lookbooks</span>
+            </div>
           </article>
 
           <article class="extended-card">
-            <div class="extended-svg-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
+            <div class="extended-card-top">
+              <div class="extended-svg-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+              </div>
+              <span class="extended-tag">Pipeline Sync</span>
             </div>
             <h3 class="extended-title">CRM &amp; Lead Management</h3>
             <p class="extended-desc">Capture inquiries from your website directly into an organized CRM pipeline with status tracking and follow-up notes.</p>
+            <div class="extended-meta">
+              <span class="extended-meta-label">Applied in:</span>
+              <span class="extended-meta-val">Lead Records &amp; Status Pipelines</span>
+            </div>
           </article>
 
           <article class="extended-card">
-            <div class="extended-svg-icon" aria-hidden="true">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
-              </svg>
+            <div class="extended-card-top">
+              <div class="extended-svg-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                </svg>
+              </div>
+              <span class="extended-tag">Cloud Ecosystem</span>
             </div>
             <h3 class="extended-title">Integrations</h3>
             <p class="extended-desc">Connect the tools you already rely on: Google Workspace, Stripe/Razorpay, WhatsApp Business API, Mailchimp, and custom webhooks.</p>
+            <div class="extended-meta">
+              <span class="extended-meta-label">Applied in:</span>
+              <span class="extended-meta-val">Payment, Cloud DNS &amp; Webhooks</span>
+            </div>
           </article>
         </div>
 
