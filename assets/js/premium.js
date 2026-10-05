@@ -13,8 +13,8 @@
     { cat: 'Photography', name: 'Studio Vows',             domain: 'studiovows.in',      headline: 'Days kept as they felt.',        tagline: 'Wedding and event photography.',         nav: ['Portfolio', 'Packages', 'Stories', 'Enquire'],  bg: '#f5ece8', ink: '#3a2622', accent: '#c98f86', url: 'demos/events/index.html' }
   ];
 
-  const mock = (p, cls = '') => `
-    <div class="mock ${cls}" style="--m-bg:${p.bg};--m-ink:${p.ink};--m-accent:${p.accent}">
+  const mock = (p) => `
+    <div class="mock" style="--m-bg:${p.bg};--m-ink:${p.ink};--m-accent:${p.accent}">
       <div class="mock-bar"><span class="mock-dots"><i></i><i></i><i></i></span><span class="mock-url">${p.domain}</span></div>
       <div class="mock-body">
         <div class="mock-nav"><b>${p.name}</b><span>${p.nav.map(n => `<em style="font-style:normal">${n}</em>`).join('')}</span></div>
@@ -26,13 +26,23 @@
       </div>
     </div>`;
 
+  const fit = (p) => `<div class="mock-fit"><div class="mock-canvas">${mock(p)}</div></div>`;
+
+  const ro = new ResizeObserver(entries => entries.forEach(e =>
+    e.target.style.setProperty('--s', e.contentRect.width / 760)));
+  const watchFits = (root = document) => $$('.mock-fit', root).forEach(el => {
+    el.style.setProperty('--s', el.clientWidth / 760);
+    ro.observe(el);
+  });
+
   /* ---- hero stage ---- */
   const stage = $('#heroStage');
   if (stage) {
     const picks = [PROJECTS[0], PROJECTS[1], PROJECTS[3]];
     const speeds = [0.05, 0.1, 0.02];
     stage.innerHTML = picks.map((p, i) =>
-      `<div class="stage-card" data-speed="${speeds[i]}"><div class="float" style="animation-delay:${i * -3}s">${mock(p, 'mock--sm')}</div></div>`).join('');
+      `<div class="stage-card" data-speed="${speeds[i]}"><div class="float" style="animation-delay:${i * -3}s">${fit(p)}</div></div>`).join('');
+    watchFits(stage);
   }
 
   /* ---- work grid ---- */
@@ -41,10 +51,11 @@
     grid.innerHTML = PROJECTS.map((p, i) => {
       const ext = p.url.startsWith('http') ? ' target="_blank" rel="noopener"' : '';
       return `<a class="work-card reveal" style="--d:${(i % 3) * 90}ms" href="${p.url}"${ext}>
-        <div class="work-cover" style="--c:${p.accent}">${mock(p, 'mock--sm')}</div>
+        <div class="work-cover" style="--c:${p.accent}">${fit(p)}</div>
         <div class="work-meta"><div><h3>${p.name}</h3><p class="eyebrow">${p.cat}</p></div><span class="link">View project <span class="arr">→</span></span></div>
       </a>`;
     }).join('');
+    watchFits(grid);
   }
 
   /* ---- showcase ---- */
@@ -65,8 +76,9 @@
       copy.innerHTML = `<p class="eyebrow">${p.cat}</p><h3>${p.name}</h3><p class="muted">${p.tagline}</p>
         <p class="path">${p.nav.join('  →  ')}</p>
         <a class="link" href="${p.url}">View project <span class="arr">→</span></a>`;
-      pane.innerHTML = mock(p);
+      pane.innerHTML = fit(p);
       pane.setAttribute('aria-labelledby', `tab-${k}`);
+      watchFits(pane);
     };
     const show = (k, user = false) => {
       current = k;
