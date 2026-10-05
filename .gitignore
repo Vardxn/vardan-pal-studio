@@ -1,0 +1,4 @@
+node_modules/
+lh.json
+audit-*.png
+.DS_Store
