@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vardan Pal — Digital Experiences for Businesses</title>
+  <meta name="description" content="Digital experiences for businesses that want to be taken seriously online. Websites, business tools and digital solutions, designed, built and managed around your business.">
+  
+  <!-- OpenGraph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vardan Pal — Digital Experiences for Businesses">
+  <meta property="og:description" content="Websites, business tools and digital solutions, designed, built and managed around your business.">
+  <meta property="og:url" content="https://vardxn.vercel.app">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Typography: Fraunces (Display Serif) & Manrope (Modern UI Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <!-- JSON-LD ProfessionalService Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Vardan Pal — Digital Experiences & Business Solutions",
+    "url": "https://vardxn.vercel.app",
+    "areaServed": "New Delhi, India",
+    "description": "Digital experiences for businesses that want to be taken seriously online. Websites, business tools and digital solutions, designed, built and managed around your business.",
+    "telephone": "+918279696707",
+    "priceRange": "₹3,000 - ₹10,000+"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Top Sticky Navbar -->
+  <header class="site-nav" id="main-nav">
+    <div class="container-x nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Vardan Pal Homepage">
+        Vardan Pal
+      </a>
+
+      <nav aria-label="Desktop Navigation">
+        <ul class="nav-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle dark mode" onclick="toggleTheme()">
+          <span id="theme-icon">◐</span>
+        </button>
+        <a href="#contact" class="btn-pill" id="nav-cta-btn">Start a Project</a>
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open navigation menu" onclick="toggleMobileSheet()">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Sheet Drawer -->
+  <div class="mobile-sheet" id="mobile-sheet" aria-hidden="true">
+    <div class="mobile-sheet-header">
+      <span class="nav-brand">Vardan Pal</span>
+      <button class="mobile-menu-btn" onclick="toggleMobileSheet()" aria-label="Close menu">&times;</button>
+    </div>
+    <ul class="mobile-sheet-links">
+      <li><a href="#work" onclick="toggleMobileSheet()">Work</a></li>
+      <li><a href="#services" onclick="toggleMobileSheet()">Services</a></li>
+      <li><a href="#pricing" onclick="toggleMobileSheet()">Pricing</a></li>
+      <li><a href="#about" onclick="toggleMobileSheet()">About</a></li>
+      <li><a href="#contact" onclick="toggleMobileSheet()">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-size: 0.9rem; color: var(--muted);">Switch Theme</span>
+      <button class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle theme">◐</button>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==========================================================================
+         01 HERO
+         ========================================================================== -->
+    <section class="section-y hero-section" id="hero">
+      <div class="container-x hero-grid">
+        <div class="hero-text-col">
+          <span class="eyebrow">Digital Studio</span>
+          
+          <h1 class="hero-h1">
+            Your business deserves a better digital presence.
+          </h1>
+
+          <p class="hero-sub">
+            Premium websites, business tools and digital experiences, designed around the way your customers discover you.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#work" class="btn-pill" id="hero-btn-work">Explore Our Work</a>
+            <a href="#contact" class="btn-pill-secondary" id="hero-btn-start">
+              Start Your Website <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+
+          <div class="hero-small-line">
+            Designed &bull; Built &bull; Launched &bull; Managed
+          </div>
+        </div>
+
+        <!-- Overlapping Browser Mockups with Tonal Gradients (CSS-drawn, no stock photos) -->
+        <div class="hero-visual-container" id="hero-mockups-visual" aria-hidden="true">
+          <!-- Mockup 1: Clinic -->
+          <div class="hero-mockup-wrapper mockup-clinic" id="mock-clinic" onclick="location.href='#work'">
+            <div class="browser-header-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-label-tag">Clinic</span>
+            </div>
+            <div class="browser-content-area">
+              <div class="browser-line-sm"></div>
+              <div class="browser-line-lg"></div>
+              <div class="browser-line-md"></div>
+              <div class="browser-media-gradient"></div>
+              <div class="browser-action-pill"></div>
+            </div>
+          </div>
+
+          <!-- Mockup 2: Restaurant -->
+          <div class="hero-mockup-wrapper mockup-restaurant" id="mock-restaurant" onclick="location.href='#work'">
+            <div class="browser-header-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-label-tag">Restaurant</span>
+            </div>
+            <div class="browser-content-area">
+              <div class="browser-line-sm"></div>
+              <div class="browser-line-lg"></div>
+              <div class="browser-line-md"></div>
+              <div class="browser-media-gradient"></div>
+              <div class="browser-action-pill"></div>
+            </div>
+          </div>
+
+          <!-- Mockup 3: Real Estate -->
+          <div class="hero-mockup-wrapper mockup-realestate" id="mock-realestate" onclick="location.href='#work'">
+            <div class="browser-header-bar">
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-dot"></span>
+              <span class="browser-label-tag">Real Estate</span>
+            </div>
+            <div class="browser-content-area">
+              <div class="browser-line-sm"></div>
+              <div class="browser-line-lg"></div>
+              <div class="browser-line-md"></div>
+              <div class="browser-media-gradient"></div>
+              <div class="browser-action-pill"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         02 WHAT YOU DO
+         ========================================================================== -->
+    <section class="section-y" id="services">
+      <div class="container-x">
+        <span class="eyebrow">Services</span>
+        <h2>From first impression to final launch.</h2>
+
+        <div class="what-you-do-grid">
+          <div class="card what-card">
+            <span class="what-num">01</span>
+            <h3 class="what-title">Design</h3>
+            <p class="what-desc">A visual identity built around your business.</p>
+          </div>
+
+          <div class="card what-card">
+            <span class="what-num">02</span>
+            <h3 class="what-title">Development</h3>
+            <p class="what-desc">Fast, responsive and purpose-built websites.</p>
+          </div>
+
+          <div class="card what-card">
+            <span class="what-num">03</span>
+            <h3 class="what-title">Launch</h3>
+            <p class="what-desc">Domain, hosting, SSL and deployment handled.</p>
+          </div>
+
+          <div class="card what-card">
+            <span class="what-num">04</span>
+            <h3 class="what-title">Management</h3>
+            <p class="what-desc">Updates, improvements and ongoing support when you need it.</p>
+          </div>
+        </div>
+
+        <div class="what-closing-line">
+          One person. One point of contact. Everything handled.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         03 ONE STUDIO, ANY BUSINESS
+         ========================================================================== -->
+    <section class="section-y" id="capabilities">
+      <div class="container-x">
+        <span class="eyebrow">Built for your business</span>
+        <h2>One studio. Any business.</h2>
+        <p class="section-sub" style="margin-top: 0.75rem;">
+          Your business doesn't need a template. It needs a digital experience that fits it.
+        </p>
+
+        <div class="categories-grid">
+          <div class="card category-tile">
+            <h3 class="category-tile-name">Healthcare</h3>
+            <div class="category-tile-sub">Clinics &bull; Doctors &bull; Wellness</div>
+          </div>
+
+          <div class="card category-tile">
+            <h3 class="category-tile-name">Hospitality</h3>
+            <div class="category-tile-sub">Restaurants &bull; Cafés &bull; Hotels</div>
+          </div>
+
+          <div class="card category-tile">
+            <h3 class="category-tile-name">Beauty &amp; Lifestyle</h3>
+            <div class="category-tile-sub">Salons &bull; Studios &bull; Wellness</div>
+          </div>
+
+          <div class="card category-tile">
+            <h3 class="category-tile-name">Property</h3>
+            <div class="category-tile-sub">Real Estate &bull; Developers &bull; Consultants</div>
+          </div>
+
+          <div class="card category-tile">
+            <h3 class="category-tile-name">Creative</h3>
+            <div class="category-tile-sub">Interiors &bull; Architecture &bull; Photography</div>
+          </div>
+
+          <div class="card category-tile">
+            <h3 class="category-tile-name">Professional</h3>
+            <div class="category-tile-sub">Consultants &bull; Agencies &bull; Local Businesses</div>
+          </div>
+
+          <!-- 7th Full-Width Tile -->
+          <div class="card category-tile category-tile-full">
+            <div>
+              <h3>+ Anything your business needs.</h3>
+              <p style="margin-top: 0.4rem;">Custom client portals, booking flows, and tailored digital experiences.</p>
+            </div>
+            <a href="https://wa.me/918279696707?text=Hi%20Vardan,%20I'd%20like%20to%20discuss%20a%20custom%20website%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="btn-pill-secondary">
+              Discuss Requirement <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         04 INTERACTIVE CATEGORY SHOWCASE
+         ========================================================================== -->
+    <section class="section-y" id="showcase">
+      <div class="container-x">
+        <div class="showcase-tabs-container" id="showcase-tabs-nav">
+          <button class="showcase-tab active" onclick="selectCategory(0)">Healthcare</button>
+          <button class="showcase-tab" onclick="selectCategory(1)">Hospitality</button>
+          <button class="showcase-tab" onclick="selectCategory(2)">Property</button>
+          <button class="showcase-tab" onclick="selectCategory(3)">Beauty</button>
+          <button class="showcase-tab" onclick="selectCategory(4)">Creative</button>
+          <button class="showcase-tab" onclick="selectCategory(5)">Professional</button>
+        </div>
+
+        <div class="showcase-stage-grid">
+          <div class="showcase-text-col" id="showcase-info-box">
+            <span class="eyebrow" id="showcase-key">Healthcare</span>
+            <h3 class="showcase-title-name" id="showcase-name">Dr. Arora</h3>
+            <p class="showcase-desc-sub" id="showcase-type">Modern clinic website</p>
+            <p class="showcase-nav-path" id="showcase-nav">Services &rarr; About &rarr; Doctors &rarr; Appointment</p>
+          </div>
+
+          <div class="card showcase-mockup-frame" id="showcase-mockup-box">
+            <div class="showcase-mockup-top">
+              <span class="font-medium" id="mockup-name-badge">Dr. Arora</span>
+              <span class="hidden sm:flex" id="mockup-nav-preview" style="gap: 1.25rem; color: var(--muted);">
+                <span>Services</span><span>About</span><span>Doctors</span><span>Appointment</span>
+              </span>
+            </div>
+            <div class="showcase-mockup-body">
+              <div class="mockup-header-bar-1"></div>
+              <div class="mockup-header-bar-2"></div>
+              <div class="mockup-body-banner"></div>
+              <div class="mockup-cta-chip"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         05 WORK GRID
+         ========================================================================== -->
+    <section class="section-y" id="work">
+      <div class="container-x">
+        <span class="eyebrow">Work</span>
+        <h2>A few things we've built.</h2>
+
+        <div class="work-grid-3x2">
+          <!-- 01: Clinic -->
+          <a href="demos/clinic/index.html" class="work-card-item" target="_blank" rel="noopener noreferrer">
+            <div class="work-aspect-box">
+              <img src="demos/clinic/images/hero_bg_1.jpg" alt="Aurelia Clinic" loading="lazy" width="400" height="300">
+            </div>
+            <div class="work-meta-row">
+              <h3 class="work-title-item">Aurelia Clinic</h3>
+              <span class="work-view-action">View project <span class="arrow">&rarr;</span></span>
+            </div>
+            <span class="eyebrow" style="margin-top: 0.25rem; margin-bottom: 0;">Healthcare</span>
+          </a>
+
+          <!-- 02: Restaurant -->
+          <a href="demos/restaurant/index.html" class="work-card-item" target="_blank" rel="noopener noreferrer">
+            <div class="work-aspect-box">
+              <img src="demos/restaurant/images/bg1.jpg" alt="Malcha Table" loading="lazy" width="400" height="300">
+            </div>
+            <div class="work-meta-row">
+              <h3 class="work-title-item">Malcha Table</h3>
+              <span class="work-view-action">View project <span class="arrow">&rarr;</span></span>
+            </div>
+            <span class="eyebrow" style="margin-top: 0.25rem; margin-bottom: 0;">Hospitality</span>
+          </a>
+
+          <!-- 03: Salon -->
+          <a href="demos/salon/index.html" class="work-card-item" target="_blank" rel="noopener noreferrer">
+            <div class="work-aspect-box">
+              <img src="demos/salon/images/bg-1.jpg" alt="Maison Aura" loading="lazy" width="400" height="300">
+            </div>
+            <div class="work-meta-row">
+              <h3 class="work-title-item">Maison Aura</h3>
+              <span class="work-view-action">View project <span class="arrow">&rarr;</span></span>
+            </div>
+            <span class="eyebrow" style="margin-top: 0.25rem; margin-bottom: 0;">Beauty</span>
+          </a>
+
+          <!-- 04: Real Estate -->
+          <a href="demos/real-estate/index.html" class="work-card-item" target="_blank" rel="noopener noreferrer">
+            <div class="work-aspect-box">
+              <img src="demos/real-estate/images/hero_bg_1.jpg" alt="South Delhi Prime Estates" loading="lazy" width="400" height="300">
+            </div>
+            <div class="work-meta-row">
+              <h3 class="work-title-item">South Delhi Prime Estates</h3>
+              <span class="work-view-action">View project <span class="arrow">&rarr;</span></span>
+            </div>
+            <span class="eyebrow" style="margin-top: 0.25rem; margin-bottom: 0;">Property</span>
+          </a>
+
+          <!-- 05: Interior -->
+          <a href="demos/interior/index.html" class="work-card-item" target="_blank" rel="noopener noreferrer">
+            <div class="work-aspect-box">
+              <img src="demos/real-estate/images/img_1.jpg" alt="Atelier Eleven" loading="lazy" width="400" height="300">
+            </div>
+            <div class="work-meta-row">
+              <h3 class="work-title-item">Atelier Eleven</h3>
+              <span class="work-view-action">View project <span class="arrow">&rarr;</span></span>
+            </div>
+            <span class="eyebrow" style="margin-top: 0.25rem; margin-bottom: 0;">Creative</span>
+          </a>
+
+          <!-- 06: Photography / Events -->
+          <a href="demos/events/index.html" class="work-card-item" target="_blank" rel="noopener noreferrer">
+            <div class="work-aspect-box">
+              <img src="demos/restaurant/images/event.jpg" alt="Studio Vows" loading="lazy" width="400" height="300">
+            </div>
+            <div class="work-meta-row">
+              <h3 class="work-title-item">Studio Vows</h3>
+              <span class="work-view-action">View project <span class="arrow">&rarr;</span></span>
+            </div>
+            <span class="eyebrow" style="margin-top: 0.25rem; margin-bottom: 0;">Events</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         06 OUTCOMES
+         ========================================================================== -->
+    <section class="section-y" id="outcomes">
+      <div class="container-x">
+        <span class="eyebrow">Outcomes</span>
+        <h2>More than a website.</h2>
+
+        <div class="outcomes-list">
+          <div class="outcome-row-item">
+            <h3 class="outcome-heading-title">Be easier to find.</h3>
+            <p class="outcome-body-copy">A clear online presence for customers discovering your business.</p>
+          </div>
+
+          <div class="outcome-row-item">
+            <h3 class="outcome-heading-title">Be easier to trust.</h3>
+            <p class="outcome-body-copy">A polished experience that communicates your business before the first call.</p>
+          </div>
+
+          <div class="outcome-row-item">
+            <h3 class="outcome-heading-title">Be easier to contact.</h3>
+            <p class="outcome-body-copy">WhatsApp, calls, enquiries, bookings and directions, exactly where customers need them.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         07 PRICING
+         ========================================================================== -->
+    <section class="section-y" id="pricing">
+      <div class="container-x">
+        <span class="eyebrow">Investment</span>
+        <h2>Simple pricing. Serious websites.</h2>
+        <p class="section-sub" style="margin-top: 0.75rem;">
+          Choose the level that fits your business. Upgrade when you need more.
+        </p>
+
+        <div class="pricing-grid-4">
+          <!-- STARTER -->
+          <div class="card pricing-card-box">
+            <span class="eyebrow">Starter</span>
+            <p class="price-heading-num">&#8377;3,000</p>
+            <p class="price-sub-tag">For getting your business online.</p>
+            <ul class="pricing-feature-list">
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>One-page website</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Premium design</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Mobile responsive</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>WhatsApp &amp; Call</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Maps</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Basic SEO</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Deployment</li>
+            </ul>
+            <a href="https://wa.me/918279696707?text=Hi%2C%20I%27d%20like%20the%20Starter%20website%20package." target="_blank" rel="noopener noreferrer" class="pricing-btn-cta">
+              Get Started &rarr;
+            </a>
+          </div>
+
+          <!-- BUSINESS (Most Popular) -->
+          <div class="card pricing-card-box popular">
+            <span class="badge-popular-chip">Most Popular</span>
+            <span class="eyebrow">Business</span>
+            <p class="price-heading-num">&#8377;5,000</p>
+            <p class="price-sub-tag">For businesses ready to grow.</p>
+            <ul class="pricing-feature-list">
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>4&ndash;5 sections/pages</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Custom design</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Gallery</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Testimonials</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Enquiry form</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>WhatsApp</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>SEO</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Deployment</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Support</li>
+            </ul>
+            <a href="https://wa.me/918279696707?text=Hi%2C%20I%27d%20like%20the%20Business%20website%20package." target="_blank" rel="noopener noreferrer" class="pricing-btn-cta">
+              Choose Business &rarr;
+            </a>
+          </div>
+
+          <!-- PREMIUM -->
+          <div class="card pricing-card-box">
+            <span class="eyebrow">Premium</span>
+            <p class="price-heading-num">&#8377;7,500</p>
+            <p class="price-sub-tag">For businesses that want to stand out.</p>
+            <ul class="pricing-feature-list">
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Multi-page website</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Premium UI/UX</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Advanced interactions</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Gallery / portfolio</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Booking flow</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Analytics</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Performance optimization</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>SEO</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>30-day support</li>
+            </ul>
+            <a href="https://wa.me/918279696707?text=Hi%2C%20I%27d%20like%20the%20Premium%20website%20package." target="_blank" rel="noopener noreferrer" class="pricing-btn-cta">
+              Go Premium &rarr;
+            </a>
+          </div>
+
+          <!-- COMPLETE -->
+          <div class="card pricing-card-box">
+            <span class="eyebrow">Complete</span>
+            <p class="price-heading-num">&#8377;10,000</p>
+            <p class="price-sub-tag">Everything handled for you.</p>
+            <ul class="pricing-feature-list">
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Complete website</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Custom design &amp; development</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Booking / enquiry system</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Analytics &amp; SEO</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Domain &amp; hosting setup</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Deployment</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Business integrations</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>60-day support</li>
+              <li><svg class="check-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Ongoing management setup</li>
+            </ul>
+            <a href="https://wa.me/918279696707?text=Hi%2C%20I%27d%20like%20the%20Complete%20website%20package." target="_blank" rel="noopener noreferrer" class="pricing-btn-cta">
+              Let's Build It &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         08 PROCESS
+         ========================================================================== -->
+    <section class="section-y" id="process">
+      <div class="container-x">
+        <span class="eyebrow">Timeline</span>
+        <h2>You run the business.<br>We handle the website.</h2>
+
+        <div class="process-timeline-wrapper">
+          <div class="timeline-horizontal-line" id="timeline-line-el"></div>
+
+          <div class="timeline-steps-row">
+            <div class="timeline-node-item">
+              <span class="timeline-ghost-index">01</span>
+              <p class="timeline-step-caption">Tell us what you need.</p>
+            </div>
+
+            <div class="timeline-node-item">
+              <span class="timeline-ghost-index">02</span>
+              <p class="timeline-step-caption">We design the experience.</p>
+            </div>
+
+            <div class="timeline-node-item">
+              <span class="timeline-ghost-index">03</span>
+              <p class="timeline-step-caption">We build your website.</p>
+            </div>
+
+            <div class="timeline-node-item">
+              <span class="timeline-ghost-index">04</span>
+              <p class="timeline-step-caption">We launch everything.</p>
+            </div>
+
+            <div class="timeline-node-item">
+              <span class="timeline-ghost-index">05</span>
+              <p class="timeline-step-caption">You start receiving customers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         09 OPTIONAL SERVICES
+         ========================================================================== -->
+    <section class="section-y" id="beyond">
+      <div class="container-x">
+        <span class="eyebrow">Capabilities</span>
+        <h2>Need more than a website?</h2>
+        <p class="section-sub" style="margin-top: 0.75rem;">
+          We can build the digital tools behind your business too.
+        </p>
+
+        <div class="optional-grid-3x2">
+          <div class="card optional-card-item">
+            <h3>Booking Systems</h3>
+            <p>Appointments, reservations &amp; enquiries.</p>
+          </div>
+
+          <div class="card optional-card-item">
+            <h3>Business Dashboards</h3>
+            <p>Manage your customers, services and operations.</p>
+          </div>
+
+          <div class="card optional-card-item">
+            <h3>AI &amp; Automation</h3>
+            <p>Reduce repetitive work and automate workflows.</p>
+          </div>
+
+          <div class="card optional-card-item">
+            <h3>Custom Web Apps</h3>
+            <p>Something unique? We build around your process.</p>
+          </div>
+
+          <div class="card optional-card-item">
+            <h3>CRM &amp; Lead Management</h3>
+            <p>Keep your enquiries organized.</p>
+          </div>
+
+          <div class="card optional-card-item">
+            <h3>Integrations</h3>
+            <p>Connect the tools your business already uses.</p>
+          </div>
+        </div>
+
+        <div class="optional-footnote-note">
+          Custom requirements are quoted separately.
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10 WHY WORK WITH ME
+         ========================================================================== -->
+    <section class="section-y" id="about">
+      <div class="container-x">
+        <span class="eyebrow">The studio</span>
+        <h2>Small team feel. Personal attention.</h2>
+
+        <div class="why-grid-2x2">
+          <div class="card why-card-box">
+            <h3>Direct communication</h3>
+            <p>Talk directly with the person building your website.</p>
+          </div>
+
+          <div class="card why-card-box">
+            <h3>Transparent pricing</h3>
+            <p>Clear packages. No unnecessary complexity.</p>
+          </div>
+
+          <div class="card why-card-box">
+            <h3>Built around your business</h3>
+            <p>Your website isn't forced into an industry template.</p>
+          </div>
+
+          <div class="card why-card-box">
+            <h3>Post-launch support</h3>
+            <p>We're still here after your website goes live.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         11 FINAL CTA
+         ========================================================================== -->
+    <section class="final-cta-full" id="contact">
+      <div class="container-x">
+        <h2>Ready to give your business a better digital presence?</h2>
+        <p class="final-cta-sub">Tell us what you do. We'll figure out what your website needs.</p>
+
+        <div class="final-cta-actions">
+          <a href="mailto:vardan2701@gmail.com?subject=Website%20Project%20Inquiry" class="btn-pill btn-cta-light" id="cta-mail-btn">
+            Start a Project &rarr;
+          </a>
+          <a href="https://wa.me/918279696707?text=Hi%2C%20I%27d%20like%20a%20website%20for%20my%20business" target="_blank" rel="noopener noreferrer" class="btn-pill-secondary btn-cta-whatsapp" id="cta-whatsapp-link">
+            WhatsApp Us <span class="arrow">&rarr;</span>
+          </a>
+        </div>
+
+        <div class="final-cta-micro">
+          Starting from &#8377;3,000
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="site-footer-area">
+    <div class="container-x">
+      <div class="footer-top-row">
+        <div>
+          <div class="footer-brand-title">Vardan Pal</div>
+          <p style="font-size: 0.9375rem; color: var(--muted); margin-top: 2px;">
+            Digital Experiences &amp; Business Solutions
+          </p>
+          <p style="font-size: 0.8125rem; color: var(--muted); margin-top: 8px;">
+            Chanakyapuri, New Delhi &bull; +91 82796 96707 &bull; vardan2701@gmail.com
+          </p>
+        </div>
+
+        <ul class="footer-nav-list">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>Websites designed for businesses, not templates.</div>
+        <div>&copy; 2026 Vardan Pal. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lenis + GSAP CDN Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+  <!-- Studio Motion & Interactive Logic -->
+  <script>
+    // --------------------------------------------------------------------------
+    // Theme Management (Light / Dark with localStorage)
+    // --------------------------------------------------------------------------
+    function initTheme() {
+      try {
+        const saved = localStorage.getItem('site-theme');
+        if (saved) {
+          document.documentElement.setAttribute('data-theme', saved);
+        } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {
+        console.warn('Theme storage restricted:', e);
+      }
+      updateThemeIcon();
+    }
+
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      try {
+        localStorage.setItem('site-theme', next);
+      } catch (e) {
+        console.warn('Theme storage restricted:', e);
+      }
+      updateThemeIcon();
+    }
+
+    function updateThemeIcon() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const icon = document.getElementById('theme-icon');
+      if (icon) icon.textContent = isDark ? '☼' : '◐';
+    }
+
+    initTheme();
+
+    // Mobile Sheet Toggle
+    function toggleMobileSheet() {
+      const sheet = document.getElementById('mobile-sheet');
+      sheet.classList.toggle('open');
+      document.body.style.overflow = sheet.classList.contains('open') ? 'hidden' : '';
+    }
+
+    // Navbar Scroll Background
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('main-nav');
+      if (window.scrollY > 24) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // --------------------------------------------------------------------------
+    // Lenis Smooth Scroll
+    // --------------------------------------------------------------------------
+    let lenis;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reducedMotion && typeof Lenis !== 'undefined') {
+      try {
+        lenis = new Lenis({
+          duration: 1.15,
+          easing: (t) => 1 - Math.pow(1 - t, 3),
+          smoothWheel: true
+        });
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add((time) => lenis.raf(time * 1000));
+        gsap.ticker.lagSmoothing(0);
+      } catch (err) {
+        console.warn('Lenis init:', err);
+      }
+    }
+
+    // --------------------------------------------------------------------------
+    // Hero Floating Mockups & Parallax
+    // --------------------------------------------------------------------------
+    const isTouch = window.matchMedia('(hover: none)').matches;
+    if (!reducedMotion && !isTouch && typeof gsap !== 'undefined') {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Hero scroll parallax
+      const mockupsConfig = [
+        { sel: '#mock-clinic', speed: -40, float: 8, delay: 0 },
+        { sel: '#mock-restaurant', speed: -90, float: 10, delay: 0.6 },
+        { sel: '#mock-realestate', speed: -20, float: 7, delay: 1.2 },
+      ];
+
+      mockupsConfig.forEach((m) => {
+        const el = document.querySelector(m.sel);
+        if (el) {
+          gsap.to(el, {
+            y: m.speed,
+            ease: 'none',
+            scrollTrigger: {
+              trigger: '#hero',
+              start: 'top top',
+              end: 'bottom top',
+              scrub: true
+            }
+          });
+          // Gentle sinusoidal float
+          gsap.to(el, {
+            y: `+=${m.float}`,
+            duration: 7 + m.delay,
+            ease: 'sine.inOut',
+            repeat: -1,
+            yoyo: true,
+            delay: m.delay
+          });
+        }
+      });
+
+      // Timeline scaleX line reveal on scroll
+      const line = document.getElementById('timeline-line-el');
+      if (line) {
+        gsap.from(line, {
+          scaleX: 0,
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '#process',
+            start: 'top 75%',
+            end: 'bottom 80%',
+            scrub: true
+          }
+        });
+      }
+    }
+
+    // --------------------------------------------------------------------------
+    // Category Showcase Data & Auto-Advance
+    // --------------------------------------------------------------------------
+    const showcaseItems = [
+      { key: "Healthcare", name: "Dr. Arora", type: "Modern clinic website", nav: ["Services", "About", "Doctors", "Appointment"] },
+      { key: "Hospitality", name: "Maison 47", type: "Restaurant website", nav: ["Menu", "Experience", "Gallery", "Reservations"] },
+      { key: "Property", name: "Aurelia Estates", type: "Real-estate website", nav: ["Properties", "About", "Locations", "Enquire"] },
+      { key: "Beauty", name: "Lumière Studio", type: "Salon website", nav: ["Services", "Team", "Gallery", "Book"] },
+      { key: "Creative", name: "Atelier Nord", type: "Interior studio website", nav: ["Projects", "Process", "Studio", "Contact"] },
+      { key: "Professional", name: "Kapoor & Co.", type: "Consultancy website", nav: ["Services", "Team", "Insights", "Contact"] }
+    ];
+
+    let currentCategoryIdx = 0;
+    let autoAdvance = true;
+    let autoTimer = null;
+
+    function selectCategory(idx, manual = true) {
+      if (manual) autoAdvance = false;
+      currentCategoryIdx = idx;
+      const cur = showcaseItems[idx];
+
+      // Update tabs
+      document.querySelectorAll('.showcase-tab').forEach((b, i) => {
+        b.classList.toggle('active', i === idx);
+      });
+
+      // Update contents
+      const keyEl = document.getElementById('showcase-key');
+      const nameEl = document.getElementById('showcase-name');
+      const typeEl = document.getElementById('showcase-type');
+      const navEl = document.getElementById('showcase-nav');
+      const mockName = document.getElementById('mockup-name-badge');
+      const mockNav = document.getElementById('mockup-nav-preview');
+
+      if (keyEl) keyEl.textContent = cur.key;
+      if (nameEl) nameEl.textContent = cur.name;
+      if (typeEl) typeEl.textContent = cur.type;
+      if (navEl) navEl.textContent = cur.nav.join('  →  ');
+      if (mockName) mockName.textContent = cur.name;
+      if (mockNav) {
+        mockNav.innerHTML = cur.nav.map(n => `<span>${n}</span>`).join('');
+      }
+    }
+
+    // Auto-advance loop every 5s while in view
+    function runAutoAdvance() {
+      if (!autoAdvance) return;
+      currentCategoryIdx = (currentCategoryIdx + 1) % showcaseItems.length;
+      selectCategory(currentCategoryIdx, false);
+    }
+
+    if (typeof ScrollTrigger !== 'undefined' && !reducedMotion) {
+      ScrollTrigger.create({
+        trigger: '#showcase',
+        start: 'top 75%',
+        end: 'bottom 25%',
+        onEnter: () => {
+          if (!autoTimer && autoAdvance) autoTimer = setInterval(runAutoAdvance, 5000);
+        },
+        onLeave: () => {
+          if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+        },
+        onEnterBack: () => {
+          if (!autoTimer && autoAdvance) autoTimer = setInterval(runAutoAdvance, 5000);
+        },
+        onLeaveBack: () => {
+          if (autoTimer) { clearInterval(autoTimer); autoTimer = null; }
+        }
+      });
+    }
+  </script>
+</body>
+</html>
