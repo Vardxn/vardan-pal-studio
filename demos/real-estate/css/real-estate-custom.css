@@ -1,0 +1,194 @@
+/* ==========================================================================
+   South Delhi Digital - South Delhi Prime Estates Custom Styling
+   Crafted by Vardan Pal
+   ========================================================================== */
+
+:root {
+  --re-primary: #005555;
+  --re-dark: #0f1c1f;
+  --re-gold: #c5a880;
+  --re-accent: #008080;
+}
+
+/* Demo Announcement Bar */
+.demo-top-bar {
+  background: #081214;
+  border-bottom: 1px solid rgba(197, 168, 128, 0.3);
+  color: #dbe5e7;
+  font-size: 13px;
+  padding: 8px 15px;
+  text-align: center;
+  position: relative;
+  z-index: 1050;
+}
+.demo-top-bar a {
+  color: var(--re-gold);
+  font-weight: 600;
+  text-decoration: underline;
+  margin-left: 8px;
+}
+.demo-top-bar .badge-demo {
+  background: var(--re-gold);
+  color: #081214;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 3px 8px;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+
+/* Property Spec Badges */
+.property-badge-area {
+  display: flex;
+  gap: 12px;
+  font-size: 13px;
+  color: #555;
+  margin: 10px 0 15px;
+}
+.property-badge-area span {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.property-price-inr {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--re-primary);
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25d366;
+  color: #fff;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.45);
+  z-index: 9999;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+.floating-whatsapp-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+  color: #fff;
+}
+.floating-whatsapp-tooltip {
+  position: absolute;
+  right: 68px;
+  background: #0f1c1f;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.floating-whatsapp-btn:hover .floating-whatsapp-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Subtle Demo Attribution Footer for Vardan Pal */
+.vardan-re-footer {
+  background: #091316;
+  border-top: 2px solid #1a2f35;
+  padding: 45px 0 35px;
+  color: #d1e2e7;
+  position: relative;
+  z-index: 20;
+}
+.vardan-re-footer h3 {
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.vardan-re-footer p.sublead {
+  font-size: 15px;
+  color: #8da7af;
+  max-width: 600px;
+  margin: 0 auto 25px;
+}
+.vardan-btn-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.vardan-btn-primary {
+  background: var(--re-gold);
+  color: #0f1c1f !important;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: background 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.vardan-btn-primary:hover {
+  background: #d8be98;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.vardan-btn-secondary {
+  background: #25d366;
+  color: #fff !important;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.vardan-btn-secondary:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.vardan-credits {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 13px;
+  color: #6a8891;
+}
+
+/* Demo Toast Notification */
+.re-toast {
+  position: fixed;
+  bottom: 95px;
+  right: 24px;
+  background: #0f1c1f;
+  color: #fff;
+  border-left: 4px solid var(--re-gold);
+  border-radius: 6px;
+  padding: 16px 20px;
+  max-width: 360px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  z-index: 9998;
+  display: none;
+}
+.re-toast.active {
+  display: block;
+  animation: slideInUp 0.3s ease;
+}
