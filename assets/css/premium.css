@@ -314,3 +314,8 @@ a { color: inherit; }
 .footer-links a:hover { color: var(--ink); }
 .footer-base { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
 @media (max-width: 800px) { .footer-grid { grid-template-columns: 1fr; } .footer-links { margin-left: 0; justify-content: flex-start; } }
+
+/* ---------- nav and mockup bars ---------- */
+.nav.scrolled { background: color-mix(in srgb, var(--bg) 94%, transparent); }
+.mock-bar { background: color-mix(in srgb, var(--m-bg) 88%, var(--m-ink)); }
+.mock-url { background: color-mix(in srgb, var(--m-bg) 92%, var(--m-ink)); color: color-mix(in srgb, var(--m-ink) 60%, var(--m-bg)); }
