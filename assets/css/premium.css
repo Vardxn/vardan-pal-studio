@@ -95,7 +95,7 @@ a { color: inherit; }
 .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; transition: color .2s; }
 .nav-links a:hover { color: var(--ink); }
 .nav-wa { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; text-decoration: none; color: var(--ink); }
-.nav-toggle { display: none; width: 40px; height: 40px; border: 0; background: none; cursor: pointer; place-content: center; gap: 6px; }
+.nav-toggle { display: none; width: 44px; height: 44px; border: 0; background: none; cursor: pointer; place-content: center; gap: 6px; }
 .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: transform .3s var(--ease); }
 .menu-open .nav-toggle span:first-child { transform: translateY(3.75px) rotate(45deg); }
 .menu-open .nav-toggle span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
@@ -202,7 +202,7 @@ a { color: inherit; }
 @media (max-width: 900px) {
   .tabs { -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); padding-right: 24px; }
 }
-.tab { position: relative; flex: none; padding: 11px 22px; border-radius: 999px; border: 1px solid var(--line); background: transparent; font: 500 14px/1 var(--font-sans); color: var(--muted); cursor: pointer; overflow: hidden; transition: color .25s, background .25s, border-color .25s; box-sizing: border-box; }
+.tab { position: relative; flex: none; min-height: 44px; display: inline-flex; align-items: center; padding: 12px 22px; border-radius: 999px; border: 1px solid var(--line); background: transparent; font: 500 14px/1 var(--font-sans); color: var(--muted); cursor: pointer; overflow: hidden; transition: color .25s, background .25s, border-color .25s; box-sizing: border-box; }
 .tab:hover { color: var(--ink); }
 .tab[aria-selected="true"] { background: var(--ink); border-color: var(--ink); color: var(--bg); }
 .tab.auto::after { content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%; background: var(--accent); transform-origin: left; animation: fill 5.2s linear forwards; }
