@@ -145,6 +145,16 @@
     }, { passive: true });
   }
 
+  /* ---- enquiry form ---- */
+  const form = $('#enquireForm');
+  if (form) form.addEventListener('submit', e => {
+    e.preventDefault();
+    const d = new FormData(form);
+    if (!d.get('name') || !d.get('type')) { form.reportValidity?.(); return; }
+    const text = `Hi, I'm ${d.get('name')}. I run a ${d.get('type')} business and I'd like a website.${d.get('msg') ? ' ' + d.get('msg') : ''}`;
+    window.open(`https://wa.me/918279696707?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+  });
+
   /* ---- reveal (keep this block last, after all rendering) ---- */
   $$('[data-stagger]').forEach(g => [...g.children].forEach((c, k) => {
     c.classList.add('reveal'); c.style.setProperty('--d', `${k * 90}ms`);
