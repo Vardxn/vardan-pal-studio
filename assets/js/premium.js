@@ -52,6 +52,7 @@
     stage.innerHTML = picks.map((p, i) =>
       `<div class="stage-card" data-speed="${speeds[i]}"><div class="float" style="animation-delay:${i * -3}s">${fit(p)}</div></div>`).join('');
     watchFits(stage);
+    new IntersectionObserver(([e]) => stage.classList.toggle('paused', !e.isIntersecting)).observe(stage);
   }
 
   /* ---- work grid ---- */
