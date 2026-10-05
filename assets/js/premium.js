@@ -166,6 +166,7 @@
     const d = new FormData(form);
     if (!d.get('name') || !d.get('type')) { form.reportValidity?.(); return; }
     const text = `Hi, I'm ${d.get('name')}. I run a ${d.get('type')} business and I'd like a website.${d.get('msg') ? ' ' + d.get('msg') : ''}`;
+    window.track && window.track('form_submit', { type: String(d.get('type')) });
     window.open(`https://wa.me/918279696707?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
   });
 
