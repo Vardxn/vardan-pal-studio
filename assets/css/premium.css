@@ -80,11 +80,12 @@ a { color: inherit; }
 /* ---------- navbar ---------- */
 .nav { position: fixed; inset: 0 0 auto 0; z-index: 50; border-bottom: 1px solid transparent; transition: background .3s, border-color .3s, backdrop-filter .3s; }
 .nav.scrolled { background: color-mix(in srgb, var(--bg) 84%, transparent); backdrop-filter: saturate(1.4) blur(14px); -webkit-backdrop-filter: saturate(1.4) blur(14px); border-color: var(--line); }
-.nav-inner { display: flex; align-items: center; gap: 28px; height: 72px; }
+.brand, .brand-name, .brand-sub, .nav-links a, .nav-wa, .nav .btn { white-space: nowrap; }
+.nav-inner { display: flex; align-items: center; gap: clamp(14px, 2vw, 28px); height: 72px; }
 .brand { display: grid; gap: 3px; text-decoration: none; margin-right: auto; }
 .brand-name { font: 400 1.15rem/1 var(--font-display); letter-spacing: .08em; text-transform: uppercase; }
 .brand-sub { font: 600 9px/1 var(--font-sans); letter-spacing: .16em; text-transform: uppercase; color: var(--accent-ink); }
-.nav-links { display: flex; gap: 28px; }
+.nav-links { display: flex; gap: clamp(14px, 1.8vw, 28px); }
 .nav-links a { font-size: 14px; color: var(--muted); text-decoration: none; transition: color .2s; }
 .nav-links a:hover { color: var(--ink); }
 .nav-wa { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; text-decoration: none; color: var(--ink); }
@@ -92,12 +93,19 @@ a { color: inherit; }
 .nav-toggle span { display: block; width: 22px; height: 1.5px; background: var(--ink); transition: transform .3s var(--ease); }
 .menu-open .nav-toggle span:first-child { transform: translateY(3.75px) rotate(45deg); }
 .menu-open .nav-toggle span:last-child { transform: translateY(-3.75px) rotate(-45deg); }
-@media (max-width: 900px) {
+.nav-mobile-actions { display: none; }
+@media (max-width: 1100px) {
   .nav-links, .nav-wa { display: none; }
   .nav-toggle { display: grid; }
   .menu-open .nav { background: var(--bg); }
-  .menu-open .nav-links { display: flex; flex-direction: column; gap: 4px; position: fixed; inset: 72px 0 0 0; padding: 28px clamp(20px, 5vw, 56px); background: var(--bg); }
-  .menu-open .nav-links a { font: 400 2rem/1.3 var(--font-display); color: var(--ink); padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .menu-open .nav-links { display: flex; flex-direction: column; gap: 4px; position: fixed; inset: 72px 0 0 0; padding: 28px clamp(20px, 5vw, 56px); background: var(--bg); overflow-y: auto; }
+  .menu-open .nav-links a:not(.btn) { font: 400 2rem/1.3 var(--font-display); color: var(--ink); padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .menu-open .nav-mobile-actions { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; padding-top: 12px; }
+  .menu-open .nav-mobile-actions .btn { display: inline-flex !important; font: 500 14px/1 var(--font-sans); }
+}
+@media (max-width: 520px) {
+  .brand-sub { display: none; }
+  .nav .btn { display: none; }
 }
 
 /* ---------- hero ---------- */
