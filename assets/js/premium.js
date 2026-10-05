@@ -267,6 +267,36 @@
     requestAnimationFrame(raf);
   }
 
+  /* ==========================================================================
+     NAVBAR ACTIVE SCROLLSPY & SMOOTH SCROLL
+     ========================================================================== */
+  const navAnchors = $$('.nav-links a[href^="#"]');
+  const spyIds = ['work', 'services', 'pricing', 'process', 'about'];
+
+  const updateSpy = () => {
+    const scrollMid = window.scrollY + 140;
+    let activeId = '';
+
+    for (const id of spyIds) {
+      const el = document.getElementById(id);
+      if (el) {
+        const top = el.offsetTop;
+        const bottom = top + el.offsetHeight;
+        if (scrollMid >= top && scrollMid < bottom) {
+          activeId = '#' + id;
+          break;
+        }
+      }
+    }
+
+    navAnchors.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === activeId);
+    });
+  };
+
+  updateSpy();
+  addEventListener('scroll', updateSpy, { passive: true });
+
   $$('a[href^="#"]').forEach(a => {
     a.addEventListener('click', e => {
       const id = a.getAttribute('href');
@@ -275,10 +305,17 @@
       if (!target) return;
       e.preventDefault();
       closeMenu();
+
+      if (a.closest('.nav-links')) {
+        navAnchors.forEach(l => l.classList.remove('active'));
+        a.classList.add('active');
+      }
+
       if (lenis) {
         lenis.scrollTo(target, { offset: -76 });
       } else {
-        target.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' });
+        const top = target.getBoundingClientRect().top + window.scrollY - 76;
+        window.scrollTo({ top, behavior: reduce ? 'auto' : 'smooth' });
       }
     });
   });
