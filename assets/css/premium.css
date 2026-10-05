@@ -17,7 +17,7 @@
   --font-sans: "Manrope", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
-html { scroll-behavior: auto; scroll-padding-top: 88px; overflow-x: clip; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; scroll-behavior: auto; scroll-padding-top: 88px; overflow-x: clip; }
 body {
   background: var(--bg); color: var(--ink);
   font-family: var(--font-sans); line-height: 1.6;
@@ -75,7 +75,11 @@ a { color: inherit; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
   * { animation: none !important; }
 }
-@media print { .js .reveal { opacity: 1 !important; transform: none !important; } .nav { position: static; } }
+@media print {
+  .js .reveal { opacity: 1 !important; transform: none !important; }
+  .nav { position: static; }
+  .mock-fit, .mock-canvas { transform: none; }
+}
 
 /* ---------- navbar ---------- */
 .nav { position: fixed; inset: 0 0 auto 0; z-index: 50; border-bottom: 1px solid transparent; transition: background .3s, border-color .3s, backdrop-filter .3s; }

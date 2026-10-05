@@ -1,7 +1,7 @@
 import { chromium } from 'playwright';
 const url = process.argv[2] || 'http://localhost:8088/';
 const browser = await chromium.launch();
-for (const w of [375, 768, 1440]) {
+for (const w of [375, 768, 1024, 1180, 1440]) {
   const page = await browser.newPage({ viewport: { width: w, height: 900 } });
   const errors = [];
   page.on('console', m => m.type() === 'error' && errors.push(m.text()));
