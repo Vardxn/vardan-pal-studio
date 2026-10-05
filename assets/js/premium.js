@@ -5,13 +5,22 @@
 
   /* ---- single source of truth for hero, showcase and work grid ---- */
   const PROJECTS = [
-    { cat: 'Healthcare',  name: 'Aurelia Clinic',            domain: 'aureliaclinic.in',   headline: 'Care that feels unhurried.',     tagline: 'Dental and skin care in South Delhi.',   nav: ['Services', 'Doctors', 'About', 'Book'],         bg: '#eef3f1', ink: '#17302b', accent: '#5b8f84', url: '#' /* TODO: live demo URL */ },
-    { cat: 'Hospitality', name: 'Malcha Table',              domain: 'malchatable.com',    headline: 'A table worth the evening.',     tagline: 'Seasonal menus and private dining.',     nav: ['Menu', 'Experience', 'Gallery', 'Reserve'],     bg: '#f3ebdf', ink: '#2a1d14', accent: '#b0653a', url: '#' /* TODO: live demo URL */ },
-    { cat: 'Beauty',      name: 'Maison Aura',               domain: 'maisonaura.in',      headline: 'Craft in every detail.',         tagline: 'Hair, skin and grooming studio.',        nav: ['Services', 'Team', 'Gallery', 'Book'],          bg: '#efe7e2', ink: '#33231f', accent: '#b9805f', url: '#' /* TODO: live demo URL */ },
-    { cat: 'Property',    name: 'South Delhi Prime Estates', domain: 'sdprime.estate',     headline: 'Homes with a long view.',        tagline: 'Residences and advisory in South Delhi.', nav: ['Properties', 'About', 'Locations', 'Enquire'], bg: '#ebe9e4', ink: '#1d2024', accent: '#8a7a56', url: '#' /* TODO: live demo URL */ },
-    { cat: 'Creative',    name: 'Atelier Eleven',            domain: 'atelier11.studio',   headline: 'Spaces drawn with intent.',      tagline: 'Interior and architecture studio.',      nav: ['Projects', 'Process', 'Studio', 'Contact'],     bg: '#1c1b19', ink: '#f1ede4', accent: '#c8ad7c', url: '#' /* TODO: live demo URL */ },
-    { cat: 'Photography', name: 'Studio Vows',               domain: 'studiovows.in',      headline: 'Days kept as they felt.',        tagline: 'Wedding and event photography.',         nav: ['Portfolio', 'Packages', 'Stories', 'Enquire'],  bg: '#f5ece8', ink: '#3a2622', accent: '#c98f86', url: '#' /* TODO: live demo URL */ }
+    { cat: 'Healthcare',  name: 'Aurelia Clinic',            domain: 'aureliaclinic.in',   headline: 'Care that feels unhurried.',     tagline: 'Dental and skin care in South Delhi.',   nav: ['Services', 'Doctors', 'About', 'Book'],         bg: '#eef3f1', ink: '#17302b', accent: '#5b8f84' },
+    { cat: 'Hospitality', name: 'Malcha Table',              domain: 'malchatable.com',    headline: 'A table worth the evening.',     tagline: 'Seasonal menus and private dining.',     nav: ['Menu', 'Experience', 'Gallery', 'Reserve'],     bg: '#f3ebdf', ink: '#2a1d14', accent: '#b0653a' },
+    { cat: 'Beauty',      name: 'Maison Aura',               domain: 'maisonaura.in',      headline: 'Craft in every detail.',         tagline: 'Hair, skin and grooming studio.',        nav: ['Services', 'Team', 'Gallery', 'Book'],          bg: '#efe7e2', ink: '#33231f', accent: '#b9805f' },
+    { cat: 'Property',    name: 'South Delhi Prime Estates', domain: 'sdprime.estate',     headline: 'Homes with a long view.',        tagline: 'Residences and advisory in South Delhi.', nav: ['Properties', 'About', 'Locations', 'Enquire'], bg: '#ebe9e4', ink: '#1d2024', accent: '#8a7a56' },
+    { cat: 'Creative',    name: 'Atelier Eleven',            domain: 'atelier11.studio',   headline: 'Spaces drawn with intent.',      tagline: 'Interior and architecture studio.',      nav: ['Projects', 'Process', 'Studio', 'Contact'],     bg: '#1c1b19', ink: '#f1ede4', accent: '#c8ad7c' },
+    { cat: 'Photography', name: 'Studio Vows',               domain: 'studiovows.in',      headline: 'Days kept as they felt.',        tagline: 'Wedding and event photography.',         nav: ['Portfolio', 'Packages', 'Stories', 'Enquire'],  bg: '#f5ece8', ink: '#3a2622', accent: '#c98f86' }
   ];
+
+  const DEMO_HOST = 'demo.YOUR-DOMAIN';
+  const SLUGS = ['clinic', 'table', 'aura', 'estates', 'atelier', 'vows']; // same order as PROJECTS
+  PROJECTS.forEach((p, i) => {
+    p.slug = SLUGS[i];
+    p.live = false; // set to true when the demo is deployed at https://<slug>.<DEMO_HOST>
+    p.domain = `${p.slug}.${DEMO_HOST}`;
+    p.url = `https://${p.slug}.${DEMO_HOST}`;
+  });
 
   const mock = (p) => `
     <div class="mock" style="--m-bg:${p.bg};--m-ink:${p.ink};--m-accent:${p.accent}">
@@ -49,11 +58,16 @@
   const grid = $('#workGrid');
   if (grid) {
     grid.innerHTML = PROJECTS.map((p, i) => {
-      const ext = p.url.startsWith('http') ? ' target="_blank" rel="noopener"' : '';
-      return `<a class="work-card reveal" style="--d:${(i % 3) * 90}ms" href="${p.url}"${ext}>
-        <div class="work-cover" style="--c:${p.accent}">${fit(p)}</div>
-        <div class="work-meta"><div><h3>${p.name}</h3><p class="eyebrow">${p.cat}</p></div><span class="link">View project <span class="arr">→</span></span></div>
-      </a>`;
+      const inner = `
+        <div class="work-cover" style="--c:${p.accent}">${fit(p)}${p.live ? '' : '<span class="soon">Demo link soon</span>'}</div>
+        <div class="work-meta">
+          <div><h3>${p.name}</h3><p class="eyebrow">${p.cat} · Demo</p></div>
+          ${p.live ? '<span class="link">View demo <span class="arr">→</span></span>' : ''}
+        </div>`;
+      const d = `style="--d:${(i % 3) * 90}ms"`;
+      return p.live
+        ? `<a class="work-card reveal" ${d} href="${p.url}" target="_blank" rel="noopener" data-track="demo_click" data-label="${p.name}">${inner}</a>`
+        : `<div class="work-card is-soon reveal" ${d}>${inner}</div>`;
     }).join('');
     watchFits(grid);
   }
@@ -75,7 +89,7 @@
       });
       copy.innerHTML = `<p class="eyebrow">${p.cat}</p><h3>${p.name}</h3><p class="muted">${p.tagline}</p>
         <p class="path">${p.nav.join('  →  ')}</p>
-        <a class="link" href="${p.url}">View project <span class="arr">→</span></a>`;
+        ${p.live ? `<a class="link" href="${p.url}" target="_blank" rel="noopener" data-track="demo_click" data-label="${p.name}">View demo <span class="arr">→</span></a>` : ''}`;
       pane.innerHTML = fit(p);
       pane.setAttribute('aria-labelledby', `tab-${k}`);
       watchFits(pane);

@@ -222,6 +222,9 @@ a { color: inherit; }
 .work-card:hover .work-cover .mock-fit { transform: translateY(-10px) scale(1.02); }
 .work-meta { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; padding-top: 18px; }
 .work-meta h3 { margin-bottom: 8px; }
+.work-card.is-soon { cursor: default; }
+.work-card.is-soon:hover .work-cover .mock-fit { transform: none; }
+.soon { position: absolute; right: 14px; bottom: 14px; padding: 6px 12px; border-radius: 999px; background: var(--ink); color: var(--bg); font: 600 10px/1 var(--font-sans); letter-spacing: .14em; text-transform: uppercase; }
 
 /* ---------- outcomes ---------- */
 .outcome { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; align-items: baseline; padding: 36px 0; border-top: 1px solid var(--line); }
