@@ -1,0 +1,658 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color: #ededed; */
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    /* Trending premium font */
+    color: #333;
+    background-color: #fff;
+    scrollbar-width: none;
+    /* For Firefox */
+    -ms-overflow-style: none;
+    /* For Internet Explorer and Edge */
+    overflow-x: hidden;
+    /* Remove horizontal scroll */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari, and Opera */
+}
+
+/* navbar */
+/* Orange liquid glass style for navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 165, 0, 0.2);
+    /* Orange transparent background */
+    backdrop-filter: blur(15px);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#navbar:hover {
+    background: rgba(255, 165, 0, 0.4);
+    /* Slightly darker orange on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 450px) {
+    #navbar {
+        display: block;
+    }
+}
+
+#navbar::before {
+    content: "";
+    /* background-color: black; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 1.5;
+}
+
+#logo {
+    padding: 8px 20px;
+    color: rgb(105, 90, 63);
+    font-size: 20px;
+    margin-left: 10px;
+    /* Align title to the left */
+}
+
+/* Gradient color animation for Swiggy title */
+#logo h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, black, orange, black);
+    background-clip: text;
+    /* Standard property for compatibility */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientShift 3s infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+#logo span {
+    color: rgb(94, 255, 0);
+}
+
+#navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    /* Center the buttons */
+    flex: 1;
+    /* Take up remaining space */
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3em;
+}
+
+#navbar ul li a {
+    background: rgba(255, 255, 255, 0.2);
+    /* Transparent button background */
+    backdrop-filter: blur(10px);
+    color: #333;
+    font-weight: bold;
+    padding: 10px 30px;
+    /* Oval shape */
+    border-radius: 50px;
+    /* Fully rounded */
+    text-decoration: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    display: block;
+    /* padding: 3px 22px; */
+    /* border-radius: 20px; */
+    /* text-decoration: none; */
+    /* transition: 0.5s; */
+}
+
+#navbar ul li a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    /* Slightly darker orange on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.white {
+    background-color: whitesmoke;
+}
+
+/* HOME */
+#sp1 {
+    color: rgb(105, 90, 63);
+}
+
+#sp2 {
+    color: rgb(94, 255, 0);
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    /* Adjusted for symmetry */
+    /* padding: 3px 200px; */
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)), url('img/bg2.jpg') no-repeat center center/cover;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    background: url('img/bg2.jpg')no-repeat center center/cover;
+    background-attachment: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: .9;
+}
+
+#home h1 {
+    color: rgb(65, 41, 41);
+    text-align: center;
+}
+
+#home p {
+    color: rgb(65, 41, 41);
+    text-align: center;
+    font-size: 2rem;
+}
+
+.h1-tag {
+    text-align: center;
+    font-size: 3rem;
+    padding: 12px;
+}
+
+.btn {
+    margin-top: 20px;
+    /* Added margin to move it down */
+    padding: 20px 40px;
+    /* Twice the size */
+    font-size: 2rem;
+    /* Larger text */
+    border: none;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #333;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@media (max-width: 450px) {
+    #home {
+        font-size: 1rem;
+        height: 285px;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+}
+
+/* menuitem */
+#menu {
+    margin: 0px;
+    display: flex;
+    height: 275px;
+}
+
+.box-container {
+    display: flex;
+}
+
+
+@media (max-width: 700px) {
+    #menu {
+        display: block;
+        height: 750px;
+    }
+
+    .box-container {
+        display: flex;
+    }
+}
+
+@media (max-width: 450px) {
+    #menu {
+        display: block;
+        height: 890px;
+    }
+
+    .box-container {
+        display: block;
+    }
+}
+
+.menu h1 {
+    color: rgb(65, 41, 41);
+}
+
+.menu h2 {
+    color: rgb(65, 41, 41);
+}
+
+#menu .box {
+    /* border: 2px solid black; */
+    padding: 0px;
+    width: 260px;
+    height: 260px;
+    /* Ensuring square aspect ratio */
+    margin: 20px;
+    border-radius: 20px;
+    /* background-color: #f2f2f2; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#menu .box:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#menu .box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.menu {
+    background-image: url(img/bg4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 20px;
+    margin: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* servicebox */
+#service {
+    display: flex;
+    padding: 25px;
+    height: 350px;
+}
+
+@media (max-width: 700px) {
+    #service {
+        display: block;
+    }
+}
+
+#service .box2 {
+    /* border: 2px solid black; */
+    padding: 0px;
+    height: 250px;
+    width: 350px;
+    margin: 15px 65px;
+    border-radius: 26px;
+    /* background-color: #f2f2f2; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+    text-align: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+#service .box2:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#service .box2 img {
+    height: 250px;
+    width: 350px;
+    border-radius: 26px;
+    /* margin: auto; */
+    display: block;
+    z-index: -1;
+    opacity: .9;
+}
+
+.service {
+    /* background-image: url(img/event.jpg); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    background-color: whitesmoke;
+    padding: 50px 20px;
+    margin: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 700px) {
+    #service {
+        height: 850px;
+    }
+
+    #service .box2 {
+        height: 255px;
+        width: 250px;
+        margin: 0;
+        margin-bottom: 15%;
+    }
+
+    #service .box2 img {
+        height: 255px;
+        width: 250px;
+        margin: 0;
+
+
+    }
+}
+
+@media (max-width: 450px) {
+    #service {
+        height: 850px;
+    }
+
+    #service .box2 {
+        height: 255px;
+        width: 250px;
+        margin: 0;
+        margin-bottom: 15%;
+
+    }
+
+    #service .box2 img {
+        height: 255px;
+        width: 250px;
+        margin: 0;
+    }
+}
+
+/* footer */
+.footer {
+    padding: 40px 0;
+    background-color: #ffffff;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: #4b4c4d;
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer .social a:hover {
+    opacity: 0.9;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a:hover {
+    opacity: 1;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    color: #aaa;
+}
+
+/* iOS 26 liquid glass look for footer */
+.footer {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    color: #333;
+    text-align: center;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer:hover {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Apply Poppins font */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Minimal color scheme */
+h1,
+h2,
+p {
+    color: #000;
+}
+
+.btn {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #ff3b2f;
+}
+
+/* Add animations */
+section {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Optimize for mobile */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu,
+    .service {
+        padding: 20px;
+    }
+
+    .box-container {
+        flex-direction: column;
+    }
+}
+
+/* Modern iOS 26 theme for search bar */
+/* Position the search bar on the right side */
+#search-bar {
+    margin-left: auto;
+    /* Push the search bar to the right */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#search-bar input {
+    width: 400px;
+    /* Twice the original width */
+    padding: 20px;
+    /* Larger padding */
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #333;
+    font-size: 1.2rem;
+    /* Larger font size */
+    outline: none;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-bar input:focus {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#search-bar button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 165, 0, 0.8);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#search-bar button:hover {
+    background: rgba(255, 165, 0, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Side banner for subscription promotion */
+/* Banner 20% visible on the side */
+#subscription-banner {
+    position: fixed;
+    top: 80px;
+    /* Below the navbar */
+    right: -120px;
+    /* 20% of the banner visible */
+    width: 150px;
+    /* Slimmer horizontally */
+    height: 400px;
+    /* Longer vertically */
+    background: rgba(255, 165, 0, 0.2);
+    /* Orange transparent background */
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #333;
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: right 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#subscription-banner:hover {
+    right: 20px;
+    /* Fully visible when hovered */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#subscription-banner p {
+    margin: 10px 0;
+    color: #ff6f61;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes peepIn {
+
+    0%,
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
