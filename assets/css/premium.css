@@ -116,14 +116,16 @@ a { color: inherit; }
 .hero .lede { margin-bottom: 36px; }
 .hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
 .hero-line { margin: 40px 0 0; font: 600 11px/1 var(--font-sans); letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
-.hero-stage { position: relative; aspect-ratio: 1 / 1.05; max-height: 640px; }
-.stage-card { position: absolute; width: 74%; transform: translate3d(0, var(--py, 0px), 0) rotate(var(--r, 0deg)); will-change: transform; }
-.stage-card:nth-child(1) { left: 0; top: 2%; --r: -2deg; z-index: 1; }
-.stage-card:nth-child(2) { right: 0; top: 30%; --r: 1.5deg; z-index: 2; }
-.stage-card:nth-child(3) { left: 8%; bottom: 0; --r: -.6deg; z-index: 3; }
+/* hero stage */
+.hero-stage { position: relative; aspect-ratio: 1 / 1; max-height: 640px; }
+.stage-card { position: absolute; width: 78%; transform: translate3d(0, var(--py, 0px), 0); will-change: transform; }
+.stage-card:nth-child(1) { left: 0;  top: 0;   z-index: 1; }
+.stage-card:nth-child(2) { right: 0; top: 21%; z-index: 2; }
+.stage-card:nth-child(3) { left: 5%; top: 43%; z-index: 3; }
+.stage-card .mock-fit { box-shadow: var(--shadow-lg); }
 .stage-card .float { animation: float 9s ease-in-out infinite; }
 @keyframes float { 50% { transform: translateY(-10px); } }
-@media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } .hero-stage { aspect-ratio: 1 / 1.1; } }
+@media (max-width: 1000px) { .hero-grid { grid-template-columns: 1fr; } .hero-stage { max-width: 560px; margin-inline: auto; width: 100%; } }
 
 /* ---------- browser mockup (shared by hero, showcase, work) ---------- */
 .mock-fit { position: relative; width: 100%; aspect-ratio: 760 / 560; overflow: hidden; border-radius: var(--r-md); }
