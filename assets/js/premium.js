@@ -284,19 +284,21 @@
   addEventListener('scroll', onScroll, { passive: true });
 
   /* ==========================================================================
-     HERO SUBTLE PARALLAX
+     HERO SUBTLE 3-TIER PARALLAX
      ========================================================================== */
   const heroPrimary = $('.hero-shot-primary');
   const heroSecondary = $('.hero-shot-secondary');
-  if (heroPrimary && heroSecondary && !reduce) {
+  const heroTertiary = $('.hero-shot-tertiary');
+  if (heroPrimary && !reduce) {
     let ticking = false;
     addEventListener('scroll', () => {
       if (ticking) return;
       ticking = true;
       requestAnimationFrame(() => {
         const y = Math.min(window.scrollY, window.innerHeight);
-        heroPrimary.style.transform = `translateY(${y * -0.06}px)`;
-        heroSecondary.style.transform = `translateY(${y * -0.12}px)`;
+        if (heroTertiary) heroTertiary.style.transform = `translateY(${y * -0.04}px) rotate(-2.5deg)`;
+        if (heroPrimary) heroPrimary.style.transform = `translateY(${y * -0.08}px) rotate(0.8deg)`;
+        if (heroSecondary) heroSecondary.style.transform = `translateY(${y * -0.14}px) rotate(-1.5deg)`;
         ticking = false;
       });
     }, { passive: true });
