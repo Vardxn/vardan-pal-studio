@@ -1,4 +1,7 @@
 node_modules/
 lh.json
+lh-a11y.json
 audit-*.png
+audit-shots/
+round*-export.pdf
 .DS_Store
