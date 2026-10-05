@@ -1,0 +1,15 @@
+{
+  "name": "south-delhi-web-studio",
+  "version": "1.0.0",
+  "description": "**Curated & Built by Vardan Pal**   *Solo Freelance Web Developer for South Delhi Local Businesses*   *Specializing in Chanakyapuri, Malcha Marg, Yashwant Place, Shanti Niketan, Vasant Vihar, Defence Colony & Greater Kailash.*",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
