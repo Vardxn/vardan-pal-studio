@@ -460,6 +460,7 @@
             </div>
           </div>
         `;
+        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
       } else {
         if (btn) {
           btn.disabled = false;
