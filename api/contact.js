@@ -27,7 +27,7 @@ export default async function handler(req, res) {
       primary_goal: goal || 'Not specified',
       project_notes: msg || 'None provided',
       submitted_at: new Date().toISOString(),
-      _subject: `New Studio Enquiry: ${name} (${type || 'General Lead'})`,
+      _subject: `New Inquiry — Kailash Digital: ${name} (${type || 'General Lead'})`,
       _template: 'table',
       _captcha: 'false'
     };
