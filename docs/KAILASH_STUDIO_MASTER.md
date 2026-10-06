@@ -168,8 +168,10 @@ All 6 client websites are fully implemented, self-contained multi-page projects 
    Discovered that `bootstrap.min.css` was missing from `demos/salon/`, which caused grid collapse ('just HTML no CSS'). Overhauled `delhi-custom.css`, fixed overlapping brand logo headers on mobile, and rebuilt the appointment booking form with elevated dark inputs, gold borders, and high contrast.
 6. **Phase 6 — Brand Simplification & Alignment:**  
    Eliminated confusing foreign French/Latin jargon (e.g. *“Maison Aura”*, *“Haute Coiffure”*, *“Aurelia”*, *“Atelier Eleven”*). Standardized all 6 demos to match recognizable Indian industry brand models (*Aura Salon & Spa*, *Care Dental & Skin Clinic*, *Prime Estates*, *Studio Eleven*).
-7. **Phase 7 — Canonical Workspace Unification (Current):**  
+7. **Phase 7 — Canonical Workspace Unification:**  
    Replaced scratch duplicate folders with a clean direct symlink to the canonical developer repository, establishing a single source of truth for seamless pairing between Codex and Antigravity IDE.
+8. **Phase 8 — Demo Thumbnail & Brand Visual Consistency (Completed):**  
+   Re-captured all 6 high-resolution (2160×1350 WebP) demo preview thumbnails (`assets/shots/`) using headless Playwright CDP capture. All mockup frames across the main portfolio homepage now render the exact synchronized brand titles (*Care Dental & Skin Clinic*, *Aura Salon & Spa*, *Prime Estates*, *Studio Eleven*, *Studio Vows*, *Malcha Table*).
 
 ---
 
@@ -180,6 +182,7 @@ All 6 client websites are fully implemented, self-contained multi-page projects 
 - [x] **Production Deployment:** Live on Vercel at `https://south-delhi-web-studio.vercel.app/` with HTTP 200 on all routes.
 - [x] **Showcase Hub Consistency:** All case cards, interactive category tabs, chrome URLs, and copy match the demo websites 100%.
 - [x] **Salon Demo Overhaul:** `demos/salon/` now renders cleanly on mobile (375px) with high-contrast form fields, legible white text, custom dropdown chevrons, and zero header overlap.
+- [x] **Mockup Thumbnail Synchronization:** Re-rendered all 6 live browser mockup screenshots in `assets/shots/` with updated logos, headlines, and domain URLs.
 
 ### 🟡 In-Flight Tasks (Immediate Next Steps)
 1. **Systematic Mobile Optimization Across Remaining Demos:**
