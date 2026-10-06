@@ -352,27 +352,125 @@
   }
 
   /* ==========================================================================
-     ENQUIRY FORM
+     ENQUIRY FORM (EMAIL INTEGRATION + FAST WHATSAPP CONTINUATION)
      ========================================================================== */
+  const escapeHtml = str => String(str || '').replace(/[&<>"']/g, s => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[s]));
+
   const form = $('#enquireForm');
   if (form) {
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async e => {
       e.preventDefault();
+      const btn = $('#enquireSubmitBtn');
+      const statusEl = $('#enquireStatus');
+
       const d = new FormData(form);
       const name = (d.get('name') || '').toString().trim();
+      const email = (d.get('email') || '').toString().trim();
+      const phone = (d.get('phone') || '').toString().trim();
       const type = (d.get('type') || '').toString().trim();
+      const goal = (d.get('goal') || '').toString().trim();
       const msg = (d.get('msg') || '').toString().trim();
 
-      if (!name || !type) {
+      if (!name || !email || !phone) {
         form.reportValidity?.();
         return;
       }
 
-      const text = `Hi Vardan, I'm ${name}. I run a ${type} business and I'd like a website.${msg ? ' ' + msg : ''}`;
-      if (window.track) {
-        window.track('form_submit', { type });
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        if (statusEl) {
+          statusEl.textContent = 'Please enter a valid email address.';
+          statusEl.className = 'enquire-status error';
+          statusEl.style.display = 'block';
+        }
+        return;
       }
-      window.open(`https://wa.me/918279696707?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+
+      const origBtnHtml = btn ? btn.innerHTML : 'Send Enquiry &rarr;';
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = 'Sending enquiry... <span class="spinner" style="display:inline-block;animation:spin 1s linear infinite">⏳</span>';
+      }
+      if (statusEl) {
+        statusEl.style.display = 'none';
+        statusEl.className = 'enquire-status';
+      }
+
+      const payload = {
+        name,
+        email,
+        phone,
+        type: type || 'General Business',
+        goal: goal || 'Not specified',
+        msg: msg || 'None provided',
+        _subject: `New Studio Inquiry: ${name} (${type || 'General Lead'})`,
+        _template: 'table',
+        _captcha: 'false'
+      };
+
+      let sent = false;
+
+      // Primary attempt: Call Vercel serverless function /api/contact
+      try {
+        const res = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (res.ok) {
+          sent = true;
+        } else {
+          throw new Error('API route returned status ' + res.status);
+        }
+      } catch (err) {
+        // Fallback: Direct FormSubmit endpoint
+        try {
+          const fallbackRes = await fetch('https://formsubmit.co/ajax/vardan2701@gmail.com', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (fallbackRes.ok) {
+            sent = true;
+          }
+        } catch (fallbackErr) {
+          console.warn('Form submission fallback error:', fallbackErr);
+        }
+      }
+
+      if (window.track) {
+        window.track('form_submit', { type, goal });
+      }
+
+      const waText = `Hi Vardan, I just submitted an enquiry on your website.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nBusiness: ${type || 'General'}\nOutcome: ${goal || 'Standard'}${msg ? `\nNotes: ${msg}` : ''}`;
+      const waUrl = `https://wa.me/918279696707?text=${encodeURIComponent(waText)}`;
+
+      if (sent) {
+        form.innerHTML = `
+          <div class="enquire-success-card">
+            <div class="success-check-badge">✓</div>
+            <h3>Thank you, ${escapeHtml(name)}!</h3>
+            <p>Your enquiry has been received and emailed directly to Vardan Pal (<strong>vardan2701@gmail.com</strong>). We will review your project requirements and get back to you within a few hours.</p>
+            <div class="success-cta-box">
+              <span>Want an immediate response on WhatsApp?</span>
+              <a class="btn btn--accent" href="${waUrl}" target="_blank" rel="noopener">
+                Continue to WhatsApp Now <span class="arr">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        `;
+      } else {
+        if (btn) {
+          btn.disabled = false;
+          btn.innerHTML = origBtnHtml;
+        }
+        if (statusEl) {
+          statusEl.className = 'enquire-status error';
+          statusEl.style.display = 'block';
+          statusEl.innerHTML = `There was a connection issue sending your enquiry. Please <a href="${waUrl}" target="_blank" rel="noopener" style="color:#FFF;text-decoration:underline;font-weight:600;">click here to message on WhatsApp</a> directly or call <a href="tel:+918279696707" style="color:#FFF;text-decoration:underline;font-weight:600;">+91 82796 96707</a>.`;
+        }
+      }
     });
   }
 
