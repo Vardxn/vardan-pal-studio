@@ -35,11 +35,11 @@ south-delhi-digital/
 ├── style.css                    # Design system for master hub
 ├── README.md                    # Project documentation & deployment guide
 └── demos/
-    ├── salon/                   # Maison Aura – Haute Coiffure & Aesthetic Studio (Chanakyapuri)
+    ├── salon/                   # Aura Salon & Spa – Haute Coiffure & Aesthetic Studio (Chanakyapuri)
     │   ├── index.html
     │   ├── css/delhi-custom.css
     │   └── ...
-    ├── clinic/                  # Aurelia Clinic – Dental & Aesthetic Dermatology (Malcha Marg)
+    ├── clinic/                  # Care Dental & Skin Clinic – Dental & Aesthetic Dermatology (Malcha Marg)
     │   ├── index.html
     │   ├── css/clinic-custom.css
     │   └── ...
@@ -64,8 +64,8 @@ south-delhi-digital/
 
 | Category | Brand Name | Delhi Locality | Key Value & Conversion Features |
 | :--- | :--- | :--- | :--- |
-| **1. Salon / Beauty** | **Maison Aura** | Malcha Marg, Chanakyapuri | Transparent ₹ pricing (₹1,800 cut, ₹4,800 balayage), online chair reservation, instant WhatsApp confirmation. |
-| **2. Clinic / Dental** | **Aurelia Clinic** | Malcha Marg, Chanakyapuri | AIIMS-trained doctors, 3D intraoral scans, hospital-grade Class-B sterilization, consultation booking. |
+| **1. Salon / Beauty** | **Aura Salon & Spa** | Malcha Marg, Chanakyapuri | Transparent ₹ pricing (₹1,800 cut, ₹4,800 balayage), online chair reservation, instant WhatsApp confirmation. |
+| **2. Clinic / Dental** | **Care Dental & Skin Clinic** | Malcha Marg, Chanakyapuri | AIIMS-trained doctors, 3D intraoral scans, hospital-grade Class-B sterilization, consultation booking. |
 | **3. Restaurant / Bar** | **Malcha Table** | 11 Malcha Marg Shopping Centre | Heritage clay-oven gastronomy, seasonal Himalayan morels, commission-free WhatsApp table reservations. |
 | **4. Real Estate** | **South Delhi Prime Estates** | Yashwant Place, Chanakyapuri | 4 BHK builder floors & villas (₹7.9 Cr - ₹28 Cr), verified clear titles, confidential site viewing bookings. |
 | **5. Architecture** | **Atelier Eleven** | Shanti Niketan Marg | Minimalist editorial travertine residences, 3-step turnkey roadmap, private studio consultation scheduler. |
