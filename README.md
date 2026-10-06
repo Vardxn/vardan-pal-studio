@@ -1,7 +1,7 @@
-# South Delhi Digital – AI-Powered Website Demo Library
+# Kailash Studios – AI-Powered Website Demo Library
 
 **Curated & Built by Vardan Pal**  
-*Solo Freelance Web Developer for South Delhi Local Businesses*  
+*Solo Freelance Web Developer for India Local Businesses*  
 *Specializing in Chanakyapuri, Malcha Marg, Yashwant Place, Shanti Niketan, Vasant Vihar, Defence Colony & Greater Kailash.*
 
 ---
@@ -46,14 +46,14 @@ south-delhi-digital/
     ├── restaurant/              # Malcha Table – Modern Indian Dining & Cocktail Room (Chanakyapuri)
     │   ├── index.html
     │   └── style.css
-    ├── real-estate/             # South Delhi Prime Estates – Luxury Residences (Yashwant Place)
+    ├── real-estate/             # India Prime Estates – Luxury Residences (Yashwant Place)
     │   ├── index.html
     │   ├── css/real-estate-custom.css
     │   └── ...
     ├── interior/                # Atelier Eleven – Architectural Interiors (Shanti Niketan)
     │   ├── index.html
     │   └── style.css
-    └── events/                  # Studio Vows – Bespoke Wedding Storytelling (South Delhi)
+    └── events/                  # Studio Vows – Bespoke Wedding Storytelling (India)
         ├── index.html
         └── style.css
 ```
@@ -67,9 +67,9 @@ south-delhi-digital/
 | **1. Salon / Beauty** | **Aura Salon & Spa** | Malcha Marg, Chanakyapuri | Transparent ₹ pricing (₹1,800 cut, ₹4,800 balayage), online chair reservation, instant WhatsApp confirmation. |
 | **2. Clinic / Dental** | **Care Dental & Skin Clinic** | Malcha Marg, Chanakyapuri | AIIMS-trained doctors, 3D intraoral scans, hospital-grade Class-B sterilization, consultation booking. |
 | **3. Restaurant / Bar** | **Malcha Table** | 11 Malcha Marg Shopping Centre | Heritage clay-oven gastronomy, seasonal Himalayan morels, commission-free WhatsApp table reservations. |
-| **4. Real Estate** | **South Delhi Prime Estates** | Yashwant Place, Chanakyapuri | 4 BHK builder floors & villas (₹7.9 Cr - ₹28 Cr), verified clear titles, confidential site viewing bookings. |
+| **4. Real Estate** | **India Prime Estates** | Yashwant Place, Chanakyapuri | 4 BHK builder floors & villas (₹7.9 Cr - ₹28 Cr), verified clear titles, confidential site viewing bookings. |
 | **5. Architecture** | **Atelier Eleven** | Shanti Niketan Marg | Minimalist editorial travertine residences, 3-step turnkey roadmap, private studio consultation scheduler. |
-| **6. Weddings / Events** | **Studio Vows** | South Delhi & The Leela Palace | Cinema-grade storytelling, ₹2.2L - ₹6.5L transparent collections, limited date availability checker. |
+| **6. Weddings / Events** | **Studio Vows** | India & The Leela Palace | Cinema-grade storytelling, ₹2.2L - ₹6.5L transparent collections, limited date availability checker. |
 
 ---
 

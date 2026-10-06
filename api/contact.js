@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, type, goal, msg } = req.body || {};
+    const { name, email, phone, city, type, goal, msg } = req.body || {};
 
     if (!name || !email || !phone) {
       return res.status(400).json({ error: 'Name, email, and phone are required.' });
@@ -23,23 +23,24 @@ export default async function handler(req, res) {
       name,
       email,
       phone,
+      location_city: city || 'Across India',
       business_industry: type || 'Not specified',
       primary_goal: goal || 'Not specified',
       project_notes: msg || 'None provided',
       submitted_at: new Date().toISOString(),
-      _subject: `New Inquiry — Kailash Digital: ${name} (${type || 'General Lead'})`,
+      _subject: `New Inquiry — Kailash Studios: ${name} (${city || 'India'} • ${type || 'General Lead'})`,
       _template: 'table',
       _captcha: 'false'
     };
 
-    // Forward to FormSubmit with origin and referer to send email to vardan2701@gmail.com
+    // Forward to FormSubmit to send email to vardan2701@gmail.com
     const response = await fetch('https://formsubmit.co/ajax/vardan2701@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Origin': 'https://south-delhi-web-studio.vercel.app',
-        'Referer': 'https://south-delhi-web-studio.vercel.app/'
+        'Origin': 'https://kailashstudio.vercel.app',
+        'Referer': 'https://kailashstudio.vercel.app/'
       },
       body: JSON.stringify(payload)
     });
