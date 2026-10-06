@@ -26,9 +26,9 @@
     },
     {
       cat: 'Doctors & Clinics',
-      name: 'Aurelia — Dental & Skin Clinic',
+      name: 'Care Dental & Skin Clinic',
       motive: 'Built for Clinics, Doctors & Dentists',
-      domain: 'aureliaclinic.in',
+      domain: 'caredental.in',
       headline: 'Care that feels unhurried.',
       tagline: 'Complete website designed for dental practices, dermatologists, clinics, and doctors.',
       features: [
@@ -43,7 +43,7 @@
     },
     {
       cat: 'Salons & Spas',
-      name: 'Aura — Hair Salon & Luxury Spa',
+      name: 'Aura Salon & Spa',
       motive: 'Built for Hair Salons, Spas & Beauty Parlours',
       domain: 'aurasalon.in',
       headline: 'Craft in every detail.',
@@ -60,7 +60,7 @@
     },
     {
       cat: 'Real Estate',
-      name: 'Prime Estates — Luxury Real Estate',
+      name: 'Prime Estates — Luxury Properties',
       motive: 'Built for Real Estate Brokers, Builders & Agents',
       domain: 'primeestates.in',
       headline: 'Homes with a long view.',
@@ -77,7 +77,7 @@
     },
     {
       cat: 'Interior Design',
-      name: 'Studio Eleven — Interior Design & Architecture',
+      name: 'Studio Eleven — Interior Design Studio',
       motive: 'Built for Interior Designers, Architects & Decorators',
       domain: 'studioeleven.in',
       headline: 'Spaces drawn with intent.',
