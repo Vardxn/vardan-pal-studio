@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://YOUR-DOMAIN/</loc><lastmod>2026-10-05</lastmod></url>
+  <url><loc>https://kailashstudio.vercel.app/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://kailashstudio.vercel.app/demos/salon/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://kailashstudio.vercel.app/demos/clinic/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://kailashstudio.vercel.app/demos/restaurant/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://kailashstudio.vercel.app/demos/real-estate/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://kailashstudio.vercel.app/demos/interior/</loc><lastmod>2026-10-06</lastmod></url>
+  <url><loc>https://kailashstudio.vercel.app/demos/events/</loc><lastmod>2026-10-06</lastmod></url>
 </urlset>

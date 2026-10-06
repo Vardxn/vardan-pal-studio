@@ -3,7 +3,8 @@
 > **The Single Source of Truth for Kailash Studios (South Delhi Web Studio)**  
 > **Lead Developer & Designer:** Vardan Pal  
 > **Studio Base:** Chanakyapuri & South Delhi, New Delhi  
-> **Live Production URL:** [https://south-delhi-web-studio.vercel.app](https://south-delhi-web-studio.vercel.app)  
+> **Primary Production URL:** [https://kailashstudio.vercel.app](https://kailashstudio.vercel.app)  
+> **Secondary Alias:** [https://kailashstudios.vercel.app](https://kailashstudios.vercel.app)  
 > **Developer Portfolio:** [https://vardxn.vercel.app](https://vardxn.vercel.app)  
 > **WhatsApp Direct:** [+91 82796 96707](https://wa.me/918279696707) | **Email:** `vardan2701@gmail.com`  
 > **Last Synchronized & Verified:** October 2026
@@ -145,12 +146,12 @@ All 6 client websites are fully implemented, self-contained multi-page projects 
 
 | # | Demo Category | Standardized Brand Name | Inspired By (Big Brands) | Simulated Domain | Live Production URL | Key Functional Features |
 | :---: | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Hair Salon & Spa** | **Aura Salon & Spa** | Looks Salon, Geetanjali Salon | `aurasalon.in` | https://south-delhi-web-studio.vercel.app/demos/salon/ | Master stylist portfolios, transparent haircut rate card, hair color balayage lookbook, touch-friendly 52px WhatsApp appointment booking form with custom gold chevron dropdowns. |
-| **02** | **Dental & Skin Clinic** | **Care Dental & Skin Clinic** | Clove Dental, Kaya Skin Clinic | `caredental.in` | https://south-delhi-web-studio.vercel.app/demos/clinic/ | Verified doctor credentials, clear aligner & implant pricing guides, interactive consultation scheduler, emergency patient WhatsApp triage. |
-| **03** | **Fine Dining & Bar** | **Malcha Table — Restaurant & Bar** | Olive Bar & Kitchen, Social | `malchatable.com` | https://south-delhi-web-studio.vercel.app/demos/restaurant/ | Interactive chef's table reservations, digital seasonal food & cocktail menus with pricing, interior lookbook, private party inquiry. |
-| **04** | **Luxury Real Estate** | **Prime Estates — Luxury Properties** | DLF Prime, India Sotheby's | `primeestates.in` | https://south-delhi-web-studio.vercel.app/demos/real-estate/ | Diplomatic enclave & Shanti Niketan villa listings, floor plans, neighborhood guides, discreet private walkthrough scheduler. |
-| **05** | **Interior Design** | **Studio Eleven — Interior Design Studio** | Livspace, HomeLane | `studioeleven.in` | https://south-delhi-web-studio.vercel.app/demos/interior/ | Editorial completed project galleries, material palette studies, turnkey execution roadmap, client project intake consultation. |
-| **06** | **Wedding Cinema** | **Studio Vows — Wedding Films & Photography** | WedMeGood, The Wedding Filmer | `studiovows.in` | https://south-delhi-web-studio.vercel.app/demos/events/ | Cinematic video trailers, wedding story photo albums, transparent package breakdown, instant date availability checker. |
+| **01** | **Hair Salon & Spa** | **Aura Salon & Spa** | Looks Salon, Geetanjali Salon | `aurasalon.in` | https://kailashstudio.vercel.app/demos/salon/ | Master stylist portfolios, transparent haircut rate card, hair color balayage lookbook, touch-friendly 52px WhatsApp appointment booking form with custom gold chevron dropdowns. |
+| **02** | **Dental & Skin Clinic** | **Care Dental & Skin Clinic** | Clove Dental, Kaya Skin Clinic | `caredental.in` | https://kailashstudio.vercel.app/demos/clinic/ | Verified doctor credentials, clear aligner & implant pricing guides, interactive consultation scheduler, emergency patient WhatsApp triage. |
+| **03** | **Fine Dining & Bar** | **Malcha Table — Restaurant & Bar** | Olive Bar & Kitchen, Social | `malchatable.com` | https://kailashstudio.vercel.app/demos/restaurant/ | Interactive chef's table reservations, digital seasonal food & cocktail menus with pricing, interior lookbook, private party inquiry. |
+| **04** | **Luxury Real Estate** | **Prime Estates — Luxury Properties** | DLF Prime, India Sotheby's | `primeestates.in` | https://kailashstudio.vercel.app/demos/real-estate/ | Diplomatic enclave & Shanti Niketan villa listings, floor plans, neighborhood guides, discreet private walkthrough scheduler. |
+| **05** | **Interior Design** | **Studio Eleven — Interior Design Studio** | Livspace, HomeLane | `studioeleven.in` | https://kailashstudio.vercel.app/demos/interior/ | Editorial completed project galleries, material palette studies, turnkey execution roadmap, client project intake consultation. |
+| **06** | **Wedding Cinema** | **Studio Vows — Wedding Films & Photography** | WedMeGood, The Wedding Filmer | `studiovows.in` | https://kailashstudio.vercel.app/demos/events/ | Cinematic video trailers, wedding story photo albums, transparent package breakdown, instant date availability checker. |
 
 ---
 
@@ -163,7 +164,7 @@ All 6 client websites are fully implemented, self-contained multi-page projects 
 3. **Phase 3 — Indian Market & South Delhi Localization:**  
    Every demo was localized for South Delhi (Chanakyapuri, Malcha Marg, Shanti Niketan, Jor Bagh). Integrated authentic contact information for Vardan Pal, transparent Rupee (`₹`) pricing, and WhatsApp-first action flows.
 4. **Phase 4 — Serverless API & Vercel Deployment:**  
-   Configured `vercel.json` with SSL, security headers, and an edge function at `api/contact.js` to process customer inquiries. Successfully aliased to https://south-delhi-web-studio.vercel.app.
+   Configured `vercel.json` with SSL, security headers, and an edge function at `api/contact.js` to process customer inquiries. Successfully aliased to https://kailashstudio.vercel.app.
 5. **Phase 5 — Salon Demo Rebuild & Form Fix:**  
    Discovered that `bootstrap.min.css` was missing from `demos/salon/`, which caused grid collapse ('just HTML no CSS'). Overhauled `delhi-custom.css`, fixed overlapping brand logo headers on mobile, and rebuilt the appointment booking form with elevated dark inputs, gold borders, and high contrast.
 6. **Phase 6 — Brand Simplification & Alignment:**  
@@ -175,11 +176,21 @@ All 6 client websites are fully implemented, self-contained multi-page projects 
 
 ---
 
+9. **Phase 9 — Pan-India Market Repositioning & Canonical Domain Switch:**  
+   - Renamed Vercel project to `kailashstudio`.
+   - Bound clean, memorable primary domain: `https://kailashstudio.vercel.app` (and alias `https://kailashstudios.vercel.app`).
+   - Removed regional South Delhi limitations across the entire portfolio website, headers, SEO meta tags, and demo footers.
+   - Positioned Kailash Studios as a Pan-India digital partner serving ambitious businesses, clinics, restaurants, salons, and creators across all states in India.
+   - Added `city` intake field and floating WhatsApp helpline for 1-click lead conversion from anywhere in India.
+
+---
+
 ## 6. Current Status & What We Are Dealing With Right Now
 
 ### ✅ What is Completed & Fully Working
 - [x] **Canonical File Structure:** Zero duplicate files. All AI tools point to `/Users/vardan/Developer/personal/03-Experiments/south-delhi-web-studio/`.
-- [x] **Production Deployment:** Live on Vercel at `https://south-delhi-web-studio.vercel.app/` with HTTP 200 on all routes.
+- [x] **Production Deployment:** Live on Vercel at `https://kailashstudio.vercel.app/` and `https://kailashstudios.vercel.app/` with HTTP 200 on all routes.
+- [x] **Pan-India Reach & WhatsApp Lead Routing:** Integrated national scope, city/state intake field, and global WhatsApp touchpoints across every page.
 - [x] **Showcase Hub Consistency:** All case cards, interactive category tabs, chrome URLs, and copy match the demo websites 100%.
 - [x] **Salon Demo Overhaul:** `demos/salon/` now renders cleanly on mobile (375px) with high-contrast form fields, legible white text, custom dropdown chevrons, and zero header overlap.
 - [x] **Mockup Thumbnail Synchronization:** Re-rendered all 6 live browser mockup screenshots in `assets/shots/` with updated logos, headlines, and domain URLs.

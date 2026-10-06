@@ -369,6 +369,7 @@
       const name = (d.get('name') || '').toString().trim();
       const email = (d.get('email') || '').toString().trim();
       const phone = (d.get('phone') || '').toString().trim();
+      const city = (d.get('city') || '').toString().trim();
       const type = (d.get('type') || '').toString().trim();
       const goal = (d.get('goal') || '').toString().trim();
       const msg = (d.get('msg') || '').toString().trim();
@@ -401,10 +402,11 @@
         name,
         email,
         phone,
+        city: city || 'Across India',
         type: type || 'General Business',
         goal: goal || 'Not specified',
         msg: msg || 'None provided',
-        _subject: `New Studio Inquiry: ${name} (${type || 'General Lead'})`,
+        _subject: `New Studio Inquiry: ${name} (${city || 'India'} • ${type || 'General Lead'})`,
         _template: 'table',
         _captcha: 'false'
       };
@@ -443,7 +445,7 @@
         window.track('form_submit', { type, goal });
       }
 
-      const waText = `Hi Vardan, I just submitted an enquiry on Kailash Digital.\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nBusiness: ${type || 'General'}\nNeed: ${goal || 'Website'}${msg ? `\nNotes: ${msg}` : ''}`;
+      const waText = `Hi Vardan, I would like to discuss a website with Kailash Studios.\n\nName: ${name}\nCity/State: ${city || 'India'}\nPhone: ${phone}\nBusiness: ${type || 'General'}\nNeed: ${goal || 'Website'}${msg ? `\nNotes: ${msg}` : ''}`;
       const waUrl = `https://wa.me/918279696707?text=${encodeURIComponent(waText)}`;
 
       if (sent) {
@@ -451,7 +453,7 @@
           <div class="enquire-success-card">
             <div class="success-check-badge">✓</div>
             <h3>Thank you, ${escapeHtml(name)}!</h3>
-            <p>Your enquiry has been received and emailed directly to Kailash Digital Studio (<strong>vardan2701@gmail.com</strong>). We will review your project requirements and get back to you within a few hours.</p>
+            <p>Your enquiry has been received and emailed directly to Kailash Studios (<strong>vardan2701@gmail.com</strong>). We will review your project requirements and get back to you within a few hours.</p>
             <div class="success-cta-box">
               <span>Want an immediate response on WhatsApp?</span>
               <a class="btn btn--accent" href="${waUrl}" target="_blank" rel="noopener">
