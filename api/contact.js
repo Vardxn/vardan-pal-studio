@@ -27,23 +27,36 @@ export default async function handler(req, res) {
       primary_goal: goal || 'Not specified',
       project_notes: msg || 'None provided',
       submitted_at: new Date().toISOString(),
-      _subject: `New Studio Inquiry: ${name} (${type || 'General Lead'})`,
+      _subject: `New Studio Enquiry: ${name} (${type || 'General Lead'})`,
       _template: 'table',
       _captcha: 'false'
     };
 
-    // Forward to FormSubmit to send email directly to vardan2701@gmail.com
+    // Forward to FormSubmit with origin and referer to send email to vardan2701@gmail.com
     const response = await fetch('https://formsubmit.co/ajax/vardan2701@gmail.com', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json'
+        'Accept': 'application/json',
+        'Origin': 'https://south-delhi-web-studio.vercel.app',
+        'Referer': 'https://south-delhi-web-studio.vercel.app/'
       },
       body: JSON.stringify(payload)
     });
 
-    const result = await response.json();
-    return res.status(200).json({ success: true, message: 'Enquiry emailed successfully', data: result });
+    const rawText = await response.text();
+    let result = {};
+    try {
+      result = JSON.parse(rawText);
+    } catch {
+      result = { raw: rawText };
+    }
+
+    return res.status(200).json({
+      success: true,
+      message: result.message || 'Enquiry processed successfully',
+      data: result
+    });
   } catch (err) {
     console.error('Contact handler error:', err);
     return res.status(500).json({ error: 'Failed to process enquiry', details: err.message });
