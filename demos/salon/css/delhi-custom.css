@@ -698,3 +698,37 @@
   justify-content: center;
   padding: 8px 14px !important;
 }
+
+
+/* 1024px navbar overflow fix */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .ftco-navbar-light .navbar-brand {
+    font-size: 17px !important;
+    margin-right: 8px !important;
+  }
+  .ftco-navbar-light .navbar-brand .brand-title {
+    font-size: 15px !important;
+  }
+  .ftco-navbar-light .navbar-brand .brand-sub {
+    font-size: 8px !important;
+    letter-spacing: 0.5px !important;
+  }
+  .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+    font-size: 12px !important;
+    letter-spacing: 0px !important;
+  }
+  .ftco-navbar-light .navbar-nav > .nav-item > .btn-nav-whatsapp {
+    padding: 6px 10px !important;
+    font-size: 11px !important;
+    margin-left: 4px !important;
+  }
+  #ftco-nav {
+    flex-shrink: 1;
+  }
+}
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}

@@ -38,6 +38,15 @@
       color: #0a0a0d;
     }
   </style>
+  <noscript>
+    <style>
+      .ftco-animate, [data-aos], .reveal {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
 </head>
 <body>
 
@@ -207,19 +216,19 @@
           <div class="form-grid">
             <div class="form-group">
               <label>Your Full Name *</label>
-              <input type="text" id="res_name" class="form-control" placeholder="e.g. Siddharth Singhania" required>
+              <input type="text" id="res_name" aria-label="Guest Full Name" class="form-control" placeholder="e.g. Siddharth Singhania" required>
             </div>
             <div class="form-group">
               <label>WhatsApp Contact Number *</label>
-              <input type="tel" id="res_phone" class="form-control" placeholder="+91 82796 96707" required>
+              <input type="tel" id="res_phone" aria-label="Phone Number for Confirmation" class="form-control" placeholder="+91 82796 96707" required>
             </div>
             <div class="form-group">
               <label>Date of Dining *</label>
-              <input type="date" id="res_date" class="form-control" required>
+              <input type="date" id="res_date" aria-label="Reservation Date" class="form-control" required>
             </div>
             <div class="form-group">
               <label>Seating Time Slot *</label>
-              <select id="res_time" class="form-control">
+              <select id="res_time" aria-label="Reservation Time" class="form-control">
                 <option value="Lunch (12:30 PM)">Lunch (12:30 PM)</option>
                 <option value="Lunch (2:00 PM)">Lunch (2:00 PM)</option>
                 <option value="Early Dinner (7:30 PM)">Early Dinner (7:30 PM)</option>
@@ -229,7 +238,7 @@
             </div>
             <div class="form-group">
               <label>Party Size *</label>
-              <select id="res_guests" class="form-control">
+              <select id="res_guests" aria-label="Party Size" class="form-control">
                 <option value="2 Guests">2 Guests (Couple Table)</option>
                 <option value="4 Guests">4 Guests (Standard Dining)</option>
                 <option value="6 Guests">6 Guests (Family Table)</option>
@@ -238,7 +247,7 @@
             </div>
             <div class="form-group">
               <label>Seating Preference</label>
-              <select id="res_section" class="form-control">
+              <select id="res_section" aria-label="Dining Area Preference" class="form-control">
                 <option value="Main Dining Room">Main Dining Room (Ambient &amp; Air-Conditioned)</option>
                 <option value="Alfresco Courtyard">Alfresco Courtyard (Candlelit Outdoor)</option>
                 <option value="Cocktail Bar Lounge">Cocktail Bar Lounge (High Tops)</option>
@@ -247,7 +256,7 @@
             </div>
             <div class="form-group form-group-full">
               <label>Special Dietary Requests or Occasion</label>
-              <textarea id="res_notes" rows="2" class="form-control" placeholder="Anniversary, birthday, vegetarian preferences, allergies..."></textarea>
+              <textarea id="res_notes" aria-label="Dietary Restrictions or Special Occasions" rows="2" class="form-control" placeholder="Anniversary, birthday, vegetarian preferences, allergies..."></textarea>
             </div>
           </div>
           <div style="text-align: center;">

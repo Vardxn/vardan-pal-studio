@@ -22,7 +22,16 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/delhi-custom.css">
-  </head>
+    <noscript>
+    <style>
+      .ftco-animate, [data-aos], .reveal {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+</head>
   <body>
 
     <!-- Demo Context Top Bar -->
@@ -292,25 +301,25 @@
 	              <div class="col-sm-6">
 	                <div class="form-group">
                     <label class="text-white-50 small mb-1">Your Full Name *</label>
-			              <input type="text" class="form-control" id="appointment_name" placeholder="e.g. Rohini Sen" required>
+			              <input type="text" class="form-control" id="appointment_name" aria-label="Your Full Name" placeholder="e.g. Rohini Sen" required>
 			            </div>
 	              </div>
 	              <div class="col-sm-6">
 	                <div class="form-group">
                     <label class="text-white-50 small mb-1">Phone Number (WhatsApp Preferred) *</label>
-			              <input type="tel" class="form-control" id="appointment_phone" placeholder="+91 82796 96707" required>
+			              <input type="tel" class="form-control" id="appointment_phone" aria-label="Phone or WhatsApp Number" placeholder="+91 82796 96707" required>
 			            </div>
 	              </div>
 	              <div class="col-sm-6">
 	                <div class="form-group">
                     <label class="text-white-50 small mb-1">Preferred Date *</label>
-	                  <input type="date" class="form-control" id="appointment_date" required>
+	                  <input type="date" class="form-control" id="appointment_date" aria-label="Appointment Date" required>
 	                </div>    
 	              </div>
 	              <div class="col-sm-6">
 	                <div class="form-group">
                     <label class="text-white-50 small mb-1">Preferred Time Slot *</label>
-			              <select id="appointment_time_slot" class="form-control">
+			              <select id="appointment_time_slot" aria-label="Select Preferred Time Slot" class="form-control">
                       <option value="Morning (10:30 AM – 1:00 PM)">Morning (10:30 AM – 1:00 PM)</option>
                       <option value="Afternoon (1:00 PM – 4:30 PM)">Afternoon (1:00 PM – 4:30 PM)</option>
                       <option value="Evening (4:30 PM – 7:30 PM)">Evening (4:30 PM – 7:30 PM)</option>
@@ -320,7 +329,7 @@
 	              <div class="col-sm-6">
 	                <div class="form-group">
                     <label class="text-white-50 small mb-1">Select Primary Service *</label>
-                    <select id="appointment_service" class="form-control">
+                    <select id="appointment_service" aria-label="Select Styling Service" class="form-control">
                       <option value="Bespoke Haircut &amp; Styling">Bespoke Haircut &amp; Styling (₹1,800)</option>
                       <option value="Balayage &amp; French Colour Melt">Balayage &amp; French Colour Melt (₹4,800+)</option>
                       <option value="Botanical Scalp Detox &amp; Spa">Botanical Scalp Detox &amp; Spa (₹2,500)</option>
@@ -332,8 +341,8 @@
 	              </div>
                 <div class="col-sm-6">
 	                <div class="form-group">
-                    <label class="text-white-50 small mb-1">Preferred Master Stylist (Optional)</label>
-                    <select id="appointment_stylist" class="form-control">
+                    <label for="appointment_stylist" class="text-white-50 small mb-1">Preferred Master Stylist (Optional)</label>
+                    <select id="appointment_stylist" aria-label="Preferred Master Stylist" class="form-control">
                       <option value="Any Senior Stylist">First Available Senior Stylist</option>
                       <option value="Aanya Verma">Aanya Verma (Creative Director)</option>
                       <option value="Rohan Kapoor">Rohan Kapoor (Master Barber)</option>
@@ -344,8 +353,8 @@
 	              </div>
 	              <div class="col-md-12">
 	              	<div class="form-group">
-                    <label class="text-white-50 small mb-1">Special Notes or Hair History</label>
-		                <textarea id="appointment_message" cols="30" rows="3" class="form-control" placeholder="Any previous chemical treatments, scalp concerns, or event timing..."></textarea>
+                    <label for="appointment_message" class="text-white-50 small mb-1">Special Notes or Hair History</label>
+		                <textarea id="appointment_message" aria-label="Special Notes or Hair History" cols="30" rows="3" class="form-control" placeholder="Any previous chemical treatments, scalp concerns, or event timing..."></textarea>
 		              </div>
 	              </div>
 		          </div>

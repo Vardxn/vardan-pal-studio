@@ -211,13 +211,31 @@
       }
     });
 
-    // Keyboard navigation
+    // Keyboard navigation (W3C APG Tab Pattern)
+    tabs.addEventListener('focusin', () => {
+      clearInterval(timer);
+      auto = false;
+    });
+
     tabs.addEventListener('keydown', e => {
+      const activeEl = document.activeElement;
+      const allTabs = Array.from(tabs.querySelectorAll('.cat-pill, .tab'));
+      const focusedIdx = allTabs.indexOf(activeEl);
+      const startIdx = focusedIdx !== -1 ? focusedIdx : current;
+
+      if (['Home', 'End'].includes(e.key)) {
+        e.preventDefault();
+        const targetIdx = e.key === 'Home' ? 0 : PROJECTS.length - 1;
+        show(targetIdx, true);
+        if (allTabs[targetIdx]) allTabs[targetIdx].focus();
+        return;
+      }
       if (!['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp'].includes(e.key)) return;
+      e.preventDefault();
       const step = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? 1 : -1;
-      const next = (current + step + PROJECTS.length) % PROJECTS.length;
+      const next = (startIdx + step + PROJECTS.length) % PROJECTS.length;
       show(next, true);
-      $$('.cat-pill, .tab', tabs)[next].focus();
+      if (allTabs[next]) allTabs[next].focus();
     });
 
     // Auto rotate when section is visible
@@ -271,7 +289,7 @@
      NAVBAR ACTIVE SCROLLSPY & SMOOTH SCROLL
      ========================================================================== */
   const navAnchors = $$('.nav-links a[href^="#"]');
-  const spyIds = ['work', 'services', 'pricing', 'process', 'faq', 'contact'];
+  const spyIds = ['work', 'services', 'pricing', 'process', 'about', 'faq', 'contact'];
 
   const updateSpy = () => {
     const scrollMid = window.scrollY + 140;
@@ -462,6 +480,127 @@
       form.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   }
+
+  
+  /* ==========================================================================
+     PORTFOLIO DEVICE PREVIEW MODAL CONTROLLER
+     ========================================================================== */
+  const previewModal = $('#previewModal');
+  const modalTitle = $('#previewModalTitle');
+  const modalDomain = $('#previewModalDomain');
+  const modalExtLink = $('#previewModalExtLink');
+  const modalIframe = $('#previewModalIframe');
+  const modalFrameContainer = $('#previewFrameContainer');
+  const btnCloseModal = $('#previewModalClose');
+  const btnModeDesktop = $('#previewToggleDesktop');
+  const btnModeMobile = $('#previewToggleMobile');
+  let lastActiveTrigger = null;
+
+  const openPreviewModal = (targetUrl, title, domain, triggerEl) => {
+    if (!previewModal) return;
+    lastActiveTrigger = triggerEl;
+    if (modalTitle) modalTitle.textContent = title || 'Project Preview';
+    if (modalDomain) modalDomain.textContent = domain || 'demo.in';
+    if (modalExtLink) modalExtLink.href = targetUrl || '#';
+    if (modalIframe) modalIframe.src = targetUrl || 'about:blank';
+
+    // Reset to desktop view
+    setModalDeviceMode('desktop');
+
+    document.body.classList.add('modal-open');
+    if (typeof previewModal.showModal === 'function') {
+      try {
+        previewModal.showModal();
+      } catch (err) {
+        previewModal.classList.add('active');
+        previewModal.setAttribute('open', '');
+      }
+    } else {
+      previewModal.classList.add('active');
+      previewModal.setAttribute('open', '');
+    }
+
+    if (btnCloseModal) btnCloseModal.focus();
+  };
+
+  const closePreviewModal = () => {
+    if (!previewModal) return;
+    if (modalIframe) modalIframe.src = 'about:blank';
+    document.body.classList.remove('modal-open');
+    if (typeof previewModal.close === 'function') {
+      try { previewModal.close(); } catch(e){}
+    }
+    previewModal.classList.remove('active');
+    previewModal.removeAttribute('open');
+    if (lastActiveTrigger && typeof lastActiveTrigger.focus === 'function') {
+      lastActiveTrigger.focus();
+    }
+  };
+
+  const setModalDeviceMode = (mode) => {
+    if (!modalFrameContainer) return;
+    if (mode === 'mobile') {
+      modalFrameContainer.className = 'preview-frame-container preview-frame-container--mobile';
+      if (btnModeMobile) {
+        btnModeMobile.classList.add('active');
+        btnModeMobile.setAttribute('aria-pressed', 'true');
+      }
+      if (btnModeDesktop) {
+        btnModeDesktop.classList.remove('active');
+        btnModeDesktop.setAttribute('aria-pressed', 'false');
+      }
+    } else {
+      modalFrameContainer.className = 'preview-frame-container preview-frame-container--desktop';
+      if (btnModeDesktop) {
+        btnModeDesktop.classList.add('active');
+        btnModeDesktop.setAttribute('aria-pressed', 'true');
+      }
+      if (btnModeMobile) {
+        btnModeMobile.classList.remove('active');
+        btnModeMobile.setAttribute('aria-pressed', 'false');
+      }
+    }
+  };
+
+  // Wire up trigger buttons
+  $$('.btn--preview-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.getAttribute('data-preview-target');
+      const title = btn.getAttribute('data-preview-title');
+      const domain = btn.getAttribute('data-preview-domain');
+      openPreviewModal(target, title, domain, btn);
+    });
+  });
+
+  if (btnCloseModal) {
+    btnCloseModal.addEventListener('click', closePreviewModal);
+  }
+
+  if (btnModeDesktop) {
+    btnModeDesktop.addEventListener('click', () => setModalDeviceMode('desktop'));
+  }
+  if (btnModeMobile) {
+    btnModeMobile.addEventListener('click', () => setModalDeviceMode('mobile'));
+  }
+
+  // Backdrop click on dialog
+  if (previewModal) {
+    previewModal.addEventListener('click', e => {
+      if (e.target === previewModal) {
+        closePreviewModal();
+      }
+    });
+    previewModal.addEventListener('cancel', e => {
+      e.preventDefault();
+      closePreviewModal();
+    });
+  }
+
+  addEventListener('keydown', e => {
+    if (e.key === 'Escape' && previewModal && (previewModal.open || previewModal.classList.contains('active'))) {
+      closePreviewModal();
+    }
+  });
 
   /* ==========================================================================
      SCROLL REVEAL OBSERVER

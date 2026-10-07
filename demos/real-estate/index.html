@@ -16,7 +16,16 @@
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/real-estate-custom.css" />
-  </head>
+    <noscript>
+    <style>
+      .ftco-animate, [data-aos], .reveal {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+</head>
   <body>
 
     <!-- Demo Context Top Bar -->
@@ -86,8 +95,8 @@
             <form action="#properties-section" class="p-3 rounded mx-auto" style="background: rgba(15, 28, 31, 0.85); backdrop-filter: blur(10px); max-width: 860px; border: 1px solid rgba(197, 168, 128, 0.3);" data-aos="fade-up" data-aos-delay="100">
               <div class="row g-2 align-items-center text-left">
                 <div class="col-md-4 mb-2 mb-md-0">
-                  <label class="text-white-50 small mb-1 d-block">Location in Delhi</label>
-                  <select class="form-control form-control-sm">
+                  <label for="filter_location" class="text-white-50 small mb-1 d-block">Location in Delhi</label>
+                  <select id="filter_location" aria-label="Location in Delhi" class="form-control form-control-sm">
                     <option>Chanakyapuri / Malcha Marg</option>
                     <option>Shanti Niketan</option>
                     <option>Vasant Vihar</option>
@@ -96,8 +105,8 @@
                   </select>
                 </div>
                 <div class="col-md-3 mb-2 mb-md-0">
-                  <label class="text-white-50 small mb-1 d-block">Property Typology</label>
-                  <select class="form-control form-control-sm">
+                  <label for="filter_typology" class="text-white-50 small mb-1 d-block">Property Typology</label>
+                  <select id="filter_typology" aria-label="Property Typology" class="form-control form-control-sm">
                     <option>4 BHK Builder Floor</option>
                     <option>3 BHK Park-Facing</option>
                     <option>5 BHK Gated Villa</option>
@@ -105,8 +114,8 @@
                   </select>
                 </div>
                 <div class="col-md-3 mb-2 mb-md-0">
-                  <label class="text-white-50 small mb-1 d-block">Price Bracket</label>
-                  <select class="form-control form-control-sm">
+                  <label for="filter_price" class="text-white-50 small mb-1 d-block">Price Bracket</label>
+                  <select id="filter_price" aria-label="Price Bracket" class="form-control form-control-sm">
                     <option>₹8 Cr – ₹15 Cr</option>
                     <option>₹15 Cr – ₹25 Cr</option>
                     <option>₹25 Cr – ₹45+ Cr</option>
@@ -366,15 +375,15 @@
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">Your Full Name *</label>
-                  <input type="text" id="re_name" class="form-control" placeholder="e.g. Sanjeev Kapoor" required>
+                  <input type="text" id="re_name" aria-label="Client Full Name" class="form-control" placeholder="e.g. Sanjeev Kapoor" required>
                 </div>
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">WhatsApp Phone Number *</label>
-                  <input type="tel" id="re_phone" class="form-control" placeholder="+91 82796 96707" required>
+                  <input type="tel" id="re_phone" aria-label="Phone or WhatsApp Number" class="form-control" placeholder="+91 82796 96707" required>
                 </div>
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">Interested Property / Location *</label>
-                  <select id="re_property" class="form-control">
+                  <select id="re_property" aria-label="Property of Interest" class="form-control">
                     <option value="4 BHK Malcha Marg (₹18.5 Cr)">4 BHK Luxury Floor, Malcha Marg (₹18.5 Cr)</option>
                     <option value="3 BHK Shanti Niketan (₹11.2 Cr)">3 BHK Garden Residence, Shanti Niketan (₹11.2 Cr)</option>
                     <option value="5 BHK Vasant Vihar Villa (₹28 Cr)">5 BHK Diplomatic Villa, Vasant Vihar (₹28 Cr)</option>
@@ -385,11 +394,11 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">Preferred Viewing Date *</label>
-                  <input type="date" id="re_date" class="form-control" required>
+                  <input type="date" id="re_date" aria-label="Requested Walkthrough Date" class="form-control" required>
                 </div>
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">Time Slot Preference</label>
-                  <select id="re_slot" class="form-control">
+                  <select id="re_slot" aria-label="Preferred Time Window" class="form-control">
                     <option value="Morning (11:00 AM – 1:00 PM)">Morning (11:00 AM – 1:00 PM)</option>
                     <option value="Afternoon (2:00 PM – 5:00 PM)">Afternoon (2:00 PM – 5:00 PM)</option>
                     <option value="Weekend Special Viewing">Weekend Special Viewing</option>
@@ -397,7 +406,7 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">Target Budget Bracket</label>
-                  <select id="re_budget" class="form-control">
+                  <select id="re_budget" aria-label="Investment Budget Range" class="form-control">
                     <option value="₹8 Cr – ₹15 Cr">₹8 Cr – ₹15 Cr</option>
                     <option value="₹15 Cr – ₹25 Cr">₹15 Cr – ₹25 Cr</option>
                     <option value="₹25 Cr+">₹25 Cr+</option>
@@ -405,7 +414,7 @@
                 </div>
                 <div class="col-12 mb-4">
                   <label class="text-white-50 small mb-1">Specific Requirements (e.g., Vastu, Park View, Lift)</label>
-                  <textarea id="re_notes" rows="2" class="form-control" placeholder="Share any specific preferences or requirements..."></textarea>
+                  <textarea id="re_notes" aria-label="Advisory Requirements or Questions" rows="2" class="form-control" placeholder="Share any specific preferences or requirements..."></textarea>
                 </div>
                 <div class="col-12 text-center">
                   <button type="submit" class="btn btn-primary px-5 py-3 font-weight-bold" style="background: #c5a880; border-color: #c5a880; color: #111;">

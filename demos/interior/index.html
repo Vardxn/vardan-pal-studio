@@ -10,6 +10,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <noscript>
+    <style>
+      .ftco-animate, [data-aos], .reveal {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
 </head>
 <body>
 
@@ -172,15 +181,15 @@
           <div class="form-grid">
             <div class="form-group">
               <label>Client Full Name *</label>
-              <input type="text" id="int_name" class="form-control" placeholder="e.g. Anandita Khosla" required>
+              <input type="text" id="int_name" aria-label="Client Full Name" class="form-control" placeholder="e.g. Anandita Khosla" required>
             </div>
             <div class="form-group">
               <label>WhatsApp Contact Number *</label>
-              <input type="tel" id="int_phone" class="form-control" placeholder="+91 82796 96707" required>
+              <input type="tel" id="int_phone" aria-label="Phone or WhatsApp Number" class="form-control" placeholder="+91 82796 96707" required>
             </div>
             <div class="form-group">
               <label>Project Typology *</label>
-              <select id="int_type" class="form-control">
+              <select id="int_type" aria-label="Project Typology" class="form-control">
                 <option value="Full Residential Architecture (New Build)">Full Residential Architecture (New Build)</option>
                 <option value="Luxury Floor / Villa Interior Renovation">Luxury Floor / Villa Interior Renovation</option>
                 <option value="Penthouse Terrace &amp; Living Remodel">Penthouse Terrace &amp; Living Remodel</option>
@@ -189,7 +198,7 @@
             </div>
             <div class="form-group">
               <label>Property Location in South Delhi *</label>
-              <select id="int_location" class="form-control">
+              <select id="int_location" aria-label="Property Location" class="form-control">
                 <option value="Shanti Niketan">Shanti Niketan</option>
                 <option value="Chanakyapuri / Malcha Marg">Chanakyapuri / Malcha Marg</option>
                 <option value="Vasant Vihar">Vasant Vihar</option>
@@ -200,15 +209,15 @@
             </div>
             <div class="form-group">
               <label>Approximate Area (Sq.Ft)</label>
-              <select id="int_area" class="form-control">
+              <select id="int_area" aria-label="Estimated Built-Up Area" class="form-control">
                 <option value="3,000 – 5,000 sq.ft">3,000 – 5,000 sq.ft</option>
                 <option value="5,000 – 8,000 sq.ft">5,000 – 8,000 sq.ft</option>
                 <option value="8,000+ sq.ft">8,000+ sq.ft</option>
               </select>
             </div>
             <div class="form-group">
-              <label>Target Timeline</label>
-              <select id="int_timeline" class="form-control">
+              <label for="int_timeline">Target Timeline</label>
+              <select id="int_timeline" aria-label="Target Timeline" class="form-control">
                 <option value="Immediate (Next 30 Days)">Immediate (Next 30 Days)</option>
                 <option value="Within 3 to 6 Months">Within 3 to 6 Months</option>
                 <option value="Planning Phase (6+ Months)">Planning Phase (6+ Months)</option>
@@ -216,7 +225,7 @@
             </div>
             <div class="form-group form-group-full">
               <label>Brief Vision or Project Brief</label>
-              <textarea id="int_notes" rows="2" class="form-control" placeholder="Tell us about the property, family requirements, or design inspiration..."></textarea>
+              <textarea id="int_notes" aria-label="Project Brief & Design Notes" rows="2" class="form-control" placeholder="Tell us about the property, family requirements, or design inspiration..."></textarea>
             </div>
           </div>
           <div style="text-align: center;">
