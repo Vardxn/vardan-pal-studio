@@ -685,3 +685,16 @@
 #booking-section {
   padding-bottom: 95px !important;
 }
+
+
+/* Mobile touch target minimum 44px */
+.demo-banner a, .demo-strip a, .demo-notice a, a.ml-2, .navbar-toggler {
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+}
+.navbar-toggler {
+  min-width: 44px;
+  justify-content: center;
+  padding: 8px 14px !important;
+}

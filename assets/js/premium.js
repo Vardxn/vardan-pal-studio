@@ -411,36 +411,6 @@
         _captcha: 'false'
       };
 
-      let sent = false;
-
-      // Primary attempt: Call Vercel serverless function /api/contact
-      try {
-        const res = await fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(payload)
-        });
-        if (res.ok) {
-          sent = true;
-        } else {
-          throw new Error('API route returned status ' + res.status);
-        }
-      } catch (err) {
-        // Fallback: Direct FormSubmit endpoint
-        try {
-          const fallbackRes = await fetch('https://formsubmit.co/ajax/vardan2701@gmail.com', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-          if (fallbackRes.ok) {
-            sent = true;
-          }
-        } catch (fallbackErr) {
-          console.warn('Form submission fallback error:', fallbackErr);
-        }
-      }
-
       if (window.track) {
         window.track('form_submit', { type, goal });
       }
@@ -448,32 +418,48 @@
       const waText = `Hi Vardan, I found Vardan Pal Studio online and would like to discuss a website.\n\nName: ${name}\nCity/State: ${city || 'India'}\nPhone: ${phone}\nBusiness: ${type || 'General'}\nNeed: ${goal || 'Website'}${msg ? `\nNotes: ${msg}` : ''}`;
       const waUrl = `https://wa.me/918279696707?text=${encodeURIComponent(waText)}`;
 
-      if (sent) {
-        form.innerHTML = `
-          <div class="enquire-success-card">
-            <div class="success-check-badge">✓</div>
-            <h3>Thank you, ${escapeHtml(name)}!</h3>
-            <p>Your enquiry has been received and emailed directly to Vardan Pal Studio (<strong>vardan2701@gmail.com</strong>). We will review your project requirements and get back to you within a few hours.</p>
-            <div class="success-cta-box">
-              <span>Want an immediate response on WhatsApp?</span>
-              <a class="btn btn--accent" href="${waUrl}" target="_blank" rel="noopener">
-                Continue to WhatsApp Now <span class="arr">&rarr;</span>
-              </a>
-            </div>
-          </div>
-        `;
-        form.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      } else {
-        if (btn) {
-          btn.disabled = false;
-          btn.innerHTML = origBtnHtml;
+      // 1. Asynchronously dispatch email notification in background
+      (async () => {
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify(payload)
+          });
+          if (!res.ok) throw new Error('API status ' + res.status);
+        } catch (apiErr) {
+          try {
+            await fetch('https://formsubmit.co/ajax/vardan2701@gmail.com', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body: JSON.stringify(payload)
+            });
+          } catch (e) {}
         }
-        if (statusEl) {
-          statusEl.className = 'enquire-status error';
-          statusEl.style.display = 'block';
-          statusEl.innerHTML = `There was a connection issue sending your enquiry. Please <a href="${waUrl}" target="_blank" rel="noopener" style="color:#FFF;text-decoration:underline;font-weight:600;">click here to message on WhatsApp</a> directly or call <a href="tel:+918279696707" style="color:#FFF;text-decoration:underline;font-weight:600;">+91 82796 96707</a>.`;
-        }
+      })();
+
+      // 2. Open WhatsApp handoff directly
+      try {
+        window.open(waUrl, '_blank');
+      } catch (openErr) {
+        console.warn('Popup blocked:', openErr);
       }
+
+      // 3. Immediately display success confirmation card
+      form.innerHTML = `
+        <div class="enquire-success-card">
+          <div class="success-check-badge">✓</div>
+          <h3>Thank you, ${escapeHtml(name)}!</h3>
+          <p>Your enquiry has been received directly by Vardan Pal Studio (<strong>vardan2701@gmail.com</strong>). We will review your project requirements and get back to you within a few hours.</p>
+          <div class="success-cta-box">
+            <span>Opening WhatsApp conversation with prefilled details...</span>
+            <a class="btn btn--accent" href="${waUrl}" target="_blank" rel="noopener">
+              Continue to WhatsApp Now <span class="arr">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      `;
+      form.scrollIntoView({ behavior: 'smooth', block: 'center' });
     });
   }
 
