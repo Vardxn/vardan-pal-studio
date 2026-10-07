@@ -4,20 +4,134 @@
 <meta charset="utf-8">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400&family=Manrope:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
-  * { box-sizing: border-box; margin: 0; }
-  body { width: 1200px; height: 630px; padding: 72px 80px; background: #f7f4ee; color: #1c1b19; font-family: Manrope, sans-serif; display: grid; align-content: space-between; position: relative; overflow: hidden; }
-  body::before { content: ""; position: absolute; width: 760px; height: 760px; right: -180px; top: -260px; background: radial-gradient(closest-side, rgba(183,155,106,.3), transparent); }
-  .top { position: relative; font-size: 20px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: #7a6540; }
-  h1 { position: relative; max-width: 900px; font-family: Fraunces, Georgia, serif; font-weight: 400; font-size: 84px; line-height: 1.04; letter-spacing: -.025em; }
-  .bottom { position: relative; display: flex; justify-content: space-between; font-size: 24px; color: #6a655b; }
-  .bottom b { color: #1c1b19; font-weight: 600; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 1200px;
+    height: 630px;
+    padding: 72px 80px;
+    background: #fcfbf9;
+    color: #141519;
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    width: 800px;
+    height: 800px;
+    right: -150px;
+    top: -250px;
+    background: radial-gradient(closest-side, rgba(181, 141, 83, 0.18), transparent);
+    pointer-events: none;
+  }
+  .top-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .monogram {
+    width: 48px;
+    height: 48px;
+    background: #141519;
+    color: #fcfbf9;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .brand-name {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #141519;
+  }
+  .brand-sub {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #8c734b;
+  }
+  .headline-wrap {
+    position: relative;
+    max-width: 980px;
+    margin: 30px 0;
+  }
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    color: #141519;
+    margin-bottom: 20px;
+  }
+  p.supporting {
+    font-size: 24px;
+    line-height: 1.4;
+    color: #55575d;
+    max-width: 820px;
+  }
+  .bottom-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: #55575d;
+    padding-top: 24px;
+    border-top: 1px solid rgba(20, 21, 25, 0.08);
+  }
+  .bottom-bar strong {
+    color: #141519;
+    font-weight: 600;
+  }
+  .badge-pan-india {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    background: rgba(181, 141, 83, 0.12);
+    border: 1px solid rgba(181, 141, 83, 0.25);
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #8c734b;
+  }
 </style>
 </head>
 <body>
-  <div class="top">Digital studio · New Delhi</div>
-  <h1>Your business deserves a better digital presence.</h1>
-  <div class="bottom"><span><b>Vardan Pal</b> · Websites, business tools and digital experiences</span><span>From ₹3,000</span></div>
+  <div class="top-bar">
+    <div class="monogram">VP</div>
+    <div class="brand-text">
+      <div class="brand-name">Vardan Pal Studio</div>
+      <div class="brand-sub">Digital Studio · New Delhi</div>
+    </div>
+  </div>
+
+  <div class="headline-wrap">
+    <h1>Websites that mean business.</h1>
+    <p class="supporting">Independent web design &amp; development studio in New Delhi building premium digital systems for ambitious businesses across India.</p>
+  </div>
+
+  <div class="bottom-bar">
+    <div><strong>Vardan Pal Studio</strong> · WhatsApp +91 82796 96707</div>
+    <div class="badge-pan-india">Serving Businesses Nationwide</div>
+  </div>
 </body>
 </html>
