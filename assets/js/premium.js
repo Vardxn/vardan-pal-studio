@@ -213,8 +213,8 @@
 
     // Keyboard navigation
     tabs.addEventListener('keydown', e => {
-      if (!['ArrowRight', 'ArrowLeft'].includes(e.key)) return;
-      const step = e.key === 'ArrowRight' ? 1 : -1;
+      if (!['ArrowRight', 'ArrowLeft', 'ArrowDown', 'ArrowUp'].includes(e.key)) return;
+      const step = (e.key === 'ArrowRight' || e.key === 'ArrowDown') ? 1 : -1;
       const next = (current + step + PROJECTS.length) % PROJECTS.length;
       show(next, true);
       $$('.cat-pill, .tab', tabs)[next].focus();
@@ -271,7 +271,7 @@
      NAVBAR ACTIVE SCROLLSPY & SMOOTH SCROLL
      ========================================================================== */
   const navAnchors = $$('.nav-links a[href^="#"]');
-  const spyIds = ['work', 'services', 'pricing', 'process', 'about'];
+  const spyIds = ['work', 'services', 'pricing', 'process', 'faq', 'contact'];
 
   const updateSpy = () => {
     const scrollMid = window.scrollY + 140;

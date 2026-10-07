@@ -224,6 +224,24 @@ This log records every milestone achieved in the development of Kailash Studio:
       - Standardized all 6 demo footers in `demos/*/index.html` to *"Vardan Pal Studio · New Delhi • Crafted by Vardan Pal"*.
       - Preserved production Vercel deployment URL (`https://kailashstudio.vercel.app`) and demo internal listings.
 
+11. **Phase 11 — Homepage Repair & Condense (October 2026):**  
+    - **Defect Remediations:**
+      - **Portfolio Previews Refreshed:** Verified and regenerated all 6 demo WebP preview mockups (`clinic`, `salon`, `restaurant`, `real-estate`, `interior`, `events`) at 1280×800 via Playwright with 1.5s network settle delay. Set explicit dimensions, `decoding="async"`, descriptive alts, and eager loading for above-the-fold cards.
+      - **Scroll-Reveal Fallback:** Implemented `class="no-js"` with inline head removal script and CSS fallback (`.no-js .reveal { opacity: 1 !important; transform: none !important; }`) alongside `prefers-reduced-motion` support.
+      - **Floating WhatsApp Widget:** Replaced the large container with a single 56px circular `#25D366` button, positioned safely at `bottom: max(20px, env(safe-area-inset-bottom)); right: 20px;`, configured to hide when modals or mobile drawers open, and verified to never obscure form submit CTAs.
+      - **Category Showcase Tabs:** Converted tab bar to `flex-wrap: wrap` and a responsive 2-column grid under 768px, ensuring "Wedding Photography" is 100% visible with zero horizontal overflow, and added 4-way arrow key roving navigation.
+      - **Measurable Claims:** Replaced unverifiable marketing claims (e.g. "#1 Result", "100% Pre-Filtered") with measurable technical deliverables ("Technical SEO & local schema", "Google Search Console setup", "Fast Core Web Vitals", "Budget & intent screening").
+      - **Concept Disclaimers:** Added letter-spaced stone grey disclaimer lines under all 6 portfolio cards and a legal footnote in the footer.
+    - **Homepage Architecture Condensation (~9 Sections Max):**
+      - Merged the 4-pillar trust strip into the hero as 4 compact highlight chips.
+      - Merged the Studio Philosophy quote into the dark showcase as an editorial closing line.
+      - Merged Services (01–04) and Outcomes into a single high-impact "What You Get" section with 5 approved proof phrase chips and 3 measurable outcome cards.
+      - Condensed extended capabilities into a slim dark add-ons band with 3 key tools.
+      - Merged the 5-step roadmap and founder advantages into "How It Works".
+      - Reduced section vertical padding ~23% on desktop (`padding-block: clamp(56px, 7.5vw, 104px)`).
+      - Synced all header and footer anchor links with `scroll-margin-top: 96px`.
+      - Added `@media print` rules avoiding card splits, hiding floating UI, and validated clean A4 PDF export.
+
 ---
 
 ## ⚡ Current Status & In-Flight Work (Phase 10)

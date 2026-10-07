@@ -115,9 +115,9 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* Section Header Standards */
 .section, section[id] {
-  padding-block: clamp(72px, 10vw, 136px);
+  padding-block: clamp(56px, 7.5vw, 104px);
   position: relative;
-  scroll-margin-top: 84px;
+  scroll-margin-top: 96px;
 }
 .section-dark {
   background: var(--dark-bg);
@@ -806,13 +806,32 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .category-tabs-bar, .tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
-  overflow-x: auto;
-  padding-bottom: 12px;
-  margin-bottom: 48px;
-  scrollbar-width: none;
+  margin-bottom: 36px;
+  padding-bottom: 0;
 }
-.category-tabs-bar::-webkit-scrollbar, .tabs::-webkit-scrollbar { display: none; }
+@media (max-width: 768px) {
+  .category-tabs-bar, .tabs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 28px;
+  }
+  .cat-pill, .tab {
+    text-align: center;
+    justify-content: center;
+    padding: 10px 12px;
+    min-height: 40px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 360px) {
+  .category-tabs-bar, .tabs {
+    grid-template-columns: 1fr;
+  }
+}
 .cat-pill, .tab {
   position: relative;
   flex: none;
@@ -2076,67 +2095,334 @@ img { max-width: 100%; height: auto; display: block; }
    ========================================================================== */
 .floating-whatsapp-btn {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 9999;
-  width: 58px;
-  height: 58px;
+  right: 20px;
+  bottom: max(20px, env(safe-area-inset-bottom));
+  z-index: 900;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background: #25d366;
+  background: #25D366;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(37, 211, 102, 0.35);
+  transform: scale(0.92);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
   text-decoration: none;
 }
 
 .floating-whatsapp-btn:hover {
-  transform: translateY(-3px) scale(1.06);
-  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.5), 0 6px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22), 0 3px 10px rgba(37, 211, 102, 0.45);
   color: #ffffff;
 }
 
 .floating-whatsapp-btn svg {
   display: block;
+  width: 28px;
+  height: 28px;
   fill: #ffffff;
 }
 
 .floating-whatsapp-tooltip {
-  position: absolute;
-  right: calc(100% + 14px);
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(20, 21, 25, 0.95);
-  color: #fcfbf9;
-  padding: 8px 14px;
+  display: none !important;
+}
+
+body.modal-open .floating-whatsapp-btn,
+body.drawer-open .floating-whatsapp-btn,
+body.menu-open .floating-whatsapp-btn {
+  display: none !important;
+}
+
+
+/* ==========================================================================
+   HOMEPAGE CONDENSE & ENHANCEMENT RULES (PHASE 11)
+   ========================================================================== */
+
+/* No-JS & Reduced Motion Fallbacks */
+.no-js .reveal {
+  opacity: 1 !important;
+  transform: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Hero Highlights Row */
+.hero-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin-top: 24px;
+}
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 500 12.5px/1.3 var(--font-sans);
+  color: var(--muted);
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 6px 12px;
   border-radius: 999px;
-  font-size: 13px;
+}
+.hero-chip b {
+  color: var(--ink);
   font-weight: 600;
-  white-space: nowrap;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  border: 1px solid rgba(197, 168, 128, 0.3);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
-.floating-whatsapp-btn:hover .floating-whatsapp-tooltip {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(-50%) translateX(-2px);
+/* Portfolio Concept Disclaimer */
+.concept-disclaimer {
+  font: 500 11.5px/1.4 var(--font-sans);
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  margin-top: 14px;
+  margin-bottom: 0;
 }
 
-@media (max-width: 640px) {
-  .floating-whatsapp-btn {
-    bottom: 20px;
-    right: 20px;
-    width: 52px;
-    height: 52px;
+/* Dark Showcase Closing Quote */
+.showcase-closing-quote {
+  margin-top: 56px;
+  padding-top: 36px;
+  border-top: 1px solid var(--dark-line);
+  text-align: center;
+}
+.showcase-quote-text {
+  font: 400 clamp(1.1rem, 2vw, 1.35rem)/1.5 var(--font-display);
+  font-style: italic;
+  color: var(--dark-ink);
+  max-width: 760px;
+  margin: 0 auto 10px;
+}
+.showcase-quote-author {
+  font: 600 11px/1 var(--font-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* What You Get (Merged Services & Outcomes) */
+.what-you-get-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .what-you-get-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
-  .floating-whatsapp-tooltip {
-    display: none;
+}
+.deliverables-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.deliverable-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 22px 20px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.deliverable-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--line-focus);
+}
+.deliverable-num {
+  font: 600 11px/1 var(--font-sans);
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+.deliverable-card h3 {
+  font: 500 1.25rem/1.2 var(--font-display);
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.deliverable-card p {
+  font: 400 13.5px/1.5 var(--font-sans);
+  color: var(--muted);
+  margin: 0;
+}
+.proof-chips-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.proof-chip {
+  font: 600 10.5px/1 var(--font-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: rgba(181, 141, 83, 0.1);
+  color: var(--accent-ink);
+  border: 1px solid rgba(181, 141, 83, 0.25);
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.outcomes-condensed {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.outcome-mini-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+.outcome-mini-card h4 {
+  font: 600 15px/1.3 var(--font-sans);
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.outcome-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.outcome-bullets li {
+  font: 400 13px/1.4 var(--font-sans);
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.outcome-bullets li::before {
+  content: "•";
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Condensed Add-Ons Band */
+.add-ons-band {
+  background: var(--dark-bg);
+  color: var(--dark-ink);
+  padding-block: clamp(48px, 6vw, 72px) !important;
+}
+.add-ons-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 28px;
+}
+@media (max-width: 800px) {
+  .add-ons-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
+}
+.add-on-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--dark-line);
+  border-radius: var(--radius-md);
+  padding: 24px 20px;
+}
+.add-on-num {
+  font: 600 11px/1 var(--font-sans);
+  color: var(--accent);
+  letter-spacing: 0.16em;
+  display: block;
+  margin-bottom: 10px;
+}
+.add-on-item h4 {
+  font: 500 1.15rem/1.3 var(--font-display);
+  color: var(--dark-ink);
+  margin-bottom: 8px;
+}
+.add-on-item p {
+  font: 400 13px/1.5 var(--font-sans);
+  color: var(--dark-muted);
+  margin: 0;
+}
+.add-ons-note {
+  font: 500 12.5px/1.4 var(--font-sans);
+  color: var(--dark-muted);
+  text-align: center;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+/* How It Works (Merged Process Steps) */
+.process-steps-row {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+@media (max-width: 900px) {
+  .process-steps-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+.process-col-step {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 22px 18px;
+  position: relative;
+}
+.process-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(181, 141, 83, 0.12);
+  color: var(--accent);
+  font: 600 12px/1 var(--font-sans);
+  margin-bottom: 12px;
+}
+.process-col-step h4 {
+  font: 600 14px/1.3 var(--font-sans);
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+.process-col-step p {
+  font: 400 12.5px/1.45 var(--font-sans);
+  color: var(--muted);
+  margin: 0;
+}
+.process-founder-note {
+  text-align: center;
+  font: 500 14px/1.5 var(--font-sans);
+  color: var(--accent-ink);
+  background: rgba(181, 141, 83, 0.08);
+  border: 1px solid rgba(181, 141, 83, 0.2);
+  padding: 12px 24px;
+  border-radius: 999px;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* Footer Legal Note */
+.footer-legal-note {
+  font: 400 12px/1.5 var(--font-sans);
+  color: var(--muted);
+  margin-top: 16px;
+  margin-bottom: 12px;
+  max-width: 840px;
+}
+
+/* Print Styles (Step 7.1) */
+@media print {
+  .site-header, .nav { position: static !important; }
+  .floating-whatsapp-btn, .floating-whatsapp, .modal, .mobile-menu, .device-drawer, .nav-toggle, .nav-wa { display: none !important; }
+  .project-card, .pricing-card, .case-card, section { break-inside: avoid !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
 }
