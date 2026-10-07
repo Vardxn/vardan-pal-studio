@@ -1,3 +1,10 @@
+
+/* Prevent horizontal overflow on mobile from offcanvas elements */
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 /* ==========================================================================
    Vardan Pal Studio - Care Dental & Skin Clinic
    Crafted by Vardan Pal
@@ -229,4 +236,14 @@
 .clinic-toast.active {
   display: block;
   animation: slideInUp 0.3s ease;
+}
+
+
+/* Mobile touch target minimum 44px */
+.site-top-bar a, .top-bar a, a[href^="tel:"], a[href*="wa.me"] {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
 }

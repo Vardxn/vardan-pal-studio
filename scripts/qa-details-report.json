@@ -1,0 +1,90 @@
+{
+  "forms": [
+    {
+      "form": "Hub Contact Form",
+      "validationWorks": true,
+      "successAppears": true,
+      "waOpened": true,
+      "waIncludesBrand": true,
+      "waUrl": "https://wa.me/918279696707?text=Hi%20Vardan%2C%20I%20found%20Vardan%20Pal%20Studio%20online%20and%20would%20like%20to%20discuss%20a%20website.%0A%0AName%3A%20QA%20Test%20Client%0ACity%2FState%3A%20New%20Delhi%0APhone%3A%20%2B91%2099999%2088888%0ABusiness%3A%20Clinic%20%2F%20Healthcare%0ANeed%3A%20New%20Website%0ANotes%3A%20Testing%20automated%20handoff"
+    },
+    {
+      "form": "Salon",
+      "toastVisible": true,
+      "waOpened": true,
+      "includesDemo": true,
+      "includesStudio": true,
+      "decodedWaSnippet": "https://wa.me/918279696707?text=Hello Aura Salon & Spa (Vardan Pal Studio Demo), I would like to con"
+    },
+    {
+      "form": "Clinic",
+      "toastVisible": true,
+      "waOpened": true,
+      "includesDemo": true,
+      "includesStudio": true,
+      "decodedWaSnippet": "https://wa.me/918279696707?text=Hello Care Dental & Skin Clinic (Vardan Pal Studio Demo), I would li"
+    },
+    {
+      "form": "Restaurant",
+      "toastVisible": true,
+      "waOpened": true,
+      "includesDemo": true,
+      "includesStudio": true,
+      "decodedWaSnippet": "https://wa.me/918279696707?text=Hello Malcha Table (Vardan Pal Studio Demo), I would like to reserve"
+    },
+    {
+      "form": "Real Estate",
+      "toastVisible": true,
+      "waOpened": true,
+      "includesDemo": true,
+      "includesStudio": true,
+      "decodedWaSnippet": "https://wa.me/918279696707?text=Hello Prime Estates (Vardan Pal Studio Demo), I would like to schedu"
+    },
+    {
+      "form": "Interior",
+      "toastVisible": true,
+      "waOpened": true,
+      "includesDemo": true,
+      "includesStudio": true,
+      "decodedWaSnippet": "https://wa.me/918279696707?text=Hello Studio Eleven (Vardan Pal Studio Demo), I would like to book a"
+    },
+    {
+      "form": "Events",
+      "toastVisible": true,
+      "waOpened": true,
+      "includesDemo": true,
+      "includesStudio": true,
+      "decodedWaSnippet": "https://wa.me/918279696707?text=Hello Studio Vows (Vardan Pal Studio Demo), we would like to check a"
+    }
+  ],
+  "links": {
+    "total": 40,
+    "passed": 40,
+    "issues": []
+  },
+  "brandSweep": {
+    "issues": []
+  },
+  "meta": [],
+  "accessibility": {
+    "passed": true,
+    "details": [
+      {
+        "check": "Image alts",
+        "missingCount": 0,
+        "missing": []
+      },
+      {
+        "check": "Tabs arrow navigation",
+        "result": {
+          "firstTabFocused": true
+        }
+      }
+    ]
+  },
+  "performance": {
+    "totalTransferredBytes": 5600112,
+    "totalMb": "5.34 MB",
+    "eagerLoadedImagesCount": 5
+  }
+}

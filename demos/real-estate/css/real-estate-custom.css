@@ -192,3 +192,18 @@
   display: block;
   animation: slideInUp 0.3s ease;
 }
+
+
+/* Mobile touch target minimum 44px */
+.burger, .site-menu-toggle, .js-menu-toggle {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.site-nav ul li a, .site-mobile-menu .site-nav-wrap li a {
+  min-height: 44px;
+  display: flex !important;
+  align-items: center;
+}

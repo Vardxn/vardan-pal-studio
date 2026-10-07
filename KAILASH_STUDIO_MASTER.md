@@ -242,6 +242,27 @@ This log records every milestone achieved in the development of Kailash Studio:
       - Synced all header and footer anchor links with `scroll-margin-top: 96px`.
       - Added `@media print` rules avoiding card splits, hiding floating UI, and validated clean A4 PDF export.
 
+12. **Phase 12 — Founder Section + Full QA (October 2026):**  
+    - **Founder Credibility Section:**
+      - Added editorial "THE FOUNDER" section (`id="about"`) positioned seamlessly between "How It Works" and FAQ.
+      - Headline: *"The person behind the work."*
+      - Editorial copy emphasizing direct engineering credibility: *"Vardan Pal Studio is run by its founder — a software engineer (B.Tech, Information Technology, NIT Srinagar) with industry experience building cloud-native applications and backend systems. Every website is designed, built, and launched directly by him — the person you message is the person who writes the code."*
+      - Integrated verified text link to developer portfolio: `https://vardxn.vercel.app` (`target="_blank" rel="noopener"`).
+      - Maintained strict design governance: no university crests, no resume downloads, no job-seeking mentions.
+    - **Service Tracks Clarity & Footer Modernization:**
+      - Appended clear service track boundary line to "What You Get" (`#services`): *"Beyond websites: client portals, booking systems, lead-qualification flows and WhatsApp automation — quoted separately."*
+      - Restructured footer navigation into a clean 2-column layout:
+        - **Services Column:** Exactly two rows: "Websites for businesses" (`#services`) and "Custom systems & automation" (`#beyond`).
+        - **Studio Column:** Demos, About (`#about`), How It Works, Pricing, FAQ, Contact, and Developer Portfolio.
+      - Upgraded footer contact details to active, accessible links for WhatsApp/tel (`+91 82796 96707`) and email (`mailto:vardan2701@gmail.com`).
+    - **Comprehensive Full-Site QA Sweep & Remediation:**
+      - **Route & Viewport Matrix:** Verified Studio Hub (`/`) and all 6 client demos (`salon`, `clinic`, `restaurant`, `real-estate`, `interior`, `events`) at 375px, 768px, and 1440px viewports. 100% HTTP 200 OK, zero broken routes, zero failed asset requests.
+      - **Horizontal Overflow Remediation:** Discovered and eliminated 124px mobile horizontal overflow in Care Dental & Skin Clinic (`demos/clinic/`) caused by off-canvas navigation by enforcing `overflow-x: hidden; max-width: 100vw;` in `clinic-custom.css`. All 7 routes now pass with 0 overflow.
+      - **Console Error Elimination:** Resolved 404 console error on `/favicon.ico` by generating valid multi-resolution `favicon.ico` and `favicon.png` at root; console errors reduced to 0.
+      - **Touch Targets Standardized (≥ 44px):** Brought mobile brand link, demo banner buttons, mobile hamburger toggles, and top-bar icons across hub and demos up to standard touch sizes.
+      - **Form Validation & WhatsApp Handoff:** Standardized Hub and all 6 demo forms with instant success states and pre-filled WhatsApp handoffs containing respective business names and "Vardan Pal Studio".
+      - **Automated Evidence & Reporting:** Generated comprehensive `QA-REPORT.md` and captured visual proof screenshots in `audit-shots/`.
+
 ---
 
 ## ⚡ Current Status & In-Flight Work (Phase 10)
