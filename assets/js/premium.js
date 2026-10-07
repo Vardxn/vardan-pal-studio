@@ -445,7 +445,7 @@
         window.track('form_submit', { type, goal });
       }
 
-      const waText = `Hi Vardan, I would like to discuss a website with Kailash Studios.\n\nName: ${name}\nCity/State: ${city || 'India'}\nPhone: ${phone}\nBusiness: ${type || 'General'}\nNeed: ${goal || 'Website'}${msg ? `\nNotes: ${msg}` : ''}`;
+      const waText = `Hi Vardan, I found Vardan Pal Studio online and would like to discuss a website.\n\nName: ${name}\nCity/State: ${city || 'India'}\nPhone: ${phone}\nBusiness: ${type || 'General'}\nNeed: ${goal || 'Website'}${msg ? `\nNotes: ${msg}` : ''}`;
       const waUrl = `https://wa.me/918279696707?text=${encodeURIComponent(waText)}`;
 
       if (sent) {
@@ -453,7 +453,7 @@
           <div class="enquire-success-card">
             <div class="success-check-badge">✓</div>
             <h3>Thank you, ${escapeHtml(name)}!</h3>
-            <p>Your enquiry has been received and emailed directly to Kailash Studios (<strong>vardan2701@gmail.com</strong>). We will review your project requirements and get back to you within a few hours.</p>
+            <p>Your enquiry has been received and emailed directly to Vardan Pal Studio (<strong>vardan2701@gmail.com</strong>). We will review your project requirements and get back to you within a few hours.</p>
             <div class="success-cta-box">
               <span>Want an immediate response on WhatsApp?</span>
               <a class="btn btn--accent" href="${waUrl}" target="_blank" rel="noopener">

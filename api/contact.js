@@ -28,7 +28,7 @@ export default async function handler(req, res) {
       primary_goal: goal || 'Not specified',
       project_notes: msg || 'None provided',
       submitted_at: new Date().toISOString(),
-      _subject: `New Inquiry — Kailash Studios: ${name} (${city || 'India'} • ${type || 'General Lead'})`,
+      _subject: `New Inquiry — Vardan Pal Studio: ${name} (${city || 'India'} • ${type || 'General Lead'})`,
       _template: 'table',
       _captcha: 'false'
     };
