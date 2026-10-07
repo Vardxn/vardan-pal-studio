@@ -18,7 +18,16 @@
     <link rel="stylesheet" href="css/aos.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/clinic-custom.css">
-  </head>
+    <noscript>
+    <style>
+      .ftco-animate, [data-aos], .reveal {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
+</head>
   <body>
 
   <!-- Demo Context Top Bar -->
@@ -321,15 +330,15 @@
               <div class="row">
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">Patient Full Name *</label>
-                  <input type="text" id="clinic_name" class="form-control" placeholder="e.g. Varun Mehra" required>
+                  <input type="text" id="clinic_name" aria-label="Patient Full Name" class="form-control" placeholder="e.g. Varun Mehra" required>
                 </div>
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">Contact Phone (WhatsApp) *</label>
-                  <input type="tel" id="clinic_phone" class="form-control" placeholder="+91 82796 96707" required>
+                  <input type="tel" id="clinic_phone" aria-label="Phone or WhatsApp Number" class="form-control" placeholder="+91 82796 96707" required>
                 </div>
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">Select Department / Concern *</label>
-                  <select id="clinic_dept" class="form-control">
+                  <select id="clinic_dept" aria-label="Clinical Department" class="form-control">
                     <option value="Clear Aligners / Invisalign">Clear Aligners / Invisalign Smile Assessment</option>
                     <option value="Dental Implants &amp; Replacement">Dental Implants &amp; Missing Tooth Replacement</option>
                     <option value="Ceramic Veneers &amp; Smile Design">Ceramic Veneers &amp; Aesthetic Smile Redesign</option>
@@ -340,11 +349,11 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">Preferred Date *</label>
-                  <input type="date" id="clinic_date" class="form-control" required>
+                  <input type="date" id="clinic_date" aria-label="Preferred Consultation Date" class="form-control" required>
                 </div>
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">Preferred Slot *</label>
-                  <select id="clinic_slot" class="form-control">
+                  <select id="clinic_slot" aria-label="Preferred Time Window" class="form-control">
                     <option value="Morning (10:00 AM – 1:00 PM)">Morning (10:00 AM – 1:00 PM)</option>
                     <option value="Afternoon (1:00 PM – 4:30 PM)">Afternoon (1:00 PM – 4:30 PM)</option>
                     <option value="Evening (4:30 PM – 7:30 PM)">Evening (4:30 PM – 7:30 PM)</option>
@@ -352,14 +361,14 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <label class="text-white-50 small mb-1">Consultation Preference</label>
-                  <select id="clinic_mode" class="form-control">
+                  <select id="clinic_mode" aria-label="Consultation Mode" class="form-control">
                     <option value="In-Clinic at Malcha Marg">In-Clinic Visit (Chanakyapuri)</option>
                     <option value="WhatsApp Preliminary Photo Consultation">WhatsApp Photo Consultation</option>
                   </select>
                 </div>
                 <div class="col-12 mb-4">
                   <label class="text-white-50 small mb-1">Clinical Notes or Symptoms</label>
-                  <textarea id="clinic_notes" rows="3" class="form-control" placeholder="Describe symptoms, duration, or previous treatments..."></textarea>
+                  <textarea id="clinic_notes" aria-label="Medical Concerns or Notes" rows="3" class="form-control" placeholder="Describe symptoms, duration, or previous treatments..."></textarea>
                 </div>
                 <div class="col-12 text-center">
                   <button type="submit" class="btn btn-primary px-5 py-3 font-weight-bold text-white" style="border-radius: 4px;">
