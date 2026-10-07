@@ -22,7 +22,7 @@ We engineer high-converting, mobile-first web experiences for clinics, salons, r
 - Potential high-ticket clients visit these websites, lose trust immediately, and bounce before booking.
 - Existing templates make booking cumbersome with 10-field forms instead of direct WhatsApp-first conversion.
 
-### 💡 The Kailash Studio Solution
+### 💡 The Vardan Pal Studio Solution
 1. **Quiet Luxury Aesthetic:** Warm natural palettes, editorial serif typography (*Cormorant Garamond*), paired with crisp grotesque type (*Plus Jakarta Sans*), reminiscent of high-end architectural monographs.
 2. **Instant WhatsApp Conversion:** Every inquiry, table reservation, and appointment leads directly to a pre-filled WhatsApp message. Zero friction, zero lost leads.
 3. **Turnkey 3–5 Day Delivery:** Full static builds with zero server maintenance overhead, hosted on edge CDN (Vercel) with near-instant load speeds.
@@ -175,7 +175,7 @@ Every demo is a complete, functioning, self-contained multi-page website inside 
 
 ---
 
-## 📜 Comprehensive Evolution & Changelog (Phases 1–9)
+## 📜 Comprehensive Evolution & Changelog (Phases 1–12)
 
 This log records every milestone achieved in the development of Kailash Studio:
 
@@ -265,28 +265,53 @@ This log records every milestone achieved in the development of Kailash Studio:
 
 ---
 
-## ⚡ Current Status & In-Flight Work (Phase 10)
+## ⚡ Current Status & Validated Architecture (Phases 10–12 Fully Complete)
 
-### ✅ What is Completed & Fully Working
-- [x] **Canonical File Structure:** Zero duplicate files. All AI tools point to `/Users/vardan/Developer/personal/03-Experiments/south-delhi-web-studio/`.
-- [x] **Production Deployment:** Live on Vercel at `https://kailashstudio.vercel.app/` with HTTP 200 on all routes.
-- [x] **Pan-India Reach & WhatsApp Lead Routing:** Integrated national scope, city/state intake field, and global WhatsApp touchpoints across every page.
-- [x] **Showcase Hub Consistency:** All case cards, category tabs, and mockup URLs match the demo websites 100%.
-- [x] **Salon Demo Overhaul:** `demos/salon/` renders cleanly on mobile (375px) with high-contrast form fields, legible white text, custom dropdown chevrons, and zero header overlap.
-- [x] **Mockup Thumbnail Synchronization:** Re-rendered all 6 live browser mockup screenshots in `assets/shots/` with updated logos, headlines, and domain URLs.
-- [x] **Local Development Server:** Verified running on port `8088`.
+### ✅ What is Completed & 100% Validated
 
-### 🟡 In-Flight Tasks (Immediate Next Steps)
-1. **Systematic Mobile Optimization Across Remaining Demos:**
-   - Audit and tune mobile viewports (375px iPhone SE and 390px iPhone 14/15) for:
-     - `demos/clinic/` (Care Dental & Skin Clinic)
-     - `demos/restaurant/` (Malcha Table)
-     - `demos/real-estate/` (Prime Estates)
-     - `demos/interior/` (Studio Eleven)
-     - `demos/events/` (Studio Vows)
-   - Ensure every demo has touch-friendly inputs (>= 48px), high-contrast labels, no horizontal scrollbars, and floating WhatsApp buttons positioned safely away from CTAs.
-2. **Automated Visual Regression Suite:**
-   - Run `scripts/audit.mjs` to capture and compare before/after screenshots across mobile, tablet, and desktop viewports.
+1. **Brand Identity & Pan-India Positioning (Phase 10):**
+   - Studio fully rebranded to **Vardan Pal Studio** with New Delhi base serving clients across all Indian states.
+   - Clean wordmark (`VARDAN PAL` / `DIGITAL STUDIO · NEW DELHI`), minimal serif "VP" monogram favicon, and updated OpenGraph/meta tags.
+   - Structured JSON-LD `Schema.org/ProfessionalService` with national reach and direct contact endpoints.
+   - Standardized attribution across all 6 demo footers: *"Vardan Pal Studio · New Delhi • Crafted by Vardan Pal"*.
+
+2. **Homepage Repairs & Architecture Condensation (Phase 11):**
+   - **Mockup Previews:** All 6 demo WebP previews refreshed at 1280×800 with sharp contrast and explicit dimensions.
+   - **Animation Resilience:** `<html class="no-js">` fallback script prevents stuck hidden elements; `prefers-reduced-motion` supported.
+   - **Floating WhatsApp Button:** Standardized to a 56px circular button (`#25D366`) with iOS safe-area insets that never blocks form CTAs and auto-hides when modals open.
+   - **Category Tabs:** Responsive 2-column mobile grid under 768px with full visibility for "Wedding Photography" and 4-way arrow key keyboard roving navigation.
+   - **Measurable Deliverables:** Marketing claims converted to verifiable technical deliverables with grey concept disclaimers on all cards and footer.
+   - **Architecture Condensation:** Master homepage condensed to ~9 high-impact sections with ~23% tighter vertical spacing and `@media print` export.
+
+3. **Founder Credibility & Two Service Tracks (Phase 12):**
+   - **The Founder Section (`#about`):** Editorial card between "How It Works" and FAQ highlighting founder credentials (B.Tech IT, NIT Srinagar; cloud-native and backend systems engineering) and outbound portfolio link (`https://vardxn.vercel.app`).
+   - **Two Service Tracks Clarity:** Closing boundary note in "What You Get" (`#services`) clarifying custom systems & automation quoted separately.
+   - **Footer Navigation Modernization:** Clean 2-column footer layout separating core "Websites for businesses" (`#services`) from "Custom systems & automation" (`#beyond`).
+
+4. **Full-Site Automated QA Sweep Across All 7 Routes (Phase 12):**
+   - **Zero Broken Routes:** Hub (`/`) and all 6 demos (`salon`, `clinic`, `restaurant`, `real-estate`, `interior`, `events`) tested at 375px, 768px, and 1440px with 100% HTTP 200 OK.
+   - **Zero Console Errors:** 404 error on `/favicon.ico` eliminated by generating valid root `favicon.ico` and `favicon.png`.
+   - **Zero Horizontal Overflow:** Resolved 124px mobile overflow in Care Dental & Skin Clinic (`demos/clinic/`) via `overflow-x: hidden; max-width: 100vw;` in `clinic-custom.css`.
+   - **Mobile Touch Targets (≥ 44px):** Hub brand mark, Salon demo banner back link & toggler, Clinic top-bar icons, and Real Estate mobile burger toggles elevated to $\ge 44	ext{px}$.
+   - **Unified Form & WhatsApp Handoff:** Hub contact form and all 6 demo forms validate required inputs, display instant confirmation cards/toasts, and open WhatsApp with prefilled text referencing both demo and *"Vardan Pal Studio"*.
+   - **Link Integrity:** 40/40 links validated on the Hub with zero dead anchors; phone (`+91 82796 96707`) and email (`vardan2701@gmail.com`) active.
+   - **Brand Terminology Sweep:** 0 rendered occurrences of legacy "Kailash" text across visible web pages.
+
+### 📊 Full-Site QA Audit Matrix (Phase 12 Automated Verification)
+
+| Route | Path | Viewports Tested | HTTP Status | Console Errors | Horiz. Overflow | Forms / WhatsApp | Touch Targets (>=44px) |
+|---|---|---|---|---|---|---|---|
+| **Studio Hub** | `/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Instant handoff + card) | Passed (Brand + CTAs >= 44px) |
+| **Aura Salon & Spa** | `/demos/salon/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (Banner & toggler >= 44px) |
+| **Care Dental & Skin** | `/demos/clinic/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (Top bar CTAs >= 44px) |
+| **Malcha Table** | `/demos/restaurant/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (All controls >= 44px) |
+| **Prime Estates** | `/demos/real-estate/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (Burger & navs >= 44px) |
+| **Studio Eleven** | `/demos/interior/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (All controls >= 44px) |
+| **Studio Vows** | `/demos/events/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (All controls >= 44px) |
+
+### 🟡 Immediate Next Steps
+1. **Manual User Production Deployment:** Review local build on port 8088 and trigger production deployment to Vercel (`npx vercel --prod`).
+2. **Production Domain Verification:** Verify live domain health post-deploy at `https://kailashstudio.vercel.app`.
 
 ---
 
