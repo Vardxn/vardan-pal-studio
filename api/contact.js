@@ -13,7 +13,7 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, city, type, goal, msg } = req.body || {};
+    const { name, email, phone, city, type, goal, msg, package: pkg } = req.body || {};
 
     if (!name || !email || !phone) {
       return res.status(400).json({ error: 'Name, email, and phone are required.' });
@@ -28,6 +28,7 @@ export default async function handler(req, res) {
       primary_goal: goal || 'Not specified',
       project_notes: msg || 'None provided',
       submitted_at: new Date().toISOString(),
+      selected_package: pkg || 'Not specified',
       _subject: `New Inquiry — Vardan Pal Studio: ${name} (${city || 'India'} • ${type || 'General Lead'})`,
       _template: 'table',
       _captcha: 'false'

@@ -2754,3 +2754,146 @@ body.menu-open .floating-whatsapp-btn {
   .preview-device-toggle { order: 2; }
   .preview-modal-right { order: 3; margin-left: auto; }
 }
+
+/* ==========================================================================
+   PHASE 14 — SERVICE CATEGORIES & PRICING SYSTEM ENHANCEMENTS
+   ========================================================================== */
+.services-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 36px;
+}
+@media (max-width: 1024px) {
+  .services-category-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+.service-category-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.service-category-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(181, 141, 83, 0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+.service-category-card--highlight {
+  border-color: rgba(181, 141, 83, 0.35);
+  background: linear-gradient(180deg, rgba(181, 141, 83, 0.03) 0%, var(--card) 100%);
+}
+.service-category-tag {
+  font: 600 11px/1 var(--font-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.service-category-card h3 {
+  font: 500 1.45rem/1.2 var(--font-display);
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.service-category-desc {
+  font: 400 13.5px/1.5 var(--font-sans);
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.service-category-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+.service-category-block {
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+.service-block-label {
+  font: 600 11.5px/1 var(--font-sans);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  display: block;
+  margin-bottom: 6px;
+}
+.service-category-block p {
+  font: 400 13px/1.5 var(--font-sans);
+  color: var(--muted);
+  margin: 0;
+}
+.service-feature-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.service-feature-bullets li {
+  font: 400 13px/1.45 var(--font-sans);
+  color: var(--ink);
+  position: relative;
+  padding-left: 16px;
+}
+.service-feature-bullets li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+.service-category-footer {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px dashed var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.service-recommended-tag {
+  font: 600 10.5px/1 var(--font-sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-ink);
+}
+.service-packages-list {
+  font: 600 13px/1.4 var(--font-sans);
+  color: var(--ink);
+}
+
+/* Plan delivery pill & price styling */
+.plan-delivery-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font: 600 11px/1 var(--font-sans);
+  letter-spacing: 0.04em;
+  color: var(--accent-ink);
+  background: rgba(181, 141, 83, 0.08);
+  border: 1px solid rgba(181, 141, 83, 0.2);
+  padding: 5px 10px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+.plan-price-wrap--custom .plan-amount {
+  font-size: clamp(1.6rem, 2.1vw, 2.2rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+.plan-price-starting {
+  font-size: 13px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  color: var(--muted);
+  margin-left: 4px;
+}

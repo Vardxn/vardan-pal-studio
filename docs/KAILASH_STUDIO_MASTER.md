@@ -284,9 +284,33 @@ This log records every milestone achieved in the development of Kailash Studio:
     - **Evidence & Artifacts:** Generated full report `QA-REPORT-COMPLETE.md` and saved 63 screenshots in `audit-shots/full-qa/{route}/{viewport}.png`.
 
 
+14. **Phase 14 — Sustainable pricing and service promise alignment (October 2026):**
+    - **Approved 4-Tier Pricing System:**
+      - Replaced legacy public rates with four sustainable, transparent studio tiers:
+        1. **Launch (₹9,900 starting):** 1-page premium custom website, mobile-first build, bespoke typography & palette, direct WhatsApp/call buttons, Google Maps, basic SEO & Search Console, cloud deployment & SSL, 1 revision round, 15 days post-launch support. 5-day typical delivery. CTA: *Get Started*.
+        2. **Business (₹19,900 starting — Most Popular):** 4–5 custom sections/pages, service menu/rate card/gallery, appointment or enquiry booking flow, testimonials & trust sections, validated WhatsApp enquiry form, local SEO & metadata optimisation, Core Web Vitals audit, 2 revision rounds, 30 days post-launch support. 7-day typical delivery. CTA: *Choose Business*.
+        3. **Signature (₹34,900 starting):** Multi-page bespoke architecture up to 8 pages, studio-grade motion & interactions, portfolio/case-study gallery, advanced intake flow, blog-ready structure (CMS quoted separately), advanced SEO/analytics/tracking, domain & cloud hosting setup, 3 revision rounds, 60 days post-launch support. 10–14 day typical delivery. CTA: *Go Signature*.
+        4. **Custom Systems (Quoted after discovery):** Discovery call & workflow mapping, client portals & booking dashboards, lead qualification flows, WhatsApp CRM & automated reminders, third-party webhook integrations, documentation & handover training, technical support quoted per scope. CTA: *Book Discovery*.
+    - **Service Category Architecture ("What can we build for you?"):**
+      - Created comprehensive service category breakdown explaining:
+        - **A. Business Websites:** Flagship digital storefronts for salons, clinics, restaurants, consultants, real estate, interior designers, and creative studios. (Packages: Launch, Business, Signature).
+        - **B. Booking & Enquiry Experiences:** Structured appointment request flows, date/service selection, validated fields, and WhatsApp intent handoffs.
+        - **C. Custom Digital Systems:** Client portals, booking dashboards, CRM pipelines, and backend automations quoted after discovery.
+    - **Promise Alignment & Integrity Rules:**
+      - Removed all unsupported claims (e.g., "#1 on Google", "guaranteed leads", "unlimited revisions/support", "full CMS in standard tiers", "24/7 support").
+      - Reinforced accurate technical wording: Technical SEO setup, Search Console configuration, clear enquiry paths, budget & project-fit discussions, structured contact forms, and faster customer journeys.
+    - **Interactive Pricing CTA & Form Preselection:**
+      - Enhanced contact form with dedicated `<select name="package">` field (`Launch`, `Business`, `Signature`, `Custom Systems`).
+      - All pricing card buttons (`.select-package-btn` with `data-package="..."`) seamlessly scroll to `#contact`, preselect the corresponding tier, and focus the field without submitting accidentally.
+      - Integrated package selection into Vercel Serverless Contact API (`api/contact.js`) and pre-filled WhatsApp handoffs.
+    - **Demo Footer Synchronization:**
+      - Updated studio attribution lines across all 6 demo footers: *"Built by Vardan Pal Studio • Websites from ₹9,900 • Custom systems quoted separately"*. Fictional business pricing inside demos remains intact.
+    - **Governance Document:** Created `PRICING-SYSTEM.md` detailing packages, inclusions, boundaries, revision limits, support windows, and communication rules.
+
+
 ---
 
-## ⚡ Current Status & Validated Architecture (Phases 10–13 Fully Complete)
+## ⚡ Current Status & Validated Architecture (Phases 10–14 Fully Complete)
 
 ### ✅ What is Completed & 100% Validated
 
