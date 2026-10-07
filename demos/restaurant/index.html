@@ -364,25 +364,54 @@
     </p>
   </div>
 
+  
   <script>
-    document.getElementById('restaurant-booking-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var name = document.getElementById('res_name').value || 'Guest';
-      var date = document.getElementById('res_date').value || 'Selected Date';
-      var time = document.getElementById('res_time').value;
-      var guests = document.getElementById('res_guests').value;
-      var section = document.getElementById('res_section').value;
-      
-      var toast = document.getElementById('demoToast');
-      var toastMsg = document.getElementById('toastMessage');
-      toastMsg.innerHTML = "Thank you, <strong>" + name + "</strong>! Reservation for <strong>" + guests + "</strong> on " + date + " at " + time + " (" + section + ") requested.<br><br><em>(Demo mode: Opening WhatsApp with dining details...)</em>";
-      toast.classList.add('active');
-      
-      setTimeout(function() {
-        var waText = encodeURIComponent("Hello Malcha Table (Vardan Pal Studio Demo), I would like to reserve a table:\n- Name: " + name + "\n- Guests: " + guests + "\n- Date: " + date + "\n- Time: " + time + "\n- Area: " + section);
-        window.open("https://wa.me/918279696707?text=" + waText, "_blank");
-      }, 1200);
-    });
+    (function() {
+      var isSubmitting = false;
+      var f = document.getElementById("restaurant-booking-form");
+      if (!f) return;
+
+      f.addEventListener("submit", function(e) {
+        e.preventDefault();
+        if (!f.checkValidity()) {
+          f.reportValidity();
+          return;
+        }
+        if (isSubmitting) return;
+        isSubmitting = true;
+
+        var name = (document.getElementById("res_name") && document.getElementById("res_name").value) || "Guest";
+        var date = (document.getElementById("res_date") && document.getElementById("res_date").value) || "Selected Date";
+        var time = (document.getElementById("res_time") && document.getElementById("res_time").value) || "Dinner";
+        var guests = (document.getElementById("res_guests") && document.getElementById("res_guests").value) || "2 Guests";
+        var section = (document.getElementById("res_section") && document.getElementById("res_section").value) || "Main Dining";
+
+        // Safe lead_submit tracking (No PII)
+        try {
+          var safeTrack = window.trackEvent || (window.parent && window.parent.trackEvent);
+          if (typeof safeTrack === "function") {
+            safeTrack("lead_submit", {
+              package: "concept_demo",
+              industry: "Restaurant / Cafe",
+              form_location: "restaurant_booking_form"
+            });
+          }
+        } catch (err) {}
+
+        var toast = document.getElementById("demoToast");
+        var toastMsg = document.getElementById("toastMessage");
+        if (toastMsg) {
+          toastMsg.innerHTML = "Thank you, <strong>" + name + "</strong>! Reservation for <strong>" + guests + "</strong> on " + date + " at " + time + " (" + section + ") requested.<br><br><em>(Demo mode: Opening WhatsApp with dining details...)</em>";
+        }
+        if (toast) toast.classList.add("active");
+
+        setTimeout(function() {
+          var waText = encodeURIComponent("Hello Malcha Table (Vardan Pal Studio Demo), I would like to reserve a table:\n- Name: " + name + "\n- Guests: " + guests + "\n- Date: " + date + "\n- Time: " + time + "\n- Area: " + section);
+          window.open("https://wa.me/918279696707?text=" + waText, "_blank");
+          isSubmitting = false;
+        }, 1200);
+      });
+    })();
   </script>
 </body>
 </html>

@@ -517,27 +517,54 @@
     <script src="js/navbar.js"></script>
     <script src="js/counter.js"></script>
     <script src="js/custom.js"></script>
+  <!-- Interactive Demo Booking Script -->
+  <script>
+    (function() {
+      var isSubmitting = false;
+      var f = document.getElementById("re-booking-form");
+      if (!f) return;
 
-    <!-- Interactive Demo Booking Script -->
-    <script>
-      document.getElementById('re-booking-form').addEventListener('submit', function(e) {
+      f.addEventListener("submit", function(e) {
         e.preventDefault();
-        var name = document.getElementById('re_name').value || 'Client';
-        var property = document.getElementById('re_property').value;
-        var date = document.getElementById('re_date').value || 'Requested Date';
-        var slot = document.getElementById('re_slot').value;
-        var budget = document.getElementById('re_budget').value;
-        
-        var toast = document.getElementById('reToast');
-        var toastMsg = document.getElementById('reToastMessage');
-        toastMsg.innerHTML = "Thank you, <strong>" + name + "</strong>! Viewing request for <strong>" + property + "</strong> on " + date + " (" + slot + ") registered.<br><br><em>(Demo mode: Connecting to WhatsApp advisor...)</em>";
-        toast.classList.add('active');
-        
+        if (!f.checkValidity()) {
+          f.reportValidity();
+          return;
+        }
+        if (isSubmitting) return;
+        isSubmitting = true;
+
+        var name = (document.getElementById("re_name") && document.getElementById("re_name").value) || "Client";
+        var property = (document.getElementById("re_property") && document.getElementById("re_property").value) || "Luxury Residence";
+        var date = (document.getElementById("re_date") && document.getElementById("re_date").value) || "Requested Date";
+        var slot = (document.getElementById("re_slot") && document.getElementById("re_slot").value) || "Morning";
+        var budget = (document.getElementById("re_budget") && document.getElementById("re_budget").value) || "Standard";
+
+        // Safe lead_submit tracking (No PII)
+        try {
+          var safeTrack = window.trackEvent || (window.parent && window.parent.trackEvent);
+          if (typeof safeTrack === "function") {
+            safeTrack("lead_submit", {
+              package: "concept_demo",
+              industry: "Real Estate",
+              form_location: "real_estate_booking_form"
+            });
+          }
+        } catch (err) {}
+
+        var toast = document.getElementById("reToast");
+        var toastMsg = document.getElementById("reToastMessage");
+        if (toastMsg) {
+          toastMsg.innerHTML = "Thank you, <strong>" + name + "</strong>! Viewing request for <strong>" + property + "</strong> on " + date + " (" + slot + ") registered.<br><br><em>(Demo mode: Connecting to WhatsApp advisor...)</em>";
+        }
+        if (toast) toast.classList.add("active");
+
         setTimeout(function() {
           var waText = encodeURIComponent("Hello Prime Estates (Vardan Pal Studio Demo), I would like to schedule a private walkthrough:\n- Client: " + name + "\n- Property: " + property + "\n- Date: " + date + "\n- Slot: " + slot + "\n- Budget: " + budget);
           window.open("https://wa.me/918279696707?text=" + waText, "_blank");
+          isSubmitting = false;
         }, 1200);
       });
-    </script>
+    })();
+  </script>
   </body>
 </html>

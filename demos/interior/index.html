@@ -295,24 +295,53 @@
     </p>
   </div>
 
+  
   <script>
-    document.getElementById('interior-booking-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var name = document.getElementById('int_name').value || 'Client';
-      var type = document.getElementById('int_type').value;
-      var loc = document.getElementById('int_location').value;
-      var area = document.getElementById('int_area').value;
-      
-      var toast = document.getElementById('demoToast');
-      var toastMsg = document.getElementById('toastMessage');
-      toastMsg.innerHTML = "Thank you, <strong>" + name + "</strong>! Consultation request for <strong>" + type + "</strong> in " + loc + " (" + area + ") registered.<br><br><em>(Demo mode: Connecting to WhatsApp studio desk...)</em>";
-      toast.classList.add('active');
-      
-      setTimeout(function() {
-        var waText = encodeURIComponent("Hello Studio Eleven (Vardan Pal Studio Demo), I would like to book a design consultation:\n- Client: " + name + "\n- Typology: " + type + "\n- Location: " + loc + "\n- Area: " + area);
-        window.open("https://wa.me/918279696707?text=" + waText, "_blank");
-      }, 1200);
-    });
+    (function() {
+      var isSubmitting = false;
+      var f = document.getElementById("interior-booking-form");
+      if (!f) return;
+
+      f.addEventListener("submit", function(e) {
+        e.preventDefault();
+        if (!f.checkValidity()) {
+          f.reportValidity();
+          return;
+        }
+        if (isSubmitting) return;
+        isSubmitting = true;
+
+        var name = (document.getElementById("int_name") && document.getElementById("int_name").value) || "Client";
+        var type = (document.getElementById("int_type") && document.getElementById("int_type").value) || "Full Residential Design";
+        var loc = (document.getElementById("int_location") && document.getElementById("int_location").value) || "South Delhi";
+        var area = (document.getElementById("int_area") && document.getElementById("int_area").value) || "Standard Area";
+
+        // Safe lead_submit tracking (No PII)
+        try {
+          var safeTrack = window.trackEvent || (window.parent && window.parent.trackEvent);
+          if (typeof safeTrack === "function") {
+            safeTrack("lead_submit", {
+              package: "concept_demo",
+              industry: "Interior / Architecture",
+              form_location: "interior_booking_form"
+            });
+          }
+        } catch (err) {}
+
+        var toast = document.getElementById("demoToast");
+        var toastMsg = document.getElementById("toastMessage");
+        if (toastMsg) {
+          toastMsg.innerHTML = "Thank you, <strong>" + name + "</strong>! Consultation request for <strong>" + type + "</strong> in " + loc + " (" + area + ") registered.<br><br><em>(Demo mode: Connecting to WhatsApp studio desk...)</em>";
+        }
+        if (toast) toast.classList.add("active");
+
+        setTimeout(function() {
+          var waText = encodeURIComponent("Hello Studio Eleven (Vardan Pal Studio Demo), I would like to book a design consultation:\n- Client: " + name + "\n- Typology: " + type + "\n- Location: " + loc + "\n- Area: " + area);
+          window.open("https://wa.me/918279696707?text=" + waText, "_blank");
+          isSubmitting = false;
+        }, 1200);
+      });
+    })();
   </script>
 </body>
 </html>

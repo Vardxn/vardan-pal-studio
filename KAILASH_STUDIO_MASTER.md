@@ -307,6 +307,36 @@ This log records every milestone achieved in the development of Kailash Studio:
       - Updated studio attribution lines across all 6 demo footers: *"Built by Vardan Pal Studio • Websites from ₹9,900 • Custom systems quoted separately"*. Fictional business pricing inside demos remains intact.
     - **Governance Document:** Created `PRICING-SYSTEM.md` detailing packages, inclusions, boundaries, revision limits, support windows, and communication rules.
 
+15. **Phase 15 — Conversion tracking and Google Ads readiness (October 2026):**
+    - **Safe Analytics Architecture (`assets/js/analytics-config.js` & `assets/js/tracking.js`):**
+      - Centralized configuration with empty IDs by default (`ga4MeasurementId: ""`, `googleAdsConversionId: ""`, `googleAdsLeadLabel: ""`). Zero third-party scripts loaded when IDs are empty; zero runtime exceptions thrown.
+      - Privacy-first client-side tracking via `trackEvent(eventName, parameters)` pushing sanitized payloads into `window.dataLayer`.
+      - Strict programmatic PII scrubber: Automatically excludes personal fields (`name`, `phone`, `email`, `city`, `msg`, `address`) and regex-matches for email/phone strings before dispatching events.
+      - Debounced click event delegation (350ms window) preventing rapid duplicate event triggers.
+    - **Conversion Events & Hierarchy:**
+      - **Primary Conversion:** `lead_submit` — Fires strictly after valid form validation succeeds (valid name, valid email, phone, and checked consent box) and before WhatsApp redirection.
+      - **Secondary Conversions:** `whatsapp_click`, `phone_click`, `email_click`, `demo_open`, `pricing_cta`, `proposal_request`.
+    - **Full UTM & Campaign Attribution Engine:**
+      - Captures `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, and `gclid` on landing and persists them across navigation via `sessionStorage`.
+      - Automatically populates hidden inputs in `#enquireForm`.
+      - Passes complete attribution object to Vercel Serverless Contact API (`api/contact.js`) with human-readable summary line.
+      - Appends referral source tag into WhatsApp message only when attribution is present.
+    - **Multi-Form Hardening Across Hub & 6 Demos:**
+      - Studio Hub contact form and all 6 client concept demos (`salon`, `clinic`, `restaurant`, `real-estate`, `interior`, `events`) hardened with `isSubmitting` duplicate submission guards, visible required field checks, instant success cards/toasts, and zero-PII `lead_submit` tracking.
+    - **Privacy Policy & Terms of Service:**
+      - Published responsive editorial legal pages (`privacy.html` and `terms.html`) adhering to the studio's Ivory/Charcoal/Gold design system.
+      - Added mandatory consent checkbox on the enquiry form linking directly to Privacy Policy and Terms.
+      - Added legal links in studio footer.
+    - **Google Ads Campaign Strategy (`GOOGLE_ADS_SETUP.md`):**
+      - Formulated complete Search-only campaign architecture (no initial PMAX or Display) with conservative budget recommendations (₹500–₹800/day for 2–4 weeks).
+      - Configured 6 high-intent Search ad groups: Clinic, Salon, Restaurant, Small-Business, Website Designer Delhi, and Website Designer India using Exact `[...]` and Phrase `"..."` match keywords.
+      - Universal negative keyword list (employment, education/tutorials, free seekers, platform logins) and weekly Search Terms review protocol.
+      - 12 Responsive Search Ad (RSA) copy concepts built strictly on verifiable claims matching studio packages (₹9,900, ₹19,900, ₹34,900, Custom Systems).
+      - Lead pipeline workflow (`New -> Contacted -> Qualified -> Proposal Sent -> Won/Lost`) and CRM tracking schema.
+    - **Automated Playwright Test Suite & Audit Report:**
+      - Automated test script `scripts/test-tracking.mjs` verifying all 10 core tracking scenarios with 100% PASS rate.
+      - Published comprehensive audit report `QA-TRACKING-REPORT.md`.
+
 
 ---
 
