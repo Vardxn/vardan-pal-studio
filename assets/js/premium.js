@@ -376,10 +376,17 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[s]));
 
+  let isEnquirySubmitting = false;
   const form = $('#enquireForm');
   if (form) {
+    if (typeof window.populateFormAttribution === 'function') {
+      window.populateFormAttribution(form);
+    }
+
     form.addEventListener('submit', async e => {
       e.preventDefault();
+      if (isEnquirySubmitting) return;
+
       const btn = $('#enquireSubmitBtn');
       const statusEl = $('#enquireStatus');
 
@@ -392,8 +399,26 @@
       const pkg = (d.get('package') || '').toString().trim();
       const goal = (d.get('goal') || '').toString().trim();
       const msg = (d.get('msg') || '').toString().trim();
+      const honeypot = (d.get('honeypot') || '').toString().trim();
+      const consent = form.querySelector('#contactConsent');
 
+      // 1. Anti-Spam Honeypot Check
+      if (honeypot) {
+        if (statusEl) {
+          statusEl.textContent = 'Submission rejected.';
+          statusEl.className = 'enquire-status error';
+          statusEl.style.display = 'block';
+        }
+        return;
+      }
+
+      // 2. Visible Validation
       if (!name || !email || !phone) {
+        if (statusEl) {
+          statusEl.textContent = 'Please provide your name, email, and phone/WhatsApp number.';
+          statusEl.className = 'enquire-status error';
+          statusEl.style.display = 'block';
+        }
         form.reportValidity?.();
         return;
       }
@@ -407,6 +432,18 @@
         return;
       }
 
+      if (consent && !consent.checked) {
+        if (statusEl) {
+          statusEl.textContent = 'Please agree to the privacy and contact consent terms to continue.';
+          statusEl.className = 'enquire-status error';
+          statusEl.style.display = 'block';
+        }
+        return;
+      }
+
+      // Prevent duplicate submissions
+      isEnquirySubmitting = true;
+
       const origBtnHtml = btn ? btn.innerHTML : 'Send Enquiry &rarr;';
       if (btn) {
         btn.disabled = true;
@@ -417,28 +454,51 @@
         statusEl.className = 'enquire-status';
       }
 
+      // Retrieve Campaign Attribution
+      const attribution = (typeof window.getAttribution === 'function' ? window.getAttribution() : {}) || {};
+      ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'].forEach(key => {
+        const val = (d.get(key) || '').toString().trim();
+        if (val && !attribution[key]) attribution[key] = val;
+      });
+
+      // SECTION 2.A — Fire lead_submit only after valid form validation succeeds and before WhatsApp handoff
+      // Strictly do not send personal data (name, phone, email, message, city)
+      if (typeof window.trackEvent === 'function') {
+        window.trackEvent('lead_submit', {
+          package: pkg || 'Website',
+          industry: type || 'General Business',
+          form_location: 'main_enquiry_form'
+        });
+      }
+
       const payload = {
         name,
         email,
         phone,
         city: city || 'Across India',
         type: type || 'General Business',
-        package: pkg || 'Not specified',
+        package: pkg || 'Website',
         goal: goal || 'Not specified',
         msg: msg || 'None provided',
+        attribution,
+        honeypot,
         _subject: `New Studio Inquiry: ${name} (${city || 'India'} • ${pkg || 'Website'} • ${type || 'General Lead'})`,
         _template: 'table',
         _captcha: 'false'
       };
 
-      if (window.track) {
-        window.track('form_submit', { type, goal });
-      }
+      // Internal WhatsApp message — include attribution tag ONLY if attribution is present
+      const attrParts = [];
+      if (attribution.utm_source) attrParts.push(`Source: ${attribution.utm_source}`);
+      if (attribution.utm_campaign) attrParts.push(`Campaign: ${attribution.utm_campaign}`);
+      if (attribution.utm_term) attrParts.push(`Keyword: ${attribution.utm_term}`);
+      if (attribution.gclid) attrParts.push('Google Ads Click');
+      const waAttrLine = attrParts.length > 0 ? `\n\n[Ref: ${attrParts.join(' • ')}]` : '';
 
-      const waText = `Hi Vardan, I found Vardan Pal Studio online and would like to discuss a project.\n\nName: ${name}\nCity/State: ${city || 'India'}\nPhone: ${phone}\nPackage: ${pkg || 'Website'}\nBusiness: ${type || 'General'}\nNeed: ${goal || 'New Website'}${msg ? `\nNotes: ${msg}` : ''}`;
+      const waText = `Hi Vardan, I found Vardan Pal Studio online and would like to discuss a project.\n\nName: ${name}\nCity/State: ${city || 'India'}\nPhone: ${phone}\nPackage: ${pkg || 'Website'}\nBusiness: ${type || 'General'}\nNeed: ${goal || 'New Website'}${msg ? `\nNotes: ${msg}` : ''}${waAttrLine}`;
       const waUrl = `https://wa.me/918279696707?text=${encodeURIComponent(waText)}`;
 
-      // 1. Asynchronously dispatch email notification in background
+      // 1. Asynchronously dispatch notification email to backend API
       (async () => {
         try {
           const res = await fetch('/api/contact', {
@@ -465,6 +525,15 @@
         console.warn('Popup blocked:', openErr);
       }
 
+      // SECTION 2.G — proposal_request: fire when valid enquiry is submitted and user reaches success state
+      if (typeof window.trackEvent === 'function') {
+        window.trackEvent('proposal_request', {
+          package: pkg || 'Website',
+          industry: type || 'General Business',
+          form_location: 'main_enquiry_form'
+        });
+      }
+
       // 3. Immediately display success confirmation card
       form.innerHTML = `
         <div class="enquire-success-card">
@@ -473,7 +542,7 @@
           <p>Your enquiry has been received directly by Vardan Pal Studio (<strong>vardan2701@gmail.com</strong>). We will review your project requirements and get back to you within a few hours.</p>
           <div class="success-cta-box">
             <span>Opening WhatsApp conversation with prefilled details...</span>
-            <a class="btn btn--accent" href="${waUrl}" target="_blank" rel="noopener">
+            <a class="btn btn--accent" href="${waUrl}" target="_blank" rel="noopener" data-track="whatsapp_click" data-location="success_card">
               Continue to WhatsApp Now <span class="arr">&rarr;</span>
             </a>
           </div>
