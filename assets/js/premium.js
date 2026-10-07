@@ -389,6 +389,7 @@
       const phone = (d.get('phone') || '').toString().trim();
       const city = (d.get('city') || '').toString().trim();
       const type = (d.get('type') || '').toString().trim();
+      const pkg = (d.get('package') || '').toString().trim();
       const goal = (d.get('goal') || '').toString().trim();
       const msg = (d.get('msg') || '').toString().trim();
 
@@ -422,9 +423,10 @@
         phone,
         city: city || 'Across India',
         type: type || 'General Business',
+        package: pkg || 'Not specified',
         goal: goal || 'Not specified',
         msg: msg || 'None provided',
-        _subject: `New Studio Inquiry: ${name} (${city || 'India'} • ${type || 'General Lead'})`,
+        _subject: `New Studio Inquiry: ${name} (${city || 'India'} • ${pkg || 'Website'} • ${type || 'General Lead'})`,
         _template: 'table',
         _captcha: 'false'
       };
@@ -433,7 +435,7 @@
         window.track('form_submit', { type, goal });
       }
 
-      const waText = `Hi Vardan, I found Vardan Pal Studio online and would like to discuss a website.\n\nName: ${name}\nCity/State: ${city || 'India'}\nPhone: ${phone}\nBusiness: ${type || 'General'}\nNeed: ${goal || 'Website'}${msg ? `\nNotes: ${msg}` : ''}`;
+      const waText = `Hi Vardan, I found Vardan Pal Studio online and would like to discuss a project.\n\nName: ${name}\nCity/State: ${city || 'India'}\nPhone: ${phone}\nPackage: ${pkg || 'Website'}\nBusiness: ${type || 'General'}\nNeed: ${goal || 'New Website'}${msg ? `\nNotes: ${msg}` : ''}`;
       const waUrl = `https://wa.me/918279696707?text=${encodeURIComponent(waText)}`;
 
       // 1. Asynchronously dispatch email notification in background
@@ -482,6 +484,47 @@
   }
 
   
+  
+  /* ==========================================================================
+     PACKAGE PRE-SELECTION FROM PRICING CTAS
+     ========================================================================== */
+  const selectPackage = (pkgName) => {
+    const pkgSelect = $('#contactPackage') || $('select[name="package"]');
+    if (!pkgSelect || !pkgName) return;
+    for (let i = 0; i < pkgSelect.options.length; i++) {
+      if (pkgSelect.options[i].value.toLowerCase() === pkgName.toLowerCase() ||
+          pkgSelect.options[i].value.toLowerCase().includes(pkgName.toLowerCase())) {
+        pkgSelect.selectedIndex = i;
+        pkgSelect.dispatchEvent(new Event('change', { bubbles: true }));
+        break;
+      }
+    }
+    const contactSection = $('#contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => pkgSelect.focus({ preventScroll: true }), 400);
+    }
+  };
+
+  document.querySelectorAll('.select-package-btn, [data-package]').forEach(btn => {
+    btn.addEventListener('click', e => {
+      const pkg = btn.getAttribute('data-package');
+      if (pkg) {
+        e.preventDefault();
+        selectPackage(pkg);
+        if (history.replaceState) {
+          history.replaceState(null, null, '#contact');
+        }
+      }
+    });
+  });
+
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const qPkg = urlParams.get('package');
+    if (qPkg) selectPackage(qPkg);
+  } catch (e) {}
+
   /* ==========================================================================
      PORTFOLIO DEVICE PREVIEW MODAL CONTROLLER
      ========================================================================== */
