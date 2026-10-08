@@ -1,9 +1,9 @@
 # Vardan Pal Studio — Master Blueprint & Documentation
 
-> **The definitive documentation for Vardan Pal Studio has been consolidated into a single master file:**  
-> 👉 **[VARDAN_PAL_STUDIO_MASTER.md](./VARDAN_PAL_STUDIO_MASTER.md)**
+> **The definitive documentation for Vardan Pal Studio is maintained in:**  
+> 👉 **[docs/VARDAN_PAL_STUDIO_MASTER.md](./docs/VARDAN_PAL_STUDIO_MASTER.md)**
 
-Please refer to **[VARDAN_PAL_STUDIO_MASTER.md](./VARDAN_PAL_STUDIO_MASTER.md)** for:
+Please refer to **[docs/VARDAN_PAL_STUDIO_MASTER.md](./docs/VARDAN_PAL_STUDIO_MASTER.md)** for:
 - 📌 Complete Project Overview & Brand Positioning (*Vardan Pal Studio · New Delhi*)
 - 🚀 Quick Start & Local Serving (`http://localhost:8088`)
 - 💎 The 6 Client Demo Portals & Live URLs
@@ -14,6 +14,6 @@ Please refer to **[VARDAN_PAL_STUDIO_MASTER.md](./VARDAN_PAL_STUDIO_MASTER.md)**
 - 🛠️ Developer Commands Reference
 
 ---
-*Live Production URL:* [https://vardanpal.vercel.app](https://vardanpal.vercel.app) *(Alias: [https://vardanpalstudio.vercel.app](https://vardanpalstudio.vercel.app))*  
+*Live Production URL:* [https://vardanpalstudio.vercel.app](https://vardanpalstudio.vercel.app)  
 *Direct WhatsApp:* [+91 82796 96707](https://wa.me/918279696707)  
 *Location:* New Delhi, India · Serving businesses nationwide
