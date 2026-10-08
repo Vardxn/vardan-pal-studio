@@ -3,10 +3,9 @@
     {
       "form": "Hub Contact Form",
       "validationWorks": true,
-      "successAppears": true,
-      "waOpened": true,
-      "waIncludesBrand": true,
-      "waUrl": "https://wa.me/918279696707?text=Hi%20Vardan%2C%20I%20found%20Vardan%20Pal%20Studio%20online%20and%20would%20like%20to%20discuss%20a%20website.%0A%0AName%3A%20QA%20Test%20Client%0ACity%2FState%3A%20New%20Delhi%0APhone%3A%20%2B91%2099999%2088888%0ABusiness%3A%20Clinic%20%2F%20Healthcare%0ANeed%3A%20New%20Website%0ANotes%3A%20Testing%20automated%20handoff"
+      "successAppears": false,
+      "waOpened": false,
+      "waIncludesBrand": false
     },
     {
       "form": "Salon",
@@ -30,7 +29,7 @@
       "waOpened": true,
       "includesDemo": true,
       "includesStudio": true,
-      "decodedWaSnippet": "https://wa.me/918279696707?text=Hello Malcha Table (Vardan Pal Studio Demo), I would like to reserve"
+      "decodedWaSnippet": "https://wa.me/918279696707?text=Hello%20CHICA%20(Vardan%20Pal%20Studio%20Demo)%2C%20I%20would%20like%20to%20reserve%20a%20table%20for%202%20guests%20on%202026-10-09%20at%2008%3A00%20PM.%20Guest%3A%20Rohan%20Mehra.%20Ref%3A%20CHC-20261009-4325"
     },
     {
       "form": "Real Estate",
@@ -58,8 +57,8 @@
     }
   ],
   "links": {
-    "total": 40,
-    "passed": 40,
+    "total": 41,
+    "passed": 41,
     "issues": []
   },
   "brandSweep": {
@@ -83,8 +82,8 @@
     ]
   },
   "performance": {
-    "totalTransferredBytes": 5600112,
-    "totalMb": "5.34 MB",
+    "totalTransferredBytes": 4823449,
+    "totalMb": "4.60 MB",
     "eagerLoadedImagesCount": 5
   }
 }

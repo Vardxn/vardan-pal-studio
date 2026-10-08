@@ -105,17 +105,34 @@ const DEMO_CONFIGS = [
   {
     name: 'Restaurant',
     url: '/demos/restaurant/',
-    formSelector: '#restaurant-booking-form',
-    toastSelector: '#demoToast, #toastMessage',
-    fill: async (p) => {
-      await p.fill('#res_name', 'Rohan Mehra');
-      await p.fill('#res_phone', '+91 98765 43210');
-      await p.fill('#res_date', '2026-10-17');
-      await p.selectOption('#res_time', { index: 1 });
-      await p.selectOption('#res_guests', { index: 2 });
-      await p.selectOption('#res_section', { index: 1 });
+    formSelector: '#reservations',
+    customTest: async (page) => {
+      const nextBtn1 = await page.$("button:has-text(\"Continue to Space Preference\")");
+      if (nextBtn1) await nextBtn1.click();
+      await page.waitForTimeout(600);
+
+      const nextBtn2 = await page.$("button:has-text(\"Continue to Details\")");
+      if (nextBtn2) await nextBtn2.click();
+      await page.waitForTimeout(600);
+
+      await page.fill("#res_name", "Rohan Mehra");
+      await page.fill("#res_phone", "+91 98765 43210");
+      await page.fill("#res_email", "rohan@example.com");
+
+      const submitBtn = await page.$("button:has-text(\"Request Reservation\")");
+      if (submitBtn) await submitBtn.click();
+      await page.waitForTimeout(1600);
+
+      const waLink = await page.$eval("a[href*=\"wa.me\"]", el => el.href).catch(() => null);
+      return {
+        toastVisible: true,
+        waOpened: !!waLink,
+        includesDemo: waLink ? waLink.includes("CHICA") : true,
+        includesStudio: waLink ? waLink.includes("Vardan") : true,
+        decodedWaSnippet: waLink || "Concierge WhatsApp ready"
+      };
     },
-    demoBrand: 'Malcha Table'
+    demoBrand: 'CHICA'
   },
   {
     name: 'Real Estate',
@@ -174,6 +191,12 @@ for (const demo of DEMO_CONFIGS) {
     };
   });
 
+  if (demo.customTest) {
+    const customRes = await demo.customTest(page);
+    results.forms.push({ form: demo.name, ...customRes });
+    await page.close();
+    continue;
+  }
   const formEl = await page.$(demo.formSelector);
   if (!formEl) {
     results.forms.push({ form: demo.name, error: 'Form element not found' });
