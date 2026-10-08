@@ -140,7 +140,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions (up to 90 chars each):**
   1. "Modern clinic websites with treatment pages, appointment enquiry flows and WhatsApp."
   2. "Explore live design options and request a proposal. Direct developer communication."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=clinic-website&package=Business#work`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=clinic-website&package=Business#work`
 
 #### RSA Concept 2 (Doctor & Trust Credibility Focus)
 - **Headlines:**
@@ -152,7 +152,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions:**
   1. "Modern clinic websites with treatment pages, appointment enquiry flows and WhatsApp integration."
   2. "Transparent packages from ₹9,900. No agency middlemen. Explore live design options."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=clinic-website#pricing`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=clinic-website#pricing`
 
 ---
 
@@ -168,7 +168,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions:**
   1. "Modern websites with clear services, enquiry flows, WhatsApp integration and mobile-first."
   2. "Explore live design options and request a proposal. Direct developer communication."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=salon-website&package=Business#work`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=salon-website&package=Business#work`
 
 #### RSA Concept 2 (Premium Editorial Focus)
 - **Headlines:**
@@ -180,7 +180,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions:**
   1. "Modern salon websites with lookbooks, service menus, and direct WhatsApp chair booking."
   2. "Transparent packages from ₹9,900. Built directly by engineer. Explore live designs."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=salon-website#pricing`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=salon-website#pricing`
 
 ---
 
@@ -196,7 +196,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions:**
   1. "Modern websites with clear services, enquiry flows, WhatsApp integration and mobile-first."
   2. "Explore live design options and request a proposal. Direct developer communication."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=restaurant-website&package=Business#work`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=restaurant-website&package=Business#work`
 
 #### RSA Concept 2 (Cafe & Hospitality Focus)
 - **Headlines:**
@@ -208,7 +208,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions:**
   1. "Digital menus, photo lookbooks, and instant WhatsApp booking for dining establishments."
   2. "Packages starting from ₹9,900. Fast turnaround. Review live interactive concepts."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=restaurant-website#pricing`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=restaurant-website#pricing`
 
 ---
 
@@ -224,7 +224,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions:**
   1. "Modern websites with clear services, enquiry flows, WhatsApp integration and mobile-first."
   2. "Explore live design options and request a proposal. Direct developer communication."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=small-biz#pricing`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=small-biz#pricing`
 
 #### RSA Concept 2 (Package Transparency Focus)
 - **Headlines:**
@@ -236,7 +236,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions:**
   1. "Transparent packages: Launch ₹9,900, Business ₹19,900, Signature ₹34,900. No surprises."
   2. "Modern websites designed and built directly by founder. Explore live options today."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=small-biz#pricing`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=small-biz#pricing`
 
 ---
 
@@ -252,7 +252,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions:**
   1. "Modern websites with clear services, enquiry flows, WhatsApp integration and mobile-first."
   2. "Explore live design options and request a proposal. Direct developer communication."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=delhi-designer#contact`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=delhi-designer#contact`
 
 #### RSA Concept 2 (Local Business Focus)
 - **Headlines:**
@@ -264,7 +264,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions:**
   1. "Independent studio in New Delhi serving local businesses. Direct developer access."
   2. "Transparent fixed packages: Launch ₹9,900, Business ₹19,900. Check live demos now."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=delhi-designer#pricing`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=delhi-designer#pricing`
 
 ---
 
@@ -280,7 +280,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions:**
   1. "Modern websites with clear services, enquiry flows, WhatsApp integration and mobile-first development."
   2. "Explore live design options and request a proposal. Serving clients nationwide."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=india-designer#pricing`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=india-designer#pricing`
 
 #### RSA Concept 2 (Engineering Craft Focus)
 - **Headlines:**
@@ -292,7 +292,7 @@ All ad copy complies with Google Ads editorial guidelines and studio credibility
 - **Descriptions:**
   1. "High-performance business websites built by NIT engineer. Clear scope and delivery."
   2. "Packages from ₹9,900 to custom systems. Explore working interactive prototypes."
-- **Final URL:** `https://kailashstudio.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=india-designer#contact`
+- **Final URL:** `https://vardanpal.vercel.app/?utm_source=google&utm_medium=cpc&utm_campaign=india-designer#contact`
 
 ---
 

@@ -64,8 +64,8 @@ export default async function handler(req, res) {
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json",
-        "Origin": "https://kailashstudio.vercel.app",
-        "Referer": "https://kailashstudio.vercel.app/"
+        "Origin": "https://vardanpal.vercel.app",
+        "Referer": "https://vardanpal.vercel.app/"
       },
       body: JSON.stringify(payload)
     });
