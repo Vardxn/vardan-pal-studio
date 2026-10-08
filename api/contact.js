@@ -58,24 +58,51 @@ export default async function handler(req, res) {
       _captcha: "false"
     };
 
-    // Forward to FormSubmit to dispatch notification email to vardan2701@gmail.com
-    const response = await fetch("https://formsubmit.co/ajax/vardan2701@gmail.com", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Accept": "application/json",
-        "Origin": "https://vardanpalstudio.vercel.app",
-        "Referer": "https://vardanpalstudio.vercel.app/"
-      },
-      body: JSON.stringify(payload)
-    });
+    // 4. Upstream Forwarding with AbortController (~8s timeout)
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 8000);
 
-    const rawText = await response.text();
-    let result = {};
+    let response;
     try {
+      response = await fetch("https://formsubmit.co/ajax/vardan2701@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+          "Origin": "https://vardanpalstudio.vercel.app",
+          "Referer": "https://vardanpalstudio.vercel.app/"
+        },
+        body: JSON.stringify(payload),
+        signal: controller.signal
+      });
+    } finally {
+      clearTimeout(timeoutId);
+    }
+
+    // 5. Upstream HTTP Status Guard
+    if (!response.ok) {
+      return res.status(502).json({
+        error: "Delivery service temporarily unavailable. Please connect directly via WhatsApp (+91 82796 96707)."
+      });
+    }
+
+    // 6. Defensive Body Parsing & Upstream Confirmation Guard
+    let result;
+    try {
+      const rawText = await response.text();
       result = JSON.parse(rawText);
     } catch {
-      result = { raw: rawText };
+      return res.status(502).json({
+        error: "Invalid response from delivery service. Please connect directly via WhatsApp (+91 82796 96707)."
+      });
+    }
+
+    // FormSubmit returns { success: "true" } or { success: true }
+    const confirmed = result && (result.success === true || result.success === "true");
+    if (!confirmed) {
+      return res.status(502).json({
+        error: "Delivery service did not confirm receipt. Please connect directly via WhatsApp (+91 82796 96707)."
+      });
     }
 
     return res.status(200).json({
@@ -88,8 +115,14 @@ export default async function handler(req, res) {
       }
     });
   } catch (err) {
-    // Log internally but never reveal raw stack traces to the public
-    console.error("[Contact API Error]:", err.message);
+    if (err && err.name === "AbortError") {
+      return res.status(502).json({
+        error: "Submission timed out reaching delivery server. Please connect directly via WhatsApp (+91 82796 96707)."
+      });
+    }
+
+    // Log internally but never reveal raw stack traces or internals to the client
+    console.error("[Contact API Error]:", err?.message || err);
     return res.status(500).json({
       error: "Failed to process enquiry. Please connect directly via WhatsApp (+91 82796 96707)."
     });

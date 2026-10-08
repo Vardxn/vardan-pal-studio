@@ -43,7 +43,7 @@
   
   <div class="site-wrap">
 
-    <div class="site-mobile-menu">
+    <div class="site-mobile-menu" aria-hidden="true" inert>
       <div class="site-mobile-menu-header">
         <div class="site-mobile-menu-close mt-3">
           <span class="icon-close2 js-menu-toggle"></span>
@@ -206,7 +206,7 @@
               <div class="service-icon-box"><span class="flaticon-pills"></span></div>
               <h3 class="h5 font-weight-bold mb-2">Clinical Dermatology &amp; Laser</h3>
               <p class="text-muted small mb-3">US-FDA approved fractional laser therapy for acne scarring, melasma, hyperpigmentation, and skin rejuvenation.</p>
-              <div class="text-dark font-weight-bold small">Administered by Board-Certified MD</div>
+              <div class="text-dark font-weight-bold small">Administered by Qualified MD Specialists</div>
             </div>
           </div>
           <div class="col-md-6 col-lg-4 mb-4">
@@ -590,5 +590,32 @@
   </script>
     
     <script src="../../assets/js/demo-navigation.js"></script>
+
+  <!-- Offcanvas Accessibility Sync (GAP 2) -->
+  <script>
+    (function() {
+      var menu = document.querySelector(".site-mobile-menu");
+      if (!menu) return;
+      var observer = new MutationObserver(function() {
+        var isOpen = document.body.classList.contains("offcanvas-menu");
+        if (isOpen) {
+          menu.removeAttribute("aria-hidden");
+          menu.removeAttribute("inert");
+        } else {
+          menu.setAttribute("aria-hidden", "true");
+          menu.setAttribute("inert", "");
+        }
+      });
+      observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
+
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape" && document.body.classList.contains("offcanvas-menu")) {
+          document.body.classList.remove("offcanvas-menu");
+          var toggle = document.querySelector("a.site-menu-toggle");
+          if (toggle) toggle.focus();
+        }
+      });
+    })();
+  </script>
 </body>
 </html>

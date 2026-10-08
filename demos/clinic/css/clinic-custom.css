@@ -247,3 +247,23 @@ html, body {
   align-items: center;
   justify-content: center;
 }
+
+/* ==========================================================================
+   GAP 2: CLINIC OFFCANVAS DRAWER STRUCTURAL FIX
+   - Closed state: truly inert (visibility: hidden, pointer-events: none)
+   - Width strictly constrained to max 100vw
+   - Open state: visible, interactive, smooth hardware-accelerated transition
+   ========================================================================== */
+.site-mobile-menu {
+  max-width: 100vw !important;
+  width: min(300px, calc(100vw - 32px)) !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out !important;
+}
+
+body.offcanvas-menu .site-mobile-menu {
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateX(0%) !important;
+}
