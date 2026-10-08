@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-07T08:00:11.139Z",
+  "timestamp": "2026-10-08T04:59:58.926Z",
   "environment": {
     "node": "v20.18.0",
     "baseUrl": "http://localhost:8088",
@@ -154,11 +154,11 @@
       "innerWidth": 320,
       "consoleErrorsCount": 0,
       "failedRequestsCount": 0,
-      "touchIssuesCount": 0,
+      "touchIssuesCount": 10,
       "labelIssuesCount": 0,
       "imageIssuesCount": 0,
       "screenshot": "audit-shots/full-qa/404/320.png",
-      "passed": true
+      "passed": false
     },
     {
       "route": "404",
@@ -173,11 +173,11 @@
       "innerWidth": 375,
       "consoleErrorsCount": 0,
       "failedRequestsCount": 0,
-      "touchIssuesCount": 0,
+      "touchIssuesCount": 10,
       "labelIssuesCount": 0,
       "imageIssuesCount": 0,
       "screenshot": "audit-shots/full-qa/404/375.png",
-      "passed": true
+      "passed": false
     },
     {
       "route": "404",
@@ -192,11 +192,11 @@
       "innerWidth": 390,
       "consoleErrorsCount": 0,
       "failedRequestsCount": 0,
-      "touchIssuesCount": 0,
+      "touchIssuesCount": 10,
       "labelIssuesCount": 0,
       "imageIssuesCount": 0,
       "screenshot": "audit-shots/full-qa/404/390.png",
-      "passed": true
+      "passed": false
     },
     {
       "route": "404",
@@ -211,11 +211,11 @@
       "innerWidth": 430,
       "consoleErrorsCount": 0,
       "failedRequestsCount": 0,
-      "touchIssuesCount": 0,
+      "touchIssuesCount": 10,
       "labelIssuesCount": 0,
       "imageIssuesCount": 0,
       "screenshot": "audit-shots/full-qa/404/430.png",
-      "passed": true
+      "passed": false
     },
     {
       "route": "404",
@@ -1207,12 +1207,357 @@
     }
   ],
   "summary": {
-    "passed": 63,
-    "failed": 0,
+    "passed": 59,
+    "failed": 4,
     "overflowIssues": [],
     "consoleErrors": [],
     "failedRequests": [],
-    "touchTargetIssues": [],
+    "touchTargetIssues": [
+      {
+        "route": "404",
+        "viewport": "320",
+        "issues": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "WhatsApp +91 82796 96707",
+            "width": 172,
+            "height": 20
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "vardan2701@gmail.com",
+            "width": 146,
+            "height": 20
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Demos",
+            "width": 280,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Pricing",
+            "width": 280,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Process",
+            "width": 280,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Contact",
+            "width": 280,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "About",
+            "width": 280,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Developer Portfolio ↗",
+            "width": 280,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Privacy",
+            "width": 280,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Terms",
+            "width": 280,
+            "height": 31
+          }
+        ]
+      },
+      {
+        "route": "404",
+        "viewport": "375",
+        "issues": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "WhatsApp +91 82796 96707",
+            "width": 172,
+            "height": 20
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "vardan2701@gmail.com",
+            "width": 146,
+            "height": 20
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Demos",
+            "width": 160,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Pricing",
+            "width": 160,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Process",
+            "width": 160,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Contact",
+            "width": 160,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "About",
+            "width": 160,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Developer Portfolio ↗",
+            "width": 160,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Privacy",
+            "width": 160,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Terms",
+            "width": 160,
+            "height": 31
+          }
+        ]
+      },
+      {
+        "route": "404",
+        "viewport": "390",
+        "issues": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "WhatsApp +91 82796 96707",
+            "width": 172,
+            "height": 20
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "vardan2701@gmail.com",
+            "width": 146,
+            "height": 20
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Demos",
+            "width": 167,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Pricing",
+            "width": 167,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Process",
+            "width": 167,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Contact",
+            "width": 167,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "About",
+            "width": 167,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Developer Portfolio ↗",
+            "width": 167,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Privacy",
+            "width": 167,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Terms",
+            "width": 167,
+            "height": 31
+          }
+        ]
+      },
+      {
+        "route": "404",
+        "viewport": "430",
+        "issues": [
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "WhatsApp +91 82796 96707",
+            "width": 172,
+            "height": 20
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "vardan2701@gmail.com",
+            "width": 146,
+            "height": 20
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Demos",
+            "width": 187,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Pricing",
+            "width": 187,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Process",
+            "width": 187,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Contact",
+            "width": 187,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "About",
+            "width": 187,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Developer Portfolio ↗",
+            "width": 187,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Privacy",
+            "width": 187,
+            "height": 31
+          },
+          {
+            "tag": "A",
+            "id": "",
+            "class": "",
+            "text": "Terms",
+            "width": 187,
+            "height": 31
+          }
+        ]
+      }
+    ],
     "labelIssues": [],
     "imageIssues": []
   }

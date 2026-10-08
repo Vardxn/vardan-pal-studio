@@ -10,7 +10,6 @@ const ROUTES = [
   { name: 'salon', path: '/demos/salon/' },
   { name: 'clinic', path: '/demos/clinic/' },
   { name: 'restaurant', path: '/demos/restaurant/' },
-  { name: 'restaurant-original', path: '/demos/restaurant/vardan-original/home.html' },
   { name: 'real-estate', path: '/demos/real-estate/' },
   { name: 'interior', path: '/demos/interior/' },
   { name: 'events', path: '/demos/events/' }
