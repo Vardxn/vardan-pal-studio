@@ -1,7 +1,7 @@
 # Vardan Pal Studio — Complete QA & Functional Audit Report
 
-> [!NOTE]
-> **Historical Record**: This document is an archived milestone report reflecting project progress and specifications at the time of authoring. The active, consolidated source of truth for Vardan Pal Studio is maintained in [`docs/VARDAN_PAL_STUDIO_MASTER.md`](./docs/VARDAN_PAL_STUDIO_MASTER.md).
+> Historical record — written when the studio operated as Kailash Studios; current name: Vardan Pal Studio.
+
 **Phase 13 — Complete Multi-Viewport, Accessibility, Functional & Performance Audit**
 
 - **Date:** October 7, 2026

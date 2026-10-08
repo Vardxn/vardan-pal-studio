@@ -6,6 +6,7 @@ const BASE_URL = 'http://localhost:8088';
 
 const ROUTES = [
   { name: 'home', path: '/' },
+  { name: 'privacy', path: '/privacy.html' },
   { name: '404', path: '/404.html' },
   { name: 'salon', path: '/demos/salon/' },
   { name: 'clinic', path: '/demos/clinic/' },

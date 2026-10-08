@@ -5,7 +5,7 @@ Static marketing site + 6 concept demo sites for Vardan Pal Studio (independent 
 
 ## Commands
 - Serve: python3 -m http.server 8088
-- QA: node scripts/full-site-qa.mjs ; node scripts/hub-functional-qa.mjs ; node scripts/test-tracking.mjs
+- QA: node scripts/full-qa.mjs ; node scripts/test-tracking.mjs ; node scripts/verify-direct-demo-navigation.mjs ; node scripts/test-contact-api.mjs ; node scripts/rebrand-audit.mjs
 - Deploy: HUMAN ONLY (npx vercel --prod --yes). Agents must never deploy.
 
 ## Hard rules
@@ -28,7 +28,7 @@ Approved proof phrases: Mobile-first development · Direct founder communication
 
 ## Contact
 WhatsApp +91 82796 96707 (wa.me/918279696707) · vardan2701@gmail.com · portfolio https://vardxn.vercel.app
-Production: https://vardanpalstudio.vercel.app (Alias: https://vardanpalstudio.vercel.app)
+Production: https://vardanpalstudio.vercel.app
 
 ## Demos (fictional concept projects, never "live clients")
 demos/salon (Aura Salon & Spa), clinic (Care Dental & Skin Clinic), restaurant (Malcha Table), real-estate (Prime Estates), interior (Studio Eleven), events (Studio Vows).

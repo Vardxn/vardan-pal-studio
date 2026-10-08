@@ -11,7 +11,7 @@ Please refer to **[docs/VARDAN_PAL_STUDIO_MASTER.md](./docs/VARDAN_PAL_STUDIO_MA
 - 📜 Chronological Evolution & Changelog (Phases 1–16)
 - ⚡ Current Status & Mobile Optimization Audits
 - 🗺️ Strategic Roadmap (Google Business Profile, SEO, Analytics)
-- 🛠️ Developer Commands Reference
+- 🛠️ Developer QA Commands Reference (`node scripts/full-qa.mjs`, `test-tracking.mjs`, `verify-direct-demo-navigation.mjs`, `test-contact-api.mjs`)
 
 ---
 *Live Production URL:* [https://vardanpalstudio.vercel.app](https://vardanpalstudio.vercel.app)  

@@ -2346,9 +2346,12 @@ img { max-width: 100%; height: auto; display: block; }
   }
 
   .footer-links-col a,
-  .footer-links a {
+  .footer-links a,
+  .footer-contact-links a {
     font-size: 13.5px;
-    padding: 6px 0;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
   }
 
   .footer-bottom-bar,
