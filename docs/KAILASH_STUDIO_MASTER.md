@@ -337,6 +337,14 @@ This log records every milestone achieved in the development of Kailash Studio:
       - Automated test script `scripts/test-tracking.mjs` verifying all 10 core tracking scenarios with 100% PASS rate.
       - Published comprehensive audit report `QA-TRACKING-REPORT.md`.
 
+16. **Phase 16A — Contact Consent UI Refinement (October 2026):**
+    - **Custom Semantic Checkbox Architecture:** Rebuilt consent row into a semantic `.form-consent` container with custom 22px × 22px checkbox (`appearance: none;` with crisp charcoal SVG tick mark `#171614` on champagne gold background `#B89A62`). Excluded `input[type="checkbox"]` from generic 52px input styles.
+    - **Touch Target & Layout Alignment:** Perfectly aligned checkbox with the first line of consent copy (`margin-top: 1.5px; gap: 13px;`). Extended touch target to $\ge 44\text{px}$ on coarse pointers via `::after` hit area and full-label clickability.
+    - **Independent Legal Links:** Separated Privacy Policy and Terms of Service links into a dedicated paragraph outside the checkbox `<label>` to prevent accidental checkbox toggling when opening legal documents.
+    - **Accessible Keyboard & Validation Feedback:** Full Tab focus, `:focus-visible` gold outline ring with offset, Space key toggling, native HTML5 `required` blocking on empty submission, and subtle `.has-error` state.
+    - **Contact Section Ending Optimization:** Condensed and centered final dark section text to `NEW DELHI · SERVING BUSINESSES ACROSS INDIA · WEBSITES FROM ₹9,900` with clean wrapping, max-width constraints, and zero horizontal clipping across all viewports (320px–1440px).
+    - **Automated Verification:** Verified across 7 responsive viewports (320px, 375px, 390px, 430px, 768px, 1024px, 1440px) with 0 errors and 0 overflows; saved visual proof screenshots in `audit-shots/contact-consent-fix/`.
+
 
 ---
 

@@ -1861,10 +1861,10 @@ img { max-width: 100%; height: auto; display: block; }
   color: rgba(247, 244, 238, 0.88);
   min-width: 0;
 }
-.enquire-form input,
+.enquire-form input:not([type="checkbox"]),
 .enquire-form select,
 .enquire-form textarea,
-.enquire input,
+.enquire input:not([type="checkbox"]),
 .enquire select,
 .enquire textarea {
   box-sizing: border-box;
@@ -1879,10 +1879,10 @@ img { max-width: 100%; height: auto; display: block; }
   font: 500 14px/1 var(--font-sans);
   transition: all 0.2s ease;
 }
-.enquire-form input:focus,
+.enquire-form input:not([type="checkbox"]):focus,
 .enquire-form select:focus,
 .enquire-form textarea:focus,
-.enquire input:focus,
+.enquire input:not([type="checkbox"]):focus,
 .enquire select:focus,
 .enquire textarea:focus {
   border-color: var(--accent);
@@ -1905,6 +1905,152 @@ img { max-width: 100%; height: auto; display: block; }
 .enquire-form .full, .enquire .full {
   grid-column: 1 / -1;
 }
+/* ==========================================================================
+   CONSENT ROW — COMPACT, ACCESSIBLE, PREMIUM CUSTOM CHECKBOX
+   ========================================================================== */
+.form-consent {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* Custom Semantic Checkbox: 22px x 22px (Max 24px) */
+.form-consent input[type="checkbox"],
+.enquire-form input[type="checkbox"],
+.enquire input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  min-height: 22px;
+  max-width: 24px;
+  max-height: 24px;
+  padding: 0;
+  margin: 1.5px 0 0 0;
+  flex-shrink: 0;
+  align-self: flex-start;
+  border-radius: 6px;
+  border: 1.5px solid rgba(184, 154, 98, 0.45);
+  background: rgba(247, 244, 238, 0.05);
+  cursor: pointer;
+  display: inline-grid;
+  place-content: center;
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+  position: relative;
+}
+
+@media (pointer: coarse) {
+  .form-consent input[type="checkbox"]::after {
+    content: "";
+    position: absolute;
+    top: -11px;
+    left: -11px;
+    right: -11px;
+    bottom: -11px;
+  }
+}
+
+.form-consent input[type="checkbox"]:hover {
+  border-color: var(--accent);
+  background-color: rgba(184, 154, 98, 0.12);
+}
+
+.form-consent input[type="checkbox"]:checked {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23171614' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='3.5 8.5 6.5 11.5 12.5 4.5'/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 14px 14px;
+}
+
+.form-consent input[type="checkbox"]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(184, 154, 98, 0.25);
+}
+
+.form-consent input[type="checkbox"]:user-invalid,
+.form-consent.has-error input[type="checkbox"] {
+  border-color: #FF8B8B;
+  box-shadow: 0 0 0 2px rgba(255, 139, 139, 0.2);
+}
+
+/* Consent Copy Typography & Independent Legal Links */
+.form-consent__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.form-consent__copy label,
+.enquire-form .form-consent__copy label,
+.enquire .form-consent__copy label {
+  display: inline;
+  flex-direction: row;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  font-weight: 400;
+  line-height: 1.48;
+  letter-spacing: normal;
+  color: rgba(247, 244, 238, 0.88);
+  margin: 0;
+  padding: 0;
+  max-width: 54ch;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.form-consent__copy p,
+.form-consent__links {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--dark-muted);
+}
+
+.form-consent__copy a {
+  color: var(--accent-light, #DFC99E);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s ease;
+}
+
+.form-consent__copy a:hover {
+  color: #FFFFFF;
+}
+
+.form-consent__copy span[aria-hidden="true"] {
+  margin: 0 5px;
+  color: rgba(247, 244, 238, 0.35);
+}
+
+@media (max-width: 640px) {
+  .form-consent {
+    gap: 12px;
+  }
+  .form-consent__copy label,
+  .enquire-form .form-consent__copy label,
+  .enquire .form-consent__copy label {
+    font-size: 14px;
+    line-height: 1.46;
+  }
+  .form-consent__copy p,
+  .form-consent__links {
+    font-size: 12.5px;
+  }
+}
+
 .enquire-submit-btn, .enquire button[type="submit"] {
   grid-column: 1 / -1;
   height: 52px;
@@ -1999,11 +2145,16 @@ img { max-width: 100%; height: auto; display: block; }
   margin-top: 36px;
 }
 .cta-price-from, .cta-from {
-  margin-top: 28px;
-  font: 600 11px/1 var(--font-sans);
-  letter-spacing: 0.18em;
+  margin-top: 24px;
+  margin-bottom: 0;
+  font: 600 11px/1.55 var(--font-sans);
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--dark-muted);
+  max-width: 50ch;
+  margin-inline: auto;
+  text-align: center;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 640px) {
