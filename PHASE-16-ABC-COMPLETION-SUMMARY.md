@@ -107,7 +107,7 @@
 - **\`scripts/test-tracking.mjs\`**: Updated tracking test suite for direct demo navigation (Phase 16C).
 - **\`scripts/verify-direct-demo-navigation.mjs\`**: New automated 14-test Playwright suite (Phase 16C).
 - **\`scripts/capture-phase16-complete-shots.mjs\`**: Visual audit evidence capture script.
-- **\`docs/KAILASH_STUDIO_MASTER.md\` & \`KAILASH_STUDIO_MASTER.md\`**: Documented Phase 16A, 16B, and 16C architectural entries.
+- **\`docs/VARDAN_PAL_STUDIO_MASTER.md\` & \`VARDAN_PAL_STUDIO_MASTER.md\`**: Documented Phase 16A, 16B, and 16C architectural entries.
 - **\`GOOGLE_ADS_SETUP.md\`**: Updated \`demo_open\` secondary conversion documentation.
 
 ---

@@ -1,10 +1,10 @@
 # Vardan Pal Studio — Master Blueprint, Specification & Project Showcase
 
-> **The Definitive Single-File Guide & Source of Truth for Vardan Pal Studio (Formerly Kailash Studios)**  
+> **The Definitive Single-File Guide & Source of Truth for Vardan Pal Studio**  
 > **Lead Developer & Designer:** Vardan Pal  
 > **Positioning:** High-Converting, Quiet Luxury Websites for Ambitious Businesses Across India  
-> **Live Production URL:** [https://kailashstudio.vercel.app](https://kailashstudio.vercel.app)  
-> **Secondary Production Alias:** [https://kailashstudios.vercel.app](https://kailashstudios.vercel.app)  
+> **Live Production URL:** [https://vardanpal.vercel.app](https://vardanpal.vercel.app)  
+> **Secondary Production Alias:** [https://vardanpalstudio.vercel.app](https://vardanpalstudio.vercel.app)  
 > **Developer Portfolio:** [https://vardxn.vercel.app](https://vardxn.vercel.app)  
 > **WhatsApp Helpline / Direct:** [+91 82796 96707](https://wa.me/918279696707) | **Email:** `vardan2701@gmail.com`  
 > **Status:** Live & Production Ready (Pan-India Edition) — October 2026
@@ -13,7 +13,7 @@
 
 ## 📌 Executive Summary — What is Vardan Pal Studio?
 
-**Vardan Pal Studio** (formerly *Kailash Studios*) is an independent, premium web design and digital solutions studio founded by **Vardan Pal**. 
+**Vardan Pal Studio** is an independent, premium web design and digital solutions studio founded by **Vardan Pal**. 
 
 We engineer high-converting, mobile-first web experiences for clinics, salons, restaurants, luxury real estate, interior studios, and event creators across all metropolitan and tier-1/tier-2 cities in India.
 
@@ -61,8 +61,8 @@ To eliminate duplicate files and prevent code divergence across AI tools (Antigr
 
 ```text
 south-delhi-web-studio/
-├── KAILASH_STUDIO_MASTER.md     # ⭐️ THE DEFINITIVE SINGLE MASTER DOCUMENT (You are here)
-├── index.html                   # Master Showcase Hub (The Kailash Studio storefront)
+├── VARDAN_PAL_STUDIO_MASTER.md     # ⭐️ THE DEFINITIVE SINGLE MASTER DOCUMENT (You are here)
+├── index.html                   # Master Showcase Hub (The Vardan Pal Studio storefront)
 ├── 404.html                     # Custom luxury 404 error page
 ├── vercel.json                  # Edge routing, headers & serverless configuration
 ├── package.json                 # Dev tooling & testing dependencies (Playwright)
@@ -106,14 +106,14 @@ south-delhi-web-studio/
 │
 ├── audit-shots/                 # QA Screen Captures Across Viewports (375px, 768px, 1440px)
 ├── docs/                        # Project documentation backup
-└── README.md                    # Quick overview pointing to KAILASH_STUDIO_MASTER.md
+└── README.md                    # Quick overview pointing to VARDAN_PAL_STUDIO_MASTER.md
 ```
 
 ---
 
 ## 🏛️ Master Showcase Hub (`index.html`) — Complete Breakdown
 
-The main website at `index.html` functions as the client-facing portfolio and conversion engine for Kailash Studio.
+The main website at `index.html` functions as the client-facing portfolio and conversion engine for Vardan Pal Studio.
 
 ### Core Visual Aesthetics
 - **Color Palette:** Warm Ivory base (`#fcfbf9`), Stone grey surfaces (`#f5f3ee`), Deep Charcoal typography (`#141519`), Muted Champagne Gold accents (`#b58d53` / `#c5a880`).
@@ -154,12 +154,12 @@ Every demo is a complete, functioning, self-contained multi-page website inside 
 
 | # | Industry / Niche | Standardized Brand Name | Inspired By (Big Brands) | Simulated Domain | Live Production URL | Key Functional Features |
 | :-: | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Hair Salon & Spa** | **Aura Salon & Spa** | Looks Salon, Geetanjali Salon | `aurasalon.in` | [https://kailashstudio.vercel.app/demos/salon/](https://kailashstudio.vercel.app/demos/salon/) | Master stylist portfolios, transparent haircut rate card, hair color balayage lookbook, touch-friendly 52px WhatsApp appointment booking form with custom gold chevron dropdowns. |
-| **02** | **Dental & Skin Clinic** | **Care Dental & Skin Clinic** | Clove Dental, Kaya Skin Clinic | `caredental.in` | [https://kailashstudio.vercel.app/demos/clinic/](https://kailashstudio.vercel.app/demos/clinic/) | AIIMS-trained doctor credentials, clear aligner & implant pricing guides, interactive consultation scheduler, emergency patient WhatsApp triage. |
-| **03** | **Fine Dining & Bar** | **Malcha Table — Restaurant & Bar** | Olive Bar & Kitchen, Social | `malchatable.com` | [https://kailashstudio.vercel.app/demos/restaurant/](https://kailashstudio.vercel.app/demos/restaurant/) | Interactive chef's table reservations, digital seasonal food & cocktail menus with pricing, interior lookbook, private party inquiry. |
-| **04** | **Luxury Real Estate** | **Prime Estates — Luxury Properties** | DLF Prime, India Sotheby's | `primeestates.in` | [https://kailashstudio.vercel.app/demos/real-estate/](https://kailashstudio.vercel.app/demos/real-estate/) | Luxury villas & residences, floor plans, neighborhood guides, verified clear titles, discreet private walkthrough scheduler. |
-| **05** | **Interior Design** | **Studio Eleven — Interior Design Studio** | Livspace, HomeLane | `studioeleven.in` | [https://kailashstudio.vercel.app/demos/interior/](https://kailashstudio.vercel.app/demos/interior/) | Editorial completed project galleries, material palette studies, turnkey 3-step execution roadmap, client project intake consultation. |
-| **06** | **Wedding Cinema** | **Studio Vows — Wedding Films & Photography** | WedMeGood, The Wedding Filmer | `studiovows.in` | [https://kailashstudio.vercel.app/demos/events/](https://kailashstudio.vercel.app/demos/events/) | Cinematic video trailers, wedding story photo albums, transparent package breakdown (₹2.2L - ₹6.5L), instant date availability checker. |
+| **01** | **Hair Salon & Spa** | **Aura Salon & Spa** | Looks Salon, Geetanjali Salon | `aurasalon.in` | [https://vardanpal.vercel.app/demos/salon/](https://vardanpal.vercel.app/demos/salon/) | Master stylist portfolios, transparent haircut rate card, hair color balayage lookbook, touch-friendly 52px WhatsApp appointment booking form with custom gold chevron dropdowns. |
+| **02** | **Dental & Skin Clinic** | **Care Dental & Skin Clinic** | Clove Dental, Kaya Skin Clinic | `caredental.in` | [https://vardanpal.vercel.app/demos/clinic/](https://vardanpal.vercel.app/demos/clinic/) | AIIMS-trained doctor credentials, clear aligner & implant pricing guides, interactive consultation scheduler, emergency patient WhatsApp triage. |
+| **03** | **Fine Dining & Bar** | **Malcha Table — Restaurant & Bar** | Olive Bar & Kitchen, Social | `malchatable.com` | [https://vardanpal.vercel.app/demos/restaurant/](https://vardanpal.vercel.app/demos/restaurant/) | Interactive chef's table reservations, digital seasonal food & cocktail menus with pricing, interior lookbook, private party inquiry. |
+| **04** | **Luxury Real Estate** | **Prime Estates — Luxury Properties** | DLF Prime, India Sotheby's | `primeestates.in` | [https://vardanpal.vercel.app/demos/real-estate/](https://vardanpal.vercel.app/demos/real-estate/) | Luxury villas & residences, floor plans, neighborhood guides, verified clear titles, discreet private walkthrough scheduler. |
+| **05** | **Interior Design** | **Studio Eleven — Interior Design Studio** | Livspace, HomeLane | `studioeleven.in` | [https://vardanpal.vercel.app/demos/interior/](https://vardanpal.vercel.app/demos/interior/) | Editorial completed project galleries, material palette studies, turnkey 3-step execution roadmap, client project intake consultation. |
+| **06** | **Wedding Cinema** | **Studio Vows — Wedding Films & Photography** | WedMeGood, The Wedding Filmer | `studiovows.in` | [https://vardanpal.vercel.app/demos/events/](https://vardanpal.vercel.app/demos/events/) | Cinematic video trailers, wedding story photo albums, transparent package breakdown (₹2.2L - ₹6.5L), instant date availability checker. |
 
 ---
 
@@ -177,16 +177,16 @@ Every demo is a complete, functioning, self-contained multi-page website inside 
 
 ## 📜 Comprehensive Evolution & Changelog (Phases 1–12)
 
-This log records every milestone achieved in the development of Kailash Studio:
+This log records every milestone achieved in the development of Vardan Pal Studio:
 
 1. **Phase 1 — Legacy Template Ingestion:**  
    Collected 6 standalone downloaded templates (`salon`, `clinic`, `restaurant`, `real-estate`, `interior`, `events`). The templates originally had foreign names, lorem ipsum placeholder text, and disjointed styles.
-2. **Phase 2 — Transformation into Kailash Studios Master Showcase:**  
+2. **Phase 2 — Transformation into Studio Master Showcase:**  
    Engineered the master agency website (`index.html`) using the Apple × Architectural Studio quiet luxury aesthetic. Replaced all SaaS gradients with editorial typography (*Cormorant Garamond* + *Plus Jakarta Sans*).
 3. **Phase 3 — Indian Market Localization:**  
    Localized with authentic contact information for Vardan Pal, transparent Rupee (`₹`) pricing, and WhatsApp-first action flows.
 4. **Phase 4 — Serverless API & Vercel Deployment:**  
-   Configured `vercel.json` with SSL, security headers, and an edge function at `api/contact.js` to process customer inquiries. Successfully aliased to https://kailashstudio.vercel.app.
+   Configured `vercel.json` with SSL, security headers, and an edge function at `api/contact.js` to process customer inquiries. Successfully aliased to https://vardanpal.vercel.app.
 5. **Phase 5 — Salon Demo Rebuild & Form Fix:**  
    Fixed missing `bootstrap.min.css` in `demos/salon/`. Overhauled `delhi-custom.css`, fixed overlapping brand logo headers on mobile, and rebuilt the appointment booking form with elevated dark inputs, gold borders, and high contrast.
 6. **Phase 6 — Brand Simplification & Alignment:**  
@@ -196,14 +196,14 @@ This log records every milestone achieved in the development of Kailash Studio:
 8. **Phase 8 — Demo Thumbnail & Visual Synchronization:**  
    Re-captured all 6 high-resolution (2160×1350 WebP) demo preview thumbnails (`assets/shots/`) using headless Playwright CDP capture. All mockup frames across the main portfolio homepage now render the exact synchronized brand titles.
 9. **Phase 9 — Pan-India Market Repositioning & Canonical Domain Switch:**  
-   - Renamed Vercel project to `kailashstudio`.
-   - Bound clean, memorable primary domain: `https://kailashstudio.vercel.app` (and alias `https://kailashstudios.vercel.app`).
+   - Renamed Vercel project to `vardan-pal-studio`.
+   - Bound clean, memorable primary domain: `https://vardanpal.vercel.app` (and alias `https://vardanpalstudio.vercel.app`).
    - Removed regional South Delhi limitations across the entire portfolio website, headers, SEO meta tags, and demo footers.
-   - Positioned Kailash Studios as a Pan-India digital partner serving ambitious businesses across all states in India.
+   - Positioned Vardan Pal Studio as a Pan-India digital partner serving ambitious businesses across all states in India.
    - Added `city` intake field and floating WhatsApp helpline for 1-click lead conversion from anywhere in India.
 
 10. **Phase 10 — Rebrand to Vardan Pal Studio (October 2026):**  
-    - **Official Brand Transition:** Formally rebranded the entire studio from *Kailash Studios* to **Vardan Pal Studio**, positioned as an independent web design and development studio based in New Delhi, serving businesses nationwide across India.
+    - **Official Brand Transition:** Formally established the studio branding as **Vardan Pal Studio**, positioned as an independent web design and development studio based in New Delhi, serving businesses nationwide across India.
     - **Approved Brand System:**
       - **Brand Name:** Vardan Pal Studio
       - **Wordmark Line 1:** `VARDAN PAL`
@@ -222,7 +222,7 @@ This log records every milestone achieved in the development of Kailash Studio:
       - Synced `404.html` and `assets/js/premium.js` WhatsApp outreach text (*"Hi Vardan, I found Vardan Pal Studio online..."*).
       - Updated `api/contact.js` email subject dispatch line to *Vardan Pal Studio*.
       - Standardized all 6 demo footers in `demos/*/index.html` to *"Vardan Pal Studio · New Delhi • Crafted by Vardan Pal"*.
-      - Preserved production Vercel deployment URL (`https://kailashstudio.vercel.app`) and demo internal listings.
+      - Preserved production Vercel deployment URL (`https://vardanpal.vercel.app`) and demo internal listings.
 
 11. **Phase 11 — Homepage Repair & Condense (October 2026):**  
     - **Defect Remediations:**
@@ -420,7 +420,7 @@ This log records every milestone achieved in the development of Kailash Studio:
 
 ### 🟡 Immediate Next Steps
 1. **Manual User Production Deployment:** Review local build on port 8088 and trigger production deployment to Vercel (`npx vercel --prod`).
-2. **Production Domain Verification:** Verify live domain health post-deploy at `https://kailashstudio.vercel.app`.
+2. **Production Domain Verification:** Verify live domain health post-deploy at `https://vardanpal.vercel.app`.
 
 ---
 
@@ -474,7 +474,7 @@ npx vercel --prod --yes
 ---
 
 > **Shareable Project Statement:**  
-> *"Kailash Studio creates quiet luxury, high-converting websites for clinics, salons, restaurants, real estate, and event creators across India. Featuring transparent Rupee pricing, sub-5-day delivery, and instant WhatsApp booking flows. Live at https://kailashstudio.vercel.app"*
+> *"Vardan Pal Studio creates quiet luxury, high-converting websites for clinics, salons, restaurants, real estate, and event creators across India. Featuring transparent Rupee pricing, sub-5-day delivery, and instant WhatsApp booking flows. Live at https://vardanpal.vercel.app"*
 
 
 ---
