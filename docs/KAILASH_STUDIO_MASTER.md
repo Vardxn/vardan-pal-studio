@@ -360,6 +360,17 @@ This log records every milestone achieved in the development of Kailash Studio:
     - **Site-Wide Application:** Consistently deployed across `index.html`, `privacy.html`, `terms.html`, and `404.html` with root-relative hash routing (`/#work`, `/#pricing`, `/#process`, `/#contact`, `/#about`).
     - **Automated Verification:** Tested across 7 viewports (320px, 375px, 390px, 430px, 768px, 1024px, 1440px) on all 4 pages (28 audit points). Verified 0 horizontal overflow, 0 WhatsApp collisions, 100% passing tracking suite; audit screenshots archived in `audit-shots/compact-footer/`.
 
+18. **Phase 16C — Direct Demo Navigation & Browser History Restoration (October 2026):**
+    - **Embedded Device Modal Retirement:** Completely eliminated the legacy preview drawer/modal (`#previewModal`), device toggles (Desktop 1280px vs. Mobile 390px), simulated iframe containers, "Open in New Tab" controls, backdrop overlays, and focus traps from the homepage DOM and stylesheets.
+    - **Same-Tab Real Anchor Architecture:** Converted all portfolio primary CTAs, preview images, project titles, and interactive showcase links to standard, accessible HTML anchors (`<a href="/demos/.../">`) with no `target="_blank"`, preserving native Cmd/Ctrl-click, middle-click, and standard tab browsing.
+    - **Shared Lightweight Context Bar:** Implemented shared `assets/css/demo-context.css` and `assets/js/demo-navigation.js` across all six concept demos (`salon`, `clinic`, `restaurant`, `real-estate`, `interior`, `events`). Provides a compact 48–54px top context bar with a touch-friendly (>= 44px) "← Back to portfolio" button and accurate concept disclosure (`Concept website · [Category]`), completely retiring legacy "Live Client Demo" labels and promotional links.
+    - **Dual-Mode Back Navigation:**
+      - *Case A (Visitor arrived from Studio homepage):* Invokes native `window.history.back()`, preserving browser history and instantly returning to the homepage.
+      - *Case B (Direct entry or external referral):* Falls back gracefully to `/#work` on the studio homepage without trapping visitors or navigating outside the domain.
+    - **Browser-Native History & Scroll Restoration:** Enabled `history.scrollRestoration = "auto"`, captures homepage scroll coordinate and clicked demo ID into `sessionStorage` (`vps_demo_return_state`), and guarantees seamless, 0px-delta scroll restoration on Back/Forward navigation with `preventScroll: true` keyboard focus restoration.
+    - **Attribution & Analytics Preservation:** Updated `demo_open` tracking specification to *"Visitor navigated to a demo website"*, continuing to capture `demo_category`, `demo_slug`, `location`, and `page` without PII or artificial navigation delays.
+    - **Automated Verification:** Verified 14/14 automated Playwright test criteria across 7 viewports (320px, 375px, 390px, 430px, 768px, 1024px, 1440px) with 0 console errors, 0 iframes, 0 modals, 0 horizontal overflow, and verified Back/Forward roundtrip; screenshots archived in `audit-shots/direct-demo-navigation/`.
+
 
 ---
 
@@ -428,7 +439,7 @@ This log records every milestone achieved in the development of Kailash Studio:
 ### 3. Analytics & Lead Intelligence
 - Integrate Google Analytics 4 (GA4) or Vercel Web Analytics to track:
   - Demo click-through rates.
-  - Device modal preview usage (Desktop vs. Mobile toggles).
+  - Demo direct navigation and time-on-demo engagement (same-tab visitor flows).
   - WhatsApp conversion button clicks.
 
 ### 4. WhatsApp Business API Automation

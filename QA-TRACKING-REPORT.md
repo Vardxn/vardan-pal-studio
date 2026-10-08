@@ -27,7 +27,7 @@ All ten core conversion tracking requirements and API payload attribution constr
 | **1** | A WhatsApp click creates whatsapp_click | whatsapp_click event in dataLayer with location and page | Event found: location=floating_button, page=/ | **PASS** |
 | **2** | A phone click creates phone_click | phone_click event in dataLayer with location and page | Event found: location=contact_section, page=/ | **PASS** |
 | **3** | An email click creates email_click | email_click event in dataLayer with location and page | Event found: location=footer, page=/ | **PASS** |
-| **4** | Opening a demo creates demo_open | demo_open event in dataLayer with demo_category and preview_mode | Event found: category=clinic, mode=modal | **PASS** |
+| **4** | Navigating to a demo creates demo_open | demo_open event in dataLayer with demo_category and demo_slug | Event found: category=clinic, slug=clinic | **PASS** |
 | **5** | Clicking a package creates pricing_cta | pricing_cta event in dataLayer with tier='business' and location | Event found: tier=business, location=pricing_section | **PASS** |
 | **7** | An invalid form does not create lead_submit | 0 lead_submit events added on invalid form submission | Before: 0, After: 0 | **PASS** |
 | **6** | A valid form creates lead_submit once and triggers proposal_request | Exactly 1 lead_submit event and 1 proposal_request event | lead_submit count: 1, proposal_request count: 1 | **PASS** |
@@ -42,7 +42,7 @@ All ten core conversion tracking requirements and API payload attribution constr
   - `lead_submit`: `{ event: "lead_submit", package: "Business", industry: "Clinic / Healthcare", form_location: "main_enquiry_form", timestamp: ... }`
   - `proposal_request`: `{ event: "proposal_request", package: "Business", industry: "Clinic / Healthcare", form_location: "main_enquiry_form", timestamp: ... }`
   - `pricing_cta`: `{ event: "pricing_cta", tier: "business", location: "pricing_section", timestamp: ... }`
-  - `demo_open`: `{ event: "demo_open", demo_category: "clinic", preview_mode: "modal", timestamp: ... }`
+  - `demo_open`: `{ event: "demo_open", demo_category: "clinic", demo_slug: "clinic", timestamp: ... }`
   - `whatsapp_click`: `{ event: "whatsapp_click", location: "floating_button", page: "/", timestamp: ... }`
   - `phone_click`: `{ event: "phone_click", location: "contact_section", page: "/", timestamp: ... }`
   - `email_click`: `{ event: "email_click", location: "footer", page: "/", timestamp: ... }`

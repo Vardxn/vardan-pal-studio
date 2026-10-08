@@ -132,11 +132,15 @@ async function runTrackingTests() {
   });
 
   // -------------------------------------------------------------
-  // Test 4: Opening a demo creates demo_open
+  // Test 4: Navigating to a demo creates demo_open
   // -------------------------------------------------------------
   await page.evaluate(() => {
-    const demoBtn = document.querySelector('.btn--preview-modal[data-demo="clinic"]');
-    if (demoBtn) demoBtn.click();
+    const demoLink = document.querySelector('a[data-track="demo_open"][data-demo="clinic"], a.case-action-cta[data-demo="clinic"]');
+    if (demoLink) {
+      const handler = (e) => e.preventDefault();
+      window.addEventListener("click", handler, { capture: true, once: true });
+      demoLink.click();
+    }
   });
   await page.waitForTimeout(100);
 
@@ -146,20 +150,12 @@ async function runTrackingTests() {
 
   results.push({
     id: 4,
-    test: "Opening a demo creates demo_open",
-    expected: "demo_open event in dataLayer with demo_category and preview_mode",
-    actual: demoEvent ? `Event found: category=${demoEvent.demo_category}, mode=${demoEvent.preview_mode}` : "Event not found",
-    pass: !!demoEvent && !!demoEvent.demo_category
+    test: "Navigating to a demo creates demo_open",
+    expected: "demo_open event in dataLayer with demo_category and demo_slug",
+    actual: demoEvent ? `Event found: category=${demoEvent.demo_category}, slug=${demoEvent.demo_slug}` : "Event not found",
+    pass: !!demoEvent && demoEvent.demo_category === "clinic"
   });
-
-  // Dismiss preview modal to restore interaction
-  await page.evaluate(() => {
-    const modal = document.querySelector("#previewModal");
-    if (modal && typeof modal.close === "function") {
-      modal.close();
-    }
-  });
-  await page.waitForTimeout(200);
+  await page.waitForTimeout(100);
 
   // -------------------------------------------------------------
   // Test 5: Clicking a package creates pricing_cta
@@ -366,7 +362,7 @@ ${results.map(r => `| **${r.id}** | ${r.test} | ${r.expected} | ${r.actual} | **
   - \`lead_submit\`: \`{ event: "lead_submit", package: "Business", industry: "Clinic / Healthcare", form_location: "main_enquiry_form", timestamp: ... }\`
   - \`proposal_request\`: \`{ event: "proposal_request", package: "Business", industry: "Clinic / Healthcare", form_location: "main_enquiry_form", timestamp: ... }\`
   - \`pricing_cta\`: \`{ event: "pricing_cta", tier: "business", location: "pricing_section", timestamp: ... }\`
-  - \`demo_open\`: \`{ event: "demo_open", demo_category: "clinic", preview_mode: "modal", timestamp: ... }\`
+  - \`demo_open\`: \`{ event: "demo_open", demo_category: "clinic", demo_slug: "clinic", timestamp: ... }\`
   - \`whatsapp_click\`: \`{ event: "whatsapp_click", location: "floating_button", page: "/", timestamp: ... }\`
   - \`phone_click\`: \`{ event: "phone_click", location: "contact_section", page: "/", timestamp: ... }\`
   - \`email_click\`: \`{ event: "email_click", location: "footer", page: "/", timestamp: ... }\`
