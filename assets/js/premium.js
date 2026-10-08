@@ -383,6 +383,18 @@
       window.populateFormAttribution(form);
     }
 
+    const consentEl = form.querySelector('#contactConsent');
+    if (consentEl) {
+      consentEl.addEventListener('change', () => {
+        const consentBox = form.querySelector('.form-consent');
+        if (consentBox) consentBox.classList.remove('has-error');
+        const statusEl = $('#enquireStatus');
+        if (statusEl && statusEl.textContent.includes('consent terms')) {
+          statusEl.style.display = 'none';
+        }
+      });
+    }
+
     form.addEventListener('submit', async e => {
       e.preventDefault();
       if (isEnquirySubmitting) return;
@@ -433,11 +445,14 @@
       }
 
       if (consent && !consent.checked) {
+        const consentBox = form.querySelector('.form-consent');
+        if (consentBox) consentBox.classList.add('has-error');
         if (statusEl) {
           statusEl.textContent = 'Please agree to the privacy and contact consent terms to continue.';
           statusEl.className = 'enquire-status error';
           statusEl.style.display = 'block';
         }
+        consent.focus({ preventScroll: false });
         return;
       }
 
