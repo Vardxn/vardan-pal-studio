@@ -31,7 +31,7 @@ WhatsApp +91 82796 96707 (wa.me/918279696707) · vardan2701@gmail.com · portfol
 Production: https://vardanpalstudio.vercel.app
 
 ## Demos (fictional concept projects, never "live clients")
-demos/salon (Aura Salon & Spa), clinic (Care Dental & Skin Clinic), restaurant (Malcha Table), real-estate (Prime Estates), interior (Studio Eleven), events (Studio Vows).
+demos/salon (Aura Salon & Spa), clinic (Care Dental & Skin Clinic), restaurant (CHICA — One Golden Mile), real-estate (Prime Estates), interior (Studio Eleven), events (Studio Vows).
 
 ## Source of truth for history
 docs/VARDAN_PAL_STUDIO_MASTER.md and PHASE-16-ABC-COMPLETION-SUMMARY.md

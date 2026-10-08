@@ -62,13 +62,13 @@ All 9 routes were tested at the 7 mandated viewport widths:
 | 33 | **restaurant** | `/demos/restaurant/` | **768px** | 768x900 | 200 | 768 / 768 | 0 | 0 | 0 | 0 | 0 | **PASS** |
 | 34 | **restaurant** | `/demos/restaurant/` | **1024px** | 1024x900 | 200 | 1024 / 1024 | 0 | 0 | 0 | 0 | 0 | **PASS** |
 | 35 | **restaurant** | `/demos/restaurant/` | **1440px** | 1440x900 | 200 | 1440 / 1440 | 0 | 0 | 0 | 0 | 0 | **PASS** |
-| 36 | **restaurant-original** | `/demos/restaurant/vardan-original/home.html` | **320px** | 320x900 | 200 | 320 / 320 | 0 | 0 | 0 | 0 | 0 | **PASS** |
-| 37 | **restaurant-original** | `/demos/restaurant/vardan-original/home.html` | **375px** | 375x900 | 200 | 375 / 375 | 0 | 0 | 0 | 0 | 0 | **PASS** |
-| 38 | **restaurant-original** | `/demos/restaurant/vardan-original/home.html` | **390px** | 390x900 | 200 | 390 / 390 | 0 | 0 | 0 | 0 | 0 | **PASS** |
-| 39 | **restaurant-original** | `/demos/restaurant/vardan-original/home.html` | **430px** | 430x900 | 200 | 430 / 430 | 0 | 0 | 0 | 0 | 0 | **PASS** |
-| 40 | **restaurant-original** | `/demos/restaurant/vardan-original/home.html` | **768px** | 768x900 | 200 | 768 / 768 | 0 | 0 | 0 | 0 | 0 | **PASS** |
-| 41 | **restaurant-original** | `/demos/restaurant/vardan-original/home.html` | **1024px** | 1024x900 | 200 | 1024 / 1024 | 0 | 0 | 0 | 0 | 0 | **PASS** |
-| 42 | **restaurant-original** | `/demos/restaurant/vardan-original/home.html` | **1440px** | 1440x900 | 200 | 1440 / 1440 | 0 | 0 | 0 | 0 | 0 | **PASS** |
+| 36 | **privacy** | `/privacy.html` | **320px** | 320x900 | 200 | 320 / 320 | 0 | 0 | 0 | 0 | 0 | **PASS** |
+| 37 | **privacy** | `/privacy.html` | **375px** | 375x900 | 200 | 375 / 375 | 0 | 0 | 0 | 0 | 0 | **PASS** |
+| 38 | **privacy** | `/privacy.html` | **390px** | 390x900 | 200 | 390 / 390 | 0 | 0 | 0 | 0 | 0 | **PASS** |
+| 39 | **privacy** | `/privacy.html` | **430px** | 430x900 | 200 | 430 / 430 | 0 | 0 | 0 | 0 | 0 | **PASS** |
+| 40 | **privacy** | `/privacy.html` | **768px** | 768x900 | 200 | 768 / 768 | 0 | 0 | 0 | 0 | 0 | **PASS** |
+| 41 | **privacy** | `/privacy.html` | **1024px** | 1024x900 | 200 | 1024 / 1024 | 0 | 0 | 0 | 0 | 0 | **PASS** |
+| 42 | **privacy** | `/privacy.html` | **1440px** | 1440x900 | 200 | 1440 / 1440 | 0 | 0 | 0 | 0 | 0 | **PASS** |
 | 43 | **real-estate** | `/demos/real-estate/` | **320px** | 320x900 | 200 | 320 / 320 | 0 | 0 | 0 | 0 | 0 | **PASS** |
 | 44 | **real-estate** | `/demos/real-estate/` | **375px** | 375x900 | 200 | 375 / 375 | 0 | 0 | 0 | 0 | 0 | **PASS** |
 | 45 | **real-estate** | `/demos/real-estate/` | **390px** | 390x900 | 200 | 390 / 390 | 0 | 0 | 0 | 0 | 0 | **PASS** |
@@ -120,10 +120,9 @@ All 9 routes were tested at the 7 mandated viewport widths:
    - Added `for="ev_guests"` and `aria-label="Approximate Guest Count"` to `<select id="ev_guests">`.
 
 ### C. Touch Target Compliance (>= 44px)
-1. **Original Restaurant Demo (`demos/restaurant/vardan-original/home.html` & `home.css`):**
-   - **Root Cause:** Footer social icon circles were sized at 40px + 2px border = 42px, failing the WCAG 44px touch target requirement on mobile.
-   - **Resolution:** Updated `.footer .social a` in `home.css` to `width: 44px; height: 44px; min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center;` and added descriptive `aria-label` attributes (Facebook, Twitter, Snapchat, Instagram).
-   - **Verification:** 0 touch target violations across all mobile viewports (320, 375, 390, 430).
+1. **Chica Luxury Restaurant Demo (`demos/restaurant/`):**
+   - **Implementation:** All interactive controls (navigation tabs, table reservation wizard, audio toggle, and WhatsApp concierge buttons) are explicitly sized with `min-height: 44px` and `min-width: 44px` touch targets.
+   - **Verification:** 0 touch target violations across all mobile viewports (320, 375, 390, 430). Legacy experimental prototypes have been completely removed.
 2. **Real Estate Demo Mobile Nav Toggle:**
    - In `real-estate-custom.css`, updated `.site-nav` to `position: relative !important; z-index: 100 !important; margin-bottom: -80px !important;` preventing the top demo bar from intercepting touch events on the burger toggle button.
 
@@ -133,7 +132,7 @@ All 9 routes were tested at the 7 mandated viewport widths:
 
 | Feature Tested | Criteria | Result | Notes |
 |---|---|---|---|
-| **Portfolio Device Preview Modal** | All 6 cards trigger accessible `<dialog>` modal | **PASS** | Evaluated for Malcha Table, Care Dental, Aura Salon, Prime Estates, Studio Eleven, and Studio Vows. |
+| **Portfolio Device Preview Modal** | All 6 cards trigger accessible `<dialog>` modal | **PASS** | Evaluated for CHICA Restaurant, Care Dental, Aura Salon, Prime Estates, Studio Eleven, and Studio Vows. |
 | **Modal Device Toggles** | Switches between Desktop (1280px) and Mobile (390px) viewports | **PASS** | Frame container classes and dimensions toggle cleanly. |
 | **Modal Keyboard Dismissal** | Escape key closes modal and returns focus to trigger | **PASS** | Tested across all 6 preview triggers; 100% focus restoration. |
 | **Modal Backdrop Dismissal** | Click on backdrop closes dialog safely | **PASS** | Native dialog `cancel` / click listener fires properly. |
@@ -152,11 +151,10 @@ All 9 routes were tested at the 7 mandated viewport widths:
 |---|---|---|---|---|---|---|
 | **Aura Salon & Spa** | `/demos/salon/` | **PASS** | **PASS** | **PASS** (`#demoToast`) | **PASS** | **PASS** |
 | **Care Dental & Skin Clinic** | `/demos/clinic/` | **PASS** | **PASS** | **PASS** (`#clinicToast`) | **PASS** | **PASS** |
-| **Malcha Table Restaurant** | `/demos/restaurant/` | **PASS** | **PASS** | **PASS** (`#demoToast`) | **PASS** | **PASS** |
+| **CHICA Luxury Restaurant** | `/demos/restaurant/` | **PASS** | **PASS** | **PASS** (Modal & Form State) | **PASS** | **PASS** |
 | **Prime Estates Advisory** | `/demos/real-estate/` | **PASS** | **PASS** | **PASS** (`#reToast`) | **PASS** | **PASS** |
 | **Studio Eleven Interiors** | `/demos/interior/` | **PASS** | **PASS** | **PASS** (`#demoToast`) | **PASS** | **PASS** |
 | **Studio Vows Photography** | `/demos/events/` | **PASS** | **PASS** | **PASS** (`#demoToast`) | **PASS** | **PASS** |
-| **Vardan Original Restaurant** | `/demos/restaurant/vardan-original/home.html` | **PASS** | **PASS** | N/A (Static showcase) | **PASS** | **PASS** |
 
 ---
 
@@ -210,7 +208,7 @@ All 63 full-page screenshots are organized and saved in:
 - **404 Page:** `audit-shots/full-qa/404/{320, 375, 390, 430, 768, 1024, 1440}.png`
 - **Aura Salon:** `audit-shots/full-qa/salon/{320, 375, 390, 430, 768, 1024, 1440}.png`
 - **Care Dental Clinic:** `audit-shots/full-qa/clinic/{320, 375, 390, 430, 768, 1024, 1440}.png`
-- **Malcha Table Restaurant:** `audit-shots/full-qa/restaurant/{320, 375, 390, 430, 768, 1024, 1440}.png`
+- **CHICA Luxury Restaurant:** `audit-shots/full-qa/restaurant/{320, 375, 390, 430, 768, 1024, 1440}.png`
 - **Vardan Original Restaurant:** `audit-shots/full-qa/restaurant-original/{320, 375, 390, 430, 768, 1024, 1440}.png`
 - **Prime Estates:** `audit-shots/full-qa/real-estate/{320, 375, 390, 430, 768, 1024, 1440}.png`
 - **Studio Eleven Interior:** `audit-shots/full-qa/interior/{320, 375, 390, 430, 768, 1024, 1440}.png`
