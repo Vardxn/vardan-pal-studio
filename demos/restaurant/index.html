@@ -47,16 +47,18 @@
       }
     </style>
   </noscript>
+  <link rel="stylesheet" href="../../assets/css/demo-context.css">
 </head>
 <body>
 
-  <!-- Demo Announcement Top Bar -->
-  <div class="demo-top-bar">
-    <span class="badge-demo">Live Client Demo</span>
-    <span>Sample Restaurant &amp; Bar Website &bull; Built by <strong>Vardan Pal Studio</strong> for Indian Dining Venues</span>
-    <a href="../../index.html#work" class="ml-2">← Back to Demo Library</a>
-    <span style="margin: 0 10px; color: rgba(255,255,255,0.2);">|</span>
-    <a href="vardan-original/home.html" style="color: #25d366; font-weight: 600;">⚡ View Vardan's Original GitHub Restaurant Project →</a>
+  <!-- Demo Context Navigation (Phase 16C) -->
+  <div class="demo-context" role="region" aria-label="Demo navigation" data-theme="restaurant">
+    <a href="/#work" class="demo-context__back" data-demo-back>
+      &larr; Back to portfolio
+    </a>
+    <span class="demo-context__label">
+      Concept website &middot; Restaurant &amp; Dining
+    </span>
   </div>
 
   <!-- Header -->
@@ -413,5 +415,6 @@
       });
     })();
   </script>
+  <script src="../../assets/js/demo-navigation.js"></script>
 </body>
 </html>

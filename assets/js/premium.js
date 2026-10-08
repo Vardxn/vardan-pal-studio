@@ -39,7 +39,7 @@
       ],
       shot: 'assets/shots/clinic.webp',
       dir: 'clinic',
-      url: 'demos/clinic/'
+      url: '/demos/clinic/'
     },
     {
       cat: 'Salons & Spas',
@@ -56,7 +56,7 @@
       ],
       shot: 'assets/shots/salon.webp',
       dir: 'salon',
-      url: 'demos/salon/'
+      url: '/demos/salon/'
     },
     {
       cat: 'Real Estate',
@@ -73,7 +73,7 @@
       ],
       shot: 'assets/shots/real-estate.webp',
       dir: 'real-estate',
-      url: 'demos/real-estate/'
+      url: '/demos/real-estate/'
     },
     {
       cat: 'Interior Design',
@@ -90,7 +90,7 @@
       ],
       shot: 'assets/shots/interior.webp',
       dir: 'interior',
-      url: 'demos/interior/'
+      url: '/demos/interior/'
     },
     {
       cat: 'Wedding Photography',
@@ -107,7 +107,7 @@
       ],
       shot: 'assets/shots/events.webp',
       dir: 'events',
-      url: 'demos/events/'
+      url: '/demos/events/'
     }
   ];
 
@@ -164,8 +164,8 @@
           `).join('')}
         </div>
         <div class="showcase-cta-row">
-          <a class="btn btn--accent" href="${p.url}" target="_blank" rel="noopener" data-track="demo_click" data-label="${p.name}">
-            Explore Live Demo <span class="arr">&rarr;</span>
+          <a class="btn btn--accent" id="showcaseCta" href="${p.url}" data-track="demo_open" data-demo="${p.dir || p.slug}" data-label="${p.name}">
+            View Demo Website <span class="arr">&rarr;</span>
           </a>
           <span style="font-size: 13px; color: var(--dark-muted);">Direct working website</span>
         </div>
@@ -179,7 +179,7 @@
       }
       if (linkEl) {
         linkEl.href = p.url;
-        linkEl.setAttribute('aria-label', `Explore live demo of ${p.name}`);
+        linkEl.removeAttribute('target'); linkEl.setAttribute('aria-label', `View demo website of ${p.name}`);
       }
     };
 
@@ -610,123 +610,85 @@
   } catch (e) {}
 
   /* ==========================================================================
-     PORTFOLIO DEVICE PREVIEW MODAL CONTROLLER
+     DIRECT DEMO NAVIGATION & SCROLL RESTORATION (PHASE 16C)
      ========================================================================== */
-  const previewModal = $('#previewModal');
-  const modalTitle = $('#previewModalTitle');
-  const modalDomain = $('#previewModalDomain');
-  const modalExtLink = $('#previewModalExtLink');
-  const modalIframe = $('#previewModalIframe');
-  const modalFrameContainer = $('#previewFrameContainer');
-  const btnCloseModal = $('#previewModalClose');
-  const btnModeDesktop = $('#previewToggleDesktop');
-  const btnModeMobile = $('#previewToggleMobile');
-  let lastActiveTrigger = null;
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'auto';
+  }
 
-  const openPreviewModal = (targetUrl, title, domain, triggerEl) => {
-    if (!previewModal) return;
-    lastActiveTrigger = triggerEl;
-    if (modalTitle) modalTitle.textContent = title || 'Project Preview';
-    if (modalDomain) modalDomain.textContent = domain || 'demo.in';
-    if (modalExtLink) modalExtLink.href = targetUrl || '#';
-    if (modalIframe) modalIframe.src = targetUrl || 'about:blank';
+  // Record homepage scroll position and demo link before navigating
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href*="/demos/"], a[href^="demos/"]');
+    if (!link) return;
 
-    // Reset to desktop view
-    setModalDeviceMode('desktop');
+    try {
+      const returnState = {
+        url: window.location.href,
+        path: window.location.pathname,
+        scrollY: window.scrollY || window.pageYOffset || 0,
+        linkId: link.id || link.getAttribute('data-demo') || link.getAttribute('href'),
+        timestamp: Date.now()
+      };
+      sessionStorage.setItem('vps_demo_return_state', JSON.stringify(returnState));
+    } catch (err) {}
+  }, { capture: true, passive: true });
 
-    document.body.classList.add('modal-open');
-    if (typeof previewModal.showModal === 'function') {
-      try {
-        previewModal.showModal();
-      } catch (err) {
-        previewModal.classList.add('active');
-        previewModal.setAttribute('open', '');
+  // Restore scroll position on back/forward return
+  const checkAndRestoreDemoPosition = (isBackForward) => {
+    try {
+      const raw = sessionStorage.getItem('vps_demo_return_state');
+      if (!raw) return;
+      const state = JSON.parse(raw);
+      if (!state || typeof state.scrollY !== 'number') return;
+
+      const targetY = state.scrollY;
+      const linkId = state.linkId;
+
+      const performRestore = () => {
+        const currentY = window.scrollY || window.pageYOffset || 0;
+        // Fallback restoration only if browser did not return near the stored position
+        if (Math.abs(currentY - targetY) > 60) {
+          window.scrollTo({ top: targetY, behavior: 'instant' });
+        }
+
+        // Restore keyboard focus to the original link if available
+        if (linkId) {
+          let el = document.getElementById(linkId);
+          if (!el) {
+            el = document.querySelector(`[data-demo="${linkId}"], [href="${linkId}"], [href*="${linkId}"]`);
+          }
+          if (el && typeof el.focus === 'function') {
+            try { el.focus({ preventScroll: true }); } catch (e) { el.focus(); }
+          }
+        }
+
+        // Clear pending restoration state after successful restoration
+        sessionStorage.removeItem('vps_demo_return_state');
+      };
+
+      if (isBackForward) {
+        requestAnimationFrame(() => {
+          setTimeout(performRestore, 50);
+        });
+      } else {
+        const referrerFromDemo = document.referrer && document.referrer.includes('/demos/');
+        if (referrerFromDemo) {
+          requestAnimationFrame(() => {
+            setTimeout(performRestore, 50);
+          });
+        } else {
+          sessionStorage.removeItem('vps_demo_return_state');
+        }
       }
-    } else {
-      previewModal.classList.add('active');
-      previewModal.setAttribute('open', '');
-    }
-
-    if (btnCloseModal) btnCloseModal.focus();
+    } catch (err) {}
   };
 
-  const closePreviewModal = () => {
-    if (!previewModal) return;
-    if (modalIframe) modalIframe.src = 'about:blank';
-    document.body.classList.remove('modal-open');
-    if (typeof previewModal.close === 'function') {
-      try { previewModal.close(); } catch(e){}
-    }
-    previewModal.classList.remove('active');
-    previewModal.removeAttribute('open');
-    if (lastActiveTrigger && typeof lastActiveTrigger.focus === 'function') {
-      lastActiveTrigger.focus();
-    }
-  };
-
-  const setModalDeviceMode = (mode) => {
-    if (!modalFrameContainer) return;
-    if (mode === 'mobile') {
-      modalFrameContainer.className = 'preview-frame-container preview-frame-container--mobile';
-      if (btnModeMobile) {
-        btnModeMobile.classList.add('active');
-        btnModeMobile.setAttribute('aria-pressed', 'true');
-      }
-      if (btnModeDesktop) {
-        btnModeDesktop.classList.remove('active');
-        btnModeDesktop.setAttribute('aria-pressed', 'false');
-      }
-    } else {
-      modalFrameContainer.className = 'preview-frame-container preview-frame-container--desktop';
-      if (btnModeDesktop) {
-        btnModeDesktop.classList.add('active');
-        btnModeDesktop.setAttribute('aria-pressed', 'true');
-      }
-      if (btnModeMobile) {
-        btnModeMobile.classList.remove('active');
-        btnModeMobile.setAttribute('aria-pressed', 'false');
-      }
-    }
-  };
-
-  // Wire up trigger buttons
-  $$('.btn--preview-modal').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.getAttribute('data-preview-target');
-      const title = btn.getAttribute('data-preview-title');
-      const domain = btn.getAttribute('data-preview-domain');
-      openPreviewModal(target, title, domain, btn);
-    });
-  });
-
-  if (btnCloseModal) {
-    btnCloseModal.addEventListener('click', closePreviewModal);
-  }
-
-  if (btnModeDesktop) {
-    btnModeDesktop.addEventListener('click', () => setModalDeviceMode('desktop'));
-  }
-  if (btnModeMobile) {
-    btnModeMobile.addEventListener('click', () => setModalDeviceMode('mobile'));
-  }
-
-  // Backdrop click on dialog
-  if (previewModal) {
-    previewModal.addEventListener('click', e => {
-      if (e.target === previewModal) {
-        closePreviewModal();
-      }
-    });
-    previewModal.addEventListener('cancel', e => {
-      e.preventDefault();
-      closePreviewModal();
-    });
-  }
-
-  addEventListener('keydown', e => {
-    if (e.key === 'Escape' && previewModal && (previewModal.open || previewModal.classList.contains('active'))) {
-      closePreviewModal();
-    }
+  window.addEventListener('pageshow', (event) => {
+    const navEntries = (typeof performance !== 'undefined' && performance.getEntriesByType)
+      ? performance.getEntriesByType('navigation')
+      : [];
+    const isBackForward = event.persisted || (navEntries.length > 0 && navEntries[0].type === 'back_forward');
+    checkAndRestoreDemoPosition(isBackForward);
   });
 
   /* ==========================================================================

@@ -231,10 +231,15 @@
       return;
     }
 
-    if (trackType === "demo_open" || target.classList.contains("btn--preview-modal") || target.classList.contains("case-action-link")) {
+    if (trackType === "demo_open" || target.classList.contains("case-action-cta") || target.classList.contains("case-action-link") || target.hasAttribute("data-demo") || (href && href.includes("/demos/"))) {
+      const demoCat = target.dataset.demo || target.dataset.previewDomain || "demo";
+      const slugMatch = (href || "").match(/demos\/([^/]+)/);
+      const demoSlug = slugMatch ? slugMatch[1] : demoCat;
       trackEvent("demo_open", {
-        demo_category: target.dataset.demo || target.dataset.previewDomain || target.getAttribute("href") || "demo",
-        preview_mode: target.classList.contains("btn--preview-modal") ? "modal" : "tab"
+        demo_category: demoCat,
+        demo_slug: demoSlug,
+        location: target.dataset.location || getLinkLocation(target),
+        page: window.location.pathname
       });
       return;
     }

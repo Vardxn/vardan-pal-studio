@@ -327,7 +327,7 @@ These actions are tracked for journey analytics but **not** used as primary auto
 1. **`whatsapp_click`**: User clicked a floating or embedded WhatsApp button.
 2. **`phone_click`**: User initiated a phone call.
 3. **`email_click`**: User clicked an email link.
-4. **`demo_open`**: User previewed an interactive demo.
+4. **`demo_open`**: Visitor navigated to a demo website (opens directly in same tab with native scroll restoration).
 5. **`pricing_cta`**: User selected a package button.
 6. **`proposal_request`**: User reached the confirmation view.
 
