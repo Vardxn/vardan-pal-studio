@@ -1,512 +1,444 @@
-# Vardan Pal Studio — Master Blueprint, Specification & Project Showcase
+# VARDAN PAL STUDIO — DEFINITIVE MASTER SPECIFICATION & STATUS BLUEPRINT
 
-> **The Definitive Single-File Guide & Source of Truth for Vardan Pal Studio**  
-> **Lead Developer & Designer:** Vardan Pal  
-> **Positioning:** High-Converting, Quiet Luxury Websites for Ambitious Businesses Across India  
+> **The Single Authoritative Source of Truth for Vardan Pal Studio**  
+> **Brand Name:** Vardan Pal Studio (`VARDAN PAL / DIGITAL STUDIO · NEW DELHI`)  
+> **Lead Developer & Designer:** Vardan Pal (Software Engineer · B.Tech IT, NIT Srinagar)  
 > **Live Production URL:** [https://vardanpalstudio.vercel.app](https://vardanpalstudio.vercel.app)  
-> **Secondary Production Alias:** [https://vardanpalstudio.vercel.app](https://vardanpalstudio.vercel.app)  
-> **Developer Portfolio:** [https://vardxn.vercel.app](https://vardxn.vercel.app)  
-> **WhatsApp Helpline / Direct:** [+91 82796 96707](https://wa.me/918279696707) | **Email:** `vardan2701@gmail.com`  
-> **Status:** Live & Production Ready (Pan-India Edition) — October 2026  
-> *Note: Formerly Kailash Studios — renamed Phase 10; historical entries retain original names.*
+> **GitHub Repository:** [https://github.com/Vardxn/vardan-pal-studio](https://github.com/Vardxn/vardan-pal-studio) (`git@github.com:Vardxn/vardan-pal-studio.git`)  
+> **Connected Vercel Project:** `vardanpalstudio` (CI/CD connected to `Vardxn/vardan-pal-studio` on branch `main`)  
+> **Founder Portfolio:** [https://vardxn.vercel.app](https://vardxn.vercel.app)  
+> **Direct WhatsApp Helpline:** [+91 82796 96707](https://wa.me/918279696707) | **Email:** `vardan2701@gmail.com`  
+> **Headquarters / Base:** New Delhi, India · Serving ambitious businesses across India  
+> **Current Date & Status:** October 8, 2026 · **100% Green QA (126/126 Automated Verifications Passing)** · Production Ready  
 
 ---
 
-## 📌 Executive Summary — What is Vardan Pal Studio?
+## 📋 Table of Contents
+1. [Executive Summary & Studio Positioning](#1-executive-summary--studio-positioning)
+2. [What Has Changed in the Last 5 Prompts](#2-what-has-changed-in-the-last-5-prompts)
+3. [Current Status — What Is Achieved vs Pending](#3-current-status--what-is-achieved-vs-pending)
+4. [GitHub & Vercel Deployment Setup (According to Screenshots)](#4-github--vercel-deployment-setup-according-to-screenshots)
+5. [Core Architecture & Technology Stack](#5-core-architecture--technology-stack)
+6. [Catalog of the 6 Client Concept Demos](#6-catalog-of-the-6-client-concept-demos)
+7. [Approved 4-Tier Pricing System & Service Governance](#7-approved-4-tier-pricing-system--service-governance)
+8. [Conversion Tracking, Attribution & Analytics Architecture](#8-conversion-tracking-attribution--analytics-architecture)
+9. [Google Ads Search Campaign Blueprint](#9-google-ads-search-campaign-blueprint)
+10. [Full Quality Assurance Matrices & Automated Test Evidence](#10-full-quality-assurance-matrices--automated-test-evidence)
+11. [Chronological Project History (Phases 1 through 16D)](#11-chronological-project-history-phases-1-through-16d)
+12. [Master Briefing & System Prompt for New AI Agent Chats](#12-master-briefing--system-prompt-for-new-ai-agent-chats)
 
-**Vardan Pal Studio** is an independent, premium web design and digital solutions studio founded by **Vardan Pal**. 
+---
 
-We engineer high-converting, mobile-first web experiences for clinics, salons, restaurants, luxury real estate, interior studios, and event creators across all metropolitan and tier-1/tier-2 cities in India.
+## 1. Executive Summary & Studio Positioning
 
-### 🎯 The Core Problem We Solve
-- Most Indian local businesses rely on slow, clunky WordPress themes or generic templates packed with tacky SaaS gradients, stock images, and broken mobile layouts.
+**Vardan Pal Studio** is an independent, high-end digital design and engineering studio founded by **Vardan Pal**. We engineer bespoke, quiet-luxury websites for clinics, salons, fine-dining restaurants, luxury real estate brokerages, interior studios, and event creators across India.
+
+### The Core Problem in the Indian Market
+- Most Indian local businesses rely on slow, cluttered WordPress themes or generic templates packed with tacky SaaS gradients, stock imagery, and broken mobile viewports.
 - Potential high-ticket clients visit these websites, lose trust immediately, and bounce before booking.
-- Existing templates make booking cumbersome with 10-field forms instead of direct WhatsApp-first conversion.
+- Traditional templates make inquiry cumbersome with 10-field forms instead of direct WhatsApp-first conversion.
 
-### 💡 The Vardan Pal Studio Solution
-1. **Quiet Luxury Aesthetic:** Warm natural palettes, editorial serif typography (*Cormorant Garamond*), paired with crisp grotesque type (*Plus Jakarta Sans*), reminiscent of high-end architectural monographs.
+### The Vardan Pal Studio Solution
+1. **Quiet Luxury Aesthetic:** Warm natural palettes (Ivory `#fcfbf9`, Stone `#f5f3ee`, Charcoal `#141519`, Champagne Gold `#b58d53` / `#c5a880`), editorial serif typography (*Cormorant Garamond*), paired with crisp grotesque type (*Plus Jakarta Sans*), inspired by Apple and architectural monographs.
 2. **Instant WhatsApp Conversion:** Every inquiry, table reservation, and appointment leads directly to a pre-filled WhatsApp message. Zero friction, zero lost leads.
-3. **Turnkey 3–5 Day Delivery:** Full static builds with zero server maintenance overhead, hosted on edge CDN (Vercel) with near-instant load speeds.
-4. **Transparent Indian Rupee (₹) Pricing:** Upfront public packages — Launch from ₹9,900, Business from ₹19,900 (most popular), Signature from ₹34,900, and Custom Systems quoted after discovery, with zero hidden fees.
+3. **Turnkey 3–7 Day Delivery:** Full static builds with zero frontend framework overhead, hosted on edge CDN (Vercel) with near-instant sub-second load speeds.
+4. **Transparent Indian Rupee (₹) Pricing:** Upfront public packages — Launch from ₹9,900, Business from ₹19,900 (most popular), Signature from ₹34,900, and Custom Systems quoted after discovery, with zero hidden platform markups.
 
 ---
 
-## 🚀 Quick Start — Local Development & Live Links
+## 2. What Has Changed in the Last 5 Prompts
 
-All demo portals and the Master Showcase Hub are static HTML5/CSS3/Vanilla JS with zero external framework build overhead.
+Here is the exact, comprehensive breakdown of all updates, bug fixes, and architectural changes implemented across the last 5 prompts:
 
-### Local Server Launch
-Run the local HTTP server on port `8088`:
-```bash
-cd /Users/vardan/Developer/personal/03-Experiments/south-delhi-web-studio
-python3 -m http.server 8088
-```
+### 🔹 Prompt 1: Global Internal Rebrand + Production URL Swap + CHICA Luxury Dining Integration
+- **Global Rebranding:** Updated all code, metadata, canonicals, JSON-LD schemas, OpenGraph tags, Twitter cards, sitemap.xml, robots.txt, and `api/contact.js` from legacy names to **Vardan Pal Studio**.
+- **Production URL Alignment:** Swapped all production endpoints to `https://vardanpalstudio.vercel.app`.
+- **CHICA Luxury Dining Integration (`demos/restaurant/`):** Integrated the flagship luxury restaurant concept demo (*CHICA — Luxury Dining & Hearth Lounge, One Golden Mile, New Delhi*), featuring interactive multi-step reservations, sommelier wine cellar showcase, and robata hearth narrative.
 
-### Local Navigation Shortcuts
-- **Master Showcase Hub:** [http://localhost:8088/](http://localhost:8088/)
-- **1. Salon & Spa Portal:** [http://localhost:8088/demos/salon/](http://localhost:8088/demos/salon/)
-- **2. Clinic / Dental / Skin:** [http://localhost:8088/demos/clinic/](http://localhost:8088/demos/clinic/)
-- **3. Restaurant & Dining:** [http://localhost:8088/demos/restaurant/](http://localhost:8088/demos/restaurant/)
-- **4. Luxury Real Estate:** [http://localhost:8088/demos/real-estate/](http://localhost:8088/demos/real-estate/)
-- **5. Interior Design Studio:** [http://localhost:8088/demos/interior/](http://localhost:8088/demos/interior/)
-- **6. Wedding Cinema & Events:** [http://localhost:8088/demos/events/](http://localhost:8088/demos/events/)
+### 🔹 Prompt 2: Phase 16D Pre-Deploy Hardening & Defect Closure
+- **Contact API Upstream Validation & Timeout (`api/contact.js`):**
+  - Replaced unverified request forwarding with strict upstream confirmation checks (`response.ok`, defensive JSON parsing, and `result.success` confirmation).
+  - Wrapped outbound fetch in an `AbortController` with an 8-second timeout guard returning clean HTTP 502 Bad Gateway instead of hanging indefinitely.
+  - Built comprehensive 28-test unit suite in `scripts/test-contact-api.mjs` verifying upstream 500, 403, network drop, timeout abort, and unconfirmed receipts.
+- **Clinic Offcanvas Structural Accessibility (`demos/clinic/`):**
+  - Replaced layout-shifting offsets with structural CSS rules: `visibility: hidden`, `pointer-events: none`, and `max-width: 100vw` when closed.
+  - Dynamically synchronized `aria-hidden="true"` and `inert` via MutationObserver, plus Escape-key dismiss with focus restoration.
+- **Risky Claims Neutralization:** Removed real institutional and publication claims across the showcase and demo pages (softened AIIMS mentions, board-certified claims, and Vogue citations to generic culinary/medical journals).
+- **QA Artifacts Untracked:** Added `scripts/*.json` to `.gitignore` and removed them from git cache to maintain a clean working tree.
+- **Binary Brand Assets Regenerated:** Regenerated `assets/og.png` (1200×630) and `assets/apple-touch-icon.png` (180×180) featuring official "Vardan Pal Studio" typography and VP monogram.
+
+### 🔹 Prompt 3: CHICA Restaurant UI Alignment & Policy Dialogs
+- **Collision Elimination:** Removed overlapping top editorial bar (`.editorial-top-bar`) that was colliding with the shared 48px `.demo-context` bar.
+- **Watermark Removal:** Eliminated floating watermark badge (`.editor-badge-float` / "Crafted by Vardxn").
+- **Scroll Progress Bar Alignment:** Aligned scroll progress bar to top of page (`top: var(--demo-context-height, 53px)`).
+- **Luxury Navbar Polish:** Positioned luxury navbar cleanly below the demo context bar.
+- **Attribution Standardization:** Standardized footer attribution to: *"Built by Vardan Pal Studio • Websites from ₹9,900 • Custom systems quoted separately"*.
+- **Luxury Policy Dialogs:** Replaced external links with high-contrast accessible dialog modals for Terms & Conditions and Privacy Policy.
+
+### 🔹 Prompt 4: Project Inventory & Documentation Reconciliation
+- **Obsolete Route Elimination:** Thoroughly scanned and excised all references to the legacy `vardan-original` restaurant route across `index.html`, `terms.html`, `assets/js/premium.js`, `AGENTS.md`, `QA-REPORT-COMPLETE.md`, and master documentation.
+- **CHICA Metadata Synchronization:** Synchronized CHICA metadata across all showcase cards, sitemaps, category sliders, and verification scripts.
+
+### 🔹 Prompt 5: Visible Rebrand Audit & GitHub CI/CD Configuration
+- **Visible Text Audit & Cleanup:** Cleaned up visible "VARDXN" branding from the restaurant demo.
+- **Enhanced Rebrand Test Script (`scripts/rebrand-audit.mjs`):** Added live visible DOM text checking to detect any legacy naming, confirming 10/10 rebrand audit pass.
+- **GitHub & Vercel Linking:**
+  - The user created GitHub repository: `https://github.com/Vardxn/vardan-pal-studio`.
+  - The user connected Vercel project `vardanpalstudio` to `Vardxn/vardan-pal-studio`.
+  - Configured local Git remote `origin` pointing to `https://github.com/Vardxn/vardan-pal-studio.git` on branch `main`.
 
 ---
 
-## 📂 Canonical Project Structure & File Organization
+## 3. Current Status — What Is Achieved vs Pending
 
-To eliminate duplicate files and prevent code divergence across AI tools (Antigravity IDE, Codex, Shell), the codebase has been consolidated into a single physical location:
+### ✅ What We Have Achieved (100% Complete & Verified)
+1. **100% Green Automated QA Suite (126 Automated Verifications Passing):**
+   - **63 / 63 Multi-Viewport Responsive Runs:** 0 errors, 0 warnings, 0 horizontal overflow across 9 routes × 7 viewports (320px, 375px, 390px, 430px, 768px, 1024px, 1440px).
+   - **14 / 14 Direct Demo Navigation Checks:** Same-tab navigation, 48px top context bar, 0px delta scroll restoration via `sessionStorage`, 0 modal dialogs, 0 iframes.
+   - **11 / 11 Conversion Tracking & Attribution Checks:** Complete dataLayer event firing, 100% PII-free sanitization, UTM preservation, and API payload attribution.
+   - **28 / 28 Contact API Unit & Upstream Failure Checks:** Full validation, honeypot spam protection, 8s timeout abort, and upstream receipt confirmation.
+   - **10 / 10 Rebrand & Domain Audit Checks:** All routes declare Vardan Pal Studio and `https://vardanpalstudio.vercel.app` with zero disallowed legacy terms.
+2. **Flagship Master Showcase Hub (`/`):** Full editorial quiet luxury experience with category filter tabs, interactive device previews, transparent pricing cards, and direct WhatsApp / form integration.
+3. **6 Complete Client Concept Demos (`/demos/*/`):** Salon, Clinic, Restaurant, Real Estate, Interior, and Events portals fully styled and mobile-optimized.
+4. **Vercel Serverless Contact API (`api/contact.js`):** Production-hardened with input validation, honeypot filtering, FormSubmit upstream integration, and error handling.
+5. **Privacy & Legal Compliance:** Fully responsive, styled `privacy.html` and `terms.html` with explicit contact consent checkbox on the enquiry form.
+6. **Local Development Environment:** Running cleanly on port 8088 (`python3 -m http.server 8088`).
 
-- **Canonical Physical Disk Location:** `/Users/vardan/Developer/personal/03-Experiments/south-delhi-web-studio/`
-- **IDE Scratch Directory:** `/Users/vardan/.gemini/antigravity-ide/scratch/south-delhi-digital` *(Direct symlink to canonical repository)*
+### ⏳ What Is Pending & Immediate Next Steps
+1. **Initial Push to GitHub (Immediate Action Required by User):**
+   - The user must run `git push -u origin main` in their local terminal to authenticate with GitHub.
+   - Once pushed, Vercel will automatically build and deploy the production site at `https://vardanpalstudio.vercel.app`.
+2. **Post-Deploy Live Sanity Check:**
+   - Verify `https://vardanpalstudio.vercel.app` in a browser.
+   - Test contact form submission and WhatsApp button handoffs.
+3. **Google Ads Activation (Deferred):**
+   - When ready to launch paid search campaigns, insert GA4 Measurement ID (`G-XXXXXXXXXX`) and Google Ads Conversion IDs in `assets/js/analytics-config.js`.
+4. **Custom Domain Purchase (Deferred):**
+   - Purchase `vardanpalstudio.com` and connect to Vercel after securing the first paying client.
+5. **Local Workspace Folder Rename (Deferred):**
+   - Rename folder `south-delhi-web-studio` to `vardan-pal-studio` after the first client to prevent symlink disruptions.
 
+---
+
+## 4. GitHub & Vercel Deployment Setup (According to Screenshots)
+
+Based on the user's setup shown in the screenshots:
+
+1. **GitHub Repository:**
+   - Owner: `Vardxn`
+   - Repository: `vardan-pal-studio`
+   - Visibility: Public
+   - Remote URL: `https://github.com/Vardxn/vardan-pal-studio.git`
+2. **Vercel Project Configuration:**
+   - Project Name: `vardanpalstudio`
+   - Connected Repository: `Vardxn/vardan-pal-studio`
+   - Production Branch: `main`
+   - Deploy Hooks: Automatic deployment on Git commit push is enabled.
+3. **Local Git Setup Executed:**
+   ```bash
+   git remote add origin https://github.com/Vardxn/vardan-pal-studio.git
+   git branch -M main
+   ```
+4. **Terminal Command for User to Execute:**
+   Run this in your Mac / VS Code terminal (where your GitHub credentials/keychain are accessible):
+   ```bash
+   git push -u origin main
+   ```
+   *As soon as this command completes, Vercel will automatically detect the commit, trigger an instant build, and update https://vardanpalstudio.vercel.app with the entire project!*
+
+---
+
+## 5. Core Architecture & Technology Stack
+
+### Technical Foundations
+- **Frontend Core:** Pure HTML5, Vanilla CSS3, and Vanilla JavaScript (ES2022). Zero frontend frameworks (no React, Next.js, Vue, or Tailwind). Sub-second load times with zero compilation overhead.
+- **Backend Serverless Function:** Node.js ECMAScript Module (`api/contact.js`) hosted on Vercel Functions.
+- **Hosting & Edge Delivery:** Vercel Global Edge Network with automatic HTTPS/SSL, custom security headers, sitemap.xml, and robots.txt.
+
+### Design System & Visual Tokens
+- **Color Palette:**
+  - Ivory (`#fcfbf9` / `--bg-ivory`): Primary background
+  - Stone (`#f5f3ee` / `--bg-stone`): Card and secondary surface background
+  - Charcoal (`#141519` / `--text-charcoal`): Primary editorial text and dark sections
+  - Champagne Gold (`#b58d53` / `#c5a880` / `--accent-gold`): Subtle accents, borders, and interactive highlights
+- **Typography:**
+  - Headings: *Cormorant Garamond* (Google Fonts, serif, elegant luxury)
+  - UI & Body: *Plus Jakarta Sans* (Google Fonts, sans-serif, high readability)
+- **Style Rules:**
+  - Quiet luxury editorial style reminiscent of architectural monographs.
+  - Strict prohibition against tacky SaaS gradients, floating tech badges, and generic colors.
+  - Minimum touch target size: >= 44px by 44px across all interactive controls.
+
+### Workspace Directory Structure
 ```text
-vardan-pal-studio/ (formerly south-delhi-web-studio)
-├── docs/
-│   └── VARDAN_PAL_STUDIO_MASTER.md # ⭐️ CONSOLIDATED SINGLE MASTER DOCUMENT (You are here)
-├── index.html                   # Master Showcase Hub (Vardan Pal Studio storefront)
-├── 404.html                     # Custom luxury 404 error page
-├── privacy.html                 # Privacy policy & data governance
-├── terms.html                   # Terms of service & transparent deliverables
-├── vercel.json                  # Edge routing, headers & serverless configuration
-├── package.json                 # Dev tooling & testing dependencies (Playwright)
-├── package-lock.json
-├── sitemap.xml                  # Canonical sitemap (https://vardanpalstudio.vercel.app)
-├── robots.txt                   # Production crawler directives
-│
-├── assets/                      # Shared Static Assets for Master Showcase Hub
+.
+├── 404.html                          # Editorial 404 error page
+├── AGENTS.md                         # Coding agent guidelines
+├── api/
+│   └── contact.js                    # Vercel serverless contact API handler
+├── assets/
 │   ├── css/
-│   │   ├── premium.css          # Master Design System (Tokens, Layout, Typography, Footer)
-│   │   └── demo-context.css     # Shared 48px top context bar for same-tab demo return
+│   │   ├── demo-context.css          # Shared 48px top bar for concept demos
+│   │   ├── main.css                  # Studio hub base stylesheet
+│   │   └── premium.css               # Quiet luxury component styles
 │   ├── js/
-│   │   ├── premium.js           # Showcase Engine (Attribution, Scroll Restoration, Validation)
-│   │   ├── demo-navigation.js   # Dual-mode same-tab return to portfolio with scroll restore
-│   │   └── tracking.js          # Google Ads / GA4 conversion tracking & PII-free dataLayer
-│   ├── shots/                   # Synchronized high-res WebP Mockup Screenshots
-│   ├── og.png                   # OpenGraph social preview card (1200x630)
-│   ├── favicon.svg              # Minimal VP brand monogram
-│   └── apple-touch-icon.png     # iOS touch icon
-│
-├── demos/                       # 6 Complete, Self-Contained Client Demo Websites
-│   ├── salon/                   # 01: Aura Salon & Spa (Rate card, mobile booking)
-│   ├── clinic/                  # 02: Care Dental & Skin Clinic (Doctor profiles, WhatsApp triage)
-│   ├── restaurant/              # 03: CHICA — One Golden Mile (Mediterranean & Robata dining, table reservations)
-│   ├── real-estate/             # 04: Prime Estates (Villas, luxury residences, viewing booking)
-│   ├── interior/                # 05: Studio Eleven (Architectural portfolios, project intake)
-│   └── events/                  # 06: Studio Vows (Wedding reels, transparent packages)
-│
-├── api/                         # Vercel Serverless Backend Functions
-│   └── contact.js               # Multi-field contact form submission & FormSubmit proxy
-│
-├── scripts/                     # Developer & QA Automated Test Suite
-│   ├── full-qa.mjs              # 56-matrix multi-viewport Playwright audit (8 routes x 7 viewports)
-│   ├── test-tracking.mjs        # 11-point analytics, UTM attribution & PII-free validation suite
-│   ├── verify-direct-demo-navigation.mjs # 14-point same-tab navigation & scroll restore test
-│   ├── rebrand-audit.mjs        # Automated live DOM scanner for zero legacy text
-│   └── screenshot-hero.mjs      # Header visual inspection capture
-│
-├── audit-shots/                 # QA Screen Captures Across Viewports (320px–1440px)
-├── README.md                    # Quick overview pointing to docs/VARDAN_PAL_STUDIO_MASTER.md
-└── AGENTS.md                    # Agent instructions, behavioral rules & verification workflows
+│   │   ├── analytics-config.js       # Tracking IDs configuration
+│   │   ├── demo-navigation.js        # Same-tab navigation & scroll restore
+│   │   ├── premium.js                # Studio hub interactive controllers
+│   │   └── tracking.js               # Zero-PII conversion tracking engine
+│   ├── shots/                        # High-resolution WebP demo thumbnails
+│   ├── apple-touch-icon.png          # 180x180 branded touch icon
+│   ├── favicon.svg                   # Vector VP brand favicon
+│   └── og.png                        # 1200x630 OpenGraph social preview image
+├── demos/
+│   ├── clinic/                       # Care Dental & Skin Clinic demo
+│   ├── events/                       # Studio Vows Wedding Photography demo
+│   ├── interior/                     # Studio Eleven Interior Design demo
+│   ├── real-estate/                  # Prime Estates Luxury Real Estate demo
+│   ├── restaurant/                   # CHICA Fine Dining & Hearth Lounge demo
+│   └── salon/                        # Aura Salon & Spa demo
+├── docs/
+│   └── VARDAN_PAL_STUDIO_MASTER.md   # Synchronized master documentation
+├── index.html                        # Master Showcase Hub homepage
+├── package.json                      # Project manifest
+├── privacy.html                      # Privacy Policy
+├── robots.txt                        # Search engine crawling rules
+├── scripts/                          # Automated QA and verification suites
+├── sitemap.xml                       # Search engine sitemap
+├── terms.html                        # Terms of Service
+├── vercel.json                       # Vercel routing & security headers
+└── VARDAN_PAL_STUDIO_MASTER.md       # Root Master Specification (THIS FILE)
 ```
 
 ---
 
-## 🏛️ Master Showcase Hub (`index.html`) — Complete Breakdown
+## 6. Catalog of the 6 Client Concept Demos
 
-The main website at `index.html` functions as the client-facing portfolio and conversion engine for Vardan Pal Studio.
+Every demo is a complete, functioning, self-contained multi-page website:
 
-### Core Visual Aesthetics
-- **Color Palette:** Warm Ivory base (`#fcfbf9`), Stone grey surfaces (`#f5f3ee`), Deep Charcoal typography (`#141519`), Muted Champagne Gold accents (`#b58d53` / `#c5a880`).
-- **Typography:** *Cormorant Garamond* (editorial luxury serif for hero & major headings) paired with *Plus Jakarta Sans* (clean grotesque for UI, forms, and cards).
-- **Persistent Floating WhatsApp Widget:** A responsive, high-contrast floating button anchored to the bottom-right for 1-tap inquiries from anywhere on the page.
+| # | Industry | Demo Name | Simulated Domain | Live URL Route | Key Functional Highlights |
+|---|---|---|---|---|---|
+| **01** | **Hair Salon & Spa** | **Aura Salon & Spa** | `aurasalon.in` | `/demos/salon/` | Transparent haircut rate card, balayage lookbook, stylist profiles, 52px WhatsApp appointment scheduler with gold chevrons. |
+| **02** | **Dental & Skin Clinic** | **Care Dental & Skin Clinic** | `caredental.in` | `/demos/clinic/` | MD specialist credentials, aligner & implant pricing guides, interactive consultation scheduler, emergency patient triage. |
+| **03** | **Fine Dining & Bar** | **CHICA — Luxury Dining & Hearth Lounge** | `chicadelhi.com` | `/demos/restaurant/` | Interactive multi-step table reservations, day-to-night transitions, robata hearth narrative, sommelier cellar, policy dialogs. |
+| **04** | **Luxury Real Estate** | **Prime Estates — Luxury Properties** | `primeestates.in` | `/demos/real-estate/` | Title-checked luxury villas, architectural floor plans, neighborhood guides, discreet private walkthrough booking flow. |
+| **05** | **Interior Design** | **Studio Eleven — Interior Design** | `studioeleven.in` | `/demos/interior/` | Editorial completed project galleries, material palette studies, turnkey 3-step roadmap, project intake consultation. |
+| **06** | **Wedding Cinema** | **Studio Vows — Wedding Films** | `studiovows.in` | `/demos/events/` | Cinematic trailers, story photo albums, transparent package breakdown (₹2.2L–₹6.5L), date availability checker. |
 
-### Key Sections & Interactive Capabilities
-1. **Editorial Hero Section:**
-   - Headline: *“Websites designed for your exact business.”*
-   - Sub-copy highlighting bespoke design, pan-India reach, and rapid 3–5 day delivery.
-   - Dual live browser mockup frames with realistic interactive chrome.
-2. **Trust & Assurance Strip (Section 01B):**
-   - 4 Pillars: **3–5 Days Delivery**, **From ₹3,000 Packages**, **Direct Solo Builder Access**, **WhatsApp-First Workflow**.
-3. **Selected Work Grid (Section 02):**
-   - 6 case study cards with simulated domains (`aurasalon.in`, `caredental.in`, `primeestates.in`, etc.).
-   - Feature tags, motive labels, and direct `Explore Live Demo →` buttons.
-4. **Interactive Dark Mode Category Showcase (Section 03):**
-   - Signature charcoal section with dynamic category tabs (*Restaurants, Clinics, Salons, Real Estate, Interior, Weddings*).
-   - Automated 5.5s cross-fade rotation, keyboard arrow support, and synchronized screenshot previews.
-5. **Services Editorial Scope (Section 05):**
-   - 4-stage deliverables: **01 Design**, **02 Development**, **03 Launch**, **04 Management**.
-6. **Transparent INR Pricing Packages (Section 06):**
-   - **Starter (₹3,000):** 1-page modern landing page, mobile responsive, WhatsApp button, 3-day turnaround.
-   - **Business (₹5,000):** *Most Popular* — 3–5 pages, service menus / rate cards, booking flow, 5-day turnaround.
-   - **Premium (₹7,500):** Custom multi-page design, animated showcases, client intake forms.
-   - **Complete (₹10,000):** Full digital suite, custom CMS integration, ongoing monthly maintenance.
-7. **National Lead Intake Form (Section 09):**
-   - Inputs for Name, Phone (WhatsApp preferred), City / State (Pan-India), Business Type, Package, and Project Notes.
-   - Dual submission: Submits to `/api/contact` and generates an instant WhatsApp message.
-8. **Interactive Device Drawer Modal:**
-   - Lets clients preview any demo inside simulated **Desktop (1280px)** or **iPhone (390px)** frames right on the portfolio.
+### Direct Same-Tab Navigation Architecture (Phase 16C)
+- **Top Context Bar:** A shared 48px sticky header (`.demo-context`) featuring a touch-friendly "← Back to portfolio" link and category label (`Concept website · [Category]`).
+- **Scroll Restoration:** Native browser history and `sessionStorage` (`vps_demo_return_state`) restore exact homepage scroll position (**0px delta** observed in tests) when returning.
+- **Fallback Safe:** Directly bookmarked demo visits safely navigate back to `/#work` without trapping the user.
 
 ---
 
-## 💎 The 6 Client Demo Portals — Full Catalog
+## 7. Approved 4-Tier Pricing System & Service Governance
 
-Every demo is a complete, functioning, self-contained multi-page website inside `demos/`:
+### 1. Public Pricing Tiers Summary
 
-| # | Industry / Niche | Standardized Brand Name | Inspired By (Big Brands) | Simulated Domain | Live Production URL | Key Functional Features |
-| :-: | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Hair Salon & Spa** | **Aura Salon & Spa** | Looks Salon, Geetanjali Salon | `aurasalon.in` | [https://vardanpalstudio.vercel.app/demos/salon/](https://vardanpalstudio.vercel.app/demos/salon/) | Master stylist portfolios, transparent haircut rate card, hair color balayage lookbook, touch-friendly 52px WhatsApp appointment booking form with custom gold chevron dropdowns. |
-| **02** | **Dental & Skin Clinic** | **Care Dental & Skin Clinic** | Clove Dental, Kaya Skin Clinic | `caredental.in` | [https://vardanpalstudio.vercel.app/demos/clinic/](https://vardanpalstudio.vercel.app/demos/clinic/) | Senior doctor credentials, clear aligner & implant pricing guides, interactive consultation scheduler, emergency patient WhatsApp triage. |
-| **03** | **Fine Dining & Bar** | **CHICA — Luxury Dining & Hearth Lounge** | Diplomatic Enclave, New Delhi | `chicadelhi.com` | [https://vardanpalstudio.vercel.app/demos/restaurant/](https://vardanpalstudio.vercel.app/demos/restaurant/) | Interactive multi-step table reservations, day-to-night transitions, robata hearth narrative, digital sommelier cellar, and private event bookings. |
-| **04** | **Luxury Real Estate** | **Prime Estates — Luxury Properties** | DLF Prime, India Sotheby's | `primeestates.in` | [https://vardanpalstudio.vercel.app/demos/real-estate/](https://vardanpalstudio.vercel.app/demos/real-estate/) | Luxury villas & residences, floor plans, neighborhood guides, verified clear titles, discreet private walkthrough scheduler. |
-| **05** | **Interior Design** | **Studio Eleven — Interior Design Studio** | Livspace, HomeLane | `studioeleven.in` | [https://vardanpalstudio.vercel.app/demos/interior/](https://vardanpalstudio.vercel.app/demos/interior/) | Editorial completed project galleries, material palette studies, turnkey 3-step execution roadmap, client project intake consultation. |
-| **06** | **Wedding Cinema** | **Studio Vows — Wedding Films & Photography** | WedMeGood, The Wedding Filmer | `studiovows.in` | [https://vardanpalstudio.vercel.app/demos/events/](https://vardanpalstudio.vercel.app/demos/events/) | Cinematic video trailers, wedding story photo albums, transparent package breakdown (₹2.2L - ₹6.5L), instant date availability checker. |
+| Tier Name | Starting Price | Delivery Timeline | Primary Audience & Positioning | Revisions | Included Support |
+|---|---|---|---|---|---|
+| **Launch** | **₹9,900 starting** | **5-day typical delivery** | Getting your business online with credibility and speed | 1 round | 15 days post-launch |
+| **Business** *(Most Popular)* | **₹19,900 starting** | **7-day typical delivery** | Established businesses converting search traffic into enquiries | 2 rounds | 30 days post-launch |
+| **Signature** | **₹34,900 starting** | **10–14 day typical delivery** | High-end editorial presence with bespoke motion & deep intake | 3 rounds | 60 days post-launch |
+| **Custom Systems** | **Quoted after discovery** | **Scoped per project** | Client portals, automation, and WhatsApp CRM beyond websites | As agreed | Quoted per scope |
 
----
+### 2. Package Specifications & Scope Boundaries
 
-## 🎯 Outreach & Conversion Features
+#### 🚀 Tier 1: LAUNCH (₹9,900 starting)
+- One-page premium custom website
+- Mobile-first, fast-loading build (clean HTML5/CSS3/Vanilla JS)
+- Bespoke typography and curated color palette
+- Direct WhatsApp and click-to-call action buttons
+- Interactive Google Maps integration
+- Basic technical SEO setup and Google Search Console registration
+- Cloud deployment and SSL certificate setup
+- *Exclusions:* Multi-page layouts, booking flows, blog/CMS, CRM automation.
 
-1. **Subtle "Crafted by Vardan Pal" Attribution:**
-   - Every demo concludes with an elegant footer banner that speaks directly to the business owner:
-     *"Your business already has customers looking for you online. A modern website makes it effortless for them to discover, trust, and book with you."*
-2. **Dual-Action Lead Capture:**
-   - Form submissions validate inputs, display an interactive confirmation toast, send notifications via `api/contact.js`, and trigger WhatsApp with pre-filled details.
-3. **Copyable WhatsApp Pitch Scripts:**
-   - Prepared pitch messages for each of the 6 business niches, complete with 1-click "Copy WhatsApp Message" buttons for rapid outreach.
+#### 💼 Tier 2: BUSINESS — Most Popular (₹19,900 starting)
+- 4–5 custom sections or pages
+- Service menu, rate card, or visual gallery
+- Appointment or enquiry booking request flow
+- Testimonials and trust/proof sections
+- Validated WhatsApp enquiry form with client-side error handling
+- Local SEO and metadata optimization (Schema.org local business markup)
+- Performance and Core Web Vitals audit
+- *Exclusions:* Full headless CMS, real-time sync calendars, complex databases.
 
----
+#### 🏛️ Tier 3: SIGNATURE (₹34,900 starting)
+- Multi-page bespoke architecture, up to 8 pages
+- Custom motion and studio-grade UI/UX micro-interactions
+- Curated portfolio or case-study gallery
+- Advanced booking or multi-step client intake flow
+- Blog-ready structure
+- Advanced SEO, analytics, and custom event tracking
+- Custom domain connection and cloud hosting infrastructure setup
+- *Boundary:* A full CMS or publishing backend is quoted separately.
 
-## 📜 Comprehensive Evolution & Changelog (Phases 1–12)
+#### ⚙️ Tier 4: CUSTOM SYSTEMS (Quoted after discovery)
+- Discovery call and workflow mapping
+- Client self-service portals or booking management dashboards
+- Multi-step lead-qualification and intake flows
+- WhatsApp CRM integration and automated payment/appointment reminders
+- Third-party webhook, CRM, and API integrations
+- Comprehensive documentation and handover staff training
 
-This log records every milestone achieved in the development of Vardan Pal Studio:
-
-1. **Phase 1 — Legacy Template Ingestion:**  
-   Collected 6 standalone downloaded templates (`salon`, `clinic`, `restaurant`, `real-estate`, `interior`, `events`). The templates originally had foreign names, lorem ipsum placeholder text, and disjointed styles.
-2. **Phase 2 — Transformation into Studio Master Showcase:**  
-   Engineered the master agency website (`index.html`) using the Apple × Architectural Studio quiet luxury aesthetic. Replaced all SaaS gradients with editorial typography (*Cormorant Garamond* + *Plus Jakarta Sans*).
-3. **Phase 3 — Indian Market Localization:**  
-   Localized with authentic contact information for Vardan Pal, transparent Rupee (`₹`) pricing, and WhatsApp-first action flows.
-4. **Phase 4 — Serverless API & Vercel Deployment:**  
-   Configured `vercel.json` with SSL, security headers, and an edge function at `api/contact.js` to process customer inquiries. Successfully aliased to https://vardanpalstudio.vercel.app.
-5. **Phase 5 — Salon Demo Rebuild & Form Fix:**  
-   Fixed missing `bootstrap.min.css` in `demos/salon/`. Overhauled `delhi-custom.css`, fixed overlapping brand logo headers on mobile, and rebuilt the appointment booking form with elevated dark inputs, gold borders, and high contrast.
-6. **Phase 6 — Brand Simplification & Alignment:**  
-   Eliminated confusing foreign French/Latin jargon (e.g. *“Maison Aura”*, *“Haute Coiffure”*, *“Aurelia”*, *“Atelier Eleven”*). Standardized all 6 demos to match recognizable Indian industry brand models (*Aura Salon & Spa*, *Care Dental & Skin Clinic*, *Prime Estates*, *Studio Eleven*).
-7. **Phase 7 — Canonical Workspace Unification:**  
-   Replaced scratch duplicate folders with a clean direct symlink to the canonical developer repository, establishing a single source of truth for seamless pairing between Codex and Antigravity IDE.
-8. **Phase 8 — Demo Thumbnail & Visual Synchronization:**  
-   Re-captured all 6 high-resolution (2160×1350 WebP) demo preview thumbnails (`assets/shots/`) using headless Playwright CDP capture. All mockup frames across the main portfolio homepage now render the exact synchronized brand titles.
-9. **Phase 9 — Pan-India Market Repositioning & Canonical Domain Switch:**  
-   - Renamed Vercel project to `vardan-pal-studio`.
-   - Bound clean, memorable primary domain: `https://vardanpalstudio.vercel.app` (and alias `https://vardanpalstudio.vercel.app`).
-   - Removed regional South Delhi limitations across the entire portfolio website, headers, SEO meta tags, and demo footers.
-   - Positioned Vardan Pal Studio as a Pan-India digital partner serving ambitious businesses across all states in India.
-   - Added `city` intake field and floating WhatsApp helpline for 1-click lead conversion from anywhere in India.
-
-10. **Phase 10 — Rebrand to Vardan Pal Studio (October 2026):**  
-    - **Official Brand Transition:** Formally established the studio branding as **Vardan Pal Studio**, positioned as an independent web design and development studio based in New Delhi, serving businesses nationwide across India.
-    - **Approved Brand System:**
-      - **Brand Name:** Vardan Pal Studio
-      - **Wordmark Line 1:** `VARDAN PAL`
-      - **Wordmark Line 2 (Small Caps):** `DIGITAL STUDIO · NEW DELHI`
-      - **Descriptor:** *Independent Web Design & Development Studio*
-      - **Primary Tagline:** *Websites that mean business.*
-      - **Supporting Line:** *Premium websites and digital systems for ambitious businesses across India.*
-      - **Location Positioning:** *New Delhi, India · Serving businesses nationwide* (strictly virtual studio model; no claimed physical office).
-    - **Visual Identity & Assets Generated:**
-      - Created minimal serif "VP" monogram in `favicon.svg` (#141519 on #fcfbf9) and linked across HTML pages.
-      - Programmatically generated 180×180 `assets/apple-touch-icon.png` via Playwright.
-      - Updated `scripts/og/template.html` and regenerated 1200×630 `assets/og.png` social card.
-    - **Code & Content Synchronization:**
-      - Refactored `index.html` header wordmark, hero pill badge, statements, footer blocks, copyright, and meta description.
-      - Updated JSON-LD `ProfessionalService` schema (`name: "Vardan Pal Studio"`, `addressLocality: "New Delhi"`, `areaServed: "IN"`).
-      - Synced `404.html` and `assets/js/premium.js` WhatsApp outreach text (*"Hi Vardan, I found Vardan Pal Studio online..."*).
-      - Updated `api/contact.js` email subject dispatch line to *Vardan Pal Studio*.
-      - Standardized all 6 demo footers in `demos/*/index.html` to *"Vardan Pal Studio · New Delhi • Crafted by Vardan Pal"*.
-      - Preserved production Vercel deployment URL (`https://vardanpalstudio.vercel.app`) and demo internal listings.
-
-11. **Phase 11 — Homepage Repair & Condense (October 2026):**  
-    - **Defect Remediations:**
-      - **Portfolio Previews Refreshed:** Verified and regenerated all 6 demo WebP preview mockups (`clinic`, `salon`, `restaurant`, `real-estate`, `interior`, `events`) at 1280×800 via Playwright with 1.5s network settle delay. Set explicit dimensions, `decoding="async"`, descriptive alts, and eager loading for above-the-fold cards.
-      - **Scroll-Reveal Fallback:** Implemented `class="no-js"` with inline head removal script and CSS fallback (`.no-js .reveal { opacity: 1 !important; transform: none !important; }`) alongside `prefers-reduced-motion` support.
-      - **Floating WhatsApp Widget:** Replaced the large container with a single 56px circular `#25D366` button, positioned safely at `bottom: max(20px, env(safe-area-inset-bottom)); right: 20px;`, configured to hide when modals or mobile drawers open, and verified to never obscure form submit CTAs.
-      - **Category Showcase Tabs:** Converted tab bar to `flex-wrap: wrap` and a responsive 2-column grid under 768px, ensuring "Wedding Photography" is 100% visible with zero horizontal overflow, and added 4-way arrow key roving navigation.
-      - **Measurable Claims:** Replaced unverifiable marketing claims (e.g. "#1 Result", "100% Pre-Filtered") with measurable technical deliverables ("Technical SEO & local schema", "Google Search Console setup", "Fast Core Web Vitals", "Budget & intent screening").
-      - **Concept Disclaimers:** Added letter-spaced stone grey disclaimer lines under all 6 portfolio cards and a legal footnote in the footer.
-    - **Homepage Architecture Condensation (~9 Sections Max):**
-      - Merged the 4-pillar trust strip into the hero as 4 compact highlight chips.
-      - Merged the Studio Philosophy quote into the dark showcase as an editorial closing line.
-      - Merged Services (01–04) and Outcomes into a single high-impact "What You Get" section with 5 approved proof phrase chips and 3 measurable outcome cards.
-      - Condensed extended capabilities into a slim dark add-ons band with 3 key tools.
-      - Merged the 5-step roadmap and founder advantages into "How It Works".
-      - Reduced section vertical padding ~23% on desktop (`padding-block: clamp(56px, 7.5vw, 104px)`).
-      - Synced all header and footer anchor links with `scroll-margin-top: 96px`.
-      - Added `@media print` rules avoiding card splits, hiding floating UI, and validated clean A4 PDF export.
-
-12. **Phase 12 — Founder Section + Full QA (October 2026):**  
-    - **Founder Credibility Section:**
-      - Added editorial "THE FOUNDER" section (`id="about"`) positioned seamlessly between "How It Works" and FAQ.
-      - Headline: *"The person behind the work."*
-      - Editorial copy emphasizing direct engineering credibility: *"Vardan Pal Studio is run by its founder — a software engineer (B.Tech, Information Technology, NIT Srinagar) with industry experience building cloud-native applications and backend systems. Every website is designed, built, and launched directly by him — the person you message is the person who writes the code."*
-      - Integrated verified text link to developer portfolio: `https://vardxn.vercel.app` (`target="_blank" rel="noopener"`).
-      - Maintained strict design governance: no university crests, no resume downloads, no job-seeking mentions.
-    - **Service Tracks Clarity & Footer Modernization:**
-      - Appended clear service track boundary line to "What You Get" (`#services`): *"Beyond websites: client portals, booking systems, lead-qualification flows and WhatsApp automation — quoted separately."*
-      - Restructured footer navigation into a clean 2-column layout:
-        - **Services Column:** Exactly two rows: "Websites for businesses" (`#services`) and "Custom systems & automation" (`#beyond`).
-        - **Studio Column:** Demos, About (`#about`), How It Works, Pricing, FAQ, Contact, and Developer Portfolio.
-      - Upgraded footer contact details to active, accessible links for WhatsApp/tel (`+91 82796 96707`) and email (`mailto:vardan2701@gmail.com`).
-    - **Comprehensive Full-Site QA Sweep & Remediation:**
-      - **Route & Viewport Matrix:** Verified Studio Hub (`/`) and all 6 client demos (`salon`, `clinic`, `restaurant`, `real-estate`, `interior`, `events`) at 375px, 768px, and 1440px viewports. 100% HTTP 200 OK, zero broken routes, zero failed asset requests.
-      - **Horizontal Overflow Remediation:** Discovered and eliminated 124px mobile horizontal overflow in Care Dental & Skin Clinic (`demos/clinic/`) caused by off-canvas navigation by enforcing `overflow-x: hidden; max-width: 100vw;` in `clinic-custom.css`. All 7 routes now pass with 0 overflow.
-      - **Console Error Elimination:** Resolved 404 console error on `/favicon.ico` by generating valid multi-resolution `favicon.ico` and `favicon.png` at root; console errors reduced to 0.
-      - **Touch Targets Standardized (≥ 44px):** Brought mobile brand link, demo banner buttons, mobile hamburger toggles, and top-bar icons across hub and demos up to standard touch sizes.
-      - **Form Validation & WhatsApp Handoff:** Standardized Hub and all 6 demo forms with instant success states and pre-filled WhatsApp handoffs containing respective business names and "Vardan Pal Studio".
-      - **Automated Evidence & Reporting:** Generated comprehensive `QA-REPORT.md` and captured visual proof screenshots in `audit-shots/`.
-
-13. **Phase 13 — Complete multi-viewport QA and functional audit (October 2026):**
-    - **Exhaustive 63-Run Multi-Viewport Matrix (9 Routes × 7 Viewports):**
-      - Discovered and tested all 9 project routes: Studio Hub (`/`), Legal Privacy (`/privacy.html`), Custom 404 (`/404.html`), Aura Salon (`/demos/salon/`), Care Dental (`/demos/clinic/`), CHICA Luxury Restaurant (`/demos/restaurant/`), Prime Estates (`/demos/real-estate/`), Studio Eleven (`/demos/interior/`), and Studio Vows (`/demos/events/`).
-      - Verified across all 7 required viewports: 320px, 375px, 390px, 430px, 768px, 1024px, 1440px.
-      - **Result:** **63 / 63 Passed (100% Pass Rate)** with 0 console errors, 0 failed requests, 0 horizontal overflow, and 0 broken images.
-    - **Defect Remediation & Precision Engineering:**
-      - **Salon 1024px Navbar Overflow:** Restructured `@media (min-width: 992px) and (max-width: 1199px)` in `delhi-custom.css` adjusting logo font size, nav link padding, and button spacing; completely eliminated 60px horizontal overflow (`1084px -> 1024px`).
-      - **Restaurant 320px Overflow:** Adjusted menu card grid in `demos/restaurant/style.css` to `minmax(min(100%, 280px), 1fr)` ensuring clean rendering on narrow 320px screens.
-      - **Form Labels & WCAG AA:** Added missing programmatic labels (`id`, `for`, `aria-label`) across Salon stylist select & message, Real Estate filter dropdowns, Interior timeline select, and Events guest count select.
-      - **Touch Target Standard (≥ 44px):** Elevated original restaurant footer social link sizes from 42px to 44px with flex centering and descriptive `aria-label` tags.
-      - **Real Estate Off-Canvas Nav:** Fixed `.site-nav` stacking relative to `.demo-top-bar` in `real-estate-custom.css` so mobile hamburger button receives unobstructed tap events.
-    - **Functional Verifications:**
-      - **Portfolio Device Preview Modal:** Verified all 6 cards trigger accessible `<dialog>` with live iframe, Desktop (1280px) and Mobile (390px) responsive preview toggles, Escape key closing, backdrop click dismissal, and strict keyboard focus restoration to trigger.
-      - **W3C APG Category Tabs:** Roving keyboard navigation with ArrowRight, ArrowLeft (with wrap), Home, End, and dynamic `aria-selected` / roving `tabindex`.
-      - **FAQ Accordions:** Validated native click, Space, and Enter keyboard expand/collapse on all items.
-      - **All 6 Demo Booking Forms:** Validated required fields, personalized toast notifications (`#demoToast`, `#clinicToast`, `#reToast`), and WhatsApp deep-link generation targeting `+918279696707`.
-      - **Vercel Serverless Contact API (`api/contact.js`):** Validated CORS OPTIONS preflight (200), Method Not Allowed (405), missing field validation (400), and zero committed secrets.
-      - **No-JS & Reduced Motion Fallbacks:** Main Hub and all 6 demos validated with `javaScriptEnabled: false` and `<noscript>` CSS overrides ensuring 100% content visibility without script hydration.
-    - **Evidence & Artifacts:** Generated full report `QA-REPORT-COMPLETE.md` and saved 63 screenshots in `audit-shots/full-qa/{route}/{viewport}.png`.
-
-
-14. **Phase 14 — Sustainable pricing and service promise alignment (October 2026):**
-    - **Approved 4-Tier Pricing System:**
-      - Replaced legacy public rates with four sustainable, transparent studio tiers:
-        1. **Launch (₹9,900 starting):** 1-page premium custom website, mobile-first build, bespoke typography & palette, direct WhatsApp/call buttons, Google Maps, basic SEO & Search Console, cloud deployment & SSL, 1 revision round, 15 days post-launch support. 5-day typical delivery. CTA: *Get Started*.
-        2. **Business (₹19,900 starting — Most Popular):** 4–5 custom sections/pages, service menu/rate card/gallery, appointment or enquiry booking flow, testimonials & trust sections, validated WhatsApp enquiry form, local SEO & metadata optimisation, Core Web Vitals audit, 2 revision rounds, 30 days post-launch support. 7-day typical delivery. CTA: *Choose Business*.
-        3. **Signature (₹34,900 starting):** Multi-page bespoke architecture up to 8 pages, studio-grade motion & interactions, portfolio/case-study gallery, advanced intake flow, blog-ready structure (CMS quoted separately), advanced SEO/analytics/tracking, domain & cloud hosting setup, 3 revision rounds, 60 days post-launch support. 10–14 day typical delivery. CTA: *Go Signature*.
-        4. **Custom Systems (Quoted after discovery):** Discovery call & workflow mapping, client portals & booking dashboards, lead qualification flows, WhatsApp CRM & automated reminders, third-party webhook integrations, documentation & handover training, technical support quoted per scope. CTA: *Book Discovery*.
-    - **Service Category Architecture ("What can we build for you?"):**
-      - Created comprehensive service category breakdown explaining:
-        - **A. Business Websites:** Flagship digital storefronts for salons, clinics, restaurants, consultants, real estate, interior designers, and creative studios. (Packages: Launch, Business, Signature).
-        - **B. Booking & Enquiry Experiences:** Structured appointment request flows, date/service selection, validated fields, and WhatsApp intent handoffs.
-        - **C. Custom Digital Systems:** Client portals, booking dashboards, CRM pipelines, and backend automations quoted after discovery.
-    - **Promise Alignment & Integrity Rules:**
-      - Removed all unsupported claims (e.g., "#1 on Google", "guaranteed leads", "unlimited revisions/support", "full CMS in standard tiers", "24/7 support").
-      - Reinforced accurate technical wording: Technical SEO setup, Search Console configuration, clear enquiry paths, budget & project-fit discussions, structured contact forms, and faster customer journeys.
-    - **Interactive Pricing CTA & Form Preselection:**
-      - Enhanced contact form with dedicated `<select name="package">` field (`Launch`, `Business`, `Signature`, `Custom Systems`).
-      - All pricing card buttons (`.select-package-btn` with `data-package="..."`) seamlessly scroll to `#contact`, preselect the corresponding tier, and focus the field without submitting accidentally.
-      - Integrated package selection into Vercel Serverless Contact API (`api/contact.js`) and pre-filled WhatsApp handoffs.
-    - **Demo Footer Synchronization:**
-      - Updated studio attribution lines across all 6 demo footers: *"Built by Vardan Pal Studio • Websites from ₹9,900 • Custom systems quoted separately"*. Fictional business pricing inside demos remains intact.
-    - **Governance Document:** Created `PRICING-SYSTEM.md` detailing packages, inclusions, boundaries, revision limits, support windows, and communication rules.
-
-15. **Phase 15 — Conversion tracking and Google Ads readiness (October 2026):**
-    - **Safe Analytics Architecture (`assets/js/analytics-config.js` & `assets/js/tracking.js`):**
-      - Centralized configuration with empty IDs by default (`ga4MeasurementId: ""`, `googleAdsConversionId: ""`, `googleAdsLeadLabel: ""`). Zero third-party scripts loaded when IDs are empty; zero runtime exceptions thrown.
-      - Privacy-first client-side tracking via `trackEvent(eventName, parameters)` pushing sanitized payloads into `window.dataLayer`.
-      - Strict programmatic PII scrubber: Automatically excludes personal fields (`name`, `phone`, `email`, `city`, `msg`, `address`) and regex-matches for email/phone strings before dispatching events.
-      - Debounced click event delegation (350ms window) preventing rapid duplicate event triggers.
-    - **Conversion Events & Hierarchy:**
-      - **Primary Conversion:** `lead_submit` — Fires strictly after valid form validation succeeds (valid name, valid email, phone, and checked consent box) and before WhatsApp redirection.
-      - **Secondary Conversions:** `whatsapp_click`, `phone_click`, `email_click`, `demo_open`, `pricing_cta`, `proposal_request`.
-    - **Full UTM & Campaign Attribution Engine:**
-      - Captures `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, and `gclid` on landing and persists them across navigation via `sessionStorage`.
-      - Automatically populates hidden inputs in `#enquireForm`.
-      - Passes complete attribution object to Vercel Serverless Contact API (`api/contact.js`) with human-readable summary line.
-      - Appends referral source tag into WhatsApp message only when attribution is present.
-    - **Multi-Form Hardening Across Hub & 6 Demos:**
-      - Studio Hub contact form and all 6 client concept demos (`salon`, `clinic`, `restaurant`, `real-estate`, `interior`, `events`) hardened with `isSubmitting` duplicate submission guards, visible required field checks, instant success cards/toasts, and zero-PII `lead_submit` tracking.
-    - **Privacy Policy & Terms of Service:**
-      - Published responsive editorial legal pages (`privacy.html` and `terms.html`) adhering to the studio's Ivory/Charcoal/Gold design system.
-      - Added mandatory consent checkbox on the enquiry form linking directly to Privacy Policy and Terms.
-      - Added legal links in studio footer.
-    - **Google Ads Campaign Strategy (`GOOGLE_ADS_SETUP.md`):**
-      - Formulated complete Search-only campaign architecture (no initial PMAX or Display) with conservative budget recommendations (₹500–₹800/day for 2–4 weeks).
-      - Configured 6 high-intent Search ad groups: Clinic, Salon, Restaurant, Small-Business, Website Designer Delhi, and Website Designer India using Exact `[...]` and Phrase `"..."` match keywords.
-      - Universal negative keyword list (employment, education/tutorials, free seekers, platform logins) and weekly Search Terms review protocol.
-      - 12 Responsive Search Ad (RSA) copy concepts built strictly on verifiable claims matching studio packages (₹9,900, ₹19,900, ₹34,900, Custom Systems).
-      - Lead pipeline workflow (`New -> Contacted -> Qualified -> Proposal Sent -> Won/Lost`) and CRM tracking schema.
-    - **Automated Playwright Test Suite & Audit Report:**
-      - Automated test script `scripts/test-tracking.mjs` verifying all 10 core tracking scenarios with 100% PASS rate.
-      - Published comprehensive audit report `QA-TRACKING-REPORT.md`.
-
-16. **Phase 16A — Contact Consent UI Refinement (October 2026):**
-    - **Custom Semantic Checkbox Architecture:** Rebuilt consent row into a semantic `.form-consent` container with custom 22px × 22px checkbox (`appearance: none;` with crisp charcoal SVG tick mark `#171614` on champagne gold background `#B89A62`). Excluded `input[type="checkbox"]` from generic 52px input styles.
-    - **Touch Target & Layout Alignment:** Perfectly aligned checkbox with the first line of consent copy (`margin-top: 1.5px; gap: 13px;`). Extended touch target to $\ge 44\text{px}$ on coarse pointers via `::after` hit area and full-label clickability.
-    - **Independent Legal Links:** Separated Privacy Policy and Terms of Service links into a dedicated paragraph outside the checkbox `<label>` to prevent accidental checkbox toggling when opening legal documents.
-    - **Accessible Keyboard & Validation Feedback:** Full Tab focus, `:focus-visible` gold outline ring with offset, Space key toggling, native HTML5 `required` blocking on empty submission, and subtle `.has-error` state.
-    - **Contact Section Ending Optimization:** Condensed and centered final dark section text to `NEW DELHI · SERVING BUSINESSES ACROSS INDIA · WEBSITES FROM ₹9,900` with clean wrapping, max-width constraints, and zero horizontal clipping across all viewports (320px–1440px).
-    - **Automated Verification:** Verified across 7 responsive viewports (320px, 375px, 390px, 430px, 768px, 1024px, 1440px) with 0 errors and 0 overflows; saved visual proof screenshots in `audit-shots/contact-consent-fix/`.
-
-17. **Phase 16B — Compact Footer Architecture (October 2026):**
-    - **Root-Cause Diagnosis & Height Reduction:** Eliminated excessive ~750–800px full-screen footer height caused by 9 stacked links in a single column with 44px min-height each, huge clamp padding (96px), large bottom margins (56px), and a verbose 6-brand fictional demo disclaimer.
-    - **Three-Area Content Architecture:**
-      - **Area A (Brand & Contact):** Brand title `Vardan Pal Studio`, tagline *“Premium websites and digital systems for businesses across India.”*, direct contact links (WhatsApp +91 82796 96707 with tracking, `vardan2701@gmail.com`), and location *“New Delhi · Serving businesses nationwide”*.
-      - **Area B (Explore):** 4 core navigation links: Demos (`#work`), Pricing (`#pricing`), Process (`#process`), and Contact (`#contact`).
-      - **Area C (Studio):** 4 core studio links: About (`#about`), Developer Portfolio ↗ (`https://vardxn.vercel.app`), Privacy (`privacy.html`), and Terms (`terms.html`).
-    - **Streamlined Concept Disclaimer & Bottom Bar:** Replaced verbose multi-line brand enumeration with a concise single sentence: *“All showcased brands are fictional concept projects created to demonstrate design directions.”* Structured compact bottom bar with tagline *“Websites that mean business.”* and copyright *“© 2026 Vardan Pal Studio. All rights reserved.”*.
-    - **Desktop & Mobile Responsive Geometry:**
-      - **Desktop:** 3-column asymmetric layout (`1.6fr 0.9fr 0.9fr`), top-aligned, natural content height ~345–358px (within the 360–500px target), restrained padding (`clamp(48px, 5vw, 64px)` top, `32px` bottom).
-      - **Tablet (<= 860px):** Brand spans 2 columns, Explore and Studio side-by-side in a 2-column grid.
-      - **Mobile (<= 480px):** Clean vertical stacking of contact details, compact link line-heights, and explicit `padding-right: 64px` clearance on the bottom bar preventing collision with the floating WhatsApp button.
-      - **Narrow (<= 340px):** Single-column stack with zero horizontal overflow.
-    - **Site-Wide Application:** Consistently deployed across `index.html`, `privacy.html`, `terms.html`, and `404.html` with root-relative hash routing (`/#work`, `/#pricing`, `/#process`, `/#contact`, `/#about`).
-    - **Automated Verification:** Tested across 7 viewports (320px, 375px, 390px, 430px, 768px, 1024px, 1440px) on all 4 pages (28 audit points). Verified 0 horizontal overflow, 0 WhatsApp collisions, 100% passing tracking suite; audit screenshots archived in `audit-shots/compact-footer/`.
-
-18. **Phase 16C — Direct Demo Navigation & Browser History Restoration (October 2026):**
-    - **Embedded Device Modal Retirement:** Completely eliminated the legacy preview drawer/modal (`#previewModal`), device toggles (Desktop 1280px vs. Mobile 390px), simulated iframe containers, "Open in New Tab" controls, backdrop overlays, and focus traps from the homepage DOM and stylesheets.
-    - **Same-Tab Real Anchor Architecture:** Converted all portfolio primary CTAs, preview images, project titles, and interactive showcase links to standard, accessible HTML anchors (`<a href="/demos/.../">`) with no `target="_blank"`, preserving native Cmd/Ctrl-click, middle-click, and standard tab browsing.
-    - **Shared Lightweight Context Bar:** Implemented shared `assets/css/demo-context.css` and `assets/js/demo-navigation.js` across all six concept demos (`salon`, `clinic`, `restaurant`, `real-estate`, `interior`, `events`). Provides a compact 48–54px top context bar with a touch-friendly (>= 44px) "← Back to portfolio" button and accurate concept disclosure (`Concept website · [Category]`), completely retiring legacy "Live Client Demo" labels and promotional links.
-    - **Dual-Mode Back Navigation:**
-      - *Case A (Visitor arrived from Studio homepage):* Invokes native `window.history.back()`, preserving browser history and instantly returning to the homepage.
-      - *Case B (Direct entry or external referral):* Falls back gracefully to `/#work` on the studio homepage without trapping visitors or navigating outside the domain.
-    - **Browser-Native History & Scroll Restoration:** Enabled `history.scrollRestoration = "auto"`, captures homepage scroll coordinate and clicked demo ID into `sessionStorage` (`vps_demo_return_state`), and guarantees seamless, 0px-delta scroll restoration on Back/Forward navigation with `preventScroll: true` keyboard focus restoration.
-    - **Attribution & Analytics Preservation:** Updated `demo_open` tracking specification to *"Visitor navigated to a demo website"*, continuing to capture `demo_category`, `demo_slug`, `location`, and `page` without PII or artificial navigation delays.
-    - **Automated Verification:** Verified 14/14 automated Playwright test criteria across 7 viewports (320px, 375px, 390px, 430px, 768px, 1024px, 1440px) with 0 console errors, 0 iframes, 0 modals, 0 horizontal overflow, and verified Back/Forward roundtrip; screenshots archived in `audit-shots/direct-demo-navigation/`.
-
+### 3. Promise Integrity & Communication Rules
+- ❌ **No guaranteed Google rankings** (e.g., "#1 on Google" replaced with "Technical SEO setup & Search Console configuration").
+- ❌ **No guaranteed lead volume or sales** (replaced with "Clear enquiry paths & faster customer journeys").
+- ❌ **No unlimited revisions or unlimited support** (each tier defines explicit revision counts and support days).
+- ❌ **No full CMS in standard website tiers** (CMS implementation quoted separately).
+- ❌ **No real-time booking engines** unless commissioned under Custom Systems.
+- ❌ **No physical office claims** outside New Delhi. Remote service nationwide.
 
 ---
 
-## ⚡ Current Status & Validated Architecture (Phases 10–14 Fully Complete)
+## 8. Conversion Tracking, Attribution & Analytics Architecture
 
-### ✅ What is Completed & 100% Validated
+### Safe Tracking Architecture (`assets/js/analytics-config.js` & `assets/js/tracking.js`)
+- **Default Empty IDs:** `ga4MeasurementId: ""`, `googleAdsConversionId: ""`, `googleAdsLeadLabel: ""`. Zero scripts load and zero runtime exceptions occur when IDs are empty.
+- **Strict PII Scrubbing:** Automatically scrubs names, phones, emails, cities, messages, and regex-matching email/digit strings before pushing events to `window.dataLayer`.
+- **Debounced Delegation:** 350ms click debounce preventing duplicate rapid fire.
 
-1. **Brand Identity & Pan-India Positioning (Phase 10):**
-   - Studio fully rebranded to **Vardan Pal Studio** with New Delhi base serving clients across all Indian states.
-   - Clean wordmark (`VARDAN PAL` / `DIGITAL STUDIO · NEW DELHI`), minimal serif "VP" monogram favicon, and updated OpenGraph/meta tags.
-   - Structured JSON-LD `Schema.org/ProfessionalService` with national reach and direct contact endpoints.
-   - Standardized attribution across all 6 demo footers: *"Vardan Pal Studio · New Delhi • Crafted by Vardan Pal"*.
+### Conversion Event Hierarchy
+- **`lead_submit` (Primary Conversion):** Fires strictly after form validation succeeds and before WhatsApp redirect. Parameters: `package`, `industry`, `form_location` (0 PII).
+- **`proposal_request` (Secondary Conversion):** Fires when valid submission reaches the success card state.
+- **`whatsapp_click`:** Tracks clicks on floating WhatsApp button, header, and section CTAs.
+- **`phone_click` & `email_click`:** Tracks phone and mailto links.
+- **`demo_open`:** Tracks navigation to demo websites with category and slug.
+- **`pricing_cta`:** Tracks package tier button clicks.
 
-2. **Homepage Repairs & Architecture Condensation (Phase 11):**
-   - **Mockup Previews:** All 6 demo WebP previews refreshed at 1280×800 with sharp contrast and explicit dimensions.
-   - **Animation Resilience:** `<html class="no-js">` fallback script prevents stuck hidden elements; `prefers-reduced-motion` supported.
-   - **Floating WhatsApp Button:** Standardized to a 56px circular button (`#25D366`) with iOS safe-area insets that never blocks form CTAs and auto-hides when modals open.
-   - **Category Tabs:** Responsive 2-column mobile grid under 768px with full visibility for "Wedding Photography" and 4-way arrow key keyboard roving navigation.
-   - **Measurable Deliverables:** Marketing claims converted to verifiable technical deliverables with grey concept disclaimers on all cards and footer.
-   - **Architecture Condensation:** Master homepage condensed to ~9 high-impact sections with ~23% tighter vertical spacing and `@media print` export.
-
-3. **Founder Credibility & Two Service Tracks (Phase 12):**
-   - **The Founder Section (`#about`):** Editorial card between "How It Works" and FAQ highlighting founder credentials (B.Tech IT, NIT Srinagar; cloud-native and backend systems engineering) and outbound portfolio link (`https://vardxn.vercel.app`).
-   - **Two Service Tracks Clarity:** Closing boundary note in "What You Get" (`#services`) clarifying custom systems & automation quoted separately.
-   - **Footer Navigation Modernization:** Clean 2-column footer layout separating core "Websites for businesses" (`#services`) from "Custom systems & automation" (`#beyond`).
-
-4. **Full-Site Automated QA Sweep Across All 7 Routes (Phase 12):**
-   - **Zero Broken Routes:** Hub (`/`) and all 6 demos (`salon`, `clinic`, `restaurant`, `real-estate`, `interior`, `events`) tested at 375px, 768px, and 1440px with 100% HTTP 200 OK.
-   - **Zero Console Errors:** 404 error on `/favicon.ico` eliminated by generating valid root `favicon.ico` and `favicon.png`.
-   - **Zero Horizontal Overflow:** Resolved 124px mobile overflow in Care Dental & Skin Clinic (`demos/clinic/`) via `overflow-x: hidden; max-width: 100vw;` in `clinic-custom.css`.
-   - **Mobile Touch Targets (≥ 44px):** Hub brand mark, Salon demo banner back link & toggler, Clinic top-bar icons, and Real Estate mobile burger toggles elevated to $\ge 44	ext{px}$.
-   - **Unified Form & WhatsApp Handoff:** Hub contact form and all 6 demo forms validate required inputs, display instant confirmation cards/toasts, and open WhatsApp with prefilled text referencing both demo and *"Vardan Pal Studio"*.
-   - **Link Integrity:** 40/40 links validated on the Hub with zero dead anchors; phone (`+91 82796 96707`) and email (`vardan2701@gmail.com`) active.
-   - **Brand Terminology Sweep:** 0 rendered occurrences of legacy "Kailash" text across visible web pages.
-
-### 📊 Full-Site QA Audit Matrix (Phase 12 Automated Verification)
-
-| Route | Path | Viewports Tested | HTTP Status | Console Errors | Horiz. Overflow | Forms / WhatsApp | Touch Targets (>=44px) |
-|---|---|---|---|---|---|---|---|
-| **Studio Hub** | `/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Instant handoff + card) | Passed (Brand + CTAs >= 44px) |
-| **Aura Salon & Spa** | `/demos/salon/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (Banner & toggler >= 44px) |
-| **Care Dental & Skin** | `/demos/clinic/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (Top bar CTAs >= 44px) |
-| **CHICA Restaurant** | `/demos/restaurant/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (All controls >= 44px) |
-| **Prime Estates** | `/demos/real-estate/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (Burger & navs >= 44px) |
-| **Studio Eleven** | `/demos/interior/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (All controls >= 44px) |
-| **Studio Vows** | `/demos/events/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (All controls >= 44px) |
-
-### 🟡 Immediate Next Steps
-1. **Manual User Production Deployment:** Review local build on port 8088 and trigger production deployment to Vercel (`npx vercel --prod`).
-2. **Production Domain Verification:** Verify live domain health post-deploy at `https://vardanpalstudio.vercel.app`.
+### Full UTM & Attribution Engine
+- Captures `utm_source`, `utm_medium`, `utm_campaign`, `utm_term`, `utm_content`, and `gclid` on landing.
+- Persists parameters in `sessionStorage` across page anchors and internal browsing.
+- Automatically populates hidden inputs in `#enquireForm`.
+- Passes full attribution into `api/contact.js` payload and formats human-readable summary.
+- Appends referral source tag into WhatsApp message only when attribution is present.
 
 ---
 
-## 🗺️ Strategic Roadmap & Future Planning
+## 9. Google Ads Search Campaign Blueprint
 
-### 1. Google Business Profile & Local Search Authority
-- **Primary Business Category:** `Website designer`
-- **Secondary Categories:** `Internet marketing service`, `Marketing agency`, `Software company`
-- **Service Area:** Pan-India (New Delhi, Mumbai, Bangalore, Hyderabad, Pune, Kolkata, Chennai).
-- **Client Reviews Integration:** Set up a Google review collection flow post-project delivery.
+### Strategic Framework
+- **Campaign Type:** Google Search Network Only (No Display, No Performance Max initially).
+- **Daily Budget:** ₹500 to ₹800 / day (₹15,000 to ₹24,000 / month) for a 2–4 week test period.
+- **Bidding Strategy:** Maximize Clicks (bid cap ₹25–₹45) -> transition to Maximize Conversions after 15–20 valid `lead_submit` events.
+- **Geographic Targeting:** Primary: New Delhi / NCR (35 km radius); Secondary: Pan-India remote service.
 
-### 2. Search Engine Optimization (SEO) & Schema Markup
-- Add structured data JSON-LD (`Schema.org/ProfessionalService` and `Schema.org/LocalBusiness`) to `index.html`.
-- Target search keywords: *"premium website designer India"*, *"luxury web design studio"*, *"website builder for clinics and salons"*.
+### Initial Ad Groups & Exact/Phrase Keywords
+1. **Ad Group 1: Clinic & Healthcare Web Design**
+   - `[clinic website design]`, `[dental clinic website designer]`, `"doctor website design delhi"`, `"medical clinic website maker"`
+2. **Ad Group 2: Salon & Luxury Spa Web Design**
+   - `[salon website design]`, `[beauty salon website maker]`, `"spa website designer delhi"`, `"luxury salon web design"`
+3. **Ad Group 3: Restaurant & Hospitality Web Design**
+   - `[restaurant website design delhi]`, `[fine dining website maker]`, `"cafe website designer delhi"`, `"restaurant online menu website"`
+4. **Ad Group 4: Small Business & Professional Services**
+   - `[small business website design]`, `[business website maker delhi]`, `"professional website for business"`, `"corporate website designer india"`
+5. **Ad Group 5: High-Intent Website Designer Delhi**
+   - `[website designer south delhi]`, `[web design studio delhi]`, `"website development agency delhi"`, `"hire web designer delhi"`
+6. **Ad Group 6: Nationwide Web Designer India**
+   - `[website designer india]`, `[quiet luxury web design]`, `"freelance website developer india"`, `"bespoke web design india"`
 
-### 3. Analytics & Lead Intelligence
-- Integrate Google Analytics 4 (GA4) or Vercel Web Analytics to track:
-  - Demo click-through rates.
-  - Demo direct navigation and time-on-demo engagement (same-tab visitor flows).
-  - WhatsApp conversion button clicks.
+### Universal Negative Keywords
+`free`, `free download`, `tutorial`, `course`, `jobs`, `internship`, `salary`, `career`, `template download`, `wordpress theme nulled`, `wix login`, `squarespace login`, `shopify login`, `cheap website 500 rs`, `source code github`.
 
-### 4. WhatsApp Business API Automation
-- Transition from direct `wa.me` links to an automated WhatsApp Business flow with instant catalog delivery and automated consultation scheduling.
-
-### 5. Expanding the Client Demo Library
-- Add upcoming niche demos:
-  - **Boutique Law Firm / Legal Advisory**
-  - **Luxury Fitness / Personal Training Studio**
-  - **Chartered Accountant / Financial Consultancy**
+### Lead Pipeline CRM Schema
+- **Lead Stages:** `New` -> `Contacted` -> `Discovery Completed` -> `Proposal Sent` -> `Won (Closed)` / `Lost`.
+- **Intake Fields:** Date, Full Name, Business Name, Industry, Package (`Launch`, `Business`, `Signature`, `Custom Systems`), Phone/WhatsApp, Email, Campaign/UTM Source, Status, Notes.
 
 ---
 
-## 🛠️ Developer Quick Commands Reference
+## 10. Full Quality Assurance Matrices & Automated Test Evidence
 
-```bash
-# Canonical Repository Path
-cd /Users/vardan/Developer/personal/03-Experiments/south-delhi-web-studio
+### Summary Table of All Automated Test Suites
 
-# Start Local Dev Server (Port 8088)
-python3 -m http.server 8088
+| Suite Name | Test Script | Total Tests | Passed | Failed | Status |
+|---|---|---|---|---|:---:|
+| **Full Responsive QA Matrix** | `scripts/full-qa.mjs` | **63** | **63** | **0** | **100% PASS ✅** |
+| **Direct Demo Navigation QA** | `scripts/verify-direct-demo-navigation.mjs` | **14** | **14** | **0** | **100% PASS ✅** |
+| **Conversion Tracking & Attribution** | `scripts/test-tracking.mjs` | **11** | **11** | **0** | **100% PASS ✅** |
+| **Contact API Unit & Failure Modes** | `scripts/test-contact-api.mjs` | **28** | **28** | **0** | **100% PASS ✅** |
+| **Rebrand & Domain Integrity Audit** | `scripts/rebrand-audit.mjs` | **10** | **10** | **0** | **100% PASS ✅** |
+| **Total Automated Assertions** | *All Suites Combined* | **126** | **126** | **0** | **100% PASS ✅** |
 
-# QA & Verification Test Suite
-node scripts/full-qa.mjs                     # 56-matrix multi-viewport QA audit
-node scripts/test-tracking.mjs                # 11-scenario conversion tracking & attribution
-node scripts/verify-direct-demo-navigation.mjs # 14-point same-tab navigation & scroll restore
-node scripts/test-contact-api.mjs             # Serverless contact API unit tests
-node scripts/rebrand-audit.mjs                # Live DOM rebrand & domain integrity audit
+### Multi-Viewport Matrix Runs (63 Runs Across 9 Routes & 7 Viewports)
+Tested viewports: `320px`, `375px`, `390px`, `430px`, `768px`, `1024px`, `1440px`.  
+Tested routes: `/`, `/404.html`, `/demos/salon/`, `/demos/clinic/`, `/demos/restaurant/`, `/demos/real-estate/`, `/demos/interior/`, `/demos/events/`, `/privacy.html`, `/terms.html`.  
+**All 63 runs verified with 0 console errors, 0 failed network requests, 0 horizontal overflow, 0 form label faults, and 0 broken images.**
 
-# Capture Visual Brand Snapshot
-node scripts/screenshot-brand-hero.mjs
+---
 
-# Production Deployment (Human Only)
-npx vercel --prod --yes
+## 11. Chronological Project History (Phases 1 through 16D)
+
+- **Phase 1 — Legacy Template Ingestion:** Collected 6 standalone downloaded templates with placeholder copy and disparate styling.
+- **Phase 2 — Transformation into Studio Master Showcase:** Engineered master agency portal (`index.html`) using Apple x Architectural monograph quiet luxury aesthetic.
+- **Phase 3 — Indian Market Localization:** Localized with authentic contact details for Vardan Pal, transparent Rupee pricing, and WhatsApp-first conversion.
+- **Phase 4 — Serverless API & Vercel Deployment:** Configured `vercel.json` with SSL, security headers, and edge function `api/contact.js`.
+- **Phase 5 — Salon Demo Rebuild & Form Fix:** Fixed missing CSS, rebuilt appointment form with high-contrast inputs and gold accents.
+- **Phase 6 — Brand Simplification:** Eliminated foreign French/Latin jargon; standardized all 6 demos to recognizable Indian industry models.
+- **Phase 7 — Canonical Workspace Unification:** Established clean symlinks and unified repository structure.
+- **Phase 8 — Demo Thumbnail Synchronization:** Recaptured high-res WebP preview thumbnails across all showcase cards.
+- **Phase 9 — Pan-India Market Repositioning:** Repositioned copy to serve ambitious businesses across India.
+- **Phases 10–12 — Rebrand & Quality Sweeps:** Audited route availability, touch targets, and eliminated legacy naming.
+- **Phase 13 — Multi-Viewport Responsive QA:** Automated 63-run Playwright matrix verifying zero horizontal overflow.
+- **Phase 14 — Sustainable Pricing Alignment:** Standardized ₹9,900 / ₹19,900 / ₹34,900 / Custom Systems rate cards and promise boundaries.
+- **Phase 15 — Conversion Tracking & Google Ads Readiness:** Built privacy-first dataLayer tracking, PII scrubber, UTM persistence, and Google Ads strategy.
+- **Phase 16A — Contact Consent UI Refinement:** Custom 22px gold checkbox, accessible touch targets, and centered section ending.
+- **Phase 16B — Compact Footer Architecture:** Rebuilt footer into concise 3-column layout with natural height and WhatsApp button clearance.
+- **Phase 16C — Direct Demo Navigation:** Completely removed modal dialogs/iframes in favor of same-tab navigation, 48px context bar, and pixel-perfect scroll restoration.
+- **Phase 16D — Pre-Deploy Hardening & Defect Closure:** Contact API 8s timeout guard, clinic offcanvas structural accessibility, claims neutralization, binary assets regeneration, and git cleanup.
+
+---
+
+## 12. Master Briefing & System Prompt for New AI Agent Chats
+
+> **PASTE THIS EXACT SECTION INTO A NEW AI AGENT CHAT TO INITIALIZE FULL CONTEXT:**
+
+```markdown
+You are pair programming on "Vardan Pal Studio", an independent quiet-luxury web design and engineering studio founded by Vardan Pal (Software Engineer · B.Tech IT, NIT Srinagar).
+
+Core Project Facts:
+- Live Domain: https://vardanpalstudio.vercel.app
+- GitHub Repo: https://github.com/Vardxn/vardan-pal-studio (remote origin, branch main)
+- Vercel Project: vardanpalstudio (linked to GitHub repo for automatic CI/CD deployment)
+- Founder Portfolio: https://vardxn.vercel.app | WhatsApp: +91 82796 96707 | Email: vardan2701@gmail.com
+- Base Location: New Delhi, India (serving businesses nationwide remotely; never claim a physical office outside Delhi)
+
+Tech Stack:
+- Plain static HTML5, Vanilla CSS3, Vanilla JS (ES2022). NO frontend frameworks (no React, Next.js, Vue, Tailwind).
+- Serverless API in api/contact.js (Node.js ESM) deployed on Vercel Functions.
+- Design System: Ivory #fcfbf9, stone #f5f3ee, charcoal #141519, champagne gold #b58d53 / #c5a880. Fonts: Cormorant Garamond (headings), Plus Jakarta Sans (UI). Quiet-luxury aesthetic.
+
+The 6 Concept Demos (in demos/):
+- Aura Salon & Spa (/demos/salon/)
+- Care Dental & Skin Clinic (/demos/clinic/)
+- CHICA Luxury Dining & Hearth Lounge (/demos/restaurant/)
+- Prime Estates (/demos/real-estate/)
+- Studio Eleven (/demos/interior/)
+- Studio Vows (/demos/events/)
+- Demos use same-tab direct navigation with a 48px top context bar (.demo-context) and sessionStorage scroll restoration. NO modal dialogs or iframes.
+
+Pricing System (Do NOT change unless requested):
+- Launch: from ₹9,900 (5-day typical, 1 revision, 15 days support)
+- Business: from ₹19,900 (Most popular, 7-day typical, 2 revisions, 30 days support)
+- Signature: from ₹34,900 (10-14 day typical, 3 revisions, 60 days support)
+- Custom Systems: Quoted after discovery
+- No promises of guaranteed rankings, guaranteed leads, free CMS, or unlimited revisions.
+
+Developer Verification Commands:
+export PATH="/Users/vardan/.local/node-v20.18.0-darwin-arm64/bin:$PATH"
+node scripts/full-qa.mjs                     # 63-run responsive audit (Must pass 63/63)
+node scripts/verify-direct-demo-navigation.mjs # 14-run same-tab navigation (Must pass 14/14)
+node scripts/test-tracking.mjs                # 11-run conversion tracking (Must pass 11/11)
+node scripts/test-contact-api.mjs             # 28-run API failure tests (Must pass 28/28)
+node scripts/rebrand-audit.mjs                # 10-run rebrand audit (Must pass 10/10)
+
+Rules for Agents:
+- Never read, print, or commit secrets or .env.local.
+- Deployments happen automatically via Git push to origin main (or manually by user).
+- Maintain 100% test pass rate across all suites.
+- Read VARDAN_PAL_STUDIO_MASTER.md for full specs.
 ```
 
 ---
-
-> **Shareable Project Statement:**  
-> *"Vardan Pal Studio creates quiet luxury, high-converting websites for clinics, salons, restaurants, real estate, and event creators across India. Featuring transparent Rupee pricing, sub-5-day delivery, and instant WhatsApp booking flows. Live at https://vardanpalstudio.vercel.app"*
-
-
----
-
-## Phase 16A–16C Summary
-The UX refinement trio has been fully executed across the repository: Phase 16A perfected the contact consent checkbox alignment, touch targets, and section ending; Phase 16B redesigned the footer into a concise, responsive 3-column architecture that occupies natural height without full-screen whitespace; and Phase 16C completely eliminated the device preview modal and iframe system in favor of direct same-tab demo navigation backed by a shared top context bar and pixel-perfect native scroll restoration. The consolidated completion report \`PHASE-16-ABC-COMPLETION-SUMMARY.md\` is published, all 14 Playwright navigation tests and 11 tracking tests pass with 100% success, visual screenshots are archived in \`audit-shots/phase16-complete/\`, and the site is running cleanly on \`http://localhost:8088/\` awaiting user review prior to production deployment.
-
----
-
-## Phase 16D — Defect Closure & Pre-Deploy Hardening
-
-Phase 16D resolved all remaining architectural gaps, upstream validations, and risk items:
-1. **Contact API Upstream Validation & Timeout (api/contact.js):**
-   - Replaced unverified forwarding with strict upstream confirmation checks (`response.ok`, defensive JSON parsing, and `result.success` receipt confirmation).
-   - Wrapped network dispatch in an `AbortController` with an 8-second timeout guard returning user-friendly HTTP 502 Bad Gateway upon upstream network failure or lag.
-   - Comprehensive unit test suite in `scripts/test-contact-api.mjs` stubs `globalThis.fetch` across 28 test assertions covering upstream 500, 403, network drop, timeout abort, unparseable bodies, and unconfirmed receipts. Zero live endpoints called during automated testing.
-2. **Clinic Offcanvas Structural Accessibility (demos/clinic/):**
-   - Diagnosed exact offending off-canvas drawer metrics across 320px–430px viewports.
-   - Replaced layout-shifting offsets with structural CSS rules: `visibility: hidden`, `pointer-events: none`, and `max-width: 100vw` when closed; dynamically synchronized `aria-hidden="true"` and `inert` via MutationObserver; enabled Escape-key dismiss with focus restoration.
-3. **Obsolete Restaurant Link Elimination (demos/restaurant/):**
-   - Verified complete eradication of legacy `vardan-original` folders and dead links. All demo links point to valid routes, WhatsApp concierge handoffs, or verified channels.
-4. **Fictional & Risky Claims Neutralization:**
-   - Audited and updated all demo text and showcase cards to eliminate real institutional claims and unverifiable metrics (removed AIIMS claim in hub clinic card; changed "Board-Certified" to "qualified MD specialists" in clinic demo; updated real estate listing to "title-checked listings"; neutralized publication claims in Chica Restaurant to generic culinary journals).
-5. **QA Results Artifacts Untracked:**
-   - Added `scripts/*.json` and QA run outputs to `.gitignore` and removed them from git cache to maintain a clean working tree after every audit run.
-6. **Binary Brand Assets Regenerated:**
-   - Ran `scripts/og.mjs` to recreate `assets/og.png` (1200x630) and `assets/apple-touch-icon.png` (180x180) featuring official "Vardan Pal Studio" typography and VP monogram.
-7. **"type": "module" Verification:**
-   - Confirmed `api/contact.js` uses standard ECMAScript module export (`export default async function handler`), which is fully supported by modern Vercel Node runtime.
+*End of Master Document — Vardan Pal Studio · October 2026*

@@ -1,19 +1,44 @@
-# Vardan Pal Studio — Master Blueprint & Documentation
+# Vardan Pal Studio — Master Repository & Blueprint
 
-> **The definitive documentation for Vardan Pal Studio is maintained in:**  
-> 👉 **[docs/VARDAN_PAL_STUDIO_MASTER.md](./docs/VARDAN_PAL_STUDIO_MASTER.md)**
-
-Please refer to **[docs/VARDAN_PAL_STUDIO_MASTER.md](./docs/VARDAN_PAL_STUDIO_MASTER.md)** for:
-- 📌 Complete Project Overview & Brand Positioning (*Vardan Pal Studio · New Delhi*)
-- 🚀 Quick Start & Local Serving (`http://localhost:8088`)
-- 💎 The 6 Client Demo Portals & Live URLs
-- 🏛️ Master Showcase Architecture & Design System
-- 📜 Chronological Evolution & Changelog (Phases 1–16)
-- ⚡ Current Status & Mobile Optimization Audits
-- 🗺️ Strategic Roadmap (Google Business Profile, SEO, Analytics)
-- 🛠️ Developer QA Commands Reference (`node scripts/full-qa.mjs`, `test-tracking.mjs`, `verify-direct-demo-navigation.mjs`, `test-contact-api.mjs`)
+> **Independent Quiet-Luxury Web Design & Development Studio · New Delhi, India**  
+> Serving clinics, salons, fine-dining restaurants, real estate, interior studios, and event creators across India.  
+> **Live Production URL:** [https://vardanpalstudio.vercel.app](https://vardanpalstudio.vercel.app)  
+> **Founder Portfolio:** [https://vardxn.vercel.app](https://vardxn.vercel.app)  
+> **WhatsApp Helpline:** [+91 82796 96707](https://wa.me/918279696707) | **Email:** `vardan2701@gmail.com`
 
 ---
-*Live Production URL:* [https://vardanpalstudio.vercel.app](https://vardanpalstudio.vercel.app)  
-*Direct WhatsApp:* [+91 82796 96707](https://wa.me/918279696707)  
-*Location:* New Delhi, India · Serving businesses nationwide
+
+## 📖 Definitive Master Documentation
+The single, authoritative source of truth for this entire project — containing the full 16-phase history, approved pricing system, Google Ads setup, 6 client demos, architecture, and complete QA matrices — is consolidated in:
+
+👉 **[VARDAN_PAL_STUDIO_MASTER.md](./VARDAN_PAL_STUDIO_MASTER.md)**
+
+---
+
+## 🚀 Quick Local Development
+```bash
+# Start local development server on port 8088
+python3 -m http.server 8088
+```
+- Studio Hub: [http://localhost:8088/](http://localhost:8088/)
+- Concept Demos: [http://localhost:8088/demos/salon/](http://localhost:8088/demos/salon/), [clinic/](http://localhost:8088/demos/clinic/), [restaurant/](http://localhost:8088/demos/restaurant/), [real-estate/](http://localhost:8088/demos/real-estate/), [interior/](http://localhost:8088/demos/interior/), [events/](http://localhost:8088/demos/events/)
+
+---
+
+## 🧪 Developer QA Test Suite
+```bash
+export PATH="/Users/vardan/.local/node-v20.18.0-darwin-arm64/bin:$PATH"
+node scripts/full-qa.mjs                     # 63-run responsive audit (Pass: 63/63)
+node scripts/verify-direct-demo-navigation.mjs # 14-run same-tab navigation (Pass: 14/14)
+node scripts/test-tracking.mjs                # 11-run conversion tracking (Pass: 11/11)
+node scripts/test-contact-api.mjs             # 28-run API failure tests (Pass: 28/28)
+node scripts/rebrand-audit.mjs                # 10-run rebrand audit (Pass: 10/10)
+```
+
+---
+
+## 🚢 Push & Automatic Vercel Deployment
+```bash
+git push -u origin main
+```
+*Pushing to `main` automatically triggers an instant build and deployment on Vercel at `https://vardanpalstudio.vercel.app`.*
