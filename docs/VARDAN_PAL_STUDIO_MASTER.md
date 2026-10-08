@@ -7,7 +7,8 @@
 > **Secondary Production Alias:** [https://vardanpalstudio.vercel.app](https://vardanpalstudio.vercel.app)  
 > **Developer Portfolio:** [https://vardxn.vercel.app](https://vardxn.vercel.app)  
 > **WhatsApp Helpline / Direct:** [+91 82796 96707](https://wa.me/918279696707) | **Email:** `vardan2701@gmail.com`  
-> **Status:** Live & Production Ready (Pan-India Edition) — October 2026
+> **Status:** Live & Production Ready (Pan-India Edition) — October 2026  
+> *Note: Formerly Kailash Studios — renamed Phase 10; historical entries retain original names.*
 
 ---
 
@@ -462,12 +463,17 @@ cd /Users/vardan/Developer/personal/03-Experiments/south-delhi-web-studio
 # Start Local Dev Server (Port 8088)
 python3 -m http.server 8088
 
-# Run Mobile Screenshot Audit (Playwright)
-node scripts/screenshot-salon-phone.mjs
-node scripts/screenshot-salon-fields.mjs
-node scripts/audit.mjs
+# QA & Verification Test Suite
+node scripts/full-qa.mjs                     # 56-matrix multi-viewport QA audit
+node scripts/test-tracking.mjs                # 11-scenario conversion tracking & attribution
+node scripts/verify-direct-demo-navigation.mjs # 14-point same-tab navigation & scroll restore
+node scripts/test-contact-api.mjs             # Serverless contact API unit tests
+node scripts/rebrand-audit.mjs                # Live DOM rebrand & domain integrity audit
 
-# Deploy to Vercel Production
+# Capture Visual Brand Snapshot
+node scripts/screenshot-brand-hero.mjs
+
+# Production Deployment (Human Only)
 npx vercel --prod --yes
 ```
 
