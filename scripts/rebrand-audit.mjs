@@ -56,7 +56,7 @@ for (const route of ROUTES) {
     }
   }
 
-  // 2. Visible Kailash Text Audit with strict allowlist
+  // 2. Visible Legacy Brand (Kailash) & VARDXN Audit
   const disallowedOccurrences = await page.evaluate(() => {
     const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
     const issues = [];
@@ -68,12 +68,28 @@ for (const route of ROUTES) {
         getComputedStyle(node.parentElement).visibility !== "hidden"
       ) {
         const text = node.textContent || "";
+
+        // Check Kailash (allowlist: "Greater Kailash")
         if (/kailash/i.test(text)) {
-          // Check against allowlist: "Greater Kailash"
           const sanitized = text.replace(/Greater\s+Kailash/gi, "");
           if (/kailash/i.test(sanitized)) {
             issues.push({
               text: text.trim(),
+              term: "Kailash",
+              tag: node.parentElement.tagName,
+              class: (node.parentElement.className || "").toString().slice(0, 40)
+            });
+          }
+        }
+
+        // Check VARDXN / Vardxn in visible page text
+        if (/\b(vardxn)\b/i.test(text)) {
+          // Allowed exception: explicit portfolio URL string without studio branding
+          const isAllowedPortfolioUrl = /vardxn\.vercel\.app/i.test(text) && !/studio|brand|architecture|experience\s+by/i.test(text);
+          if (!isAllowedPortfolioUrl) {
+            issues.push({
+              text: text.trim(),
+              term: "VARDXN",
               tag: node.parentElement.tagName,
               class: (node.parentElement.className || "").toString().slice(0, 40)
             });

@@ -1,6 +1,7 @@
 # Vardan Pal Studio — Complete QA & Functional Audit Report
 
 > Historical record — written when the studio operated as Kailash Studios; current name: Vardan Pal Studio.
+> Update: the legacy restaurant vardan-original route was removed during Phase 16D and is no longer part of the current project.
 
 **Phase 13 — Complete Multi-Viewport, Accessibility, Functional & Performance Audit**
 
