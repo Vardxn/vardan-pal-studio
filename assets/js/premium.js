@@ -9,10 +9,10 @@
   const PROJECTS = [
     {
       cat: 'Restaurants & Dining',
-      name: 'Malcha Table — Restaurant & Bar',
+      name: 'CHICA — Luxury Dining & Hearth Lounge',
       motive: 'Built for Restaurants, Cafes & Fine Dining',
-      domain: 'malchatable.com',
-      headline: 'A table worth the evening.',
+      domain: 'chicadelhi.com',
+      headline: 'Mediterranean hearth meets Japanese robata fire.',
       tagline: 'Complete website designed for fine-dining restaurants, cafes, cocktail bars, and bistros.',
       features: [
         'Instant Online Table Reservation Flow',

@@ -90,7 +90,7 @@ vardan-pal-studio/ (formerly south-delhi-web-studio)
 ├── demos/                       # 6 Complete, Self-Contained Client Demo Websites
 │   ├── salon/                   # 01: Aura Salon & Spa (Rate card, mobile booking)
 │   ├── clinic/                  # 02: Care Dental & Skin Clinic (Doctor profiles, WhatsApp triage)
-│   ├── restaurant/              # 03: Malcha Table (Food/cocktail menus, Table reservations)
+│   ├── restaurant/              # 03: CHICA — One Golden Mile (Mediterranean & Robata dining, table reservations)
 │   ├── real-estate/             # 04: Prime Estates (Villas, luxury residences, viewing booking)
 │   ├── interior/                # 05: Studio Eleven (Architectural portfolios, project intake)
 │   └── events/                  # 06: Studio Vows (Wedding reels, transparent packages)
@@ -157,7 +157,7 @@ Every demo is a complete, functioning, self-contained multi-page website inside 
 | :-: | :--- | :--- | :--- | :--- | :--- | :--- |
 | **01** | **Hair Salon & Spa** | **Aura Salon & Spa** | Looks Salon, Geetanjali Salon | `aurasalon.in` | [https://vardanpalstudio.vercel.app/demos/salon/](https://vardanpalstudio.vercel.app/demos/salon/) | Master stylist portfolios, transparent haircut rate card, hair color balayage lookbook, touch-friendly 52px WhatsApp appointment booking form with custom gold chevron dropdowns. |
 | **02** | **Dental & Skin Clinic** | **Care Dental & Skin Clinic** | Clove Dental, Kaya Skin Clinic | `caredental.in` | [https://vardanpalstudio.vercel.app/demos/clinic/](https://vardanpalstudio.vercel.app/demos/clinic/) | Senior doctor credentials, clear aligner & implant pricing guides, interactive consultation scheduler, emergency patient WhatsApp triage. |
-| **03** | **Fine Dining & Bar** | **Malcha Table — Restaurant & Bar** | Olive Bar & Kitchen, Social | `malchatable.com` | [https://vardanpalstudio.vercel.app/demos/restaurant/](https://vardanpalstudio.vercel.app/demos/restaurant/) | Interactive chef's table reservations, digital seasonal food & cocktail menus with pricing, interior lookbook, private party inquiry. |
+| **03** | **Fine Dining & Bar** | **CHICA — Luxury Dining & Hearth Lounge** | Diplomatic Enclave, New Delhi | `chicadelhi.com` | [https://vardanpalstudio.vercel.app/demos/restaurant/](https://vardanpalstudio.vercel.app/demos/restaurant/) | Interactive multi-step table reservations, day-to-night transitions, robata hearth narrative, digital sommelier cellar, and private event bookings. |
 | **04** | **Luxury Real Estate** | **Prime Estates — Luxury Properties** | DLF Prime, India Sotheby's | `primeestates.in` | [https://vardanpalstudio.vercel.app/demos/real-estate/](https://vardanpalstudio.vercel.app/demos/real-estate/) | Luxury villas & residences, floor plans, neighborhood guides, verified clear titles, discreet private walkthrough scheduler. |
 | **05** | **Interior Design** | **Studio Eleven — Interior Design Studio** | Livspace, HomeLane | `studioeleven.in` | [https://vardanpalstudio.vercel.app/demos/interior/](https://vardanpalstudio.vercel.app/demos/interior/) | Editorial completed project galleries, material palette studies, turnkey 3-step execution roadmap, client project intake consultation. |
 | **06** | **Wedding Cinema** | **Studio Vows — Wedding Films & Photography** | WedMeGood, The Wedding Filmer | `studiovows.in` | [https://vardanpalstudio.vercel.app/demos/events/](https://vardanpalstudio.vercel.app/demos/events/) | Cinematic video trailers, wedding story photo albums, transparent package breakdown (₹2.2L - ₹6.5L), instant date availability checker. |
@@ -266,7 +266,7 @@ This log records every milestone achieved in the development of Vardan Pal Studi
 
 13. **Phase 13 — Complete multi-viewport QA and functional audit (October 2026):**
     - **Exhaustive 63-Run Multi-Viewport Matrix (9 Routes × 7 Viewports):**
-      - Discovered and tested all 9 project routes: Studio Hub (`/`), Custom 404 (`/404.html`), Aura Salon (`/demos/salon/`), Care Dental (`/demos/clinic/`), Malcha Table (`/demos/restaurant/`), Vardan Original Restaurant (`/demos/restaurant/vardan-original/home.html`), Prime Estates (`/demos/real-estate/`), Studio Eleven (`/demos/interior/`), and Studio Vows (`/demos/events/`).
+      - Discovered and tested all 9 project routes: Studio Hub (`/`), Legal Privacy (`/privacy.html`), Custom 404 (`/404.html`), Aura Salon (`/demos/salon/`), Care Dental (`/demos/clinic/`), CHICA Luxury Restaurant (`/demos/restaurant/`), Prime Estates (`/demos/real-estate/`), Studio Eleven (`/demos/interior/`), and Studio Vows (`/demos/events/`).
       - Verified across all 7 required viewports: 320px, 375px, 390px, 430px, 768px, 1024px, 1440px.
       - **Result:** **63 / 63 Passed (100% Pass Rate)** with 0 console errors, 0 failed requests, 0 horizontal overflow, and 0 broken images.
     - **Defect Remediation & Precision Engineering:**
@@ -414,7 +414,7 @@ This log records every milestone achieved in the development of Vardan Pal Studi
 | **Studio Hub** | `/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Instant handoff + card) | Passed (Brand + CTAs >= 44px) |
 | **Aura Salon & Spa** | `/demos/salon/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (Banner & toggler >= 44px) |
 | **Care Dental & Skin** | `/demos/clinic/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (Top bar CTAs >= 44px) |
-| **Malcha Table** | `/demos/restaurant/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (All controls >= 44px) |
+| **CHICA Restaurant** | `/demos/restaurant/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (All controls >= 44px) |
 | **Prime Estates** | `/demos/real-estate/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (Burger & navs >= 44px) |
 | **Studio Eleven** | `/demos/interior/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (All controls >= 44px) |
 | **Studio Vows** | `/demos/events/` | 375, 768, 1440 | 200 OK | 0 | 0 (Clean) | Passed (Prefilled + Brand) | Passed (All controls >= 44px) |
