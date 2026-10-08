@@ -3,7 +3,7 @@
 > **The Definitive Single-File Guide & Source of Truth for Vardan Pal Studio**  
 > **Lead Developer & Designer:** Vardan Pal  
 > **Positioning:** High-Converting, Quiet Luxury Websites for Ambitious Businesses Across India  
-> **Live Production URL:** [https://vardanpal.vercel.app](https://vardanpal.vercel.app)  
+> **Live Production URL:** [https://vardanpalstudio.vercel.app](https://vardanpalstudio.vercel.app)  
 > **Secondary Production Alias:** [https://vardanpalstudio.vercel.app](https://vardanpalstudio.vercel.app)  
 > **Developer Portfolio:** [https://vardxn.vercel.app](https://vardxn.vercel.app)  
 > **WhatsApp Helpline / Direct:** [+91 82796 96707](https://wa.me/918279696707) | **Email:** `vardan2701@gmail.com`  
@@ -26,7 +26,7 @@ We engineer high-converting, mobile-first web experiences for clinics, salons, r
 1. **Quiet Luxury Aesthetic:** Warm natural palettes, editorial serif typography (*Cormorant Garamond*), paired with crisp grotesque type (*Plus Jakarta Sans*), reminiscent of high-end architectural monographs.
 2. **Instant WhatsApp Conversion:** Every inquiry, table reservation, and appointment leads directly to a pre-filled WhatsApp message. Zero friction, zero lost leads.
 3. **Turnkey 3–5 Day Delivery:** Full static builds with zero server maintenance overhead, hosted on edge CDN (Vercel) with near-instant load speeds.
-4. **Transparent Indian Rupee (₹) Pricing:** Upfront rate cards from ₹3,000 to ₹10,000 designed specifically for business owners without hidden fees.
+4. **Transparent Indian Rupee (₹) Pricing:** Upfront public packages — Launch from ₹9,900, Business from ₹19,900 (most popular), Signature from ₹34,900, and Custom Systems quoted after discovery, with zero hidden fees.
 
 ---
 
@@ -60,31 +60,31 @@ To eliminate duplicate files and prevent code divergence across AI tools (Antigr
 - **IDE Scratch Directory:** `/Users/vardan/.gemini/antigravity-ide/scratch/south-delhi-digital` *(Direct symlink to canonical repository)*
 
 ```text
-south-delhi-web-studio/
-├── VARDAN_PAL_STUDIO_MASTER.md     # ⭐️ THE DEFINITIVE SINGLE MASTER DOCUMENT (You are here)
-├── index.html                   # Master Showcase Hub (The Vardan Pal Studio storefront)
+vardan-pal-studio/ (formerly south-delhi-web-studio)
+├── docs/
+│   └── VARDAN_PAL_STUDIO_MASTER.md # ⭐️ CONSOLIDATED SINGLE MASTER DOCUMENT (You are here)
+├── index.html                   # Master Showcase Hub (Vardan Pal Studio storefront)
 ├── 404.html                     # Custom luxury 404 error page
+├── privacy.html                 # Privacy policy & data governance
+├── terms.html                   # Terms of service & transparent deliverables
 ├── vercel.json                  # Edge routing, headers & serverless configuration
 ├── package.json                 # Dev tooling & testing dependencies (Playwright)
 ├── package-lock.json
-├── sitemap.xml                  # Canonical sitemap containing hub + all 6 demo portals
+├── sitemap.xml                  # Canonical sitemap (https://vardanpalstudio.vercel.app)
 ├── robots.txt                   # Production crawler directives
-├── .env.local                   # Vercel environment credentials
 │
 ├── assets/                      # Shared Static Assets for Master Showcase Hub
 │   ├── css/
-│   │   └── premium.css          # Master Design System (Tokens, Layout, Typography, Floating WA)
+│   │   ├── premium.css          # Master Design System (Tokens, Layout, Typography, Footer)
+│   │   └── demo-context.css     # Shared 48px top context bar for same-tab demo return
 │   ├── js/
-│   │   └── premium.js           # Showcase Engine (Project Data, Tab Switcher, Device Drawer)
-│   ├── shots/                   # Synchronized 2160x1350 WebP Mockup Screenshots
-│   │   ├── clinic.webp          # Care Dental & Skin Clinic preview
-│   │   ├── salon.webp           # Aura Salon & Spa preview
-│   │   ├── restaurant.webp      # Malcha Table preview
-│   │   ├── real-estate.webp     # Prime Estates preview
-│   │   ├── interior.webp        # Studio Eleven preview
-│   │   └── events.webp          # Studio Vows preview
+│   │   ├── premium.js           # Showcase Engine (Attribution, Scroll Restoration, Validation)
+│   │   ├── demo-navigation.js   # Dual-mode same-tab return to portfolio with scroll restore
+│   │   └── tracking.js          # Google Ads / GA4 conversion tracking & PII-free dataLayer
+│   ├── shots/                   # Synchronized high-res WebP Mockup Screenshots
 │   ├── og.png                   # OpenGraph social preview card (1200x630)
-│   └── apple-touch-icon.png     # Brand favicon & iOS touch icon
+│   ├── favicon.svg              # Minimal VP brand monogram
+│   └── apple-touch-icon.png     # iOS touch icon
 │
 ├── demos/                       # 6 Complete, Self-Contained Client Demo Websites
 │   ├── salon/                   # 01: Aura Salon & Spa (Rate card, mobile booking)
@@ -98,15 +98,15 @@ south-delhi-web-studio/
 │   └── contact.js               # Multi-field contact form submission & FormSubmit proxy
 │
 ├── scripts/                     # Developer & QA Automated Test Suite
-│   ├── audit.mjs                # Multi-viewport automated screenshot generator (Playwright)
-│   ├── test-form.mjs            # Contact API endpoint validation script
-│   ├── og.mjs                   # Generates OpenGraph image programmatically
-│   ├── screenshot-salon-fields.mjs # Mobile form input inspector
-│   └── screenshot-salon-phone.mjs  # Mobile header & hero screenshot validator
+│   ├── full-qa.mjs              # 56-matrix multi-viewport Playwright audit (8 routes x 7 viewports)
+│   ├── test-tracking.mjs        # 11-point analytics, UTM attribution & PII-free validation suite
+│   ├── verify-direct-demo-navigation.mjs # 14-point same-tab navigation & scroll restore test
+│   ├── rebrand-audit.mjs        # Automated live DOM scanner for zero legacy text
+│   └── screenshot-hero.mjs      # Header visual inspection capture
 │
-├── audit-shots/                 # QA Screen Captures Across Viewports (375px, 768px, 1440px)
-├── docs/                        # Project documentation backup
-└── README.md                    # Quick overview pointing to VARDAN_PAL_STUDIO_MASTER.md
+├── audit-shots/                 # QA Screen Captures Across Viewports (320px–1440px)
+├── README.md                    # Quick overview pointing to docs/VARDAN_PAL_STUDIO_MASTER.md
+└── AGENTS.md                    # Agent instructions, behavioral rules & verification workflows
 ```
 
 ---
@@ -154,12 +154,12 @@ Every demo is a complete, functioning, self-contained multi-page website inside 
 
 | # | Industry / Niche | Standardized Brand Name | Inspired By (Big Brands) | Simulated Domain | Live Production URL | Key Functional Features |
 | :-: | :--- | :--- | :--- | :--- | :--- | :--- |
-| **01** | **Hair Salon & Spa** | **Aura Salon & Spa** | Looks Salon, Geetanjali Salon | `aurasalon.in` | [https://vardanpal.vercel.app/demos/salon/](https://vardanpal.vercel.app/demos/salon/) | Master stylist portfolios, transparent haircut rate card, hair color balayage lookbook, touch-friendly 52px WhatsApp appointment booking form with custom gold chevron dropdowns. |
-| **02** | **Dental & Skin Clinic** | **Care Dental & Skin Clinic** | Clove Dental, Kaya Skin Clinic | `caredental.in` | [https://vardanpal.vercel.app/demos/clinic/](https://vardanpal.vercel.app/demos/clinic/) | AIIMS-trained doctor credentials, clear aligner & implant pricing guides, interactive consultation scheduler, emergency patient WhatsApp triage. |
-| **03** | **Fine Dining & Bar** | **Malcha Table — Restaurant & Bar** | Olive Bar & Kitchen, Social | `malchatable.com` | [https://vardanpal.vercel.app/demos/restaurant/](https://vardanpal.vercel.app/demos/restaurant/) | Interactive chef's table reservations, digital seasonal food & cocktail menus with pricing, interior lookbook, private party inquiry. |
-| **04** | **Luxury Real Estate** | **Prime Estates — Luxury Properties** | DLF Prime, India Sotheby's | `primeestates.in` | [https://vardanpal.vercel.app/demos/real-estate/](https://vardanpal.vercel.app/demos/real-estate/) | Luxury villas & residences, floor plans, neighborhood guides, verified clear titles, discreet private walkthrough scheduler. |
-| **05** | **Interior Design** | **Studio Eleven — Interior Design Studio** | Livspace, HomeLane | `studioeleven.in` | [https://vardanpal.vercel.app/demos/interior/](https://vardanpal.vercel.app/demos/interior/) | Editorial completed project galleries, material palette studies, turnkey 3-step execution roadmap, client project intake consultation. |
-| **06** | **Wedding Cinema** | **Studio Vows — Wedding Films & Photography** | WedMeGood, The Wedding Filmer | `studiovows.in` | [https://vardanpal.vercel.app/demos/events/](https://vardanpal.vercel.app/demos/events/) | Cinematic video trailers, wedding story photo albums, transparent package breakdown (₹2.2L - ₹6.5L), instant date availability checker. |
+| **01** | **Hair Salon & Spa** | **Aura Salon & Spa** | Looks Salon, Geetanjali Salon | `aurasalon.in` | [https://vardanpalstudio.vercel.app/demos/salon/](https://vardanpalstudio.vercel.app/demos/salon/) | Master stylist portfolios, transparent haircut rate card, hair color balayage lookbook, touch-friendly 52px WhatsApp appointment booking form with custom gold chevron dropdowns. |
+| **02** | **Dental & Skin Clinic** | **Care Dental & Skin Clinic** | Clove Dental, Kaya Skin Clinic | `caredental.in` | [https://vardanpalstudio.vercel.app/demos/clinic/](https://vardanpalstudio.vercel.app/demos/clinic/) | Senior doctor credentials, clear aligner & implant pricing guides, interactive consultation scheduler, emergency patient WhatsApp triage. |
+| **03** | **Fine Dining & Bar** | **Malcha Table — Restaurant & Bar** | Olive Bar & Kitchen, Social | `malchatable.com` | [https://vardanpalstudio.vercel.app/demos/restaurant/](https://vardanpalstudio.vercel.app/demos/restaurant/) | Interactive chef's table reservations, digital seasonal food & cocktail menus with pricing, interior lookbook, private party inquiry. |
+| **04** | **Luxury Real Estate** | **Prime Estates — Luxury Properties** | DLF Prime, India Sotheby's | `primeestates.in` | [https://vardanpalstudio.vercel.app/demos/real-estate/](https://vardanpalstudio.vercel.app/demos/real-estate/) | Luxury villas & residences, floor plans, neighborhood guides, verified clear titles, discreet private walkthrough scheduler. |
+| **05** | **Interior Design** | **Studio Eleven — Interior Design Studio** | Livspace, HomeLane | `studioeleven.in` | [https://vardanpalstudio.vercel.app/demos/interior/](https://vardanpalstudio.vercel.app/demos/interior/) | Editorial completed project galleries, material palette studies, turnkey 3-step execution roadmap, client project intake consultation. |
+| **06** | **Wedding Cinema** | **Studio Vows — Wedding Films & Photography** | WedMeGood, The Wedding Filmer | `studiovows.in` | [https://vardanpalstudio.vercel.app/demos/events/](https://vardanpalstudio.vercel.app/demos/events/) | Cinematic video trailers, wedding story photo albums, transparent package breakdown (₹2.2L - ₹6.5L), instant date availability checker. |
 
 ---
 
@@ -186,7 +186,7 @@ This log records every milestone achieved in the development of Vardan Pal Studi
 3. **Phase 3 — Indian Market Localization:**  
    Localized with authentic contact information for Vardan Pal, transparent Rupee (`₹`) pricing, and WhatsApp-first action flows.
 4. **Phase 4 — Serverless API & Vercel Deployment:**  
-   Configured `vercel.json` with SSL, security headers, and an edge function at `api/contact.js` to process customer inquiries. Successfully aliased to https://vardanpal.vercel.app.
+   Configured `vercel.json` with SSL, security headers, and an edge function at `api/contact.js` to process customer inquiries. Successfully aliased to https://vardanpalstudio.vercel.app.
 5. **Phase 5 — Salon Demo Rebuild & Form Fix:**  
    Fixed missing `bootstrap.min.css` in `demos/salon/`. Overhauled `delhi-custom.css`, fixed overlapping brand logo headers on mobile, and rebuilt the appointment booking form with elevated dark inputs, gold borders, and high contrast.
 6. **Phase 6 — Brand Simplification & Alignment:**  
@@ -197,7 +197,7 @@ This log records every milestone achieved in the development of Vardan Pal Studi
    Re-captured all 6 high-resolution (2160×1350 WebP) demo preview thumbnails (`assets/shots/`) using headless Playwright CDP capture. All mockup frames across the main portfolio homepage now render the exact synchronized brand titles.
 9. **Phase 9 — Pan-India Market Repositioning & Canonical Domain Switch:**  
    - Renamed Vercel project to `vardan-pal-studio`.
-   - Bound clean, memorable primary domain: `https://vardanpal.vercel.app` (and alias `https://vardanpalstudio.vercel.app`).
+   - Bound clean, memorable primary domain: `https://vardanpalstudio.vercel.app` (and alias `https://vardanpalstudio.vercel.app`).
    - Removed regional South Delhi limitations across the entire portfolio website, headers, SEO meta tags, and demo footers.
    - Positioned Vardan Pal Studio as a Pan-India digital partner serving ambitious businesses across all states in India.
    - Added `city` intake field and floating WhatsApp helpline for 1-click lead conversion from anywhere in India.
@@ -222,7 +222,7 @@ This log records every milestone achieved in the development of Vardan Pal Studi
       - Synced `404.html` and `assets/js/premium.js` WhatsApp outreach text (*"Hi Vardan, I found Vardan Pal Studio online..."*).
       - Updated `api/contact.js` email subject dispatch line to *Vardan Pal Studio*.
       - Standardized all 6 demo footers in `demos/*/index.html` to *"Vardan Pal Studio · New Delhi • Crafted by Vardan Pal"*.
-      - Preserved production Vercel deployment URL (`https://vardanpal.vercel.app`) and demo internal listings.
+      - Preserved production Vercel deployment URL (`https://vardanpalstudio.vercel.app`) and demo internal listings.
 
 11. **Phase 11 — Homepage Repair & Condense (October 2026):**  
     - **Defect Remediations:**
@@ -420,7 +420,7 @@ This log records every milestone achieved in the development of Vardan Pal Studi
 
 ### 🟡 Immediate Next Steps
 1. **Manual User Production Deployment:** Review local build on port 8088 and trigger production deployment to Vercel (`npx vercel --prod`).
-2. **Production Domain Verification:** Verify live domain health post-deploy at `https://vardanpal.vercel.app`.
+2. **Production Domain Verification:** Verify live domain health post-deploy at `https://vardanpalstudio.vercel.app`.
 
 ---
 
@@ -474,7 +474,7 @@ npx vercel --prod --yes
 ---
 
 > **Shareable Project Statement:**  
-> *"Vardan Pal Studio creates quiet luxury, high-converting websites for clinics, salons, restaurants, real estate, and event creators across India. Featuring transparent Rupee pricing, sub-5-day delivery, and instant WhatsApp booking flows. Live at https://vardanpal.vercel.app"*
+> *"Vardan Pal Studio creates quiet luxury, high-converting websites for clinics, salons, restaurants, real estate, and event creators across India. Featuring transparent Rupee pricing, sub-5-day delivery, and instant WhatsApp booking flows. Live at https://vardanpalstudio.vercel.app"*
 
 
 ---

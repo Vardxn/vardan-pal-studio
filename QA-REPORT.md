@@ -1,5 +1,8 @@
 # Vardan Pal Studio — Full-Site QA Audit & Remediation Report
 
+> [!NOTE]
+> **Historical Record**: This document is an archived milestone report reflecting project progress and specifications at the time of authoring. The active, consolidated source of truth for Vardan Pal Studio is maintained in [`docs/VARDAN_PAL_STUDIO_MASTER.md`](./docs/VARDAN_PAL_STUDIO_MASTER.md).
+
 **Date:** October 7, 2026  
 **Auditor / Lead Developer:** Vardan Pal (via Antigravity Autonomous QA Suite)  
 **Scope:** Studio Hub (`/`) + All 6 Client Demos (`/demos/{salon,clinic,restaurant,real-estate,interior,events}/`)  

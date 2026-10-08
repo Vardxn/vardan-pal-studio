@@ -1,4 +1,7 @@
 # Vardan Pal Studio — Approved Pricing System & Service Governance
+
+> [!NOTE]
+> **Historical Record**: This document is an archived milestone report reflecting project progress and specifications at the time of authoring. The active, consolidated source of truth for Vardan Pal Studio is maintained in [`docs/VARDAN_PAL_STUDIO_MASTER.md`](./docs/VARDAN_PAL_STUDIO_MASTER.md).
 **Phase 14 — Sustainable Pricing and Service Promise Alignment**
 
 - **Studio Brand:** Vardan Pal Studio

@@ -1,4 +1,7 @@
 # Phase 16A–C Completion Report
+
+> [!NOTE]
+> **Historical Record**: This document is an archived milestone report reflecting project progress and specifications at the time of authoring. The active, consolidated source of truth for Vardan Pal Studio is maintained in [`docs/VARDAN_PAL_STUDIO_MASTER.md`](./docs/VARDAN_PAL_STUDIO_MASTER.md).
 **Brand:** Vardan Pal Studio  
 **Date:** October 8, 2026  
 **Status:** ✅ Complete & Ready for Local Review  

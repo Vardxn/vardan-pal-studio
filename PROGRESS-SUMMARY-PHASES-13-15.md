@@ -1,4 +1,7 @@
 # Vardan Pal Studio — Comprehensive Progress & Solutions Record
+
+> [!NOTE]
+> **Historical Record**: This document is an archived milestone report reflecting project progress and specifications at the time of authoring. The active, consolidated source of truth for Vardan Pal Studio is maintained in [`docs/VARDAN_PAL_STUDIO_MASTER.md`](./docs/VARDAN_PAL_STUDIO_MASTER.md).
 **Document:** Phases 13, 14, and 15 Milestone Summary  
 **Repository:** `/Users/vardan/Developer/personal/03-Experiments/south-delhi-web-studio`  
 **Brand:** Vardan Pal Studio (New Delhi, India · Serving Businesses Nationwide)  

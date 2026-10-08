@@ -64,8 +64,8 @@ export default async function handler(req, res) {
       headers: {
         "Content-Type": "application/json",
         "Accept": "application/json",
-        "Origin": "https://vardanpal.vercel.app",
-        "Referer": "https://vardanpal.vercel.app/"
+        "Origin": "https://vardanpalstudio.vercel.app",
+        "Referer": "https://vardanpalstudio.vercel.app/"
       },
       body: JSON.stringify(payload)
     });
