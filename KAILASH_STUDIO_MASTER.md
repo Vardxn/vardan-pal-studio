@@ -475,3 +475,9 @@ npx vercel --prod --yes
 
 > **Shareable Project Statement:**  
 > *"Kailash Studio creates quiet luxury, high-converting websites for clinics, salons, restaurants, real estate, and event creators across India. Featuring transparent Rupee pricing, sub-5-day delivery, and instant WhatsApp booking flows. Live at https://kailashstudio.vercel.app"*
+
+
+---
+
+## Phase 16A–16C Summary
+The UX refinement trio has been fully executed across the repository: Phase 16A perfected the contact consent checkbox alignment, touch targets, and section ending; Phase 16B redesigned the footer into a concise, responsive 3-column architecture that occupies natural height without full-screen whitespace; and Phase 16C completely eliminated the device preview modal and iframe system in favor of direct same-tab demo navigation backed by a shared top context bar and pixel-perfect native scroll restoration. The consolidated completion report \`PHASE-16-ABC-COMPLETION-SUMMARY.md\` is published, all 14 Playwright navigation tests and 11 tracking tests pass with 100% success, visual screenshots are archived in \`audit-shots/phase16-complete/\`, and the site is running cleanly on \`http://localhost:8088/\` awaiting user review prior to production deployment.
