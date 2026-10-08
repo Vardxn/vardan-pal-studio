@@ -487,3 +487,26 @@ npx vercel --prod --yes
 
 ## Phase 16A–16C Summary
 The UX refinement trio has been fully executed across the repository: Phase 16A perfected the contact consent checkbox alignment, touch targets, and section ending; Phase 16B redesigned the footer into a concise, responsive 3-column architecture that occupies natural height without full-screen whitespace; and Phase 16C completely eliminated the device preview modal and iframe system in favor of direct same-tab demo navigation backed by a shared top context bar and pixel-perfect native scroll restoration. The consolidated completion report \`PHASE-16-ABC-COMPLETION-SUMMARY.md\` is published, all 14 Playwright navigation tests and 11 tracking tests pass with 100% success, visual screenshots are archived in \`audit-shots/phase16-complete/\`, and the site is running cleanly on \`http://localhost:8088/\` awaiting user review prior to production deployment.
+
+---
+
+## Phase 16D — Defect Closure & Pre-Deploy Hardening
+
+Phase 16D resolved all remaining architectural gaps, upstream validations, and risk items:
+1. **Contact API Upstream Validation & Timeout (api/contact.js):**
+   - Replaced unverified forwarding with strict upstream confirmation checks (`response.ok`, defensive JSON parsing, and `result.success` receipt confirmation).
+   - Wrapped network dispatch in an `AbortController` with an 8-second timeout guard returning user-friendly HTTP 502 Bad Gateway upon upstream network failure or lag.
+   - Comprehensive unit test suite in `scripts/test-contact-api.mjs` stubs `globalThis.fetch` across 28 test assertions covering upstream 500, 403, network drop, timeout abort, unparseable bodies, and unconfirmed receipts. Zero live endpoints called during automated testing.
+2. **Clinic Offcanvas Structural Accessibility (demos/clinic/):**
+   - Diagnosed exact offending off-canvas drawer metrics across 320px–430px viewports.
+   - Replaced layout-shifting offsets with structural CSS rules: `visibility: hidden`, `pointer-events: none`, and `max-width: 100vw` when closed; dynamically synchronized `aria-hidden="true"` and `inert` via MutationObserver; enabled Escape-key dismiss with focus restoration.
+3. **Obsolete Restaurant Link Elimination (demos/restaurant/):**
+   - Verified complete eradication of legacy `vardan-original` folders and dead links. All demo links point to valid routes, WhatsApp concierge handoffs, or verified channels.
+4. **Fictional & Risky Claims Neutralization:**
+   - Audited and updated all demo text and showcase cards to eliminate real institutional claims and unverifiable metrics (removed AIIMS claim in hub clinic card; changed "Board-Certified" to "qualified MD specialists" in clinic demo; updated real estate listing to "title-checked listings"; neutralized publication claims in Chica Restaurant to generic culinary journals).
+5. **QA Results Artifacts Untracked:**
+   - Added `scripts/*.json` and QA run outputs to `.gitignore` and removed them from git cache to maintain a clean working tree after every audit run.
+6. **Binary Brand Assets Regenerated:**
+   - Ran `scripts/og.mjs` to recreate `assets/og.png` (1200x630) and `assets/apple-touch-icon.png` (180x180) featuring official "Vardan Pal Studio" typography and VP monogram.
+7. **"type": "module" Verification:**
+   - Confirmed `api/contact.js` uses standard ECMAScript module export (`export default async function handler`), which is fully supported by modern Vercel Node runtime.

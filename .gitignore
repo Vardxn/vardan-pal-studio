@@ -7,3 +7,8 @@ round*-export.pdf
 .DS_Store
 .vercel
 .env*
+
+# Generated QA run results
+scripts/full-qa-results.json
+scripts/qa-details-report.json
+scripts/qa-raw-report.json
