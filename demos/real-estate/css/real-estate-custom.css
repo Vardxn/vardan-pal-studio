@@ -232,3 +232,45 @@
   outline: 2px solid #0b2912 !important;
   outline-offset: 2px;
 }
+
+/* ==========================================================================
+   MOBILE UX & PERFORMANCE OPTIMIZATIONS (REAL ESTATE DEMO)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Prevent iOS Safari Auto-Zoom on form input focus */
+  .form-control,
+  .form-control-sm,
+  .form-select,
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* High-Contrast Form Placeholders */
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: #64748b !important;
+  opacity: 1;
+}
+
+/* Mobile Tactile Active Feedback */
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+.vardan-btn-primary:active,
+.vardan-btn-secondary:active {
+  transform: scale(0.98) !important;
+}
+
+/* Touch Target Minimum 44px on Mobile */
+@media (max-width: 768px) {
+  .btn-sm, .btn.btn-sm {
+    min-height: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+}
