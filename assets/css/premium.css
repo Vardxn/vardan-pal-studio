@@ -2105,6 +2105,11 @@ img { max-width: 100%; height: auto; display: block; }
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: color 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 6px;
+  margin: -4px 0;
 }
 
 .form-consent__copy a:hover {
@@ -2238,8 +2243,19 @@ img { max-width: 100%; height: auto; display: block; }
   overflow-wrap: break-word;
 }
 
-@media (max-width: 640px) {
-  .enquire-form, .enquire { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  .enquire-form, .enquire {
+    grid-template-columns: 1fr;
+  }
+  /* Fix 1: Prevent iOS Safari auto-zoom on input focus */
+  .enquire-form input:not([type="checkbox"]),
+  .enquire-form select,
+  .enquire-form textarea,
+  .enquire input:not([type="checkbox"]),
+  .enquire select,
+  .enquire textarea {
+    font-size: 16px !important;
+  }
 }
 
 /* ==========================================================================

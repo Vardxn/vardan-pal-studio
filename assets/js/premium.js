@@ -273,7 +273,8 @@
      SMOOTH SCROLL + ANCHOR HANDLING
      ========================================================================== */
   let lenis = null;
-  if (window.Lenis && !reduce) {
+  const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (window.matchMedia && window.matchMedia('(pointer: coarse)').matches);
+  if (window.Lenis && !reduce && !isTouchDevice) {
     lenis = new Lenis({
       duration: 1.15,
       easing: t => 1 - Math.pow(1 - t, 3)
