@@ -420,6 +420,14 @@ Tested routes: `/`, `/404.html`, `/demos/salon/`, `/demos/clinic/`, `/demos/rest
   - **Fix 2 (High — Mobile Image Payload Optimization):** Converted secondary mockup (`assets/shots/clinic.webp`) and tertiary mockup (`assets/shots/interior.webp`) in the hero stage from `loading="eager"` to `loading="lazy" decoding="async"`. Retains primary card (`restaurant.webp`) eager. Reduces initial mobile network payload by ~1.8 MB.
   - **Fix 3 (High — Native Mobile Momentum Scrolling):** Gated Lenis virtual smooth-scroll initialization to non-touch devices only (`!isTouchDevice`), restoring buttery-smooth 120Hz/60Hz hardware momentum touch scrolling and zero scroll lag on mobile viewports.
   - **Fix 4 (High — Legal Link Touch Targets >= 44px):** Expanded `.form-consent__copy a` with `display: inline-flex; align-items: center; min-height: 44px; padding: 4px 6px; margin: -4px 0;` to guarantee touch targets meet WCAG >= 44px minimums and prevent mis-taps on the consent checkbox.
+- **Phase 19 — Comprehensive Mobile Button Readability & Contrast Hardening (October 2026):**
+  - **Audit Scope:** Audited buttons, links, badges/chips, nav items, form labels/placeholders across all 10 routes on mobile screens (`390px` viewport) across 6 states: Default, Hover, Active, Focus, Disabled, Loading.
+  - **Issue Closure:** Identified and closed 27 initial contrast and readability issues down to 0 findings.
+  - **Form Placeholders:** Explicitly styled `.enquire-form` and `.enquire` `::placeholder` pseudo-elements with `rgba(247, 244, 238, 0.68) !important;` (achieving 6.6:1 contrast against dark input background, exceeding WCAG AA 4.5:1).
+  - **WhatsApp CTAs:** Resolved 1.98:1 contrast failure on bright green `#25d366` buttons by changing text and vector fills to deep obsidian `#0b2912` across `.vardan-btn-secondary` and `.floating-whatsapp-btn`, lifting contrast to 8.6:1 (WCAG AAA).
+  - **Salon Demos:** Enforced `#141519` high-contrast dark text on gold `#bf925b` buttons (replacing washed-out white text, raising contrast from 2.81:1 to 6.66:1), styled `.btn-custom` pills, added dark scrim overlays to lookbook cards, and harmonized outline buttons.
+  - **Clinic Demo:** Added high-contrast dark navbar background `rgba(17, 24, 39, 0.94)`, styled `.btn-outline-white` with solid dark teal `#0f515d` (9.5:1 contrast), and darkened `.btn-outline-info` to `#0b5e6d` (5.1:1 contrast).
+  - **Interactive States:** Added explicit tactile `:active` pressed states (`transform: scale(0.98)`), accessible `:focus-visible` rings with generous offset, high-contrast readable `:disabled` states, and loading spinner states across all button classes.
   - **Full Website Logo Integration:** Created official vector brand mark  (and updated ). Integrated the official logo mark into the sticky top navigation bar across all routes (, , , ), the footer brand column heading, and the Founder credibility card () with the high-resolution studio seal badge ().
 
 ---
