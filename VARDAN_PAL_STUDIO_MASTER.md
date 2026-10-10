@@ -428,6 +428,12 @@ Tested routes: `/`, `/404.html`, `/demos/salon/`, `/demos/clinic/`, `/demos/rest
   - **Salon Demos:** Enforced `#141519` high-contrast dark text on gold `#bf925b` buttons (replacing washed-out white text, raising contrast from 2.81:1 to 6.66:1), styled `.btn-custom` pills, added dark scrim overlays to lookbook cards, and harmonized outline buttons.
   - **Clinic Demo:** Added high-contrast dark navbar background `rgba(17, 24, 39, 0.94)`, styled `.btn-outline-white` with solid dark teal `#0f515d` (9.5:1 contrast), and darkened `.btn-outline-info` to `#0b5e6d` (5.1:1 contrast).
   - **Interactive States:** Added explicit tactile `:active` pressed states (`transform: scale(0.98)`), accessible `:focus-visible` rings with generous offset, high-contrast readable `:disabled` states, and loading spinner states across all button classes.
+- **Phase 20 — Mobile UX & Performance Optimization Across All 6 Concept Demos (October 2026):**
+  - **iOS Safari Auto-Zoom Elimination:** Applied explicit `@media (max-width: 768px)` rule enforcing `font-size: 16px !important;` on all form inputs, selects, and textareas across all 6 concept demos (Salon, Clinic, Restaurant, Real-Estate, Interior, Events), permanently ending viewport auto-zoom on mobile keyboards.
+  - **Touch Target Expansion (>= 44px):** Updated `.btn-sm`, footer links, and navigation buttons across all demos to minimum 44px tap height with finger-friendly padding.
+  - **Image Pipeline & Lazy Loading:** Added `loading="lazy" decoding="async"` on doctor profile cards (`person_1/2/3.jpg`), salon lookbook portfolios (`work-1/2/3/4.jpg`), and showcase photography.
+  - **Tactile Active Feedback:** Enforced `:active { transform: scale(0.98); }` across all demo buttons and cards for instantaneous physical mobile touch response.
+  - **Zero Horizontal Overflow:** Verified across all 6 demos with 100% pass rate at 320px, 375px, 390px, and 414px viewports.
   - **Full Website Logo Integration:** Created official vector brand mark  (and updated ). Integrated the official logo mark into the sticky top navigation bar across all routes (, , , ), the footer brand column heading, and the Founder credibility card () with the high-resolution studio seal badge ().
 
 ---
