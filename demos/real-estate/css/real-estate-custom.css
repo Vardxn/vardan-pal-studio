@@ -213,3 +213,22 @@
   z-index: 100 !important;
   margin-bottom: -80px !important;
 }
+
+/* ==========================================================================
+   MOBILE BUTTON READABILITY & CONTRAST ENHANCEMENTS (WCAG AA COMPLIANCE)
+   ========================================================================== */
+.vardan-btn-secondary {
+  color: #0b2912 !important;
+  font-weight: 700 !important;
+}
+.vardan-btn-secondary:hover {
+  background: #1eb956 !important;
+  color: #000000 !important;
+}
+.vardan-btn-secondary:active {
+  transform: scale(0.98);
+}
+.vardan-btn-secondary:focus-visible {
+  outline: 2px solid #0b2912 !important;
+  outline-offset: 2px;
+}
