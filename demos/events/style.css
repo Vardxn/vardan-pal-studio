@@ -521,3 +521,33 @@ header {
     padding: 25px 20px;
   }
 }
+
+/* ==========================================================================
+   MOBILE UX & PERFORMANCE OPTIMIZATIONS (EVENTS DEMO)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Prevent iOS Safari Auto-Zoom on form input focus */
+  .form-control,
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* High-Contrast Form Placeholders */
+.form-control::placeholder,
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.65) !important;
+  opacity: 1;
+}
+
+/* Mobile Tactile Active Feedback */
+.btn-primary:active,
+.btn-outline:active,
+.btn-nav-inquire:active,
+.vardan-btn-primary:active,
+.vardan-btn-secondary:active {
+  transform: scale(0.98) !important;
+}

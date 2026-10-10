@@ -334,3 +334,30 @@ body.offcanvas-menu .site-mobile-menu {
   border: 2px solid #20b2aa !important;
   color: #ffffff !important;
 }
+
+/* ==========================================================================
+   MOBILE UX & PERFORMANCE OPTIMIZATIONS (CLINIC DEMO)
+   ========================================================================== */
+@media (max-width: 768px) {
+  /* Prevent iOS Safari Auto-Zoom on form input focus */
+  .form-control,
+  #appointment-section input,
+  #appointment-section select,
+  #appointment-section textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* High-Contrast Form Placeholders */
+.form-control::placeholder {
+  color: #64748b !important;
+  opacity: 1;
+}
+
+/* Mobile Tactile Active Feedback */
+.btn:active,
+.btn-primary:active,
+.btn-outline-white:active,
+.btn-outline-info:active {
+  transform: scale(0.98) !important;
+}
