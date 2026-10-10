@@ -267,10 +267,36 @@ img { max-width: 100%; height: auto; display: block; }
 }
 .brand {
   display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  text-decoration: none;
+}
+.brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  flex-shrink: 0;
+  transition: transform 0.25s var(--ease);
+}
+.brand:hover .brand-mark {
+  transform: scale(1.05);
+}
+.brand-mark-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 9px;
+}
+.brand-text {
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
   gap: 2px;
-  min-height: 44px;
 }
 .brand-name {
   font: 500 1.25rem/1 var(--font-display);
@@ -284,6 +310,61 @@ img { max-width: 100%; height: auto; display: block; }
   text-transform: uppercase;
   color: var(--accent-ink);
   white-space: nowrap;
+}
+
+/* Footer brand heading with logo */
+.footer-brand-heading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 10px 0;
+}
+.footer-brand-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+.footer-logo-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 9px;
+}
+
+/* Founder section emblem badge */
+.founder-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+.founder-seal-badge {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(23, 22, 20, 0.12);
+  border: 1px solid rgba(184, 154, 98, 0.35);
+}
+.founder-seal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.founder-header-copy {
+  flex: 1;
+}
+.founder-header-copy .eyebrow {
+  margin-bottom: 8px;
+}
+.founder-header-copy .founder-title {
+  margin: 0;
 }
 
 .nav-links, .nav-center {
@@ -2324,6 +2405,24 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 @media (max-width: 480px) {
+  .brand {
+    gap: 8px;
+  }
+  .brand-mark {
+    width: 32px;
+    height: 32px;
+  }
+  .brand-name {
+    font-size: 1.12rem;
+  }
+  .founder-card-header {
+    flex-direction: column;
+    gap: 14px;
+  }
+  .founder-seal-badge {
+    width: 48px;
+    height: 48px;
+  }
   .footer {
     padding-top: 40px;
     padding-bottom: 28px;
