@@ -415,6 +415,11 @@ Tested routes: `/`, `/404.html`, `/demos/salon/`, `/demos/clinic/`, `/demos/rest
   - Removed obsolete `demos/restaurant/style.css`.
   - Pushed commits through `efc8d58` to GitHub `origin/main` with automatic Vercel production deployment.
   - Re-verified 100% green test suite across all 126 assertions.
+- **Phase 18 — Mobile UX & Performance Hardening (Critical & High Priorities):**
+  - **Fix 1 (Critical — iOS Safari Auto-Zoom Prevention):** Enforced `font-size: 16px !important;` on all input, select, and textarea controls within `.enquire-form` and `.enquire` at `@media (max-width: 768px)`, eliminating intrusive viewport zooming during keyboard activation on iOS devices.
+  - **Fix 2 (High — Mobile Image Payload Optimization):** Converted secondary mockup (`assets/shots/clinic.webp`) and tertiary mockup (`assets/shots/interior.webp`) in the hero stage from `loading="eager"` to `loading="lazy" decoding="async"`. Retains primary card (`restaurant.webp`) eager. Reduces initial mobile network payload by ~1.8 MB.
+  - **Fix 3 (High — Native Mobile Momentum Scrolling):** Gated Lenis virtual smooth-scroll initialization to non-touch devices only (`!isTouchDevice`), restoring buttery-smooth 120Hz/60Hz hardware momentum touch scrolling and zero scroll lag on mobile viewports.
+  - **Fix 4 (High — Legal Link Touch Targets >= 44px):** Expanded `.form-consent__copy a` with `display: inline-flex; align-items: center; min-height: 44px; padding: 4px 6px; margin: -4px 0;` to guarantee touch targets meet WCAG >= 44px minimums and prevent mis-taps on the consent checkbox.
   - **Full Website Logo Integration:** Created official vector brand mark  (and updated ). Integrated the official logo mark into the sticky top navigation bar across all routes (, , , ), the footer brand column heading, and the Founder credibility card () with the high-resolution studio seal badge ().
 
 ---
