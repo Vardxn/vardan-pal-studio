@@ -267,3 +267,70 @@ body.offcanvas-menu .site-mobile-menu {
   pointer-events: auto !important;
   transform: translateX(0%) !important;
 }
+
+/* ==========================================================================
+   MOBILE BUTTON READABILITY & CONTRAST ENHANCEMENTS (WCAG AA COMPLIANCE)
+   ========================================================================== */
+.vardan-btn-secondary {
+  color: #0b2912 !important;
+  font-weight: 700 !important;
+}
+
+.btn-outline-white {
+  background: rgba(12, 105, 122, 0.35) !important;
+  border: 2px solid #25d366 !important;
+  color: #ffffff !important;
+  backdrop-filter: blur(4px);
+  font-weight: 700 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-white:hover {
+  background: #25d366 !important;
+  color: #0b2912 !important;
+  border-color: #25d366 !important;
+}
+
+.btn-outline-white:active {
+  transform: scale(0.98);
+}
+
+.btn-outline-white:focus-visible {
+  outline: 2px solid #25d366 !important;
+  outline-offset: 2px;
+}
+
+.btn-outline-info {
+  color: #0b5e6d !important;
+  border-color: #0b5e6d !important;
+  background: rgba(11, 94, 109, 0.08) !important;
+  font-weight: 700 !important;
+  transition: all 0.2s ease;
+}
+
+.btn-outline-info:hover {
+  background: #0b5e6d !important;
+  color: #ffffff !important;
+}
+
+.btn-outline-info:active {
+  transform: scale(0.98);
+}
+
+.btn-outline-info:focus-visible {
+  outline: 2px solid #0b5e6d !important;
+  outline-offset: 2px;
+}
+
+.site-navbar-wrap {
+  background: rgba(17, 24, 39, 0.94) !important;
+  backdrop-filter: blur(8px) !important;
+}
+.btn-outline-white {
+  background: #0f515d !important;
+  border: 2px solid #20b2aa !important;
+  color: #ffffff !important;
+}

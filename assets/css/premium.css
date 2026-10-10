@@ -237,6 +237,33 @@ img { max-width: 100%; height: auto; display: block; }
   transform: translateX(4px);
 }
 .btn--block { width: 100%; }
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+.btn:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 999px;
+}
+.btn--solid:active {
+  background: #000000;
+  color: #FFFFFF;
+}
+.btn--accent:active {
+  background: #9E814E;
+  color: #0E0E0C;
+}
+.btn--accent:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 3px;
+}
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
 
 /* ==========================================================================
    NAVIGATION
@@ -1970,6 +1997,21 @@ img { max-width: 100%; height: auto; display: block; }
   background: rgba(247, 244, 238, 0.12);
   outline: none;
 }
+/* Form Placeholder Contrast & Mobile Readability (> 4.5:1) */
+.enquire-form input::placeholder,
+.enquire-form textarea::placeholder,
+.enquire input::placeholder,
+.enquire textarea::placeholder {
+  color: rgba(247, 244, 238, 0.68) !important;
+  font-weight: 400;
+  opacity: 1;
+}
+.enquire-form input:focus::placeholder,
+.enquire-form textarea:focus::placeholder,
+.enquire input:focus::placeholder,
+.enquire textarea:focus::placeholder {
+  color: rgba(247, 244, 238, 0.45) !important;
+}
 .enquire-form textarea, .enquire textarea {
   height: auto;
   min-height: 120px;
@@ -2160,8 +2202,21 @@ img { max-width: 100%; height: auto; display: block; }
   color: #000;
   transform: translateY(-2px);
 }
+.enquire-submit-btn:active, .enquire button[type="submit"]:active {
+  background: #9E814E;
+  color: #0E0E0C;
+  transform: scale(0.98);
+}
+.enquire-submit-btn:focus-visible, .enquire button[type="submit"]:focus-visible {
+  outline: 2px solid #FFFFFF;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(184, 154, 98, 0.45);
+}
 .enquire-submit-btn:disabled {
-  opacity: 0.65;
+  opacity: 0.85;
+  background: #A68A56 !important;
+  border-color: #A68A56 !important;
+  color: #171614 !important;
   cursor: not-allowed;
   transform: none !important;
 }
@@ -2581,7 +2636,7 @@ img { max-width: 100%; height: auto; display: block; }
   height: 56px;
   border-radius: 50%;
   background: #25D366;
-  color: #ffffff;
+  color: #0b2912;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2601,7 +2656,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: block;
   width: 28px;
   height: 28px;
-  fill: #ffffff;
+  fill: #0b2912;
 }
 
 .floating-whatsapp-tooltip {

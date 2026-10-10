@@ -86,3 +86,50 @@
     padding-bottom: 4px;
   }
 }
+
+/* ==========================================================================
+   GLOBAL DEMO MOBILE CONTRAST & ACCESSIBILITY ENHANCEMENTS
+   ========================================================================== */
+.demo-context__back:active {
+  transform: scale(0.98);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.vardan-btn-secondary {
+  background: #25d366 !important;
+  color: #0b2912 !important;
+  font-weight: 700 !important;
+  text-shadow: none !important;
+}
+
+.vardan-btn-secondary:hover {
+  background: #1eb956 !important;
+  color: #000000 !important;
+}
+
+.vardan-btn-secondary:active {
+  transform: scale(0.98);
+  background: #189846 !important;
+  color: #000000 !important;
+}
+
+.vardan-btn-secondary:focus-visible {
+  outline: 2px solid #0b2912 !important;
+  outline-offset: 2px;
+}
+
+.floating-whatsapp-btn:focus-visible {
+  outline: 3px solid #0b2912 !important;
+  outline-offset: 2px;
+}
+
+.floating-whatsapp-btn:active {
+  transform: scale(0.88);
+}
+
+.floating-whatsapp-btn {
+  color: #0b2912 !important;
+}
+.floating-whatsapp-btn svg {
+  fill: #0b2912 !important;
+}

@@ -8571,7 +8571,8 @@ h3.vr {
     border-radius: 0;
     padding-left: 30px !important;
     padding-right: 30px !important;
-    color: #fff !important;
+    color: #141519 !important;
+    font-weight: 700 !important;
     margin: 0 auto;
     margin-top: 20px; }
 
@@ -8819,7 +8820,8 @@ h3.vr {
   .btn.btn-primary {
     background: #bf925b !important;
     border: 1px solid #bf925b !important;
-    color: #fff !important; }
+    color: #141519 !important;
+    font-weight: 700 !important; }
     .btn.btn-primary:hover {
       border: 1px solid #bf925b;
       background: transparent;
