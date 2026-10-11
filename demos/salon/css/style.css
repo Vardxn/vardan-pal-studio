@@ -9866,3 +9866,7 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
+/* Ensure .btn-custom touch target >= 44px */
+.btn-custom { min-height: 44px !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; }
+
