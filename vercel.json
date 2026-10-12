@@ -3,12 +3,13 @@
   "rewrites": [
     { "source": "/chica", "destination": "/chica/index.html" },
     { "source": "/chica/", "destination": "/chica/index.html" },
+    { "source": "/chica/:path*", "destination": "/chica/index.html" },
     { "source": "/shubham-dixit", "destination": "/shubham-dixit/index.html" },
     { "source": "/shubham-dixit/", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/(.*)", "destination": "/shubham-dixit/index.html" },
+    { "source": "/shubham-dixit/:path*", "destination": "/shubham-dixit/index.html" },
     { "source": "/astrology", "destination": "/shubham-dixit/index.html" },
     { "source": "/astrology/", "destination": "/shubham-dixit/index.html" },
-    { "source": "/astrology/(.*)", "destination": "/shubham-dixit/index.html" }
+    { "source": "/astrology/:path*", "destination": "/shubham-dixit/index.html" }
   ],
   "headers": [
     { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }] },
