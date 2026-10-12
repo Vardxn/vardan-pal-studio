@@ -3,13 +3,20 @@
   "rewrites": [
     { "source": "/chica", "destination": "/chica/index.html" },
     { "source": "/chica/", "destination": "/chica/index.html" },
-    { "source": "/chica/:path*", "destination": "/chica/index.html" },
     { "source": "/shubham-dixit", "destination": "/shubham-dixit/index.html" },
     { "source": "/shubham-dixit/", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/:path*", "destination": "/shubham-dixit/index.html" },
+    { "source": "/shubham-dixit/blog", "destination": "/shubham-dixit/index.html" },
+    { "source": "/shubham-dixit/insights", "destination": "/shubham-dixit/index.html" },
+    { "source": "/shubham-dixit/tradition", "destination": "/shubham-dixit/index.html" },
+    { "source": "/shubham-dixit/services", "destination": "/shubham-dixit/index.html" },
+    { "source": "/shubham-dixit/consultation", "destination": "/shubham-dixit/index.html" },
+    { "source": "/shubham-dixit/locations", "destination": "/shubham-dixit/index.html" },
+    { "source": "/shubham-dixit/locations/(.*)", "destination": "/shubham-dixit/index.html" },
+    { "source": "/shubham-dixit/blog/(.*)", "destination": "/shubham-dixit/index.html" },
+    { "source": "/shubham-dixit/insights/(.*)", "destination": "/shubham-dixit/index.html" },
+    { "source": "/shubham-dixit/contact", "destination": "/shubham-dixit/index.html" },
     { "source": "/astrology", "destination": "/shubham-dixit/index.html" },
-    { "source": "/astrology/", "destination": "/shubham-dixit/index.html" },
-    { "source": "/astrology/:path*", "destination": "/shubham-dixit/index.html" }
+    { "source": "/astrology/", "destination": "/shubham-dixit/index.html" }
   ],
   "headers": [
     { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=3600" }] },
