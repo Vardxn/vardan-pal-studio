@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-26T05:13:42.560361Z",
+  "title": "Design System: Vardan Pal Studio (homepage)",
+  "extensions": {
+    "colorMeta": {
+      "cloth": {
+        "role": "primary",
+        "displayName": "Bahi Cloth Red",
+        "canonical": "#a3121c",
+        "tonalRamp": [
+          "#310508",
+          "#52090e",
+          "#720d14",
+          "#8f1019",
+          "#b1363e",
+          "#c87177",
+          "#dfacb0",
+          "#f1dbdd"
+        ]
+      },
+      "cloth-deep": {
+        "role": "primary",
+        "displayName": "Deep Cloth",
+        "canonical": "#7d0d16",
+        "tonalRamp": [
+          "#260407",
+          "#3e060b",
+          "#58090f",
+          "#6e0b13",
+          "#903139",
+          "#b16e73",
+          "#d2aaad",
+          "#ecdbdc"
+        ]
+      },
+      "cloth-dark": {
+        "role": "primary",
+        "displayName": "Binding Dark",
+        "canonical": "#5c0910",
+        "tonalRamp": [
+          "#1c0305",
+          "#2e0408",
+          "#40060b",
+          "#51080e",
+          "#742e34",
+          "#9d6b70",
+          "#c6a9ab",
+          "#e7dadb"
+        ]
+      },
+      "stamp": {
+        "role": "secondary",
+        "displayName": "Stamp Violet",
+        "canonical": "#5b3a8c",
+        "tonalRamp": [
+          "#1b112a",
+          "#2e1d46",
+          "#402962",
+          "#50337b",
+          "#74589d",
+          "#9d89ba",
+          "#c6bad7",
+          "#e6e1ee"
+        ]
+      },
+      "rule": {
+        "role": "secondary",
+        "displayName": "Ruling Blue",
+        "canonical": "#3a63b8",
+        "tonalRamp": [
+          "#111e37",
+          "#1d325c",
+          "#294581",
+          "#3357a2",
+          "#587ac3",
+          "#89a1d4",
+          "#bac8e6",
+          "#e1e8f4"
+        ]
+      },
+      "cord": {
+        "role": "tertiary",
+        "displayName": "Cord Yellow",
+        "canonical": "#e8b31c",
+        "tonalRamp": [
+          "#463608",
+          "#745a0e",
+          "#a27d14",
+          "#cc9e19",
+          "#ebbe3e",
+          "#f1d177",
+          "#f7e4b0",
+          "#fcf4dd"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Ledger Paper",
+        "canonical": "#eef1e4",
+        "tonalRamp": [
+          "#474844",
+          "#777872",
+          "#a7a9a0",
+          "#d1d4c9",
+          "#f1f3e8",
+          "#f5f7ef",
+          "#f9faf6",
+          "#fcfdfb"
+        ]
+      },
+      "paper-edge": {
+        "role": "neutral",
+        "displayName": "Paper Edge",
+        "canonical": "#dfe3d2",
+        "tonalRamp": [
+          "#43443f",
+          "#707269",
+          "#9c9f93",
+          "#c4c8b9",
+          "#e4e7d9",
+          "#eceee4",
+          "#f4f5ef",
+          "#fafbf8"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#17161a",
+        "tonalRamp": [
+          "#070708",
+          "#0c0b0d",
+          "#100f12",
+          "#141317",
+          "#3a393c",
+          "#747376",
+          "#aeadaf",
+          "#dcdcdd"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#3f3d45",
+        "tonalRamp": [
+          "#131215",
+          "#201e22",
+          "#2c2b30",
+          "#37363d",
+          "#5c5a61",
+          "#8c8b8f",
+          "#bcbbbe",
+          "#e2e2e3"
+        ]
+      },
+      "margin": {
+        "role": "neutral",
+        "displayName": "Margin Red",
+        "canonical": "#b3221f",
+        "tonalRamp": [
+          "#360a09",
+          "#5a1110",
+          "#7d1816",
+          "#9e1e1b",
+          "#be4341",
+          "#d17a79",
+          "#e4b2b1",
+          "#f4dedd"
+        ]
+      },
+      "on-cloth": {
+        "role": "neutral",
+        "displayName": "Cloth Cream",
+        "canonical": "#f7ead6",
+        "tonalRamp": [
+          "#4a4640",
+          "#7c756b",
+          "#ada496",
+          "#d9cebc",
+          "#f8eddc",
+          "#faf2e6",
+          "#fcf8f1",
+          "#fefcf9"
+        ]
+      },
+      "on-cloth-soft": {
+        "role": "neutral",
+        "displayName": "Warm Cream",
+        "canonical": "#edd3bf",
+        "tonalRamp": [
+          "#473f39",
+          "#766a60",
+          "#a69486",
+          "#d1baa8",
+          "#f0dac9",
+          "#f4e5d9",
+          "#f9f0e9",
+          "#fcf8f5"
+        ]
+      },
+      "whatsapp": {
+        "role": "neutral",
+        "displayName": "WhatsApp Green",
+        "canonical": "#25d366",
+        "tonalRamp": [
+          "#0b3f1f",
+          "#126a33",
+          "#1a9447",
+          "#21ba5a",
+          "#46da7d",
+          "#7ce5a3",
+          "#b3f0c9",
+          "#def8e8"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero h1 only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Sheet and spread h2."
+      },
+      "hand": {
+        "displayName": "Hand",
+        "purpose": "Kalam annotations, labels, signature."
+      },
+      "stamp": {
+        "displayName": "Stamp",
+        "purpose": "Uppercase tracked text inside stamps only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "book",
+        "value": "0 34px 60px -24px rgba(0,0,0,0.55)",
+        "purpose": "Open book on the cloth."
+      },
+      {
+        "name": "sheet",
+        "value": "0 30px 50px -26px rgba(0,0,0,0.5)",
+        "purpose": "Single sheets and the process/founder spread."
+      },
+      {
+        "name": "fold-left",
+        "value": "inset -26px 0 30px -26px rgba(0,0,0,0.22)",
+        "purpose": "Gutter shading on left page."
+      },
+      {
+        "name": "paste",
+        "value": "0 1px 2px rgba(23,22,26,0.28)",
+        "purpose": "Taped photos and thumbnails."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Stamp press, thumbnail, arrow and FAQ icon."
+      },
+      {
+        "name": "state",
+        "value": "0.18s",
+        "purpose": "Button and row colour transitions."
+      },
+      {
+        "name": "stamp-press",
+        "value": "0.42s",
+        "purpose": "Stamp press-in animation."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "book-collapse",
+        "value": "1099px"
+      },
+      {
+        "name": "nav-collapse",
+        "value": "900px"
+      },
+      {
+        "name": "phone",
+        "value": "640px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Primary action on paper.",
+      "html": "<a class=\"ds-btn-ink\" href=\"#\">Start an enquiry</a>",
+      "css": ".ds-btn-ink{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 1.5rem;font:700 1.0625rem/1 var(--set);border:2px solid transparent;border-radius:3px;cursor:pointer;transition:background-color .18s,color .18s;background:#17161a;color:#fff;text-decoration:none}.ds-btn-ink:hover{background:#000}.ds-btn-ink:focus-visible{outline:3px solid #3a63b8;outline-offset:3px}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary action on paper.",
+      "html": "<a class=\"ds-btn-line\" href=\"#\">See rates</a>",
+      "css": ".ds-btn-line{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 1.5rem;font:700 1.0625rem/1 var(--set);border:2px solid transparent;border-radius:3px;cursor:pointer;transition:background-color .18s,color .18s;background:transparent;color:#17161a;border-color:#17161a;text-decoration:none}.ds-btn-line:hover{background:#17161a;color:#fff}.ds-btn-line:focus-visible{outline:3px solid #3a63b8;outline-offset:3px}"
+    },
+    {
+      "name": "Stamp",
+      "kind": "custom",
+      "refersTo": "stamp",
+      "description": "Violet rotated rubber stamp, the only emphasis device.",
+      "html": "<span class=\"ds-stamp\">Most popular</span>",
+      "css": ".ds-stamp{display:inline-block;padding:.45em .8em .35em;font:800 .95rem/1 var(--set);letter-spacing:.1em;text-transform:uppercase;color:#5b3a8c;border:3px solid currentColor;border-radius:6px;transform:rotate(-6deg);box-shadow:inset 0 0 0 2px rgba(91,58,140,.18);mix-blend-mode:multiply}"
+    },
+    {
+      "name": "Ledger Entry",
+      "kind": "custom",
+      "refersTo": "",
+      "description": "Numbered demo row with rotated thumbnail and hover highlight.",
+      "html": "<div class=\"ds-entry\"><span class=\"ds-n\">1</span><div><div class=\"ds-name\">Aura Salon &amp; Spa</div><div class=\"ds-sub\">Concept project</div></div></div>",
+      "css": ".ds-entry{display:grid;grid-template-columns:2.6rem 1fr;align-items:center;min-height:60px;background:#eef1e4;border-bottom:1px solid rgba(58,99,184,.28);transition:background-color .18s}.ds-entry:hover{background:rgba(232,179,28,.24)}.ds-n{font:700 1.2rem/1 var(--hand);color:#b3221f;padding-left:2px}.ds-name{font-weight:700;font-size:1.22rem;color:#17161a}.ds-sub{font-size:.95rem;color:#3f3d45}"
+    },
+    {
+      "name": "Underline Field",
+      "kind": "input",
+      "refersTo": "",
+      "description": "Ledger-style input: hand label, ruling-blue underline.",
+      "html": "<label class=\"ds-field\">Your name<input type=\"text\" placeholder=\"Name\"></label>",
+      "css": ".ds-field{display:flex;flex-direction:column;gap:4px;font:400 1.05rem/1.35 var(--hand);color:#b3221f;background:#eef1e4;padding-top:.9rem}.ds-field input{font:500 1.1rem/1.3 var(--set);color:#17161a;background:transparent;border:0;border-bottom:1.5px solid #3a63b8;border-radius:0;padding:.55rem .1rem;min-height:48px}.ds-field input:focus{outline:none;border-bottom-color:#17161a;box-shadow:0 2px 0 #17161a;background:rgba(58,99,184,.06)}"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "nav-whatsapp",
+      "description": "Cream link on cloth with cord underline.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\">Work</a><a href=\"#\" class=\"on\">Rates</a></nav>",
+      "css": ".ds-nav{display:flex;gap:24px;padding:12px 20px;background:#a3121c;color:#f7ead6;font-family:var(--set)}.ds-nav a{color:inherit;font-weight:600;text-decoration:none;padding:12px 0;border-bottom:2px solid transparent}.ds-nav a:hover,.ds-nav a.on{border-bottom-color:#e8b31c}.ds-nav a:focus-visible{outline:3px solid #e8b31c;outline-offset:3px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Open Bahi-Khata",
+    "overview": "The page is a red cloth-bound ledger opened on a desk, with ruled paper pages, hand-written marginalia, violet stamps and a single yellow cord. Set type states facts; a handwriting face annotates them. Depth is physical, never glassy or gradient.",
+    "keyCharacteristics": [
+      "Red cloth ground, pale ruled paper, blue-black ink.",
+      "Two voices: Anek Latin set type and Kalam pen.",
+      "Violet stamps are the emphasis device; yellow cord the only bright accent.",
+      "Open book spread on desktop; stacked sheets below 1100px.",
+      "Reduced-motion respected."
+    ],
+    "rules": [
+      {
+        "name": "The Cloth-and-Paper Rule",
+        "body": "Text on cloth is cream; text on paper is ink or ruling blue.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Cord Rule",
+        "body": "Yellow appears as a thread, tape, highlight or focus ring, never as a surface.",
+        "section": "colors"
+      },
+      {
+        "name": "The Stamp Is Emphasis Rule",
+        "body": "Emphasis is a violet stamp or a cloth-red word, not bold colour blocks.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Set type states facts; Kalam annotates them.",
+        "section": "typography"
+      },
+      {
+        "name": "The Uppercase-Is-A-Stamp Rule",
+        "body": "Tracked uppercase exists only inside a stamp.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper-On-Cloth Rule",
+        "body": "Shadows are soft, long and directionless; no hard offset shadows and no glow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do keep text on a solid paper surface so the ruling shows only in margins and blank space.",
+      "Do write annotations in Kalam in ruling blue or margin red, at 1.05rem or larger.",
+      "Do use rotation only on physical objects: stamps, photos, thumbnails, signature.",
+      "Do keep motion short (0.12 to 0.42s) and honour prefers-reduced-motion.",
+      "Do keep 44px minimum targets and a visible focus ring tuned to the surface it sits on."
+    ],
+    "donts": [
+      "Don't use gradients as decoration; the only gradients are the cloth weave, the cord stripe, paper ruling and fold shading.",
+      "Don't use hard offset shadows, glassmorphism or glows.",
+      "Don't use cord yellow as a button or panel fill.",
+      "Don't use the ivory/champagne-gold/charcoal or Cormorant Garamond system of premium.css on this homepage."
+    ]
+  }
+}
