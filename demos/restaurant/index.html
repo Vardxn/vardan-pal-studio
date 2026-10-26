@@ -97,12 +97,22 @@
         background: #c49a6c;
       }
     </style>
+    <style>
+      /* keep the app's fixed header and progress bar below the shared 48px demo bar */
+      #root .fixed.top-0 { top: var(--demo-context-height, 48px); }
+    </style>
     <script type="module" crossorigin src="/chica/assets/index-By5eovLe.js"></script>
     <link rel="modulepreload" crossorigin href="/chica/assets/motion-DMnGUN3q.js">
     <link rel="modulepreload" crossorigin href="/chica/assets/vendor-CamclFPr.js">
     <link rel="stylesheet" crossorigin href="/chica/assets/index-cwNLLLX6.css">
+    <link rel="stylesheet" href="/assets/css/demo-context.css">
   </head>
   <body class="bg-[#1a1410] text-[#f5ede4] antialiased selection:bg-[#c49a6c]/30 selection:text-[#f5ede4]">
+    <div class="demo-context" role="region" aria-label="Demo navigation" data-theme="restaurant">
+      <a href="/#work" class="demo-context__back" data-demo-back>&larr; Back to portfolio</a>
+      <span class="demo-context__label">Concept website &middot; Fine Dining</span>
+    </div>
     <div id="root"></div>
+    <script src="/assets/js/demo-navigation.js"></script>
   </body>
 </html>

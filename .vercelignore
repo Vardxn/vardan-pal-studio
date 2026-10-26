@@ -1,0 +1,7 @@
+# Not part of the website: keep out of every deployment
+scripts
+docs
+demos/astrology
+.impeccable
+.claude
+*.md

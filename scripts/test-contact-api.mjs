@@ -62,6 +62,29 @@ async function runTests() {
     assert(res.statusCode === 405, "GET method returns 405 Method Not Allowed");
   }
 
+  // 2b. Foreign website origin is refused
+  {
+    const req = createValidReq();
+    req.headers = { origin: "https://evil.example" };
+    const res = new MockRes();
+    await handler(req, res);
+    assert(res.statusCode === 403, "Foreign Origin is rejected with 403");
+  }
+
+  // 2c. Oversized text is capped before it is forwarded
+  {
+    const req = createValidReq({ msg: "x".repeat(50000) });
+    req.headers = { origin: "https://vardxn.com" };
+    let forwarded = "";
+    const realFetch = globalThis.fetch;
+    globalThis.fetch = async (url, opts) => { forwarded = opts.body; return { ok: true, text: async () => '{"success":"true"}' }; };
+    const res = new MockRes();
+    await handler(req, res);
+    globalThis.fetch = realFetch;
+    assert(res.statusCode === 200, "Own-site Origin is accepted");
+    assert(JSON.parse(forwarded).project_notes.length === 2000, "Message is capped at 2000 characters");
+  }
+
   // 3. Honeypot guard
   {
     const req = createValidReq({ honeypot: "spam_bot_field" });

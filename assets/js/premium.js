@@ -244,24 +244,18 @@
       const waText = `Hi Vardan, I found Vardan Pal Studio online and would like to discuss a project.\n\nName: ${name}\nCity/State: ${city || 'India'}\nPhone: ${phone}\nPackage: ${pkg || 'Website'}\nBusiness: ${type || 'General'}\nNeed: ${goal || 'New Website'}${msg ? `\nNotes: ${msg}` : ''}${waAttrLine}`;
       const waUrl = `https://wa.me/918279696707?text=${encodeURIComponent(waText)}`;
 
-      // 1. Asynchronously dispatch notification email to backend API
-      (async () => {
-        try {
-          const res = await fetch('/api/contact', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify(payload)
-          });
-          if (!res.ok) throw new Error('API status ' + res.status);
-        } catch (apiErr) {
-          try {
-            await fetch('https://formsubmit.co/ajax/vardan2701@gmail.com', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-              body: JSON.stringify(payload)
-            });
-          } catch (e) {}
-        }
+      // 1. Send the enquiry email; resolves true only if a service confirmed it
+      const post = async url => {
+        const res = await fetch(url, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        return res.ok;
+      };
+      const sendPromise = (async () => {
+        try { if (await post('/api/contact')) return true; } catch (e) {}
+        try { return await post('https://formsubmit.co/ajax/vardan2701@gmail.com'); } catch (e) { return false; }
       })();
 
       // 2. Open WhatsApp handoff directly
@@ -271,8 +265,11 @@
         console.warn('Popup blocked:', openErr);
       }
 
+      // WhatsApp is opened first (needs the click gesture); then wait for the email result
+      const sent = await sendPromise;
+
       // SECTION 2.G — proposal_request: fire when valid enquiry is submitted and user reaches success state
-      if (typeof window.trackEvent === 'function') {
+      if (sent && typeof window.trackEvent === 'function') {
         window.trackEvent('proposal_request', {
           package: pkg || 'Website',
           industry: type || 'General Business',
@@ -280,14 +277,18 @@
         });
       }
 
-      // 3. Immediately display success confirmation card
+      // 3. Show the real outcome: confirmed by the email service, or not
+      const outcome = sent
+        ? `<h3>Thank you, ${escapeHtml(name)}!</h3>
+          <p>Your enquiry has been received directly by Vardan Pal Studio (<strong>vardan2701@gmail.com</strong>). We will review your project requirements and get back to you within a few hours.</p>`
+        : `<h3>We couldn&rsquo;t send your enquiry by email</h3>
+          <p>Please send it on WhatsApp instead. Your details are already filled in, so one tap is enough. You can also write to <strong>vardan2701@gmail.com</strong>.</p>`;
       form.innerHTML = `
         <div class="enquire-success-card">
-          <div class="success-check-badge">✓</div>
-          <h3>Thank you, ${escapeHtml(name)}!</h3>
-          <p>Your enquiry has been received directly by Vardan Pal Studio (<strong>vardan2701@gmail.com</strong>). We will review your project requirements and get back to you within a few hours.</p>
+          <div class="success-check-badge">${sent ? '✓' : '!'}</div>
+          ${outcome}
           <div class="success-cta-box">
-            <span>Opening WhatsApp conversation with prefilled details...</span>
+            <span>${sent ? 'Opening WhatsApp conversation with prefilled details...' : 'WhatsApp opens with your details prefilled.'}</span>
             <a class="btn btn--accent" href="${waUrl}" target="_blank" rel="noopener" data-track="whatsapp_click" data-location="success_card">
               Continue to WhatsApp Now <span class="arr">&rarr;</span>
             </a>

@@ -1,6 +1,14 @@
+const ALLOWED_ORIGIN = /^https?:\/\/(localhost(:\d+)?|(www\.)?vardxn\.(com|me)|vardanpalstudio\.vercel\.app)$/;
+const clip = (v, n) => (typeof v === "string" ? v.slice(0, n) : v);
+
 export default async function handler(req, res) {
-  // CORS configuration
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  // CORS: only our own sites may call this from a browser
+  const origin = req.headers?.origin;
+  if (origin && !ALLOWED_ORIGIN.test(origin)) {
+    return res.status(403).json({ error: "Origin not allowed." });
+  }
+  res.setHeader("Access-Control-Allow-Origin", origin || "*");
+  res.setHeader("Vary", "Origin");
   res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type");
 
@@ -13,7 +21,13 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, city, type, goal, msg, package: pkg, attribution = {}, honeypot } = req.body || {};
+    const body = req.body || {};
+    const { honeypot } = body;
+    // Cap field sizes so one request cannot carry megabytes into the owner's inbox
+    const name = clip(body.name, 100), email = clip(body.email, 200), phone = clip(body.phone, 30);
+    const city = clip(body.city, 100), type = clip(body.type, 100), goal = clip(body.goal, 100);
+    const pkg = clip(body.package, 60), msg = clip(body.msg, 2000);
+    const attribution = body.attribution && typeof body.attribution === "object" ? body.attribution : {};
 
     // 1. Anti-Spam Honeypot Check
     if (honeypot && honeypot.trim().length > 0) {

@@ -72,7 +72,8 @@ for (const route of ROUTES) {
 
     page.on('console', msg => {
       // Capture error types, exclude harmless migrator log
-      if (msg.type() === 'error') {
+      // /_vercel/* (Analytics) only exists on Vercel, so it 404s on the local server
+      if (msg.type() === 'error' && !msg.location().url.includes('/_vercel/')) {
         consoleErrors.push(msg.text());
       }
     });
