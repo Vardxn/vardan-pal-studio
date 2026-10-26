@@ -12,10 +12,10 @@
     let current = entries.find(e => e.classList.contains('is-active')) || entries[0];
     let swapTimer = null;
 
-    entries.forEach(e => {
-      const pre = new Image();
-      pre.src = e.dataset.shot;
-    });
+    // the large preview is hidden below 1100px, so don't fetch it on phones
+    if (matchMedia('(min-width: 1100px)').matches) {
+      entries.forEach(e => { new Image().src = e.dataset.shot; });
+    }
 
     const select = entry => {
       if (!entry || entry === current) return;
@@ -49,6 +49,7 @@
     stamps.forEach(s => s.classList.add('pressed'));
     return;
   }
+  stamps.forEach(s => s.classList.add('armed'));
   const io = new IntersectionObserver(items => {
     items.forEach(item => {
       if (item.isIntersecting) {

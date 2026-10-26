@@ -89,8 +89,8 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
   box-shadow: inset 0 0 0 2px rgba(91, 58, 140, 0.18);
   mix-blend-mode: multiply;
 }
-.js .stamp[data-stamp] { opacity: 0; }
-.js .stamp[data-stamp].pressed { animation: press 0.42s var(--ease-out) both; }
+.stamp.armed:not(.pressed) { opacity: 0; }
+.stamp.pressed { animation: press 0.42s var(--ease-out) both; }
 @keyframes press {
   0% { opacity: 0; transform: rotate(var(--r, -5deg)) scale(1.6); }
   60% { opacity: 1; transform: rotate(var(--r, -5deg)) scale(0.96); }
@@ -229,7 +229,7 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
   display: inline-flex; align-items: center; gap: 6px;
 }
 .entry-go::after { content: ""; width: 18px; height: 2px; background: currentColor; transition: width 0.2s var(--ease-out); }
-.entries.has-active .entry { opacity: 0.55; }
+.entries.has-active .entry { opacity: 0.75; }
 .entries.has-active .entry.is-active { opacity: 1; background: rgba(232, 179, 28, 0.24); }
 .entry.is-active .entry-go::after { width: 30px; }
 .entry:focus-within { opacity: 1; }
@@ -331,7 +331,6 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
 .sheet--slip .sheet-head, .sheet--slip .cta-price-from { grid-column: 1 / -1; }
 .enquire-form { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
 .enquire-form .full { grid-column: 1 / -1; }
-.enquire-form .hp { display: none !important; }
 .enquire-form label { display: flex; flex-direction: column; gap: 4px; font: 400 1.05rem/1.35 var(--hand); color: var(--margin); padding-top: 0.9rem; }
 .enquire-form input:not([type="checkbox"]), .enquire-form select, .enquire-form textarea {
   font: 500 1.1rem/1.3 var(--set); color: var(--ink);
@@ -457,7 +456,6 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
-  .js .stamp[data-stamp] { opacity: 1; }
 }
 
 /* Paper ruling stays in margins and blank areas: text blocks sit on clean paper so no rule cuts through set type */
