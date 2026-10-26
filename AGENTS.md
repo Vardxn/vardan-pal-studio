@@ -33,7 +33,7 @@ Approved proof phrases: Mobile-first development · Direct founder communication
 
 ## Contact
 WhatsApp +91 82796 96707 (wa.me/918279696707) · vardan2701@gmail.com · portfolio https://vardxn.vercel.app
-Production: https://vardxn.com
+Production: https://vardxn.me
 
 ## Demos (Fictional Concept Projects, Never "Live Clients")
 demos/salon (Aura Salon & Spa), clinic (Care Dental & Skin Clinic), restaurant (CHICA — Luxury Dining & Hearth Lounge), real-estate (Prime Estates), interior (Studio Eleven), events (Studio Vows).

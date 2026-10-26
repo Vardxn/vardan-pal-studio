@@ -2,7 +2,7 @@ import { chromium } from "playwright";
 
 const BASE_URL = "http://localhost:8088";
 const EXPECTED_BRAND = "Vardan Pal Studio";
-const EXPECTED_PROD_URL = "https://vardxn.com";
+const EXPECTED_PROD_URL = "https://vardxn.me";
 
 const browser = await chromium.launch({
   executablePath: "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
@@ -117,5 +117,5 @@ if (totalViolations > 0) {
   console.error(`\n❌ REBRAND AUDIT FAILED with ${totalViolations} violations.`);
   process.exit(1);
 } else {
-  console.log("\n✅ REBRAND AUDIT PASSED: All pages reflect Vardan Pal Studio branding and vardxn.com with zero disallowed legacy text.");
+  console.log("\n✅ REBRAND AUDIT PASSED: All pages reflect Vardan Pal Studio branding and vardxn.me with zero disallowed legacy text.");
 }

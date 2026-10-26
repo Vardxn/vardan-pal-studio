@@ -74,7 +74,7 @@ async function runTests() {
   // 2c. Oversized text is capped before it is forwarded
   {
     const req = createValidReq({ msg: "x".repeat(50000) });
-    req.headers = { origin: "https://vardxn.com" };
+    req.headers = { origin: "https://vardxn.me" };
     let forwarded = "";
     const realFetch = globalThis.fetch;
     globalThis.fetch = async (url, opts) => { forwarded = opts.body; return { ok: true, text: async () => '{"success":"true"}' }; };

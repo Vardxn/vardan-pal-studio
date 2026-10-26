@@ -234,10 +234,10 @@ async function runTrackingTests() {
   await page.fill('input[name="name"]', testPiiName);
   await page.fill('input[name="email"]', testPiiEmail);
   await page.fill('input[name="phone"]', testPiiPhone);
-  await page.fill('input[name="city"]', testPiiCity);
+  // city field removed from the form
   await page.selectOption('select[name="type"]', "Clinic / Healthcare");
   await page.selectOption('select[name="package"]', "Business");
-  await page.selectOption('select[name="goal"]', "New Website");
+  // goal field removed from the form
   await page.fill('textarea[name="msg"]', testPiiMsg);
   await page.evaluate(() => {
     const cb = document.querySelector("#contactConsent");

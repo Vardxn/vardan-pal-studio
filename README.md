@@ -2,7 +2,7 @@
 
 > **Independent Quiet-Luxury Web Design & Development Studio · New Delhi, India**  
 > Serving clinics, salons, fine-dining restaurants, real estate, interior studios, and event creators across India.  
-> **Live Production URL:** [https://vardxn.com](https://vardxn.com)  
+> **Live Production URL:** [https://vardxn.me](https://vardxn.me)  
 > **Founder Portfolio:** [https://vardxn.vercel.app](https://vardxn.vercel.app)  
 > **WhatsApp Helpline:** [+91 82796 96707](https://wa.me/918279696707) | **Email:** `vardan2701@gmail.com`
 
@@ -41,4 +41,4 @@ node scripts/rebrand-audit.mjs                # 10-run rebrand audit (Pass: 10/1
 ```bash
 git push -u origin main
 ```
-*Pushing to `main` automatically triggers an instant build and deployment on Vercel at `https://vardxn.com`.*
+*Pushing to `main` automatically triggers an instant build and deployment on Vercel at `https://vardxn.me`.*
