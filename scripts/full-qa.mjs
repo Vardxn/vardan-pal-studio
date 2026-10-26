@@ -293,3 +293,4 @@ console.log(`Failed: ${fullReport.summary.failed}`);
 fs.writeFileSync('scripts/full-qa-results.json', JSON.stringify(fullReport, null, 2));
 console.log('Saved scripts/full-qa-results.json');
 await browser.close();
+process.exit(fullReport.summary.failed ? 1 : 0);

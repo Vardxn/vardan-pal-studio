@@ -31,3 +31,6 @@ QA-TRACKING-REPORT.md
 **/.impeccable/live/*.png
 .claude/settings.local.json
 # impeccable-ignore-end
+
+.claude/skills/
+.claude/agents/

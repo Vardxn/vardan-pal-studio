@@ -249,7 +249,8 @@
         const res = await fetch(url, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-          body: JSON.stringify(payload)
+          body: JSON.stringify(payload),
+          signal: AbortSignal.timeout(10000)
         });
         return res.ok;
       };
