@@ -328,7 +328,7 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
 
 /* Enquiry slip */
 .sheet--slip .sheet-inner { display: grid; grid-template-columns: 1fr minmax(240px, 300px); gap: 0 clamp(28px, 4vw, 64px); }
-.sheet--slip .sheet-head, .sheet--slip .cta-price-from { grid-column: 1 / -1; }
+.sheet--slip .runhead, .sheet--slip .sheet-head, .sheet--slip .cta-price-from { grid-column: 1 / -1; }
 .enquire-form { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; }
 .enquire-form .full { grid-column: 1 / -1; }
 .enquire-form label { display: flex; flex-direction: column; gap: 4px; font: 400 1.05rem/1.35 var(--hand); color: var(--margin); padding-top: 0.9rem; }
@@ -461,7 +461,7 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
 /* Paper ruling stays in margins and blank areas: text blocks sit on clean paper so no rule cuts through set type */
 .lede, .sheet-lede, .trades-note, .ledger-col > p:not(.col-label), .rate-head, .rate .ticks,
 .ticks, .steps li, .founder p:not(.signature), .founder-direct, .faq-item p, .concept-disclaimer,
-.hero-terms, .hand-line, .enquire-form, .slip-side, .cta-price-from, .footer-brand, .totals {
+.hero-terms, .hand-line, .enquire-form, .slip-side, .cta-price-from, .totals {
   background-color: var(--paper);
 }
 .steps, .faq, .ledger-rows, .rates, .entries, .hero-terms { background-color: var(--paper); }
