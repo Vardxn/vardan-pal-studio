@@ -137,7 +137,7 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
 }
 .page, .sheet-inner {
   background-color: var(--paper);
-  background-image: repeating-linear-gradient(to bottom, transparent 0 35px, rgba(58, 99, 184, 0.16) 35px 36px);
+  background-image: repeating-linear-gradient(to bottom, transparent 0 35px, rgba(58, 99, 184, 0.09) 35px 36px);
   background-position: 0 14px;
 }
 .page {
@@ -174,10 +174,12 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
 }
 
 /* right page: the entries */
+.trades-head { display: grid; grid-template-columns: 1fr 1.9fr; gap: 20px; align-items: start; }
+.trades-note { margin-top: 0.6rem; font: 400 1.05rem/1.35 var(--hand); color: var(--rule); }
 .page-title { font-weight: 800; font-size: clamp(1.5rem, 2.2vw, 2rem); letter-spacing: -0.01em; line-height: 1.1; }
 
 .paste {
-  position: relative; margin: 1rem 0 0.9rem auto; width: 64%;
+  position: relative; margin: 0.4rem 0 1.1rem;
   transform: rotate(1.2deg);
   box-shadow: 0 1px 2px rgba(23, 22, 26, 0.28);
   background: #fff; padding: 8px 8px 0;
@@ -257,8 +259,7 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
 .col-label { font: 700 1.05rem/1 var(--hand); color: var(--margin); margin-bottom: 0.5rem; }
 .ledger-col > p:not(.col-label) { color: var(--ink-soft); max-width: 36em; }
 .ledger-row-note { grid-column: 2; grid-row: 1; align-self: end; font: 400 1.05rem/1.35 var(--hand); color: var(--stamp); }
-.ticks li { position: relative; padding: 0.32rem 0 0.32rem 1.6rem; border-bottom: 1px dotted var(--rule-soft); }
-.ticks li:last-child { border-bottom: 0; }
+.ticks li { position: relative; padding: 0.32rem 0 0.32rem 1.6rem; }
 .ticks li::before {
   content: ""; position: absolute; left: 2px; top: 0.72em; width: 0.7rem; height: 0.38rem;
   border-left: 2px solid var(--rule); border-bottom: 2px solid var(--rule); transform: rotate(-45deg);
@@ -394,6 +395,8 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
   .page--left { border-right: 0; box-shadow: none; border-bottom: 3px solid var(--cloth-deep); }
   .page--right { box-shadow: none; }
   .paste { display: none; }
+  .trades-head { display: block; margin-bottom: 1rem; }
+  .trades-note { display: none; }
   .entry { grid-template-columns: 2.2rem 1fr 112px; min-height: 84px; }
   .entry-thumb { justify-self: center; }
   .entry:nth-child(1) { --tw: 96px; } .entry:nth-child(2) { --tw: 108px; } .entry:nth-child(3) { --tw: 88px; }
@@ -403,7 +406,7 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
   .rate { grid-template-columns: 1fr 1.2fr; }
   .rate-amt { grid-column: 1 / -1; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; text-align: left; }
   .rate-amt .btn { width: auto; }
-  .stamp--rate { top: -1.2rem; right: auto; left: 60%; }
+  .stamp--rate { position: static; order: -1; margin-right: auto; }
   .entry-go { display: none; }
 }
 @media (max-width: 900px) {
@@ -439,7 +442,8 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
   .rate { grid-template-columns: 1fr; }
   .rate .ticks { columns: 1; }
   .rate-amt .btn { width: 100%; }
-  .stamp--rate { left: auto; right: 0; top: -1.4rem; }
+  .stamp--rate { position: static; align-self: flex-start; margin: 0.2rem 0 0.4rem; }
+  .rate-amt { align-items: flex-start; }
   .ledger-row { grid-template-columns: 1fr; }
   .ledger-row-note { grid-column: 1; grid-row: auto; }
   .entry-name { font-size: 1.1rem; }
@@ -455,3 +459,11 @@ html { scrollbar-color: var(--cloth-dark) var(--on-cloth-soft); }
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
   .js .stamp[data-stamp] { opacity: 1; }
 }
+
+/* Paper ruling stays in margins and blank areas: text blocks sit on clean paper so no rule cuts through set type */
+.lede, .sheet-lede, .trades-note, .ledger-col > p:not(.col-label), .rate-head, .rate .ticks,
+.ticks, .steps li, .founder p:not(.signature), .founder-direct, .faq-item p, .concept-disclaimer,
+.hero-terms, .hand-line, .enquire-form, .slip-side, .cta-price-from, .footer-brand, .totals {
+  background-color: var(--paper);
+}
+.steps, .faq, .ledger-rows, .rates, .entries, .hero-terms { background-color: var(--paper); }
