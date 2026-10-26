@@ -23,7 +23,7 @@ All project specs, full history, pricing, Google Ads campaigns, and architecture
 - Run the QA scripts after changes and report results honestly.
 
 ## Design System
-Homepage (index.html, assets/css/bahi.css, assets/js/bahi.js): "bahi-khata" ledger. Red cloth #a3121c, ledger paper #eef1e4, ink #17161a, ledger blue #3a63b8, stamp violet #5b3a8c, cord yellow #e8b31c. Fonts: Anek Latin (set type), Kalam (ledger handwriting). Direction contract: .impeccable/surfaces/index-html.md; product context: PRODUCT.md.
+Homepage (index.html, assets/css/studio.css): calm luxury. Ivory #fcfbf9, stone #f5f3ee, charcoal #141519, champagne gold #b58d53 (text gold #7d5f2c). Fonts: Cormorant Garamond (display), Plus Jakarta Sans (text). Product context: PRODUCT.md.
 Other pages and the 6 demos still use assets/css/premium.css (ivory, stone, charcoal, champagne gold; Cormorant Garamond + Plus Jakarta Sans).
 
 ## Brand and Pricing (Approved)

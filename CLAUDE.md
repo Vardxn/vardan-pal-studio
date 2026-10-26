@@ -47,7 +47,7 @@ All demos use same-tab navigation, a shared 48px `.demo-context` bar with scroll
 - **Frontend:** Pure Static HTML5, Vanilla CSS3, Vanilla ES2022 JavaScript. **No React, Next.js, Vue, or Tailwind.**
 - **Backend:** Vercel Serverless Function at `api/contact.js` (Node.js ESM) with honeypot validation, 8s timeout guard, and upstream delivery verification.
 - **Design Systems:**
-  - **Homepage (`index.html`):** *Bahi-khata* ledger aesthetic (`assets/css/bahi.css`, `assets/js/bahi.js`) featuring red cloth `#a3121c`, ledger paper `#eef1e4`, blue ruling lines, violet stamps, and *Anek Latin* + *Kalam* fonts.
+  - **Homepage (`index.html`):** Calm luxury (`assets/css/studio.css`): ivory `#fcfbf9`, charcoal `#141519`, champagne gold `#b58d53`, *Cormorant Garamond* + *Plus Jakarta Sans*.
   - **Demos & Legal Pages (`demos/*`, `privacy.html`, `terms.html`):** Quiet luxury editorial aesthetic (`assets/css/premium.css`) with Ivory `#fcfbf9`, Charcoal `#141519`, Champagne Gold `#b58d53`, and *Cormorant Garamond* + *Plus Jakarta Sans*.
 - **Tracking (`assets/js/tracking.js`):** Privacy-first dataLayer events (`whatsapp_click`, `lead_submit`, `demo_open`, `pricing_cta`), 100% PII-free sanitization, UTM persistence, and GCLID tracking.
 
