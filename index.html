@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Website Designer in India | Vardan Pal Studio</title>
   <meta name="description" content="Vardan Pal Studio is an independent web design &amp; development studio in New Delhi building premium, mobile-first websites with WhatsApp booking for businesses across India.">
-  <meta name="theme-color" content="#F5F2EA">
+  <meta name="theme-color" content="#7d0d16">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23171614'/%3E%3Ctext x='32' y='41' font-family='Fraunces, Georgia, serif' font-size='26' font-weight='600' fill='%23F5F2EA' text-anchor='middle'%3EVP%3C/text%3E%3C/svg%3E">
   <link rel="canonical" href="https://vardanpalstudio.vercel.app/">
   
@@ -28,19 +28,15 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
 
-  <!-- Typography: Fraunces (Display Serif) & Manrope (UI Sans) with Non-Blocking Font Loading -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <!-- Typography: Anek Latin (set type) & Kalam (ledger hand), non-blocking -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap" media="print" onload="this.media='all'">
   <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;500;600;700;800&family=Kalam:wght@400;700&display=swap">
   </noscript>
-  
-  <!-- Lenis CSS & Script -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.css" media="print" onload="this.media='all'">
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js" defer></script>
 
-  <!-- Premium Design System Stylesheet -->
-  <link rel="stylesheet" href="assets/css/premium.css">
+  <!-- Bahi-khata design system (homepage) -->
+  <link rel="stylesheet" href="assets/css/bahi.css">
 
   <!-- JSON-LD ProfessionalService Schema & FAQPage Schema -->
   <script type="application/ld+json">
@@ -93,14 +89,13 @@
 </head>
 <body>
 
-  <!-- ==========================================================================
-       TOP STICKY NAVBAR
-       ========================================================================== -->
+  <a class="skip-link" href="#work">Skip to the six demo websites</a>
+
   <header class="nav" id="siteNav">
     <div class="wrap nav-inner">
       <a class="brand" href="#top">
         <span class="brand-mark" aria-hidden="true">
-          <img src="assets/logo.svg" alt="Vardan Pal Studio logo" class="brand-mark-img" width="36" height="36">
+          <img src="assets/logo.svg" alt="" class="brand-mark-img" width="40" height="40">
         </span>
         <span class="brand-text">
           <span class="brand-name">VARDAN PAL</span>
@@ -110,26 +105,21 @@
 
       <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
         <a href="#work">Demos</a>
-        <a href="#services">What You Get</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#process">How It Works</a>
+        <a href="#services">What you get</a>
+        <a href="#pricing">Prices</a>
+        <a href="#process">How it works</a>
         <a href="#about">About</a>
         <a href="#faq">FAQ</a>
         <div class="nav-mobile-actions">
-          <a class="btn btn--solid btn--block" href="#contact">Start a Project <span class="arr">&rarr;</span></a>
-          <a class="btn btn--block" href="https://wa.me/918279696707?text=Hi%2C%20I%27d%20like%20a%20website%20for%20my%20business" target="_blank" rel="noopener" data-track="whatsapp_click" data-location="header">WhatsApp Us</a>
+          <a class="btn btn--paper btn--block" href="#contact">Send an enquiry</a>
+          <a class="btn btn--ink btn--block" href="https://wa.me/918279696707?text=Hi%2C%20I%27d%20like%20a%20website%20for%20my%20business" target="_blank" rel="noopener" data-track="whatsapp_click" data-location="header">WhatsApp Vardan</a>
         </div>
       </nav>
 
       <div class="nav-actions">
         <a class="nav-wa" href="https://wa.me/918279696707?text=Hi%2C%20I%27d%20like%20a%20website%20for%20my%20business" target="_blank" rel="noopener" data-track="whatsapp_click" data-location="header">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z"/>
-          </svg>
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
           WhatsApp
-        </a>
-        <a class="btn btn--solid btn--sm" href="#contact">
-          Start a Project <span class="arr">&rarr;</span>
         </a>
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span>
@@ -139,1114 +129,501 @@
   </header>
 
   <main>
-    <!-- ==========================================================================
-         01 — HERO (CINEMATIC VISUAL COMPOSITION)
-         ========================================================================== -->
-    <section class="hero" id="top">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <div class="hero-badge-wrap reveal">
-            <span class="hero-pulse" aria-hidden="true"></span>
-            <span class="hero-badge-text">Independent Web Design &amp; Development Studio &bull; New Delhi &mdash; Serving Pan-India</span>
-          </div>
+    <!-- The open book: promise on the left, the six trades on the right -->
+    <section class="book-wrap" id="top" aria-label="Vardan Pal Studio">
+      <div class="book">
+        <div class="book-cord" aria-hidden="true"></div>
 
-          <h1 class="reveal">Websites that mean business.</h1>
-
-          <p class="lede reveal">
-            Premium websites and digital systems for ambitious businesses across India.
-          </p>
-
-          <div class="hero-cta reveal">
-            <a class="btn btn--solid" href="#work">Explore Our Work</a>
-            <a class="btn btn--ghost" href="#contact">
-              Start Your Website <span class="arr">&rarr;</span>
-            </a>
-          </div>
-
-          <div class="hero-line reveal" aria-label="Capabilities">
-            <span>Designed</span>
-            <span>Built</span>
-            <span>Launched</span>
-            <span>Managed</span>
-          </div>
-
-          <div class="hero-chips-row reveal" aria-label="Studio highlights">
-            <span class="hero-chip"><b>5–14 day</b> typical delivery</span>
-            <span class="hero-chip"><b>From ₹9,900</b></span>
-            <span class="hero-chip"><b>Direct founder</b> communication</span>
-            <span class="hero-chip"><b>WhatsApp</b> enquiry integration</span>
-          </div>
-        </div>
-
-        <div class="hero-stage-wrap reveal" id="heroStage" aria-label="Featured website demonstrations">
-          <div class="hero-ambient-glow" aria-hidden="true"></div>
-          <div class="hero-card-stack">
-            <!-- Back Tertiary Shot (Studio Eleven) -->
-            <div class="hero-shot-card hero-shot-tertiary">
-              <div class="hero-shot-chrome">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="url-pill">studioeleven.in</span>
-              </div>
-              <img src="assets/shots/interior.webp" alt="Studio Eleven interior architecture concept preview" width="1280" height="800" decoding="async" loading="lazy">
-            </div>
-
-            <!-- Top Primary Shot (CHICA — One Golden Mile) -->
-            <div class="hero-shot-card hero-shot-primary">
-              <div class="hero-shot-chrome">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="url-pill">chicadelhi.com</span>
-              </div>
-              <img src="assets/shots/restaurant.webp" alt="CHICA luxury dining concept preview" width="1280" height="800" decoding="async" loading="eager">
-            </div>
-
-            <!-- Bottom Overlapping Shot (Care Dental &amp; Skin Clinic) -->
-            <div class="hero-shot-card hero-shot-secondary">
-              <div class="hero-shot-chrome">
-                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-                <span class="url-pill">caredental.in</span>
-              </div>
-              <img src="assets/shots/clinic.webp" alt="Care Dental &amp; Skin Clinic concept preview" width="1280" height="800" decoding="async" loading="lazy">
-            </div>
-
-            <!-- Floating Studio Indicator Pill -->
-            <div class="hero-shot-floating-pill">
-              <span class="pulse-gold" aria-hidden="true"></span>
-              <span>Live Interactive Portfolio</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- ==========================================================================
-         02 — SELECTED PORTFOLIO (EDITORIAL GALLERY)
-         ========================================================================== -->
-    <section class="section" id="work">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">Interactive Demo Websites &middot; Live Portfolio</p>
-          <h2>Websites designed for your exact business.</h2>
+        <div class="page page--left">
+          <div class="runhead"><span>Shubh Labh &middot; New Delhi</span><span>page 1</span></div>
+          <h1>Open a working website for <em>your</em> business. Then decide.</h1>
           <p class="lede">
-            Explore live, fully-functional websites built for clinics, restaurants, salons, real estate, interior studios, and photography. Every demo includes working booking flows, digital menus, rate cards, and direct WhatsApp integration.
+            Six concept websites, one for each trade. Open the one closest to yours, use it the way your customer would, and message me when it feels right.
           </p>
-        </div>
-
-        <div class="portfolio-gallery" id="workGrid">
-          <!-- 01: Wide Hero Case (Chica Restaurant — Luxury Dining & Hearth Lounge) -->
-          <article class="case-card work-card case-card--wide reveal" style="--d: 0ms">
-            <div class="case-visual">
-              <div class="case-chrome">
-                <span class="case-dots"><i></i><i></i><i></i></span>
-                <span class="case-url">chica.restaurant</span>
-              </div>
-              <img src="assets/shots/restaurant.webp" alt="Chica Restaurant — concept website preview" width="1280" height="800" decoding="async" loading="eager">
-            </div>
-            <div class="case-content">
-              <div>
-                <span class="case-num">PROJECT 01 &middot; 06</span>
-                <div class="case-header-row">
-                  <span class="case-badge">Hospitality &middot; Restaurant Demo</span>
-                  <span class="case-live-pill">&bull; Live Demo</span>
-                </div>
-                <h3 class="case-title">Chica — Luxury Dining &amp; Hearth Lounge</h3>
-                <span class="case-motive">Built for Fine Dining, Luxury Lounges &amp; Bars</span>
-                <p class="case-desc">
-                  Signature Mediterranean wood-fired hearth and Japanese robata culinary concept at One Golden Mile, Diplomatic Enclave. Features interactive multi-step table reservations, ambient day-to-night transitions, digital sommelier cellar, and private event bookings.
-                </p>
-              </div>
-              <div>
-                <div class="case-pill-features">
-                  <span>Interactive Table Booking</span>
-                  <span>Digital Sommelier &amp; Menus</span>
-                  <span>Curated Architectural Spaces</span>
-                  <span>Live Robata &amp; Hearth Story</span>
-                </div>
-                <div class="case-card-actions">
-                  <a class="btn btn--accent case-action-cta" id="demo-cta-restaurant" href="/demos/restaurant/" data-track="demo_open" data-demo="restaurant">
-                    View Demo Website <span class="arr" aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-                <p class="concept-disclaimer">Concept demo &mdash; a design direction, not an affiliated client project.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- Duo Grid: Clinic & Salon -->
-          <div class="case-duo-grid">
-            <!-- 02: Care Dental &amp; Skin Clinic — Dental & Skin Clinic -->
-            <article class="case-card work-card case-card--duo reveal" style="--d: 100ms">
-              <div class="case-visual">
-                <div class="case-chrome">
-                  <span class="case-dots"><i></i><i></i><i></i></span>
-                  <span class="case-url">caredental.in</span>
-                </div>
-                <img src="assets/shots/clinic.webp" alt="Care Dental &amp; Skin Clinic — concept website preview" width="1280" height="800" decoding="async" loading="eager">
-              </div>
-              <div class="case-content">
-                <span class="case-num">PROJECT 02 &middot; 06</span>
-                <div class="case-header-row">
-                  <span class="case-badge">Healthcare &middot; Clinic Demo</span>
-                  <span class="case-live-pill">&bull; Live Demo</span>
-                </div>
-                <h3 class="case-title">Care Dental &amp; Skin Clinic</h3>
-                <span class="case-motive">Built for Clinics, Doctors &amp; Dentists</span>
-                <p class="case-desc">
-                  Dental &amp; skin aesthetics practice website. Features verified doctor credentials, clear treatment pricing guides, instant online consultation booking, and WhatsApp patient helpline.
-                </p>
-                <div class="case-pill-features">
-                  <span>Online Appointment Booking</span>
-                  <span>Doctor Qualifications &amp; Team</span>
-                  <span>Treatment Pricing Guides</span>
-                  <span>WhatsApp Patient Helpline</span>
-                </div>
-                <div class="case-card-actions">
-                  <a class="btn btn--accent case-action-cta" id="demo-cta-clinic" href="/demos/clinic/" data-track="demo_open" data-demo="clinic">
-                    View Demo Website <span class="arr" aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-                <p class="concept-disclaimer">Concept demo &mdash; a design direction, not an affiliated client project.</p>
-              </div>
-            </article>
-
-            <!-- 03: Aura Salon — Hair, Beauty & Spa -->
-            <article class="case-card work-card case-card--duo reveal" style="--d: 200ms">
-              <div class="case-visual">
-                <div class="case-chrome">
-                  <span class="case-dots"><i></i><i></i><i></i></span>
-                  <span class="case-url">aurasalon.in</span>
-                </div>
-                <img src="assets/shots/salon.webp" alt="Aura Salon &amp; Spa — concept website preview" width="1280" height="800" decoding="async" loading="lazy">
-              </div>
-              <div class="case-content">
-                <span class="case-num">PROJECT 03 &middot; 06</span>
-                <div class="case-header-row">
-                  <span class="case-badge">Beauty &amp; Grooming &middot; Salon Demo</span>
-                  <span class="case-live-pill">&bull; Live Demo</span>
-                </div>
-                <h3 class="case-title">Aura Salon &amp; Spa</h3>
-                <span class="case-motive">Built for Hair Salons, Spas &amp; Beauty Parlours</span>
-                <p class="case-desc">
-                  Hair salon &amp; aesthetic wellness spa website. Showcases master stylist portfolios, transparent service rate cards, haircut lookbooks, and direct VIP WhatsApp bookings.
-                </p>
-                <div class="case-pill-features">
-                  <span>Stylist Portfolios &amp; Lookbook</span>
-                  <span>Transparent Service Rate Card</span>
-                  <span>Direct VIP WhatsApp Booking</span>
-                  <span>Bridal &amp; Grooming Packages</span>
-                </div>
-                <div class="case-card-actions">
-                  <a class="btn btn--accent case-action-cta" id="demo-cta-salon" href="/demos/salon/" data-track="demo_open" data-demo="salon">
-                    View Demo Website <span class="arr" aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-                <p class="concept-disclaimer">Concept demo &mdash; a design direction, not an affiliated client project.</p>
-              </div>
-            </article>
+          <div class="hero-actions">
+            <a class="btn btn--ink" href="https://wa.me/918279696707?text=Hi%20Vardan%2C%20I%20saw%20your%20demo%20websites%20and%20would%20like%20one%20for%20my%20business" target="_blank" rel="noopener" data-track="whatsapp_click" data-location="hero">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+              WhatsApp Vardan
+            </a>
+            <a class="link-hand" href="#contact">or send a written enquiry</a>
           </div>
-
-          <!-- Duo Grid: Real Estate & Interior -->
-          <div class="case-duo-grid">
-            <!-- 04: Prime Estates — Luxury Properties -->
-            <article class="case-card work-card case-card--duo reveal" style="--d: 100ms">
-              <div class="case-visual">
-                <div class="case-chrome">
-                  <span class="case-dots"><i></i><i></i><i></i></span>
-                  <span class="case-url">primeestates.in</span>
-                </div>
-                <img src="assets/shots/real-estate.webp" alt="Prime Estates — concept website preview" width="1280" height="800" decoding="async" loading="lazy">
-              </div>
-              <div class="case-content">
-                <span class="case-num">PROJECT 04 &middot; 06</span>
-                <div class="case-header-row">
-                  <span class="case-badge">Property &middot; Real Estate Demo</span>
-                  <span class="case-live-pill">&bull; Live Demo</span>
-                </div>
-                <h3 class="case-title">Prime Estates — Luxury Properties</h3>
-                <span class="case-motive">Built for Real Estate Brokers, Builders &amp; Agents</span>
-                <p class="case-desc">
-                  High-end real estate website showcasing luxury residences, park-facing penthouses, neighborhood guides, and discreet private viewing scheduling.
-                </p>
-                <div class="case-pill-features">
-                  <span>Property Listing Gallery</span>
-                  <span>Private Viewing Appointments</span>
-                  <span>Neighborhood Area Guides</span>
-                  <span>Discreet Client Intake</span>
-                </div>
-                <div class="case-card-actions">
-                  <a class="btn btn--accent case-action-cta" id="demo-cta-real-estate" href="/demos/real-estate/" data-track="demo_open" data-demo="real-estate">
-                    View Demo Website <span class="arr" aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-                <p class="concept-disclaimer">Concept demo &mdash; a design direction, not an affiliated client project.</p>
-              </div>
-            </article>
-
-            <!-- 05: Studio Eleven — Interior Design & Architecture -->
-            <article class="case-card work-card case-card--duo reveal" style="--d: 200ms">
-              <div class="case-visual">
-                <div class="case-chrome">
-                  <span class="case-dots"><i></i><i></i><i></i></span>
-                  <span class="case-url">studioeleven.in</span>
-                </div>
-                <img src="assets/shots/interior.webp" alt="Studio Eleven — concept website preview" width="1280" height="800" decoding="async" loading="lazy">
-              </div>
-              <div class="case-content">
-                <span class="case-num">PROJECT 05 &middot; 06</span>
-                <div class="case-header-row">
-                  <span class="case-badge">Architecture &middot; Interior Studio Demo</span>
-                  <span class="case-live-pill">&bull; Live Demo</span>
-                </div>
-                <h3 class="case-title">Studio Eleven — Interior Design Studio</h3>
-                <span class="case-motive">Built for Interior Designers, Architects &amp; Decorators</span>
-                <p class="case-desc">
-                  Architecture &amp; interior design studio website featuring completed project photo galleries, material palette studies, design process guides, and client consultation booking.
-                </p>
-                <div class="case-pill-features">
-                  <span>Project Showcase Gallery</span>
-                  <span>Material Palette Studies</span>
-                  <span>Design Process Roadmap</span>
-                  <span>Client Project Consultation</span>
-                </div>
-                <div class="case-card-actions">
-                  <a class="btn btn--accent case-action-cta" id="demo-cta-interior" href="/demos/interior/" data-track="demo_open" data-demo="interior">
-                    View Demo Website <span class="arr" aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-                <p class="concept-disclaimer">Concept demo &mdash; a design direction, not an affiliated client project.</p>
-              </div>
-            </article>
+          <div class="hero-stamps">
+            <span class="stamp" data-stamp>From ₹9,900</span>
+            <span class="stamp stamp--tilt" data-stamp>Live in 5&ndash;14 days</span>
           </div>
-
-          <!-- 06: Wide Cinematic Case (Studio Vows — Wedding Photography & Films) -->
-          <article class="case-card work-card case-card--wide case-card--wide-reversed reveal" style="--d: 0ms">
-            <div class="case-visual">
-              <div class="case-chrome">
-                <span class="case-dots"><i></i><i></i><i></i></span>
-                <span class="case-url">studiovows.in</span>
-              </div>
-              <img src="assets/shots/events.webp" alt="Studio Vows — concept website preview" width="1280" height="800" decoding="async" loading="lazy">
-            </div>
-            <div class="case-content">
-              <div>
-                <span class="case-num">PROJECT 06 &middot; 06</span>
-                <div class="case-header-row">
-                  <span class="case-badge">Creative Media &middot; Photography Demo</span>
-                  <span class="case-live-pill">&bull; Live Demo</span>
-                </div>
-                <h3 class="case-title">Studio Vows — Wedding Photography &amp; Films</h3>
-                <span class="case-motive">Built for Wedding Photographers, Videographers &amp; Studios</span>
-                <p class="case-desc">
-                  Wedding cinema &amp; fine-art event photography website with cinematic video teasers, full wedding photo albums, transparent package pricing, and date availability checking.
-                </p>
-              </div>
-              <div>
-                <div class="case-pill-features">
-                  <span>Cinematic Video Trailers</span>
-                  <span>Full Wedding Photo Albums</span>
-                  <span>Transparent Package Pricing</span>
-                  <span>Date Availability Checker</span>
-                </div>
-                <div class="case-card-actions">
-                  <a class="btn btn--accent case-action-cta" id="demo-cta-events" href="/demos/events/" data-track="demo_open" data-demo="events">
-                    View Demo Website <span class="arr" aria-hidden="true">&rarr;</span>
-                  </a>
-                </div>
-                <p class="concept-disclaimer">Concept demo &mdash; a design direction, not an affiliated client project.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         03 — INTERACTIVE CATEGORY SHOWCASE (DARK SIGNATURE SECTION)
-         ========================================================================== -->
-    <section class="section section-dark showcase-section" id="showcase">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">One Studio &middot; Any Business</p>
-          <h2>One studio. Any business.</h2>
-          <p class="lede">
-            Your business doesn't need a template. It needs a digital experience that fits it. Select an industry to see how the experience adapts:
-          </p>
+          <ul class="hero-terms">
+            <li>You talk to the founder who writes the code.</li>
+            <li>Price and scope written down before work starts.</li>
+            <li>Your customers enquire in one tap on WhatsApp.</li>
+          </ul>
         </div>
 
-        <!-- Category Tabs -->
-        <div class="category-tabs-bar tabs" role="tablist" aria-label="Industries">
-          <button type="button" class="cat-pill tab active" role="tab" aria-selected="true" tabindex="0">Clinic / Healthcare</button>
-          <button type="button" class="cat-pill tab" role="tab" aria-selected="false" tabindex="-1">Restaurant / Hospitality</button>
-          <button type="button" class="cat-pill tab" role="tab" aria-selected="false" tabindex="-1">Salon &amp; Spa</button>
-          <button type="button" class="cat-pill tab" role="tab" aria-selected="false" tabindex="-1">Luxury Real Estate</button>
-          <button type="button" class="cat-pill tab" role="tab" aria-selected="false" tabindex="-1">Interior &amp; Architecture</button>
-          <button type="button" class="cat-pill tab" role="tab" aria-selected="false" tabindex="-1">Wedding Photography</button>
-        </div>
+        <div class="page page--right" id="work">
+          <div class="runhead"><span>Vardan Pal Studio</span><span>page 2</span></div>
+          <h2 class="page-title">The six trades</h2>
 
-        <!-- Showcase Stage Grid -->
-        <div class="showcase-stage-grid showcase-grid">
-          <div class="showcase-info-pane showcase-copy" id="showcaseCopy" aria-live="polite">
-            <div style="display:flex; align-items:center; gap:8px; margin-bottom:12px; flex-wrap:wrap;">
-              <span class="showcase-client-badge">Clinic / Healthcare</span>
-              <span class="case-motive" style="margin-bottom:0; font-size:11px; padding:3px 9px;">Built for Dental, Dermatology &amp; Wellness Practices</span>
-              <span class="case-live-pill" style="font-size:10px; padding:3px 8px;">&bull; Working Demo</span>
-            </div>
-            <h3 class="showcase-project-name">Care Dental &amp; Skin Clinic</h3>
-            <p class="showcase-tagline">Clinical precision meets calm luxury. Clear treatment pathways, doctor credentials, and 1-tap WhatsApp consultation scheduling.</p>
-            <div class="showcase-features-list">
-              <div class="showcase-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Online Consultation Scheduler</span>
-              </div>
-              <div class="showcase-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Specialist Doctor Credentials &amp; Profiles</span>
-              </div>
-              <div class="showcase-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Clear Aligner &amp; Implant Pricing Guides</span>
-              </div>
-              <div class="showcase-feature-item">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Emergency WhatsApp Triage</span>
-              </div>
-            </div>
-            <div class="showcase-cta-row">
-              <a class="btn btn--accent" id="showcaseCta" href="/demos/clinic/" data-track="demo_open" data-demo="clinic">
-                View Demo Website <span class="arr">&rarr;</span>
+          <figure class="paste" aria-hidden="true">
+            <img id="pastePreview" src="assets/shots/salon.webp" alt="" width="1920" height="1200" decoding="async" fetchpriority="high">
+            <figcaption id="pasteCaption">aurasalon.in &middot; concept</figcaption>
+          </figure>
+
+          <ol class="entries" id="workGrid">
+            <li class="entry work-card is-active" data-shot="assets/shots/salon.webp" data-domain="aurasalon.in">
+              <span class="entry-n">01</span>
+              <a class="entry-link case-action-cta" id="demo-cta-salon" href="/demos/salon/" data-track="demo_open" data-demo="salon">
+                <span class="entry-name">Salon &amp; Spa</span>
+                <span class="entry-sub">Aura &middot; rate card, lookbook, WhatsApp booking</span>
               </a>
-              <span style="font-size: 13px; color: var(--dark-muted);">Direct working website</span>
-            </div>
-          </div>
-
-          <div class="showcase-stage" id="showcaseStage">
-            <div class="showcase-screen-wrap mock" id="showcaseMock">
-              <div class="screen-browser-bar mock-bar">
-                <span class="screen-dots mock-dots"><i></i><i></i><i></i></span>
-                <span class="screen-url-badge mock-url" id="showcaseUrl">caredental.in</span>
-              </div>
-              <a class="showcase-img-link" id="showcaseLink" href="/demos/clinic/" data-track="demo_open" data-demo="clinic" aria-label="View demo website">
-                <img id="showcaseImg" src="assets/shots/clinic.webp" alt="Care Dental &amp; Skin Clinic Website Preview" width="1280" height="800" loading="lazy">
-                <div class="showcase-img-overlay">
-                  <span class="btn btn--accent">View Demo Website &rarr;</span>
-                </div>
+              <img class="entry-thumb" src="assets/shots/thumbs/salon.webp" alt="" width="360" height="225" loading="lazy" decoding="async">
+              <span class="entry-go" aria-hidden="true">Open</span>
+            </li>
+            <li class="entry work-card" data-shot="assets/shots/clinic.webp" data-domain="caredental.in">
+              <span class="entry-n">02</span>
+              <a class="entry-link case-action-cta" id="demo-cta-clinic" href="/demos/clinic/" data-track="demo_open" data-demo="clinic">
+                <span class="entry-name">Dental &amp; Skin Clinic</span>
+                <span class="entry-sub">Care &middot; doctors, treatment prices, consult requests</span>
               </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Merged Studio Philosophy Closing Line -->
-        <div class="showcase-closing-quote reveal">
-          <p class="showcase-quote-text">&ldquo;Your website is often the first conversation. We design that conversation to feel considered, clear and unmistakably yours.&rdquo;</p>
-          <span class="showcase-quote-author">Vardan Pal Studio &bull; New Delhi &bull; Serving Businesses Nationwide</span>
+              <img class="entry-thumb" src="assets/shots/thumbs/clinic.webp" alt="" width="360" height="225" loading="lazy" decoding="async">
+              <span class="entry-go" aria-hidden="true">Open</span>
+            </li>
+            <li class="entry work-card" data-shot="assets/shots/restaurant.webp" data-domain="chicadelhi.com">
+              <span class="entry-n">03</span>
+              <a class="entry-link case-action-cta" id="demo-cta-restaurant" href="/demos/restaurant/" data-track="demo_open" data-demo="restaurant">
+                <span class="entry-name">Fine Dining</span>
+                <span class="entry-sub">CHICA &middot; menu, wine cellar, table reservations</span>
+              </a>
+              <img class="entry-thumb" src="assets/shots/thumbs/restaurant.webp" alt="" width="360" height="225" loading="lazy" decoding="async">
+              <span class="entry-go" aria-hidden="true">Open</span>
+            </li>
+            <li class="entry work-card" data-shot="assets/shots/real-estate.webp" data-domain="primeestates.in">
+              <span class="entry-n">04</span>
+              <a class="entry-link case-action-cta" id="demo-cta-real-estate" href="/demos/real-estate/" data-track="demo_open" data-demo="real-estate">
+                <span class="entry-name">Real Estate</span>
+                <span class="entry-sub">Prime Estates &middot; listings, private viewings</span>
+              </a>
+              <img class="entry-thumb" src="assets/shots/thumbs/real-estate.webp" alt="" width="360" height="225" loading="lazy" decoding="async">
+              <span class="entry-go" aria-hidden="true">Open</span>
+            </li>
+            <li class="entry work-card" data-shot="assets/shots/interior.webp" data-domain="studioeleven.in">
+              <span class="entry-n">05</span>
+              <a class="entry-link case-action-cta" id="demo-cta-interior" href="/demos/interior/" data-track="demo_open" data-demo="interior">
+                <span class="entry-name">Interior Studio</span>
+                <span class="entry-sub">Studio Eleven &middot; projects, materials, consultations</span>
+              </a>
+              <img class="entry-thumb" src="assets/shots/thumbs/interior.webp" alt="" width="360" height="225" loading="lazy" decoding="async">
+              <span class="entry-go" aria-hidden="true">Open</span>
+            </li>
+            <li class="entry work-card" data-shot="assets/shots/events.webp" data-domain="studiovows.in">
+              <span class="entry-n">06</span>
+              <a class="entry-link case-action-cta" id="demo-cta-events" href="/demos/events/" data-track="demo_open" data-demo="events">
+                <span class="entry-name">Wedding Films</span>
+                <span class="entry-sub">Studio Vows &middot; films, packages, date checks</span>
+              </a>
+              <img class="entry-thumb" src="assets/shots/thumbs/events.webp" alt="" width="360" height="225" loading="lazy" decoding="async">
+              <span class="entry-go" aria-hidden="true">Open</span>
+            </li>
+          </ol>
+          <a class="totals" href="#pricing">Launch ₹9,900 &middot; Business ₹19,900 &middot; Signature ₹34,900 <span>see the rate page</span></a>
+          <p class="concept-disclaimer">All six are concept websites made to show what your site could do, not client projects.</p>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         04 — WHAT YOU GET (DELIVERABLES & MEASURABLE OUTCOMES)
-         ========================================================================== -->
-    <section class="section" id="services">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">Service Tracks &middot; Tailored Architecture</p>
-          <h2>What can we build for you?</h2>
-          <p class="lede">Purpose-built digital foundations engineered around how your business actually operates and attracts clients.</p>
+    <!-- What goes into a website -->
+    <section class="sheet" id="services">
+      <div class="sheet-inner">
+        <div class="runhead"><span>What you get</span><span>page 3</span></div>
+        <div class="sheet-head">
+          <h2>What goes into the book.</h2>
+          <p class="sheet-lede">Three kinds of work, each written down with what it suits and what you get.</p>
         </div>
 
-        <div class="services-category-grid" data-stagger>
-          <!-- Category A: Business Websites -->
-          <article class="service-category-card">
-            <div class="service-category-header">
-              <span class="service-category-tag">Track 01 &middot; Flagship Websites</span>
-              <h3>Business Websites</h3>
-              <p class="service-category-desc">Credible, high-converting digital storefronts crafted with quiet-luxury aesthetics and fast performance.</p>
+        <div class="ledger-rows">
+          <article class="ledger-row">
+            <h3 class="ledger-row-title">Business websites</h3>
+            <div class="ledger-col">
+              <p class="col-label">Suits</p>
+              <p>Salons, clinics, restaurants, consultants, real estate, interior designers, creative studios and local services.</p>
             </div>
-            <div class="service-category-body">
-              <div class="service-category-block">
-                <span class="service-block-label">Best suited to:</span>
-                <p>Salons, clinics, restaurants, consultants, local service businesses, real estate professionals, interior designers, and creative studios.</p>
-              </div>
-              <div class="service-category-block">
-                <span class="service-block-label">What is included:</span>
-                <ul class="service-feature-bullets">
-                  <li>Premium responsive interface &amp; mobile-first layout</li>
-                  <li>Clear service menus &amp; transparent rate card presentation</li>
-                  <li>Direct WhatsApp &amp; click-to-call enquiry paths</li>
-                  <li>Technical SEO setup &amp; Google Search Console indexing</li>
-                  <li>Cloud deployment, custom domain &amp; SSL setup</li>
-                </ul>
-              </div>
-              <div class="service-category-footer">
-                <span class="service-recommended-tag">Recommended Packages:</span>
-                <span class="service-packages-list">Launch &bull; Business &bull; Signature</span>
-              </div>
+            <div class="ledger-col">
+              <p class="col-label">You get</p>
+              <ul class="ticks">
+                <li>Mobile-first design built for your business</li>
+                <li>Service menus and rate cards that are easy to read</li>
+                <li>WhatsApp and click-to-call buttons</li>
+                <li>Technical SEO and Google Search Console setup</li>
+                <li>Hosting, domain and SSL set up for you</li>
+              </ul>
             </div>
+            <p class="ledger-row-note">Launch &middot; Business &middot; Signature</p>
           </article>
 
-          <!-- Category B: Booking and Enquiry Experiences -->
-          <article class="service-category-card">
-            <div class="service-category-header">
-              <span class="service-category-tag">Track 02 &middot; Conversion Paths</span>
-              <h3>Booking &amp; Enquiry Experiences</h3>
-              <p class="service-category-desc">Frictionless customer journeys designed to collect qualified appointment and table booking requests.</p>
+          <article class="ledger-row">
+            <h3 class="ledger-row-title">Booking &amp; enquiry flows</h3>
+            <div class="ledger-col">
+              <p class="col-label">Suits</p>
+              <p>Clinics, salons, restaurants, wedding creators, consultants and anyone who works by appointment.</p>
             </div>
-            <div class="service-category-body">
-              <div class="service-category-block">
-                <span class="service-block-label">Best suited to:</span>
-                <p>Clinics, salons, restaurants, wedding creators, consultants, and appointment-based practitioners.</p>
-              </div>
-              <div class="service-category-block">
-                <span class="service-block-label">What is included:</span>
-                <ul class="service-feature-bullets">
-                  <li>Structured enquiry forms &amp; appointment request flows</li>
-                  <li>Date, time window &amp; service selection controls</li>
-                  <li>Pre-filled WhatsApp message handoff with customer intent</li>
-                  <li>Client-side input validation preventing spam submissions</li>
-                  <li>Instant confirmation states &amp; feedback toast dialogs</li>
-                </ul>
-              </div>
-              <div class="service-category-footer">
-                <span class="service-recommended-tag">Important wording note:</span>
-                <span class="service-packages-list">Enquiry &amp; appointment request flows via WhatsApp</span>
-              </div>
+            <div class="ledger-col">
+              <p class="col-label">You get</p>
+              <ul class="ticks">
+                <li>Enquiry forms and appointment request flows</li>
+                <li>Date, time and service choices</li>
+                <li>A pre-filled WhatsApp message with what the customer wants</li>
+                <li>Checks on every field to keep out spam</li>
+                <li>Clear confirmation once a request is sent</li>
+              </ul>
             </div>
+            <p class="ledger-row-note">Requests arrive on WhatsApp; real-time calendars are Custom Systems</p>
           </article>
 
-          <!-- Category C: Custom Digital Systems -->
-          <article class="service-category-card service-category-card--highlight">
-            <div class="service-category-header">
-              <span class="service-category-tag">Track 03 &middot; Bespoke Systems</span>
-              <h3>Custom Digital Systems</h3>
-              <p class="service-category-desc">Tailored operational tools and backend workflows designed to automate manual tasks and lead management.</p>
+          <article class="ledger-row" id="beyond">
+            <h3 class="ledger-row-title">Custom systems</h3>
+            <div class="ledger-col">
+              <p class="col-label">Suits</p>
+              <p>Businesses with repeated manual work, teams that need a customer portal, and practices that screen leads before calling back.</p>
             </div>
-            <div class="service-category-body">
-              <div class="service-category-block">
-                <span class="service-block-label">Best suited to:</span>
-                <p>Businesses with repeated manual workflows, teams needing customer portals, and practices needing multi-step lead qualification.</p>
-              </div>
-              <div class="service-category-block">
-                <span class="service-block-label">What can be built:</span>
-                <ul class="service-feature-bullets">
-                  <li>Client portals &amp; booking management dashboards</li>
-                  <li>Interactive lead-qualification &amp; intake flows</li>
-                  <li>WhatsApp CRM workflows &amp; automated reminders</li>
-                  <li>Third-party webhook &amp; API integrations</li>
-                  <li>Handover documentation &amp; workflow mapping</li>
-                </ul>
-              </div>
-              <div class="service-category-footer">
-                <span class="service-recommended-tag">Pricing:</span>
-                <span class="service-packages-list">Quoted after discovery</span>
-              </div>
+            <div class="ledger-col">
+              <p class="col-label">Can include</p>
+              <ul class="ticks">
+                <li>Client portals and booking dashboards</li>
+                <li>Lead-qualification and intake flows</li>
+                <li>WhatsApp CRM, payment and appointment reminders</li>
+                <li>Webhook, CRM and API integrations</li>
+                <li>Handover documentation and staff training</li>
+              </ul>
             </div>
+            <p class="ledger-row-note">Quoted after a discovery call</p>
           </article>
         </div>
 
-        <!-- 5 Approved Proof Chips -->
-        <div class="proof-chips-wrap reveal" aria-label="Studio proof points" style="margin-top: 40px;">
-          <span class="proof-chip">Mobile-first development</span>
-          <span class="proof-chip">Direct founder communication</span>
-          <span class="proof-chip">WhatsApp enquiry integration</span>
-          <span class="proof-chip">Core Web Vitals optimisation</span>
-          <span class="proof-chip">Transparent scope &amp; pricing</span>
-        </div>
-
-        <p class="services-closing-note reveal" id="beyond">
-          Beyond standard websites: client portals, booking dashboards, lead-qualification flows and WhatsApp automation &mdash; quoted separately after discovery.
-        </p>
+        <p class="hand-line">Whatever you choose: built mobile-first, tuned for Core Web Vitals, wired for WhatsApp enquiries, scoped and priced in writing, and you deal with the founder directly.</p>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         05 — EXTENDED CAPABILITIES (SLIM DARK BAND)
-         ========================================================================== -->
-    <section class="section section-dark add-ons-band" id="beyond">
-      <div class="wrap">
-        <div class="section-head reveal" style="margin-bottom: 28px; text-align: center;">
-          <p class="eyebrow">Extended Capabilities</p>
-          <h2>Need more than a website?</h2>
-          <p class="lede" style="margin: 0 auto; max-width: 680px;">Custom digital tools and operational workflows engineered for businesses ready to automate routine tasks.</p>
+    <!-- Prices -->
+    <section class="sheet sheet--rates" id="pricing">
+      <div class="sheet-inner">
+        <div class="runhead"><span>Rates</span><span>page 4</span></div>
+        <div class="sheet-head">
+          <h2>The rate page.</h2>
+          <p class="sheet-lede">Starting prices, delivery times, revisions and support, all in writing. If your scope grows, we agree the change before any extra work.</p>
         </div>
 
-        <div class="add-ons-row reveal">
-          <div class="add-on-item">
-            <span class="add-on-num">01 / SELF-SERVICE</span>
-            <h4>Client Self-Service Portals</h4>
-            <p>24/7 online session scheduling, patient slot booking &amp; account access without staff friction.</p>
-          </div>
-          <div class="add-on-item">
-            <span class="add-on-num">02 / QUALIFICATION</span>
-            <h4>Lead Qualification Systems</h4>
-            <p>Budget &amp; timeline screening to deliver high-intent enquiries directly to your WhatsApp or calendar.</p>
-          </div>
-          <div class="add-on-item">
-            <span class="add-on-num">03 / AUTOMATION</span>
-            <h4>WhatsApp CRM &amp; Reminders</h4>
-            <p>Automated payment notifications, session renewals &amp; appointment reminders that protect cash flow.</p>
-          </div>
-        </div>
-
-        <p class="add-ons-note reveal">Custom business systems are quoted separately based on exact workflow requirements.</p>
-      </div>
-    </section>
-
-    <!-- ==========================================================================
-         08 — PRICING (HIGH CONTRAST & ACCESSIBLE)
-         ========================================================================== -->
-    <section class="section" id="pricing">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">Investment</p>
-          <h2>Simple pricing. Serious websites.</h2>
-          <p class="lede">Choose the level that fits your business. Transparent deliverables with zero surprises.</p>
-        </div>
-
-        <div class="plans-grid" data-stagger>
-          <!-- LAUNCH -->
-          <article class="plan-card">
-            <p class="plan-name">Launch</p>
-            <div class="plan-price-wrap">
-              <span class="plan-currency">&#8377;</span>
-              <span class="plan-amount">9,900</span>
-              <span class="plan-price-starting">starting</span>
+        <div class="rates">
+          <article class="rate">
+            <div class="rate-head">
+              <h3 class="rate-name">Launch</h3>
+              <p class="rate-time">5-day typical delivery</p>
+              <p class="rate-sum">Get your business online with credibility and speed.</p>
             </div>
-            <div class="plan-delivery-pill">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              5-day typical delivery
-            </div>
-            <p class="plan-summary">For getting your business online with credibility and speed.</p>
-            <ul class="plan-features-list">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>One-page premium custom website</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Mobile-first, fast-loading build</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Bespoke typography &amp; colour palette</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Direct WhatsApp &amp; call buttons</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Google Maps integration</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Basic SEO &amp; Search Console setup</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Cloud deployment &amp; SSL setup</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>1 revision round</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>15 days post-launch support</span>
-              </li>
+            <ul class="ticks">
+              <li>One-page custom website</li>
+              <li>Mobile-first, fast-loading build</li>
+              <li>Typography and colours chosen for you</li>
+              <li>WhatsApp and call buttons</li>
+              <li>Google Maps</li>
+              <li>Basic SEO and Search Console setup</li>
+              <li>Hosting and SSL setup</li>
+              <li>1 revision round</li>
+              <li>15 days support after launch</li>
             </ul>
-            <a class="btn btn--block select-package-btn" href="#contact" data-package="Launch" data-track="pricing_cta" data-tier="launch" data-location="pricing_section">
-              Get Started <span class="arr">&rarr;</span>
-            </a>
+            <div class="rate-amt">
+              <p class="rate-price"><span class="rate-cur">₹</span>9,900 <span class="rate-from">starting</span></p>
+              <a class="btn btn--line btn--block select-package-btn" href="#contact" data-package="Launch" data-track="pricing_cta" data-tier="launch" data-location="pricing_section">Start with Launch</a>
+            </div>
           </article>
 
-          <!-- BUSINESS (Most popular) -->
-          <article class="plan-card plan-card--featured">
-            <span class="plan-popular-badge">Most Popular</span>
-            <p class="plan-name">Business</p>
-            <div class="plan-price-wrap">
-              <span class="plan-currency">&#8377;</span>
-              <span class="plan-amount">19,900</span>
-              <span class="plan-price-starting">starting</span>
+          <article class="rate rate--marked">
+            <div class="rate-head">
+              <h3 class="rate-name">Business</h3>
+              <p class="rate-time">7-day typical delivery</p>
+              <p class="rate-sum">For established businesses turning search visits into enquiries.</p>
             </div>
-            <div class="plan-delivery-pill">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              7-day typical delivery
-            </div>
-            <p class="plan-summary">For established businesses ready to convert search traffic into enquiries.</p>
-            <ul class="plan-features-list">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>4&ndash;5 custom sections or pages</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Service menu, rate card, or gallery</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Appointment or enquiry booking flow</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Testimonials &amp; trust sections</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Validated WhatsApp enquiry form</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Local SEO &amp; metadata optimisation</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Performance &amp; Core Web Vitals audit</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>2 revision rounds</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>30 days post-launch support</span>
-              </li>
+            <ul class="ticks">
+              <li>4&ndash;5 custom sections or pages</li>
+              <li>Service menu, rate card or gallery</li>
+              <li>Appointment or enquiry request flow</li>
+              <li>Testimonials and trust sections</li>
+              <li>Validated WhatsApp enquiry form</li>
+              <li>Local SEO and metadata</li>
+              <li>Performance and Core Web Vitals audit</li>
+              <li>2 revision rounds</li>
+              <li>30 days support after launch</li>
             </ul>
-            <a class="btn btn--accent btn--block select-package-btn" href="#contact" data-package="Business" data-track="pricing_cta" data-tier="business" data-location="pricing_section">
-              Choose Business <span class="arr">&rarr;</span>
-            </a>
+            <div class="rate-amt">
+              <span class="stamp stamp--rate" data-stamp>Most chosen</span>
+              <p class="rate-price"><span class="rate-cur">₹</span>19,900 <span class="rate-from">starting</span></p>
+              <a class="btn btn--ink btn--block select-package-btn" href="#contact" data-package="Business" data-track="pricing_cta" data-tier="business" data-location="pricing_section">Choose Business</a>
+            </div>
           </article>
 
-          <!-- SIGNATURE -->
-          <article class="plan-card">
-            <p class="plan-name">Signature</p>
-            <div class="plan-price-wrap">
-              <span class="plan-currency">&#8377;</span>
-              <span class="plan-amount">34,900</span>
-              <span class="plan-price-starting">starting</span>
+          <article class="rate">
+            <div class="rate-head">
+              <h3 class="rate-name">Signature</h3>
+              <p class="rate-time">10&ndash;14 day typical delivery</p>
+              <p class="rate-sum">A distinctive, high-end presence with more pages and motion.</p>
             </div>
-            <div class="plan-delivery-pill">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              10&ndash;14 day typical delivery
-            </div>
-            <p class="plan-summary">For businesses that want a distinctive, high-end editorial presence.</p>
-            <ul class="plan-features-list">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Multi-page bespoke architecture, up to 8 pages</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Custom motion &amp; studio-grade interactions</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Portfolio or case-study gallery</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Advanced booking or intake system</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Blog-ready structure (CMS quoted separately)</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Advanced SEO, analytics &amp; event tracking</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Domain &amp; cloud hosting setup</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>3 revision rounds</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>60 days post-launch support</span>
-              </li>
+            <ul class="ticks">
+              <li>Up to 8 custom pages</li>
+              <li>Custom motion and interactions</li>
+              <li>Portfolio or case-study gallery</li>
+              <li>Advanced booking or intake flow</li>
+              <li>Blog-ready structure (CMS quoted separately)</li>
+              <li>Advanced SEO, analytics and event tracking</li>
+              <li>Domain and hosting setup</li>
+              <li>3 revision rounds</li>
+              <li>60 days support after launch</li>
             </ul>
-            <a class="btn btn--block select-package-btn" href="#contact" data-package="Signature" data-track="pricing_cta" data-tier="signature" data-location="pricing_section">
-              Go Signature <span class="arr">&rarr;</span>
-            </a>
+            <div class="rate-amt">
+              <p class="rate-price"><span class="rate-cur">₹</span>34,900 <span class="rate-from">starting</span></p>
+              <a class="btn btn--line btn--block select-package-btn" href="#contact" data-package="Signature" data-track="pricing_cta" data-tier="signature" data-location="pricing_section">Choose Signature</a>
+            </div>
           </article>
 
-          <!-- CUSTOM SYSTEMS -->
-          <article class="plan-card">
-            <p class="plan-name">Custom Systems</p>
-            <div class="plan-price-wrap plan-price-wrap--custom">
-              <span class="plan-amount">Custom Quote</span>
+          <article class="rate">
+            <div class="rate-head">
+              <h3 class="rate-name">Custom Systems</h3>
+              <p class="rate-time">After a discovery call</p>
+              <p class="rate-sum">Portals, automation and WhatsApp systems beyond a website.</p>
             </div>
-            <div class="plan-delivery-pill">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              Quoted after discovery
-            </div>
-            <p class="plan-summary">Client portals, automation, and WhatsApp systems beyond standard websites.</p>
-            <ul class="plan-features-list">
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Discovery call &amp; workflow mapping</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Client portals or booking dashboards</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Lead-qualification flows</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>WhatsApp CRM &amp; automated reminders</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Third-party webhook &amp; tool integrations</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Documentation &amp; handover training</span>
-              </li>
-              <li>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                <span>Technical support quoted according to scope</span>
-              </li>
+            <ul class="ticks">
+              <li>Discovery call and workflow mapping</li>
+              <li>Client portals or booking dashboards</li>
+              <li>Lead-qualification flows</li>
+              <li>WhatsApp CRM and automated reminders</li>
+              <li>Webhook and tool integrations</li>
+              <li>Documentation and handover training</li>
+              <li>Support quoted to scope</li>
             </ul>
-            <a class="btn btn--block select-package-btn" href="#contact" data-package="Custom Systems" data-track="pricing_cta" data-tier="custom_systems" data-location="pricing_section">
-              Book Discovery <span class="arr">&rarr;</span>
-            </a>
+            <div class="rate-amt">
+              <p class="rate-price rate-price--quote">Quoted</p>
+              <a class="btn btn--line btn--block select-package-btn" href="#contact" data-package="Custom Systems" data-track="pricing_cta" data-tier="custom_systems" data-location="pricing_section">Book a discovery call</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         07 — HOW IT WORKS (WORKFLOW & SOLO FOUNDER ADVANTAGE)
-         ========================================================================== -->
-    <section class="section" id="process">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">How It Works</p>
-          <h2>You run the business.<br>We handle the website.</h2>
-          <p class="lede">A streamlined 5-step roadmap from initial conversation to live customer enquiries.</p>
-        </div>
-
-        <ol class="process-steps-row reveal" data-stagger>
-          <li class="process-col-step">
-            <span class="process-step-num">01</span>
-            <h4>Tell us what you need</h4>
-            <p>A direct, unhurried WhatsApp chat or call to understand your business, clientele, and goals.</p>
-          </li>
-          <li class="process-col-step">
-            <span class="process-step-num">02</span>
-            <h4>Experience design</h4>
-            <p>Bespoke typography, tailored color harmonies, and editorial layouts crafted around your brand.</p>
-          </li>
-          <li class="process-col-step">
-            <span class="process-step-num">03</span>
-            <h4>Build &amp; QA</h4>
-            <p>Clean, mobile-first code with fast Core Web Vitals, responsive viewports, and zero bloat.</p>
-          </li>
-          <li class="process-col-step">
-            <span class="process-step-num">04</span>
-            <h4>Domain &amp; Launch</h4>
-            <p>Domain linking, SSL setup, Google Search Console registration, and technical schema verified.</p>
-          </li>
-          <li class="process-col-step">
-            <span class="process-step-num">05</span>
-            <h4>Start receiving clients</h4>
-            <p>Direct calls, bookings, and pre-filled WhatsApp enquiries begin arriving from your visitors.</p>
-          </li>
+    <!-- Process + founder, as a two-page spread -->
+    <section class="spread" id="process" aria-labelledby="processTitle">
+      <div class="page page--left">
+        <div class="runhead"><span>How it works</span><span>page 5</span></div>
+        <h2 id="processTitle">You run the business. I handle the website.</h2>
+        <ol class="steps">
+          <li><span class="step-n">1</span><div><h3>Tell me what you need</h3><p>A WhatsApp chat or call about your business, your customers and your goals.</p></div></li>
+          <li><span class="step-n">2</span><div><h3>Design</h3><p>Typography, colours and layout made for your brand, not picked from a template.</p></div></li>
+          <li><span class="step-n">3</span><div><h3>Build and test</h3><p>Clean, mobile-first code, checked on real phone sizes, fast to load.</p></div></li>
+          <li><span class="step-n">4</span><div><h3>Domain and launch</h3><p>Domain, SSL, Google Search Console and business schema set up.</p></div></li>
+          <li><span class="step-n">5</span><div><h3>Customers start enquiring</h3><p>Calls, booking requests and pre-filled WhatsApp messages come straight to you.</p></div></li>
         </ol>
-
-        <p class="process-founder-note reveal">
-          You work directly with the founder &mdash; no account managers, no junior handoffs.
-        </p>
       </div>
-    </section>
-
-    <!-- ==========================================================================
-         10 — THE FOUNDER (EDITORIAL CREDIBILITY)
-         ========================================================================== -->
-    <section class="section founder-section" id="about">
-      <div class="wrap">
-        <div class="founder-card reveal">
-          <div class="founder-card-header">
-            <div class="founder-seal-badge" aria-hidden="true">
-              <img src="assets/branding/logo-profile-square.jpg" alt="Vardan Pal Studio Emblem" class="founder-seal-img" width="56" height="56" loading="lazy">
-            </div>
-            <div class="founder-header-copy">
-              <p class="eyebrow">THE FOUNDER</p>
-              <h2 class="founder-title">The person behind the work.</h2>
-            </div>
-          </div>
-          <p class="founder-body">
-            Vardan Pal Studio is run by its founder &mdash; a software engineer (B.Tech, Information Technology, NIT Srinagar) with industry experience building cloud-native applications and backend systems. Every website is designed, built, and launched directly by him &mdash; the person you message is the person who writes the code.
+      <div class="page page--right" id="about">
+        <div class="runhead"><span>Founder</span><span>page 6</span></div>
+        <div class="founder">
+          <img src="assets/branding/logo-profile-square.jpg" alt="" class="founder-seal" width="72" height="72" loading="lazy">
+          <h2>The person behind the work.</h2>
+          <p>
+            Vardan Pal Studio is run by its founder, a software engineer (B.Tech, Information Technology, NIT Srinagar) with industry experience building cloud applications and backend systems. Every website is designed, built and launched by him. The person you message is the person who writes the code.
           </p>
-          <div class="founder-link-wrap">
-            <a href="https://vardxn.vercel.app" target="_blank" rel="noopener" class="founder-link">Developer portfolio &#8599;</a>
-          </div>
+          <p class="signature" aria-hidden="true">Vardan Pal</p>
+          <dl class="founder-direct">
+            <div><dt>WhatsApp</dt><dd><a href="https://wa.me/918279696707?text=Hi%20Vardan%2C%20I%20would%20like%20to%20discuss%20a%20website" target="_blank" rel="noopener" data-track="whatsapp_click" data-location="founder">+91 82796 96707</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:vardan2701@gmail.com" data-track="email_click" data-location="founder">vardan2701@gmail.com</a></dd></div>
+            <div><dt>Based in</dt><dd>New Delhi, working with businesses across India</dd></div>
+          </dl>
+          <a href="https://vardxn.vercel.app" target="_blank" rel="noopener" class="founder-link">Developer portfolio <svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         11 — FAQ
-         ========================================================================== -->
-    <section class="section" id="faq">
-      <div class="wrap">
-        <div class="section-head reveal">
-          <p class="eyebrow">Questions</p>
+    <!-- FAQ -->
+    <section class="sheet" id="faq">
+      <div class="sheet-inner">
+        <div class="runhead"><span>Questions</span><span>page 7</span></div>
+        <div class="sheet-head">
           <h2>Before you ask.</h2>
         </div>
 
-        <div class="faq-wrap faq">
+        <div class="faq">
           <details class="faq-item">
-            <summary>
-              <span>What does the Launch package include?</span>
-              <span class="faq-icon-cross" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer-content">
-              <p>Launch includes a one-page premium website, responsive development, WhatsApp and call buttons, Google Maps, basic SEO setup, deployment, one revision round, and 15 days of post-launch support.</p>
-            </div>
+            <summary><span>What does the Launch package include?</span><svg class="ico faq-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Launch includes a one-page premium website, responsive development, WhatsApp and call buttons, Google Maps, basic SEO setup, deployment, one revision round, and 15 days of post-launch support.</p>
           </details>
-
           <details class="faq-item">
-            <summary>
-              <span>What is the difference between Business and Signature?</span>
-              <span class="faq-icon-cross" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer-content">
-              <p>Business is designed for established businesses that need several pages, enquiry flows, trust sections, and local SEO. Signature adds a larger bespoke structure, richer motion, advanced intake flows, analytics, and a longer support period.</p>
-            </div>
+            <summary><span>What is the difference between Business and Signature?</span><svg class="ico faq-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Business is designed for established businesses that need several pages, enquiry flows, trust sections, and local SEO. Signature adds a larger bespoke structure, richer motion, advanced intake flows, analytics, and a longer support period.</p>
           </details>
-
           <details class="faq-item">
-            <summary>
-              <span>Do you build booking systems?</span>
-              <span class="faq-icon-cross" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer-content">
-              <p>Standard packages can include appointment or enquiry request flows. Real-time calendars, dashboards, portals, and automation are scoped separately under Custom Systems.</p>
-            </div>
+            <summary><span>Do you build booking systems?</span><svg class="ico faq-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Standard packages can include appointment or enquiry request flows. Real-time calendars, dashboards, portals, and automation are scoped separately under Custom Systems.</p>
           </details>
-
           <details class="faq-item">
-            <summary>
-              <span>Can I upgrade later?</span>
-              <span class="faq-icon-cross" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer-content">
-              <p>Yes. If the scope grows, the website can be upgraded to a higher package. Confirm the upgrade and any price adjustment before additional work begins.</p>
-            </div>
+            <summary><span>Can I upgrade later?</span><svg class="ico faq-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Yes. If the scope grows, the website can be upgraded to a higher package. Confirm the upgrade and any price adjustment before additional work begins.</p>
           </details>
-
           <details class="faq-item">
-            <summary>
-              <span>Is ongoing maintenance included?</span>
-              <span class="faq-icon-cross" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer-content">
-              <p>Post-launch support is included for the period shown in each package. Ongoing maintenance and content updates can be quoted separately.</p>
-            </div>
+            <summary><span>Is ongoing maintenance included?</span><svg class="ico faq-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Post-launch support is included for the period shown in each package. Ongoing maintenance and content updates can be quoted separately.</p>
           </details>
-
           <details class="faq-item">
-            <summary>
-              <span>How do you ensure enquiries are relevant and qualified?</span>
-              <span class="faq-icon-cross" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer-content">
-              <p>Unlike standard contact forms that invite spam, we design structured enquiry flows. Prospective clients specify their budget, service requirements, and project timeline before reaching your WhatsApp or inbox, making initial conversations faster and clearer.</p>
-            </div>
+            <summary><span>How do you make sure enquiries are relevant?</span><svg class="ico faq-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>Instead of a bare contact form, enquiry flows ask for the service, budget and timeline before the message reaches your WhatsApp or inbox, so the first conversation starts with the facts.</p>
           </details>
-
           <details class="faq-item">
-            <summary>
-              <span>What if I am not tech-savvy and don&#39;t want to manage software?</span>
-              <span class="faq-icon-cross" aria-hidden="true">+</span>
-            </summary>
-            <div class="faq-answer-content">
-              <p>You don&#39;t have to touch any software. We act as your direct technical builder &mdash; deploying your site, configuring custom domains, and connecting your direct WhatsApp channels so you can focus entirely on running your business.</p>
-            </div>
+            <summary><span>What if I am not tech-savvy and don&#39;t want to manage software?</span><svg class="ico faq-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary>
+            <p>You don&#39;t have to touch any software. Deployment, your domain and your WhatsApp links are set up for you, so you can focus on running your business.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- ==========================================================================
-         12 — FINAL CTA (DARK IMMERSIVE CALLOUT)
-         ========================================================================== -->
-    <section class="cta-banner cta reveal" id="contact">
+    <!-- Enquiry slip -->
+    <section class="sheet sheet--slip cta" id="contact">
       <div id="contact-vardan"></div>
-      <h2>Ready to give your business a better digital presence?</h2>
-      <p class="cta-sub">Tell us what you do. We'll figure out what your website needs.</p>
-
-      <form class="enquire-form enquire" id="enquireForm" novalidate>
-        <!-- Campaign Attribution & Anti-Spam (Safe & No PII) -->
-        <input type="hidden" name="utm_source" id="utm_source">
-        <input type="hidden" name="utm_medium" id="utm_medium">
-        <input type="hidden" name="utm_campaign" id="utm_campaign">
-        <input type="hidden" name="utm_term" id="utm_term">
-        <input type="hidden" name="utm_content" id="utm_content">
-        <input type="hidden" name="gclid" id="gclid">
-        <input type="text" name="honeypot" style="display:none !important; visibility:hidden;" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <label>
-          Your name *
-          <input name="name" type="text" autocomplete="name" required placeholder="e.g. Rahul Sharma">
-        </label>
-        <label>
-          Email address *
-          <input name="email" type="email" autocomplete="email" required placeholder="e.g. rahul@example.com">
-        </label>
-        <label>
-          Phone / WhatsApp *
-          <input name="phone" type="tel" autocomplete="tel" required placeholder="e.g. +91 98765 43210">
-        </label>
-        <label>
-          Your City / State *
-          <input name="city" type="text" autocomplete="address-level2" required placeholder="e.g. Mumbai, Delhi, Bengaluru, Jaipur...">
-        </label>
-        <label>
-          Business industry *
-          <select name="type" required>
-            <option value="">Select industry</option>
-            <option value="Clinic / Healthcare">Clinic / Healthcare</option>
-            <option value="Restaurant / Cafe">Restaurant / Cafe</option>
-            <option value="Salon / Spa">Salon / Spa</option>
-            <option value="Gym / Fitness">Gym / Fitness</option>
-            <option value="Real Estate">Real Estate</option>
-            <option value="Interior / Architecture">Interior / Architecture</option>
-            <option value="Photography / Events">Photography / Events</option>
-            <option value="Professional Services">Professional Services</option>
-            <option value="Other Business">Other Business</option>
-          </select>
-        </label>
-        <label class="full">
-          Selected package *
-          <select name="package" id="contactPackage" required>
-            <option value="">Select a package</option>
-            <option value="Launch">Launch — ₹9,900 starting</option>
-            <option value="Business">Business — ₹19,900 starting</option>
-            <option value="Signature">Signature — ₹34,900 starting</option>
-            <option value="Custom Systems">Custom Systems — quoted after discovery</option>
-          </select>
-        </label>
-        <label class="full">
-          What do you need? *
-          <select name="goal" required>
-            <option value="">Select what you need</option>
-            <option value="New Website">New Website</option>
-            <option value="Website Redesign">Website Redesign</option>
-            <option value="Online Booking & Forms">Online Booking &amp; Forms</option>
-            <option value="Client Portal">Client Portal</option>
-            <option value="Landing Page for Ads">Landing Page for Ads</option>
-            <option value="WhatsApp Automation">WhatsApp Automation &amp; Reminders</option>
-            <option value="Manage Software For Me">Manage Software &amp; Tools For Me</option>
-            <option value="Other / Not Sure Yet">Other / Not Sure Yet</option>
-          </select>
-        </label>
-        <label class="full">
-          Project details (optional)
-          <textarea name="msg" rows="3" placeholder="Tell us briefly about your business, timeline, or any questions..."></textarea>
-        </label>
-        
-        <div class="form-consent full">
-          <input type="checkbox" id="contactConsent" name="consent" required>
-          <div class="form-consent__copy">
-            <label for="contactConsent">
-              I agree to be contacted about this enquiry via WhatsApp, phone or email.
-            </label>
-            <p>
-              <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
-              <span aria-hidden="true">&middot;</span>
-              <a href="terms.html" target="_blank" rel="noopener">Terms of Service</a>
-            </p>
-          </div>
+      <div class="sheet-inner">
+        <div class="runhead"><span>Enquiry</span><span>page 8</span></div>
+        <div class="sheet-head">
+          <h2>Write your business into the book.</h2>
+          <p class="sheet-lede">Tell me what you do. I&rsquo;ll reply with what your website needs and a written price.</p>
         </div>
-        <button class="btn btn--accent enquire-submit-btn" type="submit" id="enquireSubmitBtn">
-          Send Enquiry &amp; Get Proposal <span class="arr">&rarr;</span>
-        </button>
-        <div class="enquire-status" id="enquireStatus" style="display:none;" aria-live="polite"></div>
-      </form>
 
-      <div class="cta-secondary-actions cta-actions">
-        <a class="btn btn--light" href="https://wa.me/918279696707?text=Hi%20Vardan%2C%20I%20would%20like%20to%20discuss%20a%20website%20for%20my%20business" target="_blank" rel="noopener" data-track="whatsapp_click" data-location="contact_section">
-          WhatsApp Us from Anywhere in India <span class="arr">&rarr;</span>
-        </a>
-        <a class="btn btn--ghost btn--light" href="tel:+918279696707" data-track="phone_click" data-location="contact_section">
-          Call +91 82796 96707
-        </a>
+        <form class="enquire-form enquire" id="enquireForm" novalidate>
+          <input type="hidden" name="utm_source" id="utm_source">
+          <input type="hidden" name="utm_medium" id="utm_medium">
+          <input type="hidden" name="utm_campaign" id="utm_campaign">
+          <input type="hidden" name="utm_term" id="utm_term">
+          <input type="hidden" name="utm_content" id="utm_content">
+          <input type="hidden" name="gclid" id="gclid">
+          <input type="text" name="honeypot" style="display:none !important; visibility:hidden;" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label>
+            Your name *
+            <input name="name" type="text" autocomplete="name" required placeholder="Rahul Sharma">
+          </label>
+          <label>
+            Email address *
+            <input name="email" type="email" autocomplete="email" required placeholder="rahul@example.com">
+          </label>
+          <label>
+            Phone / WhatsApp *
+            <input name="phone" type="tel" autocomplete="tel" required placeholder="+91 98765 43210">
+          </label>
+          <label>
+            City / State *
+            <input name="city" type="text" autocomplete="address-level2" required placeholder="Delhi, Mumbai, Jaipur&hellip;">
+          </label>
+          <label>
+            Business type *
+            <select name="type" required>
+              <option value="">Choose your trade</option>
+              <option value="Clinic / Healthcare">Clinic / Healthcare</option>
+              <option value="Restaurant / Cafe">Restaurant / Cafe</option>
+              <option value="Salon / Spa">Salon / Spa</option>
+              <option value="Gym / Fitness">Gym / Fitness</option>
+              <option value="Real Estate">Real Estate</option>
+              <option value="Interior / Architecture">Interior / Architecture</option>
+              <option value="Photography / Events">Photography / Events</option>
+              <option value="Professional Services">Professional Services</option>
+              <option value="Other Business">Other Business</option>
+            </select>
+          </label>
+          <label>
+            Package *
+            <select name="package" id="contactPackage" required>
+              <option value="">Choose a package</option>
+              <option value="Launch">Launch — ₹9,900 starting</option>
+              <option value="Business">Business — ₹19,900 starting</option>
+              <option value="Signature">Signature — ₹34,900 starting</option>
+              <option value="Custom Systems">Custom Systems — quoted after discovery</option>
+            </select>
+          </label>
+          <label class="full">
+            What do you need? *
+            <select name="goal" required>
+              <option value="">Choose what you need</option>
+              <option value="New Website">New Website</option>
+              <option value="Website Redesign">Website Redesign</option>
+              <option value="Online Booking & Forms">Online Booking &amp; Forms</option>
+              <option value="Client Portal">Client Portal</option>
+              <option value="Landing Page for Ads">Landing Page for Ads</option>
+              <option value="WhatsApp Automation">WhatsApp Automation &amp; Reminders</option>
+              <option value="Manage Software For Me">Manage Software &amp; Tools For Me</option>
+              <option value="Other / Not Sure Yet">Other / Not Sure Yet</option>
+            </select>
+          </label>
+          <label class="full">
+            Anything else (optional)
+            <textarea name="msg" rows="3" placeholder="Your business, timeline, or questions"></textarea>
+          </label>
+
+          <div class="form-consent full">
+            <input type="checkbox" id="contactConsent" name="consent" required>
+            <div class="form-consent__copy">
+              <label for="contactConsent">I agree to be contacted about this enquiry by WhatsApp, phone or email.</label>
+              <p>
+                <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>
+                <span aria-hidden="true">&middot;</span>
+                <a href="terms.html" target="_blank" rel="noopener">Terms of Service</a>
+              </p>
+            </div>
+          </div>
+          <button class="btn btn--ink enquire-submit-btn" type="submit" id="enquireSubmitBtn">Send enquiry</button>
+          <div class="enquire-status" id="enquireStatus" style="display:none;" aria-live="polite"></div>
+        </form>
+
+        <div class="slip-side cta-actions">
+          <p class="hand-line">Faster on WhatsApp:</p>
+          <a class="btn btn--ink" href="https://wa.me/918279696707?text=Hi%20Vardan%2C%20I%20would%20like%20to%20discuss%20a%20website%20for%20my%20business" target="_blank" rel="noopener" data-track="whatsapp_click" data-location="contact_section">WhatsApp Vardan</a>
+          <a class="btn btn--line" href="tel:+918279696707" data-track="phone_click" data-location="contact_section">Call +91 82796 96707</a>
+          <span class="stamp stamp--slip" data-stamp>From ₹9,900</span>
+        </div>
+
+        <p class="cta-price-from">New Delhi &middot; serving businesses across India &middot; websites from ₹9,900</p>
       </div>
-
-      <p class="cta-price-from cta-from">NEW DELHI &middot; SERVING BUSINESSES ACROSS INDIA &middot; WEBSITES FROM ₹9,900</p>
     </section>
   </main>
 
-  <!-- ==========================================================================
-       13 — FOOTER
-       ========================================================================== -->
-    <footer class="footer">
-    <div class="wrap">
-      <div class="footer-grid">
-        <div class="footer-brand-col">
-          <div class="footer-brand-heading">
-            <span class="footer-brand-mark" aria-hidden="true">
-              <img src="assets/logo.svg" alt="Vardan Pal Studio logo" class="footer-logo-img" width="36" height="36" loading="lazy">
-            </span>
-            <h3 class="footer-brand-title">Vardan Pal Studio</h3>
-          </div>
-          <p class="footer-brand-desc">Premium websites and digital systems for businesses across India.</p>
-          <div class="footer-contact-links">
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="" class="footer-logo" width="40" height="40" loading="lazy">
+        <div>
+          <p class="footer-title">Vardan Pal Studio</p>
+          <p>Websites and digital systems for businesses across India.</p>
+          <p>
             <a href="https://wa.me/918279696707?text=Hi%20Vardan%2C%20I%20would%20like%20to%20discuss%20a%20website" target="_blank" rel="noopener" data-track="whatsapp_click" data-location="footer">WhatsApp +91 82796 96707</a>
-            <span class="footer-contact-sep" aria-hidden="true">&middot;</span>
+            <span aria-hidden="true">&middot;</span>
             <a href="mailto:vardan2701@gmail.com" data-track="email_click" data-location="footer">vardan2701@gmail.com</a>
-          </div>
-          <p class="footer-location">New Delhi &middot; Serving businesses nationwide</p>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title">Explore</h4>
-          <nav class="footer-links-col" aria-label="Explore navigation">
-            <a href="#work">Demos</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#process">Process</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-
-        <div class="footer-col">
-          <h4 class="footer-col-title">Studio</h4>
-          <nav class="footer-links-col" aria-label="Studio navigation">
-            <a href="#about">About</a>
-            <a href="https://vardxn.vercel.app" target="_blank" rel="noopener">Developer Portfolio &#8599;</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-          </nav>
+          </p>
+          <p>New Delhi &middot; serving businesses nationwide</p>
         </div>
       </div>
-
-      <p class="footer-disclaimer">All showcased brands are fictional concept projects created to demonstrate design directions.</p>
-
-      <div class="footer-bottom-bar">
-        <span class="footer-tagline">Websites that mean business.</span>
-        <span class="footer-copy">&copy; 2026 Vardan Pal Studio. All rights reserved.</span>
-      </div>
+      <nav class="footer-links" aria-label="Explore">
+        <a href="#work">Demos</a>
+        <a href="#pricing">Prices</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <nav class="footer-links" aria-label="Studio">
+        <a href="#about">About</a>
+        <a href="https://vardxn.vercel.app" target="_blank" rel="noopener">Developer portfolio <svg class="ico ico--sm" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+    <div class="wrap footer-bottom">
+      <p>All showcased brands are fictional concept projects created to demonstrate design directions.</p>
+      <p>&copy; 2026 Vardan Pal Studio</p>
     </div>
   </footer>
 
-  
-  
-
-  <!-- Scripts -->
   <script src="assets/js/analytics-config.js" defer></script>
   <script src="assets/js/tracking.js" defer></script>
   <script src="assets/js/premium.js" defer></script>
-  <!-- Floating WhatsApp Helpline -->
+  <script src="assets/js/bahi.js" defer></script>
+
   <a href="https://wa.me/918279696707?text=Hi%20Vardan%2C%20I%20found%20Vardan%20Pal%20Studio%20online%20and%20would%20like%20to%20discuss%20a%20website" target="_blank" rel="noopener" class="floating-whatsapp-btn" aria-label="Chat on WhatsApp" data-track="whatsapp_click" data-location="floating_button">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+    <svg width="28" height="28" viewBox="0 0 24 24" aria-hidden="true">
       <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.186 8.186 0 0 1-1.26-4.36c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.66c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.07-.25-.12-1.05-.39-2-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.64 4.19 3.7.59.25 1.05.4 1.41.51.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.23-.17-.48-.29z"/>
     </svg>
   </a>
