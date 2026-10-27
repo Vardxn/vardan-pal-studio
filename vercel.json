@@ -1,33 +1,31 @@
 {
   "cleanUrls": true,
-  "rewrites": [
-    { "source": "/chica", "destination": "/chica/index.html" },
-    { "source": "/chica/", "destination": "/chica/index.html" },
-    { "source": "/shubham-dixit", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/blog", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/insights", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/tradition", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/services", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/consultation", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/locations", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/locations/(.*)", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/blog/(.*)", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/insights/(.*)", "destination": "/shubham-dixit/index.html" },
-    { "source": "/shubham-dixit/contact", "destination": "/shubham-dixit/index.html" },
-    { "source": "/astrology", "destination": "/shubham-dixit/index.html" },
-    { "source": "/astrology/", "destination": "/shubham-dixit/index.html" }
-  ],
   "headers": [
-    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }] },
-    { "source": "/chica/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
-    { "source": "/chica/images/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] },
-    { "source": "/shubham-dixit/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] },
-    { "source": "/shubham-dixit/images/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] },
-    { "source": "/(.*)", "headers": [
-      { "key": "X-Content-Type-Options", "value": "nosniff" },
-      { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-      { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
-    ] }
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
   ]
 }
